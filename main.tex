@@ -98,7 +98,18 @@ keyword1 -- keyword2 -- keyword3
 
 \section{Methods, Observations, Simulations etc.}
 
-\textbf{TBD.}
+% How we select the particles
+\textit{
+For a given galaxy we select all particles that are in the central galaxy at $z=0$ and in the CGM 1 Gyr prior.
+The galaxy is defined as all gas and stars inside $R_{\rm gal} = 4 R_{\star,0.5}$, with an additional density cut of $n_{\rm H} = 0.13$ cm$^{-3}$ for gas.
+The CGM is defined as all gas inside $0.1 -1 R_{\rm vir}$.
+For each selected particle we retrieve the full history of the particle (including temperature, density, metallicity) throughout the simulation.
+}
+
+\textbf{The number of IDs that are accreted is 18554.
+However, after removing duplicates, the number of IDs that are tracked is 14703.
+Either $\sim20\%$ of the particles split, or this is a symptom of a bug.
+Find out which.}
 
 \section{Conclusions}
 
