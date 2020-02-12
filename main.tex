@@ -54,7 +54,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Hot Accretion]{Hot Accretion in FIRE}
+\title[Hot Accretion in FIRE]{Galactic Discs Fed by Hot Accretion in FIRE}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -110,6 +110,67 @@ For each selected particle we retrieve the full history of the particle (includi
 However, after removing duplicates, the number of IDs that are tracked is 14703.
 Either $\sim20\%$ of the particles split, or this is a symptom of a bug.
 Find out which.}
+
+\section{Results}
+
+
+\begin{figure}
+    \centering
+    % \includegraphics{}
+    \caption{T vs.\ R tracks, with color indicating time}
+    \label{f: T vs R}
+\end{figure}
+
+\begin{figure}
+    \centering
+    % \includegraphics{}
+    \caption{image of face-on $z=0$ slice with temperature and velocity arrows}
+    \label{f:slice}
+\end{figure}
+
+\newcommand{\Rcool}{R_{\rm cool}} %need better name as R_cool means something else
+\begin{equation}
+    \Rcool \equiv \text{max radius where} T<10^5\,{\rm K}
+\end{equation}
+
+\newcommand{\Mdot}{\dot{M}}
+\newcommand{\Rcirc}{R_{\rm circ}} %need better name as R_cool means something else
+
+the circularization radius $\Rcirc$ is defined via
+\begin{equation}
+    j = v_{\rm c}(\Rcirc)\Rcirc
+\end{equation}
+where $j$ is the specific angular momentum and $v_{\rm c}$ is the circular velocity
+
+\begin{figure}
+    \centering
+    % \includegraphics{}
+    \caption{Left panel: distribution of $\Rcool$. Right panel: scatter plot of $\Rcool$ vs.~$\Rcirc$}
+    \label{f:Rcool}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    % \includegraphics{}
+    \caption{ $\cos \theta$ vs.\ radius tracks, with color by time. maybe join with Fig.~\ref{f: T vs R}}
+    \label{f: theta vs R}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    % \includegraphics{}
+    \caption{$\Mdot(T<10^{5}\,{\rm K})$ vs.\ radius, $\Mdot(T>10^{5}\,{\rm K})$ vs.\ radius in $z=0$ snapshots. show also SFR}
+    \label{f:Mdot}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics{}
+    \caption{cooling emission in X-ray, optical and UV lines vs.\ radius, only from tracked particles}
+    \label{f:emission}
+\end{figure}
 
 \section{Conclusions}
 
