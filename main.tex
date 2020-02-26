@@ -156,14 +156,13 @@ where $j$ is the specific angular momentum and $v_{\rm c}$ is the circular veloc
     \caption{
     Main panel: 50 T vs.\ R tracks, with sequential color indicating time or time minus accretion time . no median;
     Top panel: distribution of $\Rcool$
-    \textbf{I think maybe change Rcondense and tcondense to $R_{T=10^5\K}$ and $t_{T=10^5\K}$.}
+    \textbf{Add all particles with $R_{T=10^5\K}>100$ to $R=100$ bin, so we don't ignore them}
+    \textbf{Is this only m12i? lets see same plot for other sims (maybe not eventually to go into paper).}
     \textbf{Add another panel with K vs.~R for the same particles.}
     \textbf{Add in coloring by $t - t_{\rm{condense}}$.}
     \textbf{Make y-axis T but in log space (not log T).}
     \textbf{Add label to 0.1$R_{\rm vir}$.}
     \textbf{Make upper panel less tall, so its clear its an addendum to the bottom panel}
-    \textbf{'Accreted gas' -> 'radius where gas cools', and remove y-axis}
-    \textbf{in main panel write 'accretion tracks'}
     }
     \label{f: T vs R}
 \end{figure}
@@ -174,6 +173,11 @@ where $j$ is the specific angular momentum and $v_{\rm c}$ is the circular veloc
     \caption{
     Distribution of $\Rcool$ vs j($\Rcool$) for four FIRE-2 halos with $L(z=0) \sim L^\star$.
 Thick (thin) contours enclose values for 50\% (90\%) of the accreted gas particles.
+The angular momentum as a function of radius for all gas in \texttt{m12i} at $z=0$ is displayed as a dashed line (the median) and shaded regions (5th-95th percentiles).
+\textbf{The contours appear to match well with the circular velocity, but in reality so does the angular momentum of all gas at $z=0$, it's just that there are many order of magnitude on the y axis. In fact, the angular momentum of all gas at $z=0$ matches better, maybe??}
+\textbf{Maybe add in a line that indicates the angular momentum necessary for full support?}
+\textbf{Does the 100 kpc-cooling gas only occur in simulations without metal diffusion? If so, is it seen for particularly metal-enriched particles?}
+\textbf{Is the 100 kpc-cooling gas related to satellite galaxies?}
 \textit{
 In all halos the distributions are consistent with $j_{\rm c} = v_{\rm c} r$, i.e. gas cools once circularized.
 This demonstrates that the variable angular momentum of incoming gas drives the width in the $\Rcool$ distribution.
@@ -181,7 +185,6 @@ This demonstrates that the variable angular momentum of incoming gas drives the 
     }
     \label{f:Rcool}
 \end{figure}
-
 
 \begin{figure}
     \centering
@@ -194,7 +197,10 @@ This demonstrates that the variable angular momentum of incoming gas drives the 
     \label{f: theta vs R}
 \end{figure}
 
-
+% Distribution of r1e5
+\textit{
+Isotropic cooling occurring randomly within $R_{\rm vir}$ would cool in a wide distribution with a median at $0.8 R_{\rm vir}$, while for our accreted gas the median $\Rcool \approx 0.06 R_{\rm vir}$.
+}
 
 \begin{figure}
     \centering
@@ -218,6 +224,9 @@ Is it due to pile-up of material, increasing density and driving cooling?
     \item Results are baseline for detecting effects of feedback in observations / simulations
     
 \end{itemize}
+\subsection{Contrast with Precipitation}
+
+\textbf{We should note that we may lack the resolution necessary to see true precipitation.}
 
 \section{Conclusions}
 
