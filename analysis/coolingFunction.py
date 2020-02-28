@@ -6,10 +6,10 @@ import scipy.stats
 from scipy import interpolate
 
 Z_solar = 0.0129
-def LambdaFunc(z,tables_dir):
+def LambdaFunc(z,tables_dir,Y):
     fns = np.array(glob.glob(tables_dir+'z_?.???.hdf5'))
     zs = np.array([float(fn[-10:-5]) for fn in fns])
-    fn = fns[zs.argsort()][u.searchsortedclosest(sorted(zs), z)]
+    fn = fns[zs.argsort()][searchsortedclosest(sorted(zs), z)]
     
     f=h5py.File(fn,'r')
     iHe = searchsortedclosest(f['Metal_free']['Helium_mass_fraction_bins'][:],Y)    
