@@ -165,10 +165,12 @@ This is confirmed after-the-fact in Figure~\ref{f: theta vs R}, where gas is not
     \centering
     \includegraphics{Mdot_m12i.pdf}
     \caption{
+    Mass inflow in spherical shells as a function of radius for $T < 10^5$ K gas (blue) and $T>10^5$ K (red) gas.
+    Most inflowing gas at $r\gtrsim 20 $ kpc is hot.
     \textbf{Add images of face-on $z=0$ slice with temperature and velocity arrows.}
-    \textbf{Plot too busy. dispersion at disc radii takes to much attention. Change to SFR$(>r)$}
-    \textbf{Add cuts on density/temperature to avoid ISM gas causing a wide dispersion at low-r.}
-    \textbf{Change to linear space to emphasize halo. Cut out accretion shock.}
+    \textbf{Add SFR$(>r)$}
+    % \textbf{Add cuts on density/temperature to avoid ISM gas causing a wide dispersion at low-r.}
+    % \textbf{Change to linear space to emphasize halo. Cut out accretion shock.}
     }
     \label{f:Mdot}
 \end{figure}
@@ -209,20 +211,25 @@ This is confirmed after-the-fact in Figure~\ref{f: theta vs R}, where gas is not
     \label{f: theta vs R}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=\columnwidth]{figures/heating_vs_cooling_m12i_md.pdf}
+\begin{figure*}
+\includegraphics[width=\columnwidth]{rad_vs_compress.png}
+\includegraphics[width=\columnwidth]{rad_vs_compress_zoom.png}
 \caption{
-\textit{
-Compressional heating rate vs cooling rate as a function of radius and as a function of time.
-$n_{\rm H}^2 \Lambda / \rho$ is cooling per unit mass.
-$P dv/dt = P d(1/\rho)/dt = -P \rho^2 d\rho/dt$ is compressional heating.
+Compressional heating rate vs cooling rate of accreted particles as a function of time relative to $t(T=10^5\,{\rm K})$.
+Thick lines are medians while thin lines are 16 and 84 percentiles.
+Right panels focuses on $-60 - 100\Myr$.
 This figure shows that gas cools when the cooling is no longer offset by compressive heating.
+\textbf{
+Add a vertical line in the left panel at t-t1e5=0.
 }
-\textbf{Is compressional heating high, or cooling low?}
-\textbf{Why is there no compressional heating value at t > t1e5?}
-\textbf{Why is the value of Lcool intermittent?}
+\textbf{
+Make labels bigger, and space between figures smaller.
 }
-\end{figure}
+\textbf{
+Change image type to PDF so it never loses resolution.
+}
+}
+\end{figure*}
 
 \begin{figure}
     \centering
