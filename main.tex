@@ -42,7 +42,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Hot Accretion in FIRE]{Galactic Discs Fed Directly by Hot Accretion in FIRE}
+\title[Hot Accretion in FIRE]{Galactic Discs Fed by Hot Accretion in FIRE}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -74,13 +74,12 @@ $^1$ \ldots
 % Abstract of the paper
 \begin{abstract}
 
-We compare the contribution of modes of accretion in the FIRE simulation in $L^\star$ halos between cold accretion, hot gas that condenses into clouds and accretes onto the galaxy (``condensation''), and hot gas that accretes directly onto the galaxy as it cools.
-We demonstrate that across our sample of 4 MW-mass halos the primary mode of gas accretion is hot accretion directly onto the galactic disc, with an inflow rate $\sim 5\times$ that of other accretion modes.
-Using particle tracking we demonstrate that gas remains hot until it cools when it circularizes at $\lesssim 0.1 R_{\rm vir}$.
-Cooling gas changes from an irregular morphology without a preferred direction to strong alignment with the galactic plane within $\sim 100$ Myr of cooling.
-\textit{Gas cools after circularizing because it is no longer undergoing compressional heating that offsets cooling.}
-\textbf{Check the numbers.}
-
+We study how gas accretes onto $\sim L^\star$ star-forming galaxies at redshift $z\sim0$ using the FIRE cosmological simulations. We evaluate the relative importance of three modes of accretion: gas that never heats to the virial temperature (`cold accretion'), hot gas that condenses into cool clouds in the halo which then accretes onto the galaxy (``condensation''), and gas that remains hot down to the galaxy scale at which point it circularizes and cools (`cooling flow'). 
+We demonstrate that across our sample of 4 MW-mass halos the primary mode of gas accretion is `cooling flow', with an inflow rate $\sim xx\times$ that of other accretion modes. Cooling gas changes from an irregular morphology without a preferred direction to strong alignment with the galactic plane within $\sim 100$ Myr of cooling.
+Accretion via condensation is only associated with satellites (?). Cold accretion does not occur in significant quantities in our sample. 
+% Using particle tracking we demonstrate that gas remains hot until it cools when it circularizes at $\lesssim 0.1 R_{\rm vir}$.
+% \textit{Gas cools after circularizing because it is no longer undergoing compressional heating that offsets cooling.}
+% \textbf{Check the numbers.}
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -111,7 +110,16 @@ Two modes of hot accretion:
     \item classic CF (Cowie+80; Paper I)
 \end{itemize}
 }
-\textbf{Intro TBD}
+
+% Observational signatures
+\textbf{
+Kregel+02; van der Kruit+07;  Martín-Navarro+12; Comeron+12 all discuss the observed ``truncation radius'' of disc galaxies roughly at $\sim$4 effective radii.
+Our $\Rcool$ may explain this truncation.
+}
+
+% Related work
+\textbf{Oppenheimer+2018  show increased angular momentum in the inner halo, consistent with our results.
+Huscher+2020 also have relevant ang momentum work.}
 
 \section{Methods}
 
@@ -180,8 +188,10 @@ This is confirmed after-the-fact in Figure~\ref{f: theta vs R}, where gas is not
     \includegraphics[width=\columnwidth]{figures/tracks_m12i_md.pdf}
     \caption{
     \textbf{Main panel:} 10 T vs.\ R and K vs.\ R tracks for an $L^\star$ halo at $z=0$ (\texttt{m12i\_md}), with color indicating time minus accretion time.
+    We only show gas that has never been ejected from the central galaxy.
     Gas remains hot until cooling at $\lesssim 0.1 R_{\rm vir}$.
     \textbf{Top panel:} Distribution of $\Rcool$, the radius at which gas particles last transitioned from $T > 10^5$ K to $T < 10^5$ K prior to accreting, i.e. the radius at which they cooled prior to accretion.
+    \textbf{Add some way of visually marking the gas that heats up again. Maybe an outline?}
     }
     \label{f: T vs R}
 \end{figure}
@@ -195,21 +205,19 @@ This is confirmed after-the-fact in Figure~\ref{f: theta vs R}, where gas is not
     \label{f: T vs R m12b_md}
 \end{figure}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{figures/tracks_m11d_md.pdf}
+    \caption{
+    Same as Figure~\ref{f: T vs R}, but for \texttt{m11d\_md}.
+    }
+    \label{f: T vs R m12b_md}
+\end{figure}
+
 % \begin{figure}
 % \centering
 % \includegraphics[width=\columnwidth]{figures/tracks_m12i_md.pdf}
 % \end{figure}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=\columnwidth]{figures/theta_vs_t.pdf}
-    \caption{
-    Angular distribution of accreting gas over 250 Myr before/after cooling.
-    Prior to cooling the gas is distributed without a strong preferential direction (as shown by the consistency with the horizontal line representing a spherical PDF).
-    After cooling the gas is primarily found in the disk at $\cos\ \theta = 0$.
-    }
-    \label{f: theta vs R}
-\end{figure}
 
 \begin{figure*}
 \includegraphics[width=\columnwidth]{rad_vs_compress.png}
@@ -228,8 +236,22 @@ Make labels bigger, and space between figures smaller.
 \textbf{
 Change image type to PDF so it never loses resolution.
 }
+\textbf{
+Consider adding an individual track or a few on top (will definitely need to make the lines into shaded regions if we do this).
+}
 }
 \end{figure*}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{figures/theta_vs_t.pdf}
+    \caption{
+    Angular distribution of accreting gas over 250 Myr before/after cooling.
+    Prior to cooling the gas is distributed without a strong preferential direction (as shown by the consistency with the horizontal line representing a spherical PDF).
+    After cooling the gas is primarily found in the disk at $\cos\ \theta = 0$.
+    }
+    \label{f: theta vs R}
+\end{figure}
 
 \begin{figure}
     \centering
