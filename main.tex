@@ -42,7 +42,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Hot Accretion in FIRE]{Galactic Discs Fed Directly by Hot Accretion in FIRE}
+\title[Hot Accretion in FIRE]{How do galactic discs accrete gas in FIRE?}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -65,6 +65,7 @@ $^1$ \ldots
 \newcommand{\tcon}{t_{T=10^5\,{\rm K}}}
 \newcommand{\Mdot}{\dot{M}}
 \newcommand{\Rcirc}{R_{\rm circ}} %need better name as R_cool means something else
+\newcommand{\Rvir}{R_{\rm vir}}
 
 \begin{document}
 \label{firstpage}
@@ -73,14 +74,16 @@ $^1$ \ldots
 
 % Abstract of the paper
 \begin{abstract}
-
-We compare the contribution of modes of accretion in the FIRE simulation in $L^\star$ halos between cold accretion, hot gas that condenses into clouds and accretes onto the galaxy (``condensation''), and hot gas that accretes directly onto the galaxy as it cools.
-We demonstrate that across our sample of 4 MW-mass halos the primary mode of gas accretion is hot accretion directly onto the galactic disc, with an inflow rate $\sim 5\times$ that of other accretion modes.
-Using particle tracking we demonstrate that gas remains hot until it cools when it circularizes at $\lesssim 0.1 R_{\rm vir}$.
-Cooling gas changes from an irregular morphology without a preferred direction to strong alignment with the galactic plane within $\sim 100$ Myr of cooling.
-\textit{Gas cools after circularizing because it is no longer undergoing compressional heating that offsets cooling.}
-\textbf{Check the numbers.}
-
+We study how gas accretes onto $\sim L^\star$ star-forming galaxies at redshift $z\sim0$ using the FIRE cosmological simulations. We evaluate the relative importance of three different modes of accretion: 
+gas that never heats to the virial temperature (``cold accretion''), 
+cool clouds which condense out of the hot halo, lose buoyancy and accrete  (``condensation''), 
+and inflowing hot gas which remains hot down to the galaxy scale (``cooling flow''). 
+We demonstrate that across our sample of $xx$ MW-mass halos most accretion occurs via a cooling flow, accounting for $yy-zz\%$ of all accreted gas. Gas accreted in this mode is hot and quasi-spherical down to $\lesssim 0.1$ of the halo virial radius, at which point it simulataneously cools and circularizes, thus joining the outskirts of the galactic disc. 
+% Only a small fraction ($zz$\%) of this hot flow experienced condensation and reheating prior to accretion. 
+The remaining $vv-ww\%$ of accreted gas originates in cool clouds which condensed out of the halo. Cold accretion does not occur in appreciable quantities at $z\sim0$ in our simulations. 
+% Using particle tracking we demonstrate that gas remains hot until it cools when it circularizes at 
+% \textit{Gas cools after circularizing because it is no longer undergoing compressional heating that offsets cooling.}
+% \textbf{Check the numbers.}
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -165,7 +168,7 @@ This is confirmed after-the-fact in Figure~\ref{f: theta vs R}, where gas is not
     \centering
     \includegraphics{Mdot_m12i.pdf}
     \caption{
-    Mass inflow in spherical shells as a function of radius for $T < 10^5$ K gas (blue) and $T>10^5$ K (red) gas.
+    Mass flow rates in spherical shells as a function of radius for $T < 10^5$ K gas (blue) and $T>10^5$ K (red) gas.
     Most inflowing gas at $r\gtrsim 20 $ kpc is hot.
     \textbf{Add images of face-on $z=0$ slice with temperature and velocity arrows.}
     \textbf{Add SFR$(>r)$}
@@ -217,7 +220,7 @@ This is confirmed after-the-fact in Figure~\ref{f: theta vs R}, where gas is not
 \caption{
 Compressional heating rate vs cooling rate of accreted particles as a function of time relative to $t(T=10^5\,{\rm K})$.
 Thick lines are medians while thin lines are 16 and 84 percentiles.
-Right panels focuses on $-60 - 100\Myr$.
+Right panels focuses on $-60 - 100$ Myr.
 This figure shows that gas cools when the cooling is no longer offset by compressive heating.
 \textbf{
 Add a vertical line in the left panel at t-t1e5=0.
@@ -227,6 +230,9 @@ Make labels bigger, and space between figures smaller.
 }
 \textbf{
 Change image type to PDF so it never loses resolution.
+}
+\textbf{
+Consider adding an individual track or a few on top (will definitely need to make the lines into shaded regions if we do this).
 }
 }
 \end{figure*}
@@ -303,26 +309,26 @@ As an explicit example of how far our distribution is from a condensation model,
 
 \section{Angular Momentum of Accreting Material}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\columnwidth]{figures/j_vs_rcondense.png}
-    \caption{
-    Distribution of $\Rcool$ vs j($\Rcool$) for four FIRE-2 halos with $L(z=0) \sim L^\star$.
-Thick (thin) contours enclose values for 50\% (90\%) of the accreted gas particles.
-The angular momentum as a function of radius for all gas in \texttt{m12i} at $z=0$ is displayed as a dashed line (the median) and shaded regions (5th-95th percentiles).
-\textbf{
-Maybe delete this figure later, because it's only relevant for simulations that have a wide distribution of $\Rcool$, which are only the artificially wide non-md runs.
-}
-\textbf{Is the 100 kpc-cooling gas related to satellite galaxies?}
-\textbf{Try changing shaded region to only hot gas instead of all gas.}
-\textbf{Try histogram of r/(j/vc) instead, to demonstrate that that decreases the spread.}
-\textit{
-In all halos the distributions are consistent with $j_{\rm c} = v_{\rm c} r$, i.e. gas cools once circularized.
-This demonstrates that the variable angular momentum of incoming gas drives the width in the $\Rcool$ distribution.
-}
-    }
-    \label{f: jcool vs Rcool}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\columnwidth]{figures/j_vs_rcondense.png}
+%     \caption{
+%     Distribution of $\Rcool$ vs j($\Rcool$) for four FIRE-2 halos with $L(z=0) \sim L^\star$.
+% Thick (thin) contours enclose values for 50\% (90\%) of the accreted gas particles.
+% The angular momentum as a function of radius for all gas in \texttt{m12i} at $z=0$ is displayed as a dashed line (the median) and shaded regions (5th-95th percentiles).
+% \textbf{
+% Maybe delete this figure later, because it's only relevant for simulations that have a wide distribution of $\Rcool$, which are only the artificially wide non-md runs.
+% }
+% \textbf{Is the 100 kpc-cooling gas related to satellite galaxies?}
+% \textbf{Try changing shaded region to only hot gas instead of all gas.}
+% \textbf{Try histogram of r/(j/vc) instead, to demonstrate that that decreases the spread.}
+% \textit{
+% In all halos the distributions are consistent with $j_{\rm c} = v_{\rm c} r$, i.e. gas cools once circularized.
+% This demonstrates that the variable angular momentum of incoming gas drives the width in the $\Rcool$ distribution.
+% }
+%     }
+%     \label{f: jcool vs Rcool}
+% \end{figure}
 
 \section{Metal diffusion vs non-metal diffusion}
 
