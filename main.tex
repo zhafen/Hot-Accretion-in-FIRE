@@ -42,7 +42,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Hot Accretion in FIRE]{How do galactic discs accrete gas in FIRE?}
+\title[Hot Accretion in FIRE]{Galactic discs fed by hot accretion in the FIRE simulations}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -81,9 +81,13 @@ and inflowing hot gas which remains hot down to the galaxy scale (``cooling flow
 We demonstrate that across our sample of $xx$ MW-mass halos most accretion occurs via a cooling flow, accounting for $yy-zz\%$ of all accreted gas. Gas accreted in this mode is hot and quasi-spherical down to $\lesssim 0.1$ of the halo virial radius, at which point it simulataneously cools and circularizes, thus joining the outskirts of the galactic disc. 
 % Only a small fraction ($zz$\%) of this hot flow experienced condensation and reheating prior to accretion. 
 The remaining $vv-ww\%$ of accreted gas originates in cool clouds which condensed out of the halo. Cold accretion does not occur in appreciable quantities at $z\sim0$ in our simulations. 
-% Using particle tracking we demonstrate that gas remains hot until it cools when it circularizes at 
-% \textit{Gas cools after circularizing because it is no longer undergoing compressional heating that offsets cooling.}
-% \textbf{Check the numbers.}
+\textbf{
+Include: Comparison of angular momentum radius to disk radius, making the connection between disk feeding and disk size.
+Disk size can be uniquely characterized in observations by a knee in the stellar profile.
+}
+\textbf{
+Include: Compare Mdotcool with the accretion rate and SFR to further strengthen the relation, maybe through Figure 1 in an energetic sense.
+}
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -115,6 +119,25 @@ Two modes of hot accretion:
 \end{itemize}
 }
 \textbf{Intro TBD}
+
+\textbf{Info-dump from Jonathan:}
+Some refs on truncation radius in observations:
+Kregel+02: tight correlation between disk truncation radius and Re (Spearman 0.95) in 34 edge-on spirals (in face-on galaxies stellar halos can outshine truncation, see Martín-Navarro+14). $R_truncation / R\_e(I-band) \sim~ 3.6$. Somewhat higher ratio in small Re spirals, somewhat lower ratio in bluer passbands (where Re is larger). Re is independently found to be proportional to the virial radius, roughly Re ~ 0.011 Rvir (e.g. Kravtsov13)
+Martín-Navarro+12: 34 edge-on spirals from SDSS / S4G: Rtruncation ~ 1.1 R25, where R25 is the radius at which the surface brightness equals 25mag
+van der Kruit+07: when a HI-warp is present in the gaseous disc it starts at 1.1 Rtrunc; the truncation radius and the onset of the warps coincide radially sometimes with features in the rotation curve and often with steep declines in the HI surface density; inner disks are very flat and the onset of the warp just beyond the truncation radius is abrupt and discontinuous;
+Perez+04, Trujillo\&Pohlen05, Azzollini+08: measurements of truncation radius at z~1
+Comeron+12: 70 edge-on S4G galaxies. 77\% of thin discs truncate, but only 31\% of thick discs. $M_thick/M_thin$ increases with decreasing $v_c$
+de Jong+07: Stellar Populations across the NGC 4244 Truncated Galactic Disk
+Haberzettl+07: truncation in LSBs
+some suggested theoretical explanations of breaks:
+https://ui.adsabs.harvard.edu/abs/2009MNRAS.398..591S/abstract
+https://ui.adsabs.harvard.edu/abs/2008ApJ...675L..65R/abstract
+https://ui.adsabs.harvard.edu/abs/2006ApJ...645..209D/abstract
+https://ui.adsabs.harvard.edu/abs/2009ApJ...705L.133M/abstract
+https://ui.adsabs.harvard.edu/abs/1987A%26A...173...59V/abstract
+and short summary sentence from Comeron+12 intro:
+"Several theories compete for explaining the origin of such breaks. Truncations have been explained by dynamical arguments related to the conservation of angular momentum during galaxy formation, by star formation thresholds, and by the redistribution of angular momentum by a bar. Antitruncations have in some cases been linked to interactions and mergers."
+Antitruncations are cases where the Surface Brightness profiles flattens at large disc radii rather than steepens. From my impression of the observational literature anti-truncations are seen mainly in face-on galaxies and are related to the existence of stellar halos
 
 \section{Methods}
 
@@ -163,40 +186,54 @@ This is confirmed after-the-fact in Figure~\ref{f: theta vs R}, where gas is not
 \textbf{When calculating the cooling function I just used Y=0.2485. That should be fine, right?}
 
 \section{Results}
+\subsection{Inflow rates of different phases}
+\newcommand{\nH}{n_{\rm H}}
 
-\begin{figure}
+We calculate the mass inflow rate as
+\begin{equation}\label{e:Mdot}
+     \Mdot = \frac{\int_{\rm shell} v_r dm}{\Delta r} = \frac{M_{\rm shell}}{\Delta r} \langle v_r\rangle_\rho
+\end{equation}
+where $\Delta r$ is the shell thickness, and the integration is done on all particles which center is within the shell. Mass-weighted averaging is noted by $\langle\cdot\rangle_\rho$.
+
+\textbf{TBD: $\dot{M}_{\rm stars}$ in Fig.~\ref{f:Mdot} is currently SFR$/2$. Change to SFR minus gas returned from winds/SNe.}
+    
+\begin{figure*}
     \centering
-    \includegraphics{Mdot_m12i.pdf}
+    \includegraphics{Mdot.pdf}
     \caption{
-    Mass flow rates in spherical shells as a function of radius for $T < 10^5$ K gas (blue) and $T>10^5$ K (red) gas.
-    Most inflowing gas at $r\gtrsim 20 $ kpc is hot.
-    \textbf{Add images of face-on $z=0$ slice with temperature and velocity arrows.}
-    \textbf{Add SFR$(>r)$}
+    Average mass inflow rates in the last Gyr of two FIRE simulations. Black line shows the total $\dot{M}_{\rm inflows}$  while colored lines show the division into the hot, cool and cold phases. 
+    The inflow is dominated by hot gas at $r\gtrsim 20 $ kpc. For comparison the dashed grey line shows the gas mass converted into stars.
+    \textbf{verify conversion SFR to Mdot\_stars}
+    % \textbf{Add images of face-on $z=0$ slice with temperature and velocity arrows.}
+    % \textbf{Add top x-axis with radius in units of $\Rvir$}.
     % \textbf{Add cuts on density/temperature to avoid ISM gas causing a wide dispersion at low-r.}
     % \textbf{Change to linear space to emphasize halo. Cut out accretion shock.}
+    % \textbf{Try using Clarke's entropy cut.}
     }
     \label{f:Mdot}
-\end{figure}
+\end{figure*}
 
-\begin{figure}
+\begin{figure*}
     \centering
     \includegraphics[width=\columnwidth]{figures/tracks_m12i_md.pdf}
+    \includegraphics[width=\columnwidth]{figures/tracks_m12b_md.pdf}
     \caption{
-    \textbf{Main panel:} 10 T vs.\ R and K vs.\ R tracks for an $L^\star$ halo at $z=0$ (\texttt{m12i\_md}), with color indicating time minus accretion time.
-    Gas remains hot until cooling at $\lesssim 0.1 R_{\rm vir}$.
+    \textbf{Main panels:} 10 T vs.\ R and K vs.\ R tracks for two $L^\star$ halo at $z=0$, with color indicating time minus accretion time.
+    Gas either remains hot or cools and reheats down to $\lesssim 0.1 R_{\rm vir}$. 
+    % We do not show gas that has ever been ejected from the central galaxy.
     \textbf{Top panel:} Distribution of $\Rcool$, the radius at which gas particles last transitioned from $T > 10^5$ K to $T < 10^5$ K prior to accreting, i.e. the radius at which they cooled prior to accretion.
     }
     \label{f: T vs R}
-\end{figure}
+\end{figure*}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\columnwidth]{figures/tracks_m12b_md.pdf}
-    \caption{
-    Same as Figure~\ref{f: T vs R}, but for \texttt{m12b\_md}.
-    }
-    \label{f: T vs R m12b_md}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=\columnwidth]{figures/tracks_m11d_md.pdf}
+%     \caption{
+%     Same as Figure~\ref{f: T vs R}, but for \texttt{m11d\_md}.
+%     }
+%     \label{f: T vs R m11d_md}
+% \end{figure}
 
 % \begin{figure}
 % \centering
@@ -207,35 +244,43 @@ This is confirmed after-the-fact in Figure~\ref{f: theta vs R}, where gas is not
     \centering
     \includegraphics[width=\columnwidth]{figures/theta_vs_t.pdf}
     \caption{
-    Angular distribution of accreting gas over 250 Myr before/after cooling.
-    Prior to cooling the gas is distributed without a strong preferential direction (as shown by the consistency with the horizontal line representing a spherical PDF).
-    After cooling the gas is primarily found in the disk at $\cos\ \theta = 0$.
+    Angular distribution of accreting gas over 250 Myr before/after cooling. Cooling and circularization occur together -- prior to cooling the gas is distributed quasi-spherically, while after cooling the gas has a disc like configuration.
+    \textbf{note `disc distribution' near vertical line'}.
+    \textbf{remove m11d}.
     }
     \label{f: theta vs R}
 \end{figure}
 
 \begin{figure*}
-\includegraphics[width=\columnwidth]{rad_vs_compress.png}
-\includegraphics[width=\columnwidth]{rad_vs_compress_zoom.png}
+% \includegraphics[width=\columnwidth]{rad_vs_compress.png}
+% \includegraphics[width=\columnwidth]{rad_vs_compress_zoom.png}
+\includegraphics{Edot.pdf}
 \caption{
-Compressional heating rate vs cooling rate of accreted particles as a function of time relative to $t(T=10^5\,{\rm K})$.
-Thick lines are medians while thin lines are 16 and 84 percentiles.
-Right panels focuses on $-60 - 100$ Myr.
-This figure shows that gas cools when the cooling is no longer offset by compressive heating.
+Comparison of energy sources and sinks in the last Gyr of two FIRE simulations. Black line shows the gravitational energy loss of the flow.  Blue line shows the energy lost to radiation of $T>10^4$ K gas. Red line shows the $PdV$ work on the flow. Gray dashed lines approximate the feedback energy. 
+Note that in the CGM This figure shows that gas cools when the cooling is no longer offset by compressive heating.
 \textbf{
-Add a vertical line in the left panel at t-t1e5=0.
-}
-\textbf{
-Make labels bigger, and space between figures smaller.
-}
-\textbf{
-Change image type to PDF so it never loses resolution.
-}
-\textbf{
-Consider adding an individual track or a few on top (will definitely need to make the lines into shaded regions if we do this).
+Go back to Lagrangian form.
+Limit to -250 to 250 Myr.
+Sum radiative cooling and compressive heating for all particles in bins of $t_{10^5 K}$.
 }
 }
+\label{f:Edot}
 \end{figure*}
+
+\begin{figure}
+    \centering
+    % \includegraphics{}
+    \caption{
+    \textbf{
+    Left:
+    Stellar profile for young edge-on stellar disk showing truncation.
+    Include vertical line for Rcirc (top panels for Figure 2-3).
+    Right:
+    Observational histogram for Rtrunc/Rhalf, with a line for the FIRE sim value.
+    }
+    }
+    \label{f:emission}
+\end{figure}
 
 \begin{figure}
     \centering
@@ -259,7 +304,33 @@ As an explicit example of how far our distribution is from a condensation model,
 }
 \textit{We added all particles with $\Rcool>100$ to $R=100$ bin, so we don't ignore them.}
 
+\subsection{Energetics}
+
+To demonstrate that the hot radial inflow is driven by cooling, we compare the different terms of the energy conservation equation. In steady-state, and assuming the gravitationaly potential is constant,  energy conservation in the radial direction dictates \citep[e.g.][]{Shu82}
+\begin{equation}\label{e:energy}
+    \rho g v_r + H_{\rm feedback} - \frac{d}{dr}(v_r P)= 
+    \frac{d}{dr}\left(\rho v_r \left(\epsilon+\frac{1}{2}v^2\right)\right)  +  \nH^2\Lambda  
+\end{equation}
+where the terms on the left hand side are the `source terms' -- gravity, feedback, and the work done on the shell by adjacent shells, while the terms on the right represent respectively the heating and acceleration of the flow and radiative losses. 
+Integrating over radial shells and rearranging we get the energy integral
+\begin{equation}
+    \Mdot\frac{d}{dr}\left(\Phi+\frac{3}{2}\epsilon + \frac{1}{2}v^2\right) = 4\pi r^2 \left(\langle\nH^2\Lambda\rangle-\langle H_{\rm feedback}\rangle\right)
+\end{equation}
+
+In Fig.~\ref{f:Edot} we plot each of the terms in eqn.~(\ref{e:energy}), averaged over radial shells and over time. Shell averages of quantity $Q$ are calculated via 
+\begin{equation}
+    \frac{d\dot{E}_Q}{d r} = \frac{\int_{\rm shell} Q\rho^{-1} dm}{\Delta r} 
+\end{equation}
+where the intergral is over all particles within the shell and $\Delta r$ is the thickness of the shell. The factor $\rho^{-1}$ is since eqn.~\ref{e:energy} is in Eulerian form. We then take the average of all shells at a given $r$ in snapshots of the last Gyr of the simulation. 
+% In order to calculate the compression term from a single snapshot, we make the following further approximation \textbf{(TBD: check if justified)}
+% \begin{equation}
+%     \frac{d\dot{E}_{\rm comp}}{d r} \approx 
+%     \Mdot P \left\langle\frac{d V}{d r}\right\rangle_{\rho v_r} \approx
+%     \Mdot P \frac{d\langle V \rangle_{\rho v_r} }{dr}
+% \end{equation}
+% Note that since $d\ln\rho/ d\ln r$ is of order unity, and in hot virial temperature gas $\epsilon/r \approx c_{\rm s}^2/r \approx v_{\rm c}^2/r = g$, we get that $\dot{E}_{\rm comp}$ (eqn.~\ref{e:Ecomp}) and $\dot{E}_{\rm grav}$ (eqn.~\ref{e:Egrav}) are of the same order.
 \section{Discussion}
+
 
 \subsection{AGN feedback}
 
@@ -270,7 +341,18 @@ As an explicit example of how far our distribution is from a condensation model,
 \end{itemize}
 }
 
-\subsection{Contrast with Condensation/Precipitation}
+\subsection{Contrast with other accretion mechanisms}
+
+\subsubsection{Condensation/Precipitation}
+
+\begin{itemize}
+    \item Nelson+20
+    \item Esmerian+20
+\end{itemize}
+emphasize cold clouds due to over-densities heat back up and join the hot inflow, as in Illustris (see fig.~12 in Nelson+20
+
+\subsubsection{filaments}
+Kretschmer+20
 
 \textbf{Discuss resolution effects and Balbus\&Soker}
 
@@ -330,9 +412,11 @@ As an explicit example of how far our distribution is from a condensation model,
 %     \label{f: jcool vs Rcool}
 % \end{figure}
 
-\section{Metal diffusion vs non-metal diffusion}
+\section{Metal diffusion vs non-metal diffusion vs MHDCV}
 
 \textbf{Plot of distribution $\Rcool$ for m12i and m12i\_md overlapping. Show cooling only happens at large radii in metal diffusion sims.}
+
+\textbf{Add mhdcv comparison.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
