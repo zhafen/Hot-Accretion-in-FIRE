@@ -222,6 +222,9 @@ where $\Delta r$ is the shell thickness, and the integration is done on all part
     Gas either remains hot or cools and reheats down to $\lesssim 0.1 R_{\rm vir}$. 
     % We do not show gas that has ever been ejected from the central galaxy.
     \textbf{Top panel:} Distribution of $\Rcool$, the radius at which gas particles last transitioned from $T > 10^5$ K to $T < 10^5$ K prior to accreting, i.e. the radius at which they cooled prior to accretion.
+    \textbf{Try out fractional form: ultimate goal make it super clear (which it is, so the presentation shouldn't hinder it).}
+    \textbf{Remove vertical lines for Rsonic.}
+    \textbf{Consider putting histograms by themselves to have a very simple, clear result with no distraction.}
     }
     \label{f: T vs R}
 \end{figure*}
@@ -246,26 +249,32 @@ where $\Delta r$ is the shell thickness, and the integration is done on all part
     \caption{
     Angular distribution of accreting gas over 250 Myr before/after cooling. Cooling and circularization occur together -- prior to cooling the gas is distributed quasi-spherically, while after cooling the gas has a disc like configuration.
     \textbf{note `disc distribution' near vertical line'}.
-    \textbf{remove m11d}.
+    \textbf{remove m11d maybe. An advantage for including is that it provides a powerful contrast.}.
+    \textbf{Try splitting up into two panels side-by-side with a "before" panel and an "after" panel.}
+    \textbf{Make a plot using the same particle bins as here, but showing the sum of the angular momentum for all particles in the bin, divided by vcR}
+    \textbf{See if the distribution becomes narrower if selecting a narrower range of particles.}
+    \textbf{Compare accretion radii (this plot) to a textbook angular momentum support radii distribution.}
     }
     \label{f: theta vs R}
 \end{figure}
 
-\begin{figure*}
+\begin{figure}
 % \includegraphics[width=\columnwidth]{rad_vs_compress.png}
-% \includegraphics[width=\columnwidth]{rad_vs_compress_zoom.png}
-\includegraphics{Edot.pdf}
+\includegraphics[width=\columnwidth]{figures/rad_vs_compress.pdf}
+% \includegraphics{Edot.pdf}
 \caption{
-Comparison of energy sources and sinks in the last Gyr of two FIRE simulations. Black line shows the gravitational energy loss of the flow.  Blue line shows the energy lost to radiation of $T>10^4$ K gas. Red line shows the $PdV$ work on the flow. Gray dashed lines approximate the feedback energy. 
-Note that in the CGM This figure shows that gas cools when the cooling is no longer offset by compressive heating.
+% Comparison of energy sources and sinks in the last Gyr of two FIRE simulations. Black line shows the gravitational energy loss of the flow.  Blue line shows the energy lost to radiation of $T>10^4$ K gas. Red line shows the $PdV$ work on the flow. Gray dashed lines approximate the feedback energy. 
+This figure shows that gas cools when the cooling is no longer offset by compressive heating.
 \textbf{
-Go back to Lagrangian form.
-Limit to -250 to 250 Myr.
-Sum radiative cooling and compressive heating for all particles in bins of $t_{10^5 K}$.
+Add another panel that shows average radius for the same collection of particles.
+Try cutting out tail of particles that makes the low-opacity lines.
+Radiation -> radiation cooling
+Compression -> compression heating
+Add "time" to the x-axis.
 }
 }
 \label{f:Edot}
-\end{figure*}
+\end{figure}
 
 \begin{figure}
     \centering
