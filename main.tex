@@ -122,7 +122,8 @@ Two modes of hot accretion:
 
 \textbf{Info-dump from Jonathan:}
 Some refs on truncation radius in observations:
-Kregel+02: tight correlation between disk truncation radius and Re (Spearman 0.95) in 34 edge-on spirals (in face-on galaxies stellar halos can outshine truncation, see Martín-Navarro+14). $R_truncation / R\_e(I-band) \sim~ 3.6$. Somewhat higher ratio in small Re spirals, somewhat lower ratio in bluer passbands (where Re is larger). Re is independently found to be proportional to the virial radius, roughly Re ~ 0.011 Rvir (e.g. Kravtsov13)
+\cite{Kregel2002} tight correlation between disk truncation radius and Re (Spearman 0.95) in 34 edge-on spirals (in face-on galaxies stellar halos can outshine truncation, see Martín-Navarro+14). $R_{\rm truncation} / R_e({\rm Iband}) \sim~ 3.6$. Somewhat higher ratio in small Re spirals, somewhat lower ratio in bluer passbands (where Re is larger).
+Re is independently found to be proportional to the virial radius, roughly Re ~ 0.015 Rvir (e.g. Kravtsov13).
 Martín-Navarro+12: 34 edge-on spirals from SDSS / S4G: Rtruncation ~ 1.1 R25, where R25 is the radius at which the surface brightness equals 25mag
 van der Kruit+07: when a HI-warp is present in the gaseous disc it starts at 1.1 Rtrunc; the truncation radius and the onset of the warps coincide radially sometimes with features in the rotation curve and often with steep declines in the HI surface density; inner disks are very flat and the onset of the warp just beyond the truncation radius is abrupt and discontinuous;
 Perez+04, Trujillo\&Pohlen05, Azzollini+08: measurements of truncation radius at z~1
@@ -199,10 +200,10 @@ where $\Delta r$ is the shell thickness, and the integration is done on all part
     
 \begin{figure*}
     \centering
-    \includegraphics{Mdot.pdf}
+    \includegraphics{Mdot_normalized.pdf}
     \caption{
-    Average mass inflow rates in the last Gyr of two FIRE simulations. Black line shows the total $\dot{M}_{\rm inflows}$  while colored lines show the division into the hot, cool and cold phases. 
-    The inflow is dominated by hot gas at $r\gtrsim 20 $ kpc. For comparison the dashed grey line shows the gas mass converted into stars.
+    Average mass inflow rate in the last Gyr of two FIRE simulations. Black lines in the top panels show the total $\dot{M}_{\rm inflows}$  while colored lines in the bottom panels show the division into the hot, cool and cold phases. 
+    The inflow is dominated by hot gas at $r\gtrsim 20 $ kpc. For comparison the dotted line shows the rate of gas being converted into stars.
     \textbf{verify conversion SFR to Mdot\_stars}
     % \textbf{Add images of face-on $z=0$ slice with temperature and velocity arrows.}
     % \textbf{Add top x-axis with radius in units of $\Rvir$}.
@@ -222,9 +223,12 @@ where $\Delta r$ is the shell thickness, and the integration is done on all part
     Gas either remains hot or cools and reheats down to $\lesssim 0.1 R_{\rm vir}$. 
     % We do not show gas that has ever been ejected from the central galaxy.
     \textbf{Top panel:} Distribution of $\Rcool$, the radius at which gas particles last transitioned from $T > 10^5$ K to $T < 10^5$ K prior to accreting, i.e. the radius at which they cooled prior to accretion.
-    \textbf{Try out fractional form: ultimate goal make it super clear (which it is, so the presentation shouldn't hinder it).}
+    \textbf{Try out fractional form: ultimate goal make it super clear (which the result is, so the presentation shouldn't hinder it).}
     \textbf{Remove vertical lines for Rsonic.}
     \textbf{Consider putting histograms by themselves to have a very simple, clear result with no distraction.}
+    \textbf{
+    Try plotting an edge-on image of the system to-scale above the histogram.
+    }
     }
     \label{f: T vs R}
 \end{figure*}
@@ -242,6 +246,8 @@ where $\Delta r$ is the shell thickness, and the integration is done on all part
 % \centering
 % \includegraphics[width=\columnwidth]{figures/tracks_m12i_md.pdf}
 % \end{figure}
+
+\textbf{Zoom-in on axis labels for Figure 4, add ratio of radiative cooling/compressive heating.}
 
 \begin{figure}
     \centering
@@ -266,8 +272,8 @@ where $\Delta r$ is the shell thickness, and the integration is done on all part
 % Comparison of energy sources and sinks in the last Gyr of two FIRE simulations. Black line shows the gravitational energy loss of the flow.  Blue line shows the energy lost to radiation of $T>10^4$ K gas. Red line shows the $PdV$ work on the flow. Gray dashed lines approximate the feedback energy. 
 This figure shows that gas cools when the cooling is no longer offset by compressive heating.
 \textbf{
-Add another panel that shows average radius for the same collection of particles.
-Try cutting out tail of particles that makes the low-opacity lines.
+Avoid clipping of titles
+Make sure cutting out of low-n bins is justified.
 Radiation -> radiation cooling
 Compression -> compression heating
 Add "time" to the x-axis.
