@@ -61,11 +61,12 @@ $^1$ \ldots
 
 % Don't change these lines
 
-\newcommand{\Rcool}{R_{T=10^5\,{\rm K}}}
+\newcommand{\Rcon}{R_{T=10^5\,{\rm K}}}
 \newcommand{\tcon}{t_{T=10^5\,{\rm K}}}
 \newcommand{\Mdot}{\dot{M}}
 \newcommand{\Rcirc}{R_{\rm circ}} %need better name as R_cool means something else
 \newcommand{\Rvir}{R_{\rm vir}}
+\newcommand{\nH}{n_{\rm H}}
 
 \begin{document}
 \label{firstpage}
@@ -173,58 +174,43 @@ For each selected particle we retrieve the full history of the particle (includi
 
 % Handling duplicate IDS
 \textit{
-The selection criteria also selects particles that are duplicates of those in the galaxy and were previously in the CGM, as well as particles that are in the galaxy and are duplicates of particles in the CGM, and also all particles that are duplicates prior and afterwards.
+Of the particles targeted to be tracked $<2\%$ are particles that will accumulate or have accumulated at least twice their mass' worth in deposited mass from stellar feedback, resulting in them being split into two particles.
+These particles pose a problem for tracking because the history of the additional mass is not recorded and likely comes from a variety of sources.
+As in \cite{Hafen2019}, we discard these particles, which are not expected to affect our results due to their small contribution.
 }
-% \textit{
-% As much as $\sim 1/3$ of the particles targeted to be tracked (e.g. in the case of \texttt{m12i\_md}) are particles that will accumulate or have accumulated at least twice their mass' worth in deposited mass from stellar feedback, resulting in them being split into two particles.
-% These particles pose a problem for tracking because the history of the additional mass is not recorded and likely comes from a variety of sources.
-% }
-% \textbf{
-% There are a few options for addressing this in the context of our analysis.
-% 1. The work-intensive option:
-% We could track the history of the particles prior to accumulating enough mass to split, and compare it to the history of unsplit particles to understand what type of bias that induces.
-% This could be an informative addition to our analysis if we frame it as a history as a function of stellar feedback deposition.
-% In particular, we would want to likely show hot accretion fraction as a function of stellar feedback deposition.
-% This would be good to compare to hot accretion fraction as a function of SFR.
-% 2. The quick option:
-% We could show that the hot accretion fraction doesn't change significantly as a function of stellar mass deposition for our tracked particles.
-% 3. The quicker option:
-% We could show that $\Rcool$ doesn't change significantly as a function of stellar mass deposition for our tracked particles.
-% }
-% \textbf{Why does GIZMO split particles, i.e., why are similar masses important?}
-% \textbf{If going (1) direction: why does mass decrease for particles w/o duplicates? Is this after they become stars and start producing stellar feedback?}
-
 
 % Definition of t1e5 and calculating it
 \textit{
 $\tcon$ is the latest time among our particles at which the particle transitions from $T > 10^5$ K to $T< 10^5$ K.
-(When selecting values in the simulation corresponding to $\tcon$ we use the last snapshot an accreted particle had $T > 10^5$ K, i.e. the snapshot immediately before the transition.)
+When selecting values in the simulation corresponding to $\tcon$ we use the last snapshot an accreted particle had $T > 10^5$ K, i.e. the snapshot immediately before the transition.
 Note that we do not account for gas particles being heated to $T > 10^5$ K while still in the ISM.
 Because our sample of tracked particles focuses on recently accreted particles this is expected to be a small population that will not contaminate our analysis.
 This is confirmed after-the-fact in Figure~\ref{f: theta vs R}, where gas is not preferentially oriented in a disky ISM prior to $\tcon$.
 }
-\textbf{We could select out ISM-heated particles, if necessary, but as noted above Figure~\ref{f: theta vs R} shows that this is not an issue.}
 
-\begin{equation}
-    \Rcool \equiv R(\tcon)
-\end{equation}
-
-
-\textit{the circularization radius $\Rcirc$ is defined via}
-\begin{equation}
-    j = v_{\rm c}(\Rcirc)\Rcirc
-\end{equation}
-\textit{where $j$ is the specific angular momentum and $v_{\rm c}$ is the circular velocity.}
+% Rcon and interpretation
+\textit{
+Another important quantity is $\Rcon\equiv R(\tcon)$, the 3D distance from the center of the galaxy of the particle at time $\tcon$.
+For gas that cools in the halo $\Rcon$  will be at CGM scales, while for gas that cools directly onto the galaxy $\Rcon$ will be at galaxy scales.
+}
 
 \section{Results}
-\subsection{Inflow rates of different phases}
-\newcommand{\nH}{n_{\rm H}}
+
+\subsection{Phase of inflowing gas}
 
 We calculate the mass inflow rate as
 \begin{equation}\label{e:Mdot}
      \Mdot = \frac{\int_{\rm shell} v_r dm}{\Delta r} = \frac{M_{\rm shell}}{\Delta r} \langle v_r\rangle_\rho
 \end{equation}
 where $\Delta r$ is the shell thickness, and the integration is done on all particles which center is within the shell. Mass-weighted averaging is noted by $\langle\cdot\rangle_\rho$.
+
+\subsection{Morphology of accreting gas}
+
+\subsubsection{Gas cools at or near the galaxy edge}
+
+\subsubsection{Gas forms a disk as it cools}
+
+\subsection{Cooling and accretion mechanisms}
 
 \textbf{TBD: $\dot{M}_{\rm stars}$ in Fig.~\ref{f:Mdot} is currently SFR$/2$. Change to SFR minus gas returned from winds/SNe.}
     
@@ -254,7 +240,7 @@ where $\Delta r$ is the shell thickness, and the integration is done on all part
     \textbf{Main panels:} 10 T vs.\ R and K vs.\ R tracks for two $L^\star$ halo at $z=0$, with color indicating time relative to the time at which gas cools.
     Gas either remains hot or cools only temporarily down to $\lesssim 0.1 R_{\rm vir}$. 
     % We do not show gas that has ever been ejected from the central galaxy.
-    \textbf{Top panel:} Distribution of $\Rcool$, the radius at which gas particles last transitioned from $T > 10^5$ K to $T < 10^5$ K prior to accreting, i.e. the radius at which they cooled prior to accretion.
+    \textbf{Top panel:} Distribution of $\Rcon$, the radius at which gas particles last transitioned from $T > 10^5$ K to $T < 10^5$ K prior to accreting, i.e. the radius at which they cooled prior to accretion.
     \textbf{Try out fractional form: ultimate goal make it super clear (which the result is, so the presentation shouldn't hinder it).}
     \textbf{Remove vertical lines for Rsonic.}
     \textbf{Consider putting histograms by themselves to have a very simple, clear result with no distraction.}
@@ -262,7 +248,7 @@ where $\Delta r$ is the shell thickness, and the integration is done on all part
     Try plotting an edge-on image of the system to-scale above the histogram.
     }
     \textbf{
-    Try making a 2D histogram of \Rcool and the angle at which it accretes.
+    Try making a 2D histogram of $\Rcon$ and the angle at which it accretes.
     }
  \textbf{Compare accretion radii (this plot) to a textbook angular momentum support radii distribution.}
     }
@@ -319,6 +305,9 @@ Make sure cutting out of low-n bins is justified.
 Check bin width.
 Add "time" to the x-axis label.
 Consider adding another panel that's angular momentum along total angular momentum axis, relevant for disk formation and aligned accretion.
+Add comment about the degeneracy/compleminterarty(?) of increased density and running into the pre-existing gas.
+A confusing part to some (e.g. Alex) is how the pole-gas interacts with others.
+Whether or not virialization matters depends on when alignment happens. If out in the halo then the virialized halo can circularize. Otherwise it's just gas that circularizes at a given radius when it starts to interact with other gas.
 }
 }
 \label{f:before_after_cooling}
@@ -336,6 +325,7 @@ Fill out observations description.
 Put on log-linear axis.
 Cut out inner radii where dust obscuration is likely an issue.
 Maybe cut out entirely and just reference Cameron's paper.
+Reference Shea and Kareem's papers.
 }
 }
 \label{f:stellar_profile}
@@ -359,9 +349,9 @@ The main panels of Figure~\ref{f: T vs R} show the paths in temperature-radius a
 
 % Distribution of r1e5
 \textit{
-As an explicit example of how far our distribution is from a condensation model, isotropic cooling occurring randomly within $R_{\rm vir}$ would cool in a wide distribution with a median at $0.8 R_{\rm vir}$, while for our accreted gas the median $\Rcool \approx 0.06 R_{\rm vir}$.
+As an explicit example of how far our distribution is from a condensation model, isotropic cooling occurring randomly within $R_{\rm vir}$ would cool in a wide distribution with a median at $0.8 R_{\rm vir}$, while for our accreted gas the median $\Rcon \approx 0.06 R_{\rm vir}$.
 }
-\textit{We added all particles with $\Rcool>100$ to $R=100$ bin, so we don't ignore them.}
+\textit{We added all particles with $\Rcon>100$ to $R=100$ bin, so we don't ignore them.}
 
 \subsection{Energetics}
 
@@ -401,14 +391,7 @@ Can be checked by making an equivalent to Figure~\ref{f:before_after_cooling} fo
 Consider making slice movies of the galaxy and inner halo to better track how the hot halo affects accretion.
 }
 
-\subsection{AGN feedback}
-
-\textit{
-\begin{itemize}
-    \item Results expected to be valid after disc forms (Paper III) and before AGN feedback kicks in (ref.~Byrne+)
-    \item Results are baseline for detecting effects of feedback in observations / simulations
-\end{itemize}
-}
+\subsection{Generality of accretion mode}
 
 \subsection{Contrast with other accretion mechanisms}
 
@@ -424,6 +407,48 @@ emphasize cold clouds due to over-densities heat back up and join the hot inflow
 Kretschmer+20
 
 \textbf{Discuss resolution effects and Balbus\&Soker}
+
+\subsection{AGN feedback}
+
+\textit{
+\begin{itemize}
+    \item Results expected to be valid after disc forms (Paper III) and before AGN feedback kicks in (ref.~Byrne+)
+    \item Results are baseline for detecting effects of feedback in observations / simulations
+\end{itemize}
+}
+
+\subsection{Contrast with Cameron+2021}
+
+\textbf{
+Discussion goal:
+A brief description of gas accretion in FIRE for both CR and non-CR halos, i.e. we have the narrative laid out consistently.
+There are two areas where I think the narrative could use some sharpening.
+Other goals?
+}
+
+% CR vs MHDCV
+\textbf{Gas should be moving inward more slowly due to extra support, and so should be a bit cooler ($T\sim 10^5$ K), but otherwise same general picture.}
+
+% Organization into disk: angular momentum exchange
+\textbf{
+Our analysis suggests that as part of a hot halo with gas moving at sub-sonic speeds angular momentum can be exchanged between gas at all angles.
+Therefore, when the gas eventually cools it naturally organizes into a disk.
+}
+\textbf{
+Similar for CR, but gas starts to organize into a disk earlier
+}
+
+%  Organization into disk: cooling mechanism
+\textbf{Option 1: Radiative cooling is no longer offset by compression.}
+\textbf{Option 2: Pile-up increases density, and runaway cooling happens.}
+
+% Does this set the size for disks?
+
+% Results overlap
+\textbf{Cameron Fig 7/Fig 3.}
+\textbf{Cameron Fig 5/Fig 4.}
+\textbf{Cameron Fig 8/Fig 2.}
+I think these potential overlaps are fine, and if anything beneficial to reinforce.
 
 \section{Conclusions}
 
@@ -471,26 +496,26 @@ Kretschmer+20
 %     \centering
 %     \includegraphics[width=\columnwidth]{figures/j_vs_rcondense.png}
 %     \caption{
-%     Distribution of $\Rcool$ vs j($\Rcool$) for four FIRE-2 halos with $L(z=0) \sim L^\star$.
+%     Distribution of $\Rcon$ vs j($\Rcon$) for four FIRE-2 halos with $L(z=0) \sim L^\star$.
 % Thick (thin) contours enclose values for 50\% (90\%) of the accreted gas particles.
 % The angular momentum as a function of radius for all gas in \texttt{m12i} at $z=0$ is displayed as a dashed line (the median) and shaded regions (5th-95th percentiles).
 % \textbf{
-% Maybe delete this figure later, because it's only relevant for simulations that have a wide distribution of $\Rcool$, which are only the artificially wide non-md runs.
+% Maybe delete this figure later, because it's only relevant for simulations that have a wide distribution of $\Rcon$, which are only the artificially wide non-md runs.
 % }
 % \textbf{Is the 100 kpc-cooling gas related to satellite galaxies?}
 % \textbf{Try changing shaded region to only hot gas instead of all gas.}
 % \textbf{Try histogram of r/(j/vc) instead, to demonstrate that that decreases the spread.}
 % \textit{
 % In all halos the distributions are consistent with $j_{\rm c} = v_{\rm c} r$, i.e. gas cools once circularized.
-% This demonstrates that the variable angular momentum of incoming gas drives the width in the $\Rcool$ distribution.
+% This demonstrates that the variable angular momentum of incoming gas drives the width in the $\Rcon$ distribution.
 % }
 %     }
-%     \label{f: jcool vs Rcool}
+%     \label{f: jcool vs Rcon}
 % \end{figure}
 
 \section{Metal diffusion vs non-metal diffusion vs MHDCV}
 
-\textbf{Plot of distribution $\Rcool$ for m12i and m12i\_md overlapping. Show cooling only happens at large radii in metal diffusion sims.}
+\textbf{Plot of distribution $\Rcon$ for m12i and m12i\_md overlapping. Show cooling only happens at large radii in metal diffusion sims.}
 
 \textbf{Add mhdcv comparison.}
 
