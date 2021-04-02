@@ -269,7 +269,7 @@ Reference Shea and Kareem's papers.
 Normal: Normal text, polished enough to be included in a draft.
 
 \section{Introduction}
-\ref{s: introduction}
+\label{s: introduction}
 
 % Star formation and CGM accretion
 \textit{
@@ -314,7 +314,7 @@ In \S\ref{s: characteristics} we show that the vast majority of accreting gas ha
 In \S\ref{s: mechanics} we analyze the mechanics through which quiet accretion occurs.
 In \S\ref{s: other modes} we compare quiet accretion as seen in our simulations to other accretion modes.
 In \S\ref{s: prevalence} we discuss the prevalence of the quiet accretion mode, focusing on the conditions that enable quiet accretion, including an equivalent mode in halos with non-thermal support.
-In \S\ref{s: fueling} and \S\ref{s: disk formation} we discuss the implications of quiet accretion for fueling star formations and encouraging disk formation, respectively.
+In \S\ref{s: fueling} and \S\ref{s: disk formation} we discuss the implications of quiet accretion for fueling star formation and encouraging disk formation, respectively.
 We offer some brief insight on observational expectations for quiet accretion in \S\ref{s: observational expectations} before concluding in \S\ref{s: conclusions}.
 }
 
@@ -468,7 +468,7 @@ To focus on understanding hot accretion we center our analysis on the last time 
 
 % Summary picture description
 
-\subsubsection{Hot in halo}
+\subsubsection{Hot in outer CGM}
 \label{s: inflowing gas phase}
 
 % Intro and figure description
@@ -516,7 +516,8 @@ As an explicit example of how far our distribution is from a condensation model,
 }
 \textbf{Just add the radial mass distribution.}
 
-\subsubsection{Aligns as it cools}
+\subsubsection{Aligns with the galaxy as it cools}
+\label{s: aligns}
 
 % Figure description/introduction
 \textit{
@@ -532,6 +533,8 @@ Over approximately a galaxy dynamical time gas moves from being distributed with
 From ``accreting gas cools near the galaxy edge'' and ``cooling gas aligns with the galaxy'' the picture that emerges is of hot gas cooling directly onto the galactic disk.
 This is confirmed by \textbf{new figure description here}.
 }
+
+\textbf{Why is it essential it align to be called quiet accretion?}
 
 \subsection{Mechanics of quiet accretion}
 \label{s: mechanics}
@@ -581,7 +584,9 @@ At 500 Myr prior to cooling the gas has approximately half the angular momentum 
 This is consistent with other cosmological simulations of $L_\star$ halos~\citep[e.g.][]{Oppenheimer2018} that find that the inner halo is strongly supported by angular momentum, with decreasing angular momentum support with increasing radius.
 }
 
-\subsubsection{Cools after circularizing}
+\textbf{Citations for why it has this angular momentum.}
+
+\subsubsection{Angular momentum support leads to cooling}
 
 % Energy balance description
 \textit{
@@ -672,29 +677,47 @@ Kretschmer+20
 
 \textbf{Angles-Alcazar2017}
 
-\textbf{Discuss resolution effects and Balbus\&Soker}
-
 \subsection{Prevalence of quiet accretion}
 \label{s: prevalence}
 
-% Argue primary mode for MW-mass halos
-
-% Prevalent in FIRE simulations
+% Primary mode for MW-mass virialized halos
+\textit{
+The importance of  an accretion mode depends partially on how many galaxy types it is relevant to and the extent to which such galaxy types are essential to understanding galaxy evolution.
+We suggest that quiet accretion may be the dominant mode of accretion for MW-mass halos at low redshift, as is shown in \S\ref{s: results} for galaxies from the FIRE simulations.
+As we will discuss, this is because sufficient conditions for quiet accretion are met for any halo with an inward-flowing, voluminous phase not subject to runaway thermal instabilities and with weak disruption by feedback or merging galaxies/orbiting satellite galaxies.
+These conditions may be met in some halos with non-thermal support.
+}
 
 \subsubsection{Conditions for quiet accretion}
 
-% Virialized halo
-
-% Weak feedback
-
-% Weak cold flows
-
-% AGN feedback
+% Voluminous phase condition
 \textit{
-\begin{itemize}
-    \item Results expected to be valid after disc forms (Paper III) and before AGN feedback kicks in (ref.~Byrne+)
-    \item Results are baseline for detecting effects of feedback in observations / simulations
-\end{itemize}
+The first condition for quiet accretion is that the accreting gas must be able to equilibriate to a sufficiently coherent angular momentum prior to cooling (as in Figure~\ref{f: before and after}).
+This allows the gas to collapse into a thin disk after cooling, a characteristic of quiet accretion we discussed in \S\ref{s: aligns}.
+The exact degree of coherence required for the gas to collapse neatly into a thin disk is an avenue for future study.
+One way for the gas to equilibriate its angular momentum is for the inflowing gas to exist as part of a voluminous phase through which gas can exchange angular momentum faster than it accretes.
+$L^*$ halos may have volume-filling subsonic cooling flows that fit this condition~\ref{Stern2019}, as is the case in the FIRE simulations~\citep{Stern2020}.
+}
+
+
+% Thermal instabilities
+\textbf{Discuss resolution effects and Balbus\&Soker}
+
+% Feedback condition
+\textit{
+In addition to the prior conditions, quiet accretion may not be dominant, or occur at all, in halos undergoing significant energy or momentum deposition by feedback or merging/satellite galaxy dynamics.
+In the case of quiet accretion as part of a subsonic cooling flow, this is because the cooling flow is the ``background'' hydrodynamic solution for CGM gas flows~\cite{Stern2019}, i.e. the solution that describes the CGM provided there are no energy or momentum source terms.
+More generally, disruption from feedback or other dynamics may invalidate the previous conditions: it could add an additional angular momentum term or disrupt the process of angular momentum coherence, and there is evidence that such perturbations induce cooling of gas~\citep[e.g.][]{Hummels2019, Esmerian2020}.
+}
+
+% Satsifaction of feedback condition
+\textit{
+Fortunately there's evidence that MW-mass halos are not strongly disrupted by feedback or other bulk motion.
+In the FIRE simulations these halos are dominated by a hot, well-mixed halo absent strong ongoing outflows~\citep{Hafen2019}.
+In addition, while half the cold gas being is associated with satellite galaxies, especially in the outer region, the cold phase has less mass than the hot phase~\citep{Hafen2020}.
+Our analysis in \S\ref{s: characteristics}, which selects particles to track with no cuts on gas temperature, suggests that this cold phase not only has less mass than the hot phase, but that the majority of accretion is consistent with quiet accretion.
+Beyond the FIRE simulations, $L^\star$ halos are at the peak of the $M_\star/M_{\rm h}$ vs $M_{\rm h}$ relation~\textbf{Behroozi citation?}, suggesting they may be halos where galactic feedback is weakest.
+These halos may be in a mass range where stellar feedback is no longer sufficient to regulate star formation, and before AGN feedback can suppress star formation significantly.
 }
 
 \subsubsection{Analogous accretion for halos with non-thermal support}
