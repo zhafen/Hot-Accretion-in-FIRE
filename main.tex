@@ -416,6 +416,10 @@ https://ui.adsabs.harvard.edu/abs/2019ApJ...883...77S/abstract
 \textbf{Galaxy size and relation to angular momentum:
 https://ui.adsabs.harvard.edu/abs/2017rlbc.confE..29K/abstract}
 
+\textbf{
+Include El-Badry+2018 on angular momentum.
+}
+
 \section{Methods}
 \label{s: methods}
 
@@ -703,14 +707,14 @@ $L^*$ halos may have volume-filling subsonic cooling flows that fit this conditi
 % Thermal instabilities
 \textbf{Discuss resolution effects and Balbus\&Soker}
 
-% Feedback condition
+%  Disruption condition
 \textit{
 In addition to the prior conditions, quiet accretion may not be dominant, or occur at all, in halos undergoing significant energy or momentum deposition by feedback or merging/satellite galaxy dynamics.
 In the case of quiet accretion as part of a subsonic cooling flow, this is because the cooling flow is the ``background'' hydrodynamic solution for CGM gas flows~\cite{Stern2019}, i.e. the solution that describes the CGM provided there are no energy or momentum source terms.
 More generally, disruption from feedback or other dynamics may invalidate the previous conditions: it could add an additional angular momentum term or disrupt the process of angular momentum coherence, and there is evidence that such perturbations induce cooling of gas~\citep[e.g.][]{Hummels2019, Esmerian2020}.
 }
 
-% Satsifaction of feedback condition
+% Satisfaction of disruption condition
 \textit{
 Fortunately there's evidence that MW-mass halos are not strongly disrupted by feedback or other bulk motion.
 In the FIRE simulations these halos are dominated by a hot, well-mixed halo absent strong ongoing outflows~\citep{Hafen2019}.
@@ -733,7 +737,7 @@ after accreting gas co-rotates with the galaxy,
 gas becomes fully rotationally supported at the radius of accretion,
 gas moves inward more slowly after reaching the disk edge,
 and the disk edge is produced by a density-increasing pileup.
-These characteristics are all consistent with quiet accretion, suggesting that the conditions for quiet accretion outlined in the previous section can occur in halos with non-thermal support in the halo.
+These characteristics are all consistent with quiet accretion, suggesting that the conditions for quiet accretion outlined in the previous section may occur in halos with non-thermal support in the halo.
 }
 
 % Analysis replication
@@ -742,16 +746,6 @@ To confirm the presence of quiet accretion in halos with non-thermal support we 
 \textbf{Do this.}
 }
 
-\textbf{
-Include El-Badry+2018 on angular momentum.
-}
-
-\textbf{
-Discussion goal:
-A brief description of gas accretion in FIRE for both CR and non-CR halos, i.e. we have the narrative laid out consistently.
-There are two areas where I think the narrative could use some sharpening.
-Other goals?
-}
 
 % CR vs MHDCV
 \textbf{Gas should be moving inward more slowly due to extra support, and so should be a bit cooler ($T\sim 10^5$ K), but otherwise same general picture.}
@@ -762,14 +756,12 @@ Our analysis suggests that as part of a hot halo with gas moving at sub-sonic sp
 Therefore, when the gas eventually cools it naturally organizes into a disk.
 }
 \textbf{
-Similar for CR, but gas starts to organize into a disk earlier
+Similar for CR, but gas starts to organize into a disk earlier?
 }
 
 %  Organization into disk: cooling mechanism
 \textbf{Option 1: Radiative cooling is no longer offset by compression.}
 \textbf{Option 2: Pile-up increases density, and runaway cooling happens.}
-
-% Does this set the size for disks?
 
 % Results overlap
 \textbf{Cameron Fig 7/Fig 3.}
@@ -780,23 +772,58 @@ I think these potential overlaps are fine, and if anything beneficial to reinfor
 \subsection{Quiet accretion fueling star formation}
 \label{s: fueling}
 
+% Maximum accretion rate onto DM halos
+\textbf{Reread Jonathan's max acc rate paper and add in some of the most relevant notes here.}
+
 % Overprediction of star formation
 \textit{
-The FIRE simulations overpredict the observed SFR in MW-mass halos by a factor of $\sim 4$ \textbf{citation needed}.
+The fiducial FIRE simulations overpredict the observed SFR in MW-mass halos by a factor of $\sim 4$ \textbf{citation needed}.
+FIRE simulations also underpredict the number of red galaxies~\citep{Garrison-Kimmel2017}.
+This discrepancy may be a result of an elevated accretion rate relative to the real accretion rate.
+If so, a potential solution lies in feedback absent in the fiducial FIRE simulations that can suppress gas accretion.
+The FIRE simulations that include cosmic-rays have star-formation rates more consistent with observations, in support of this picture~\textbf{TK CR paper citation}.
+Similarly, AGN feedback may be able to suppress star formation, although the effect of AGN feedback on some FIRE halos would increase X-ray emissivity beyond observed levels~\textbf{citation needed}. 
 }
 
-% Maximum amount of possible fuel
+% Alternate solution
+\textit{
+An alternative solution to the discrepancy in SFR is if the CGM is still described by a sub-sonic cooling flow with no feedback terms, but the mass in the CGM is reduced by a factor of  $\sim2$.
+For a cooling flow, decreasing the total mass in the CGM by a factor of $\sim 2$ reduces the accretion rate by a factor of $\sim4$~\cite{Stern2019}, potentially bringing the star formation rate into better agreement with observations.
+The total mass in the CGM at a given time is determined by the full history of the CGM at previous times.
+Even without including additional feedback terms it would be unsurprising if the energy and momentum deposition by wind was inconsistent with real values by an amount necessary to account for this mass difference. \textbf{citation needed?}
+If this is true, one convenient feature is that cooling flow solutions can easily be scaled up/down to predict the properties of the hot CGM in accordance with an appropriate accretion rate.
+}
 
 \textbf{Look at \cite{Dekel2014}.}
-
-\textbf{Jonathan SFR discussion on slack.}
 
 \subsection{Quiet accretion and disk formation}
 \label{s: disk formation}
 
-\subsubsection{There is a bifurcation in galaxy and CGM properties.}
+\subsubsection{$L^*$ halos mark a transition in galaxy and CGM properties}
 
-% Causal direction of  bursty transition
+% Importance of L*
+\textit{
+Galaxies with a mass comparable to the MW have long been of special interest, both because of their relation to our galaxy and because the mass is thought to be a critical mass at which many properties of galaxies change.
+\textbf{Golden mass citations}
+}
+
+% FIRE-centric recent work
+\textit{
+Recent work has revealed correlations between a number of evolving properties of the galaxy and CGM, all showing a critical transition at $L \sim L^*$.
+In the FIRE simulations these properties include the inner CGM transitioning from a supersonic and free-falling inner to a subsonic and virialized, the star formation rate transitioning from bursty to steady, and the stellar morphology transitioning from more spheroidal to a thin disk~(\citealt{Stern2020, Yu2021}, Gurvich et al., in prep).
+The mechanics driving this transition are clearly important to understanding galaxy formation and evolution, and are the subject of ongoing work.
+}
+
+\subsubsection{Quiet accretion is conducive for disk formation}
+
+% Quiet accretion and the transition
+\textit{
+Here we note that while the causal direction of the transition is yet to be determined, the emergence of quiet accretion as a result of a virialized halo is highly conducive to disk formation and a steady star formation.
+In particular quiet accretion is co-rotating and closely aligned with the galaxy, likely time-steady, and deposited on the disk edge before moving inwards~(as discussed here and in Trappe et al., in prep).
+These properties suggest that any stars formed out of the accreting gas will already be in the morphology of a thin disk, and if star formation follows the accretion rate then they will form at a steady rate.
+As such, the development of a virialized halo at least partially enables a steady star formation rate and thin disk formation, although a change in ISM properties may in turn allow for the presence of a virialized halo.
+}
+
 \textbf{
 James: Older cosmological sims showed a similar thick-thin disk transition, suggesting that something present in those sims for the transition may also be present in our sims, and might produce the bursty-steady transition.
 The similar thing may be CGM virialization.
@@ -805,12 +832,26 @@ https://iopscience.iop.org/article/10.1088/0004-637X/773/1/43
 https://ui.adsabs.harvard.edu/abs/2011ApJ...742...76G/abstract
 }
 
-\subsubsection{Quiet accretion is conducive for disk formation}
-
 \subsubsection{Quiet accretion may set disk size}
+
+% Previous knowledge
+\textit{
+Many previous studies have observed that angular momentum of CGM gas correlates with the angular momentum of the galaxy and the size of the galactic disk.
+\textbf{citations needed}
+}
+
+% Quiet accretion
+\textit{
+Here we note that the mechanics responsible for quiet accretion can explain why the correlation exists.
+\textbf{Some confusion here. Wouldn't we expect there a correlation no matter what if angular momentum is conserved? There's something deeper here I need to think about.}
+}
 
 \subsection{Observational expectations for quiet accretion}
 \label{s: observational expectations}
+
+\textbf{
+Cite Cameron's paper and leave it at that?
+}
 
 \textbf{
 First step!
@@ -842,11 +883,12 @@ Quiet accretion
 HVCs are close to the galaxy}
 
 \textbf{HVCs, rotation, and thermal instabilities:
-https://ui.adsabs.harvard.edu/abs/2019MNRAS.486..215S/abstract}
+\url{https://ui.adsabs.harvard.edu/abs/2019MNRAS.486..215S/abstract}
+}
 
 \textbf{
 Could HVCS be an HI warp?
-https://ui.adsabs.harvard.edu/abs/2006ApJ...643..881L/abstract
+\url{https://ui.adsabs.harvard.edu/abs/2006ApJ...643..881L/abstract}
 }
 
 \textbf{
@@ -869,20 +911,54 @@ As for nearby galaxies, the H I gas of NGC 2403 moves radially inward at 10-20 k
 
 \textbf{
 Yong recommended papers:
-https://ui.adsabs.harvard.edu/abs/2003ApJS..146..165S/abstract
+\url{https://ui.adsabs.harvard.edu/abs/2003ApJS..146..165S/abstract}
 \url{https://ui.adsabs.harvard.edu/abs/2008A\%26A...487..951K/abstract}
 }
 
 \section{Conclusions}
 \label{s: conclusions}
 
-\textbf{TBD.}
+% Summary paragraph
+\textit{
+In this paper we studied the characteristics, mechanics, and prevalence of quiet accretion--hot accretion that cools as it accretes at the galaxy-halo interface.
+We studied quiet accretion by analyzing MW-mass halos at $z \sim 0$ produced as part of the FIRE-2 simulation suite~\cite{Hopkins2018}, including tracking all gas found inside the central galaxy at $z=0$ and outside the galaxy 1 Gyr prior.
+The primary takeaways are summarized below.
+}
+\begin{itemize}
+    \item \textbf{Characteristics:} Quiet accretion is characterized by hot/voluminous CGM gas (Figure~\ref{f: Mdot}) that cools at the galaxy-halo interface (Figure~\ref{f: T vs R}), and as it cools it collapses into a disk oriented with the galaxy (Figure~\ref{f: theta vs t}).
+    \item \textbf{Mechanics:} Quiet accretion occurs when gas falls through the CGM while maintaining a voluminous state.
+    The gas cools out of the voluminous state when it becomes fully angular-momentum supported, preventing inward movement, causing an increase in density, and halting any compressive heating.
+    Prior to cooling the voluminous nature allows the gas to equilibriate to a coherent angular momentum, and therefore when the gas cools it quickly flattens into a shapely disk.
+    The mechanics of quiet accretion are summarized in Figure~\ref{f: before and after}.
+    \item \textbf{Prevalence:} Our work suggests that quiet accretion may be the main accretion mechanism for many virialized halos (\S\ref{s: prevalence}).
+    We argue that quiet accretion is the expected accretion mode for undisturbed volume-filling infalling gas.
+    As such this accretion mode should be especially evident in virialized halos where feedback and cold accretion are weak, as is borne out in MW-mass FIRE simulations at z=0.
+    Quiet accretion may also occur in halos affected by feedback in the form of isotropic non-thermal support, provided by e.g. cosmic rays, and Trappe et al., in prep identify accretion with consistent characteristics in an analysis of FIRE with cosmic ray feedback.
+\end{itemize}
+
+\textit{
+In addition to the characteristics, mechanics, and prevalence, we discussed the relationship between quiet accretion and other accretion modes, star formation, disk formation, and a theorized transition in galaxy and CGM properties.
+\begin{itemize}
+    \item We compare quiet accretion to both cold and hot modes, including filamentary IGM accretion, accretion from satellites, and accretion from thermal instabilities (\S\ref{s: other modes}). \textbf{Fill out.}
+    \item Quiet accretion may be significantly intertwined with the formation of thin disks (\S\ref{s: disk formation}).
+    The onset of quiet accretion is expected when the inner halo virializes, which is correlated with the development of the thin disk.
+    From a mechanistic standpoint, quiet accretion is expected to be highly conducive to disk formation because it is "soft-landing", circularized accretion that smoothly cools onto the disk at same rotation speed as the disk.
+    \item As the accretion mechanism for halos absent feedback, quiet accretion describes the maximum accretion rate onto galaxies for a given CGM mass (\S\ref{s: fueling}). Differences in star formation rates between theory and observations for halos fed by quiet accretion can therefore be linked to the CGM mass, which is tied to the cumulative feedback history of a halo and related uncertainties.
+\end{itemize}
+}
+
+\textit{
+There are a number of analyses and observations necessary to expand our understanding of quiet accretion.
+Quiet accretion should be confirmed observationally, and comprehensive mock observations of quiet accretion may be necessary to enable observers to identify galaxies undergoing this accretion mode, potentially including our own.
+The relationship between quiet accretion, disk formation, and a transition in galaxy and CGM properties needs to be further disentangled, with causal directions determined (Gurvich et al., in prep).
+To this end, analyses that probe the parameter regime over which quiet accretion occurs in cosmological simulations (including redshift and halo mass) would be valuable.
+}
 
 \section*{Acknowledgements}
 
 \textbf{TBD.}
 
-\textbf{Halo21 KITP workshopw/ KITP primary grant number NSF PHY-1748958.
+\textbf{Halo21 KITP workshop/ KITP primary grant number NSF PHY-1748958.
 This research was supported in part by the National Science Foundation under Grant No. NSF PHY-1748958.
 }
 
@@ -911,6 +987,14 @@ This research was supported in part by the National Science Foundation under Gra
 
 \appendix
 
+\section{Additional Simulations}
+
+\subsection{Metal diffusion vs non-metal diffusion vs MHDCV vs CRs}
+
+\textbf{Plot of distribution $\Rcon$ for m12i and m12i\_md overlapping. Show cooling only happens at large radii in metal diffusion sims.}
+
+\textbf{Add mhdcv comparison.}
+
 \section{Dependence on Deposited Mass}
 
 \begin{figure}
@@ -918,7 +1002,7 @@ This research was supported in part by the National Science Foundation under Gra
 \label{f: deposited mass vs R1e5}
 \end{figure}
 
-\section{Angular Momentum of Accreting Material}
+% \section{Angular Momentum of Accreting Material}
 
 % \begin{figure}
 %     \centering
@@ -940,12 +1024,6 @@ This research was supported in part by the National Science Foundation under Gra
 %     }
 %     \label{f: jcool vs Rcon}
 % \end{figure}
-
-\section{Metal diffusion vs non-metal diffusion vs MHDCV vs CRs}
-
-\textbf{Plot of distribution $\Rcon$ for m12i and m12i\_md overlapping. Show cooling only happens at large radii in metal diffusion sims.}
-
-\textbf{Add mhdcv comparison.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
