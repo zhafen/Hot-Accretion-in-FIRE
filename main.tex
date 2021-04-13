@@ -118,6 +118,7 @@ Side-by-side of just the cold material, and just the hot material.
 Small number of tracks.
 Medium number of tracks.
 Large number of tracks.
+The image I used in the prezi presentation got very positive feedback.
 }
     \textbf{
     Multi-panel image:
@@ -200,8 +201,7 @@ Large number of tracks.
 
 % MECHANICS OF QUIET ACCRETION
 \begin{figure*}
-% \includegraphics[width=\columnwidth]{rad_vs_compress.png}
-\includegraphics[width=\textwidth]{figures/rad_vs_compress.pdf}
+\includegraphics[width=\textwidth]{figures/before_vs_after.pdf}
 \caption{
 \textbf{Top:}
 Radius versus time for 1 Gyr centered the time each individual particle cools ($t_{\rm 10^5 K}$).
@@ -212,21 +212,15 @@ Same as top but for the specific angular momentum of particles (green) and the t
 Gas becomes fully rotationally-supported at the time it cools, contributing to the slower inward movement shown in the top panel.
 \textbf{Bottom:}
 Energy loss from radiative cooling (blue) and heating from $PdV$ work on the gas particles (red).
-Each line represents the total change in specific energy for particles that cool at the same time (i.e. the same 250 Myr bin in $t_{\rm 10^5 K}$).
+Each line represents the total change in specific energy for particles that cool at the same time (i.e. the same 100 Myr bin in $t_{\rm 10^5 K}$).
 Prior to being rotationally-supported the gas cooling is offset by compressive heating, but lack of inward movement decreases the compressive heating afterwards while radiative cooling increases greatly due to increased density.
 \textbf{
-Make sure cutting out of low-n bins is justified.
-Check bin width.
-Add comment about the degeneracy/complementarity(?) of increased density and running into the pre-existing gas.
-A confusing part to some (e.g. Alex) is how the pole-gas interacts with the rest of the gas.
-Whether or not virialization matters depends on when alignment happens. If out in the halo then the virialized halo can circularize. Otherwise it's just gas that circularizes at a given radius when it starts to interact with other gas.
-Change label in panel 1 to more intuitive.
-Add label to panel 2 indicating angular full momentum support.
-Come up with some label for panel 3?
-Try putting the top panel in log space. May emphasize stall.
+Change line in panel 1 to more intuitive.
 Try adding in m11 to see how it looks.
 Add labels to panels (A, B, C, D), alongside two-word summaries e.g. A: gas stalls, B: angular momentum support, C: increasing coherence, D: energy balance.
-Extend the third panel axis to -1.
+Switch labels back to magnitude of angular momentum.
+Emphasize these are particle tracks for accreting gas.
+Add temperature panel.
 }
 }
 \label{f: before and after}
@@ -263,10 +257,33 @@ Reference Shea and Kareem's papers.
     \label{f: emission}
 \end{figure}
 
-\subsection{ KEY FOR COAUTHORS}
+\subsection{KEY FOR COAUTHORS}
 \textbf{Bold: Notes for things to implement.} \\
 \textit{Italics: Rough text, needs polishing.} \\
 Normal: Normal text, polished enough to be included in a draft.
+
+\subsection{Outstanding Questions/Discussion Points}
+
+Is quiet accretion the term we want to use?
+
+Do we want to include CRs in this paper?
+If including, plot temperature distribution while tracking to compare and contrast CRs and non-CRs.
+When doing CR-comparison panel overplot fiducial simulation results.
+
+When presenting we should ensure we're clearly differentiating definition and results.
+
+Alex's concerns about angular momentum inheritance:
+AM at large radii is offset from AM at inner radii.
+How does the AM get aligned with the galaxy?
+Potential solutions:
+The AM isn't actually fully aligned with the galaxy (e.g. warped disks).
+The AM of the accreting material, and only the accreting material, is aligned.
+The galaxy is forcibly aligning the AM at inner radii, perhaps via winds.
+
+Justify how individual particles can have the direction of their angular momentum changed by interactions without really having the magnitude of their angular momentum change.
+Maybe check thus using distribution of angle between $\vec{j}$ and z. (Plot the average jz/j, not just the median?)
+
+Framing of conducive to disk formation might give your listeners the impression that this is the only theory for disk formation
 
 \section{Introduction}
 \label{s: introduction}
@@ -320,9 +337,17 @@ We offer some brief insight on observational expectations for quiet accretion in
 }
 
 % Accretion in cosmological simulations
-\textbf{Ho,Martin+2019}
+\textbf{Read intros thoroughly and extract all info.}
+\textbf{Correa+2018}
+\textbf{El-Badry2018}
 \textbf{Wright+2021}
 \textbf{Appleby+2021}
+\textbf{Trappe+2021}
+\textbf{(Danovich et al. 2012, 2015)}
+\textbf{Stewart+2011,2017}
+\textbf{Brook+2011}
+\textbf{Kimm+2011}
+\textbf{Teklu+2015}
 
 % Angular momentum theoretical estimates
 \textbf{DeFelippis' work}
@@ -579,6 +604,15 @@ The increased coherence is likely due to angular momentum exchange between hot a
 Following cooling the gas disk gains further coherence, and by 500 Myr post-accretion the gas is a very thin disk.
 }
 
+\textbf{
+Discuss net jz/j
+}
+
+\textbf{
+How does the angular momentum of all gas at a given radius compare to the angular momentum of the accreting gas?
+Check by calculating the inner product between the two.
+}
+
 \subsubsection{Achieves full angular momentum support}
 
 % Angular momentum support
@@ -662,6 +696,12 @@ Can be checked by making an equivalent to Figure~\ref{f: before and after} for a
 \subsection{Comparison to other accretion modes}
 \label{s: other modes}
 
+\subsubsection{Classic Hot Mode}
+
+\textbf{What does this even mean?}
+
+\textbf{Birnboim\&Dekel2003?}
+
 \subsubsection{Instability-Driven}
 
 \begin{itemize}
@@ -725,7 +765,7 @@ Beyond the FIRE simulations, $L^\star$ halos are at the peak of the $M_\star/M_{
 These halos may be in a mass range where stellar feedback is no longer sufficient to regulate star formation, and before AGN feedback can suppress star formation significantly.
 }
 
-\subsubsection{Quiet accretion in halos with non-thermal support}
+\subsubsection{Halos with non-thermal support}
 
 % Comparison to Trapp+2021
 \textit{
@@ -747,6 +787,14 @@ To confirm the presence of quiet accretion in halos with non-thermal support we 
 \textbf{Do this.}
 }
 
+\textbf{How much of this should we include in this paper?
+Pros of inclusion:
+- The physical mechanisms do not require the halo to be a classic virialized hot halo.
+- Under our three characteristics that define quiet accretion, quiet accretion is observed in CR simulations.
+- Quiet accretion is a more interesting concept if we point out its generality.
+- Cameron Trappe is also writing a similar paper on accretion, and one of the main differences is the inclusion of cosmic rays. I'm not sure there's room to do a third entirely separate paper on cosmic ray quiet accretion. Most things will have been covered.
+- As an extension of the previous point, because Cameron is writing the CR paper we can just include a single plot or so and point to his paper for the details of how accretion works.
+}
 
 % CR vs MHDCV
 \textbf{Gas should be moving inward more slowly due to extra support, and so should be a bit cooler ($T\sim 10^5$ K), but otherwise same general picture.}
@@ -769,6 +817,23 @@ Similar for CR, but gas starts to organize into a disk earlier?
 \textbf{Cameron Fig 5/Fig 4.}
 \textbf{Cameron Fig 8/Fig 2.}
 I think these potential overlaps are fine, and if anything beneficial to reinforce.
+
+\subsubsection{Other cosmological simulations}
+
+% EAGLE
+\textit{
+Is the cold accretion described by \cite{Ho2019} consistent with quiet accretion?
+\textbf{Finding out would likely involve reproducing the ballistic approximation, which identifies the most strongly inflowing gas.}
+It's not clear, but the cold gas around the galaxy is mostly aligned with the galaxy plane, including for the most strongly-inflowing gas.
+The hot gas that is most strongly cooling is best fit by a singular isothermal sphere, while all hot gas is best fit by a $\beta$ profile~\citep{Stevens2017}.
+\textbf{Is this consistent with what we expect? Do we expect an isothermal sphere?}
+\textbf{If important for comparison, Stevens2017 give the cooling time profiles for their halos, so we can check if it's a cooling flow.}
+In the EAGLE simulations specific angular momentum is not conserved for cooling gas, including for gas cooling onto disky galaxies~\citep{Stevens2017}.
+This may cause differences in the characteristics of the accretion at the gaalxy-halo interface.
+\cite{Stevens2017} find that the most cooling gas within $R_{\rm vir}$ has a comparable, but slightly higher, magnitude of angular momentum distribution as all hot gas in the halo.
+\textbf{I think this is support for the halos being similar.}
+\cite{Stevens2017} also find that gas will orient itself parallel to the cold disk as it cools.
+}
 
 \subsection{Quiet accretion fueling star formation}
 \label{s: fueling}
@@ -833,7 +898,11 @@ https://iopscience.iop.org/article/10.1088/0004-637X/773/1/43
 https://ui.adsabs.harvard.edu/abs/2011ApJ...742...76G/abstract
 }
 
-\subsubsection{Quiet accretion may set disk size}
+\textbf{
+Compare to classic pictures of disk formation, Fall \& Efstathiou (1980) and Mo, Mao\&White (1998).
+}
+
+\subsubsection{Setting disk size}
 
 % Previous knowledge
 \textit{
