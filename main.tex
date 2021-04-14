@@ -42,7 +42,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Quiet Accretion in FIRE]{Galactic discs fed by hot accretion in the FIRE simulations}
+\title[Quiet Accretion in FIRE]{The Quiet Growth of MW-Like Disks}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -221,8 +221,15 @@ Add labels to panels (A, B, C, D), alongside two-word summaries e.g. A: gas stal
 Switch labels back to magnitude of angular momentum.
 Emphasize these are particle tracks for accreting gas.
 Add temperature panel.
+Try adding radial velocity panel.
 Move Rvc(R) label to the left.
 Move aligned label down.
+Address the increase in jz in panel two.Torquing of the disk? Collisional interaction? Evidence in the form of hot gas rotating slower?
+Try removing shaded region   for Rvc, because we primarily just care about the average angular support.
+Scatter in jz goes below zero, try showing that.
+Try showing for the third panel ( jvec - jz )/j, which we expect to go to zero, and shows the coherence and only the coherence pretty well.
+Re: the hitch, it's crazy that anything could be that well-aligned cosmologically. The hitch could be pretty important in making the disk thin. Try remaking this plot in the thick disk phase.
+The hitch may be driving inflow, because the disk could be giving angular momentum to it, allowing it to move in more.
 }
 }
 \label{f: before and after}
@@ -266,7 +273,18 @@ Normal: Normal text, polished enough to be included in a draft.
 
 \subsection{Outstanding Questions/Discussion Points}
 
+Reproduce this analysis for simulations with cold mode accretion so we have an idea of what could be different.
+
+Come up with a "quietness" variable and use it to show that it occurs for a number of halos.
+
 Is quiet accretion the term we want to use?
+Use inspiration from the pre-virilization comparison.
+Alternatives:
+Soft, soft-landing.
+Slow?
+Gentle?
+Spiraling?
+Sharp? (Sudden and ubiquitous at angular momentum support radius.)
 
 Do we want to include CRs in this paper?
 If including, plot temperature distribution while tracking to compare and contrast CRs and non-CRs.
@@ -288,6 +306,8 @@ Maybe check thus using distribution of angle between $\vec{j}$ and z. (Plot the 
 Framing of conducive to disk formation might give your listeners the impression that this is the only theory for disk formation
 
 Can quiet accretion produce misaligned or warped disks?
+Tjitske has seen in large scale simulations a misaligned disk being preceeded by a change in halo angular momentum.
+Anna has some plots of this. This might be more present in the ELVIS sims.
 
 \section{Introduction}
 \label{s: introduction}
@@ -493,7 +513,7 @@ This is confirmed after-the-fact in Figure~\ref{f: theta vs R}, where gas is not
 
 % This section will describe results
 
-\subsection{Characteristics of quiet accretion}
+\subsection{How do disky MW galaxies accrete?}
 \label{s: characteristics}
 
 % Sample description
@@ -572,6 +592,9 @@ This is confirmed by \textbf{new figure description here}.
 }
 
 \textbf{Why is it essential it align to be called quiet accretion?}
+
+
+\textbf{Outline the three key components, and then that's our new definition.}
 
 \subsection{Mechanics of quiet accretion}
 \label{s: mechanics}
@@ -710,9 +733,11 @@ Can be checked by making an equivalent to Figure~\ref{f: before and after} for a
 \subsection{Comparison to other accretion modes}
 \label{s: other modes}
 
-\subsubsection{Classic Hot Mode}
+\subsubsection{Classic (1D) Hot Mode}
 
 \textbf{What does this even mean?}
+\textbf{Is this mode classic hot-mode? Can check by looking at Cowie1980.}
+\textbf{Wasn't looked at in 3D.}
 
 \textbf{Birnboim\&Dekel2003?}
 
@@ -727,9 +752,14 @@ Can be checked by making an equivalent to Figure~\ref{f: before and after} for a
 \end{itemize}
 emphasize cold clouds due to over-densities heat back up and join the hot inflow, as in Illustris (see fig.~12 in Nelson+20
 
-\subsubsection{Faerman Model}
+\subsubsection{Thermal-Balance}
+
+(No accretion; e.g. Faerman model)
+
+Our mode is the opposite case.
 
 \subsubsection{Filaments}
+
 Kretschmer+20
 
 \subsubsection{Satellite CGM}
@@ -757,7 +787,6 @@ The exact degree of coherence required for the gas to collapse neatly into a thi
 One way for the gas to equilibriate its angular momentum is for the inflowing gas to exist as part of a voluminous phase through which gas can exchange angular momentum faster than it accretes.
 $L^*$ halos may have volume-filling subsonic cooling flows that fit this condition~\ref{Stern2019}, as is the case in the FIRE simulations~\citep{Stern2020}.
 }
-
 
 % Thermal instabilities
 \textbf{Discuss resolution effects and Balbus\&Soker}
@@ -872,6 +901,11 @@ For a cooling flow, decreasing the total mass in the CGM by a factor of $\sim 2$
 The total mass in the CGM at a given time is determined by the full history of the CGM at previous times.
 Even without including additional feedback terms it would be unsurprising if the energy and momentum deposition by wind was inconsistent with real values by an amount necessary to account for this mass difference. \textbf{citation needed?}
 If this is true, one convenient feature is that cooling flow solutions can easily be scaled up/down to predict the properties of the hot CGM in accordance with an appropriate accretion rate.
+}
+
+% Decreasing halo mass implications
+\textbf{
+Earlier onset of quiet accretion.
 }
 
 \textbf{Look at \cite{Dekel2014}.}
