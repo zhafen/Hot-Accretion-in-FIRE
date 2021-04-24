@@ -1,0 +1,54 @@
+########################################################################
+[DEFAULT]
+########################################################################
+# This section named "[DEFAULT]" contains the majority of
+# parameters used in the analysis.
+
+# Bulk data
+scratch_dir = /scratch/03057/zhafen
+root_data_dir = ${scratch_dir}/hot_accretion_data
+
+# Analysis
+paper_dir = /home1/03057/zhafen/papers/Hot-Accretion-in-FIRE
+code_dir = ${paper_dir}/analysis
+figure_dir = ${paper_dir}/figures
+processed_data_dir = ${paper_dir}/data
+
+########################################################################
+[SCRIPTS]
+########################################################################
+# This section named "[SCRIPTS]" contains code that will be run.
+# Code will be run in order from lowest to highest number
+# The prefix determines how the code will be handled.
+
+# Get halo data
+py.1 = ${code_dir}/retrieve_halo_data.py
+
+# Get IDs to track
+# nb.2 = ${code_dir}/
+
+########################################################################
+[CONVERSION]
+########################################################################
+# This section helps convert existing pipelines to trove pipelines.
+# In particular it will check if the data products exist and mark that part
+# of the trove as complete if they do.
+
+# Get halo data
+py.1 = halo_00000_smooth.dat
+
+########################################################################
+# Parameter Variations
+########################################################################
+# These sections are variations on the parameters to explore.
+# Each will create a trove of data.
+# The section name should be the identifier you would
+# like to use for that set of parameters.
+
+[m12i_md]
+subpath = metal_diffusion/m12i_res7100
+halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+
+[m11b]
+subpath = core/m11b_res2100
+halo_data_dir = ${scratch_dir}/halo_files/${subpath}
