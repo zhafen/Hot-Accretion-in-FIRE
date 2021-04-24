@@ -213,7 +213,9 @@ Emphasize these are particle tracks for accreting gas.
 Address the increase in jz in panel two.Torquing of the disk? Collisional interaction, with evidence in the form of hot gas rotating slower?
 Re: the hitch, it's crazy that anything could be that well-aligned cosmologically. The hitch could be pretty important in making the disk thin. Try remaking this plot in the thick disk phase.
 The hitch may be driving inflow, because the disk could be giving angular momentum to it, allowing it to move in more.
+Hint: the hitch is much less apparent in jmag.
 Try showing for the fourth panel ( jvec - jz )/j, which we expect to go to zero, and shows the coherence and only the coherence pretty well.
+Change tick labels in last panel.
 }
 }
 \label{f: before and after}
@@ -257,8 +259,7 @@ Normal: Normal text, polished enough to be included in a draft.
 
 \subsection{Outstanding Questions/Discussion Points}
 
-Reproduce this analysis for simulations with cold mode accretion so we have an idea of what could be different.
-
+Reproduce this analysis for simulations with cold mode accretion so we have an idea of what could be diff
 Come up with a "quietness" variable and use it to show that it occurs for a number of halos.
 
 Is quiet accretion the term we want to use?
@@ -292,6 +293,7 @@ Framing of conducive to disk formation might give your listeners the impression 
 Can quiet accretion produce misaligned or warped disks?
 Tjitske has seen in large scale simulations a misaligned disk being preceeded by a change in halo angular momentum.
 Anna has some plots of this. This might be more present in the ELVIS sims.
+The angular momentum vector of the CGM is in general misaligned with that of the stars in the central galaxy by large angles  30 to 60 degrees (DeFelippis et al. 2020).
 
 \section{Introduction}
 \label{s: introduction}
@@ -352,7 +354,7 @@ We offer some brief insight on observational expectations for quiet accretion in
 \textbf{Appleby+2021}
 \textbf{Trappe+2021}
 \textbf{(Danovich et al. 2012, 2015)}
-\textbf{Stewart+2011,2017}
+\textbf{Stewart+2011,2013,2017}
 \textbf{Brook+2011}
 \textbf{Kimm+2011}
 \textbf{Teklu+2015}
@@ -619,7 +621,8 @@ Following cooling the gas disk gains further coherence, and by 500 Myr post-accr
 }
 
 \textbf{
-Discuss net jz/j
+Discuss net jz/j.
+In particular, this shows that the CGM is, on average, rotating with the galaxy.
 }
 
 \textbf{
@@ -627,12 +630,54 @@ How does the angular momentum of all gas at a given radius compare to the angula
 Check by calculating the inner product between the two.
 }
 
+\textbf{
+observations indicate that in many systems the CGM has substantial rotation and that this rotation correlates with that of the central galaxy (e.g., Bouche et al.2013, Ho et al. 2017.
+}
+
+\textbf{
+The comparison of j to Rvc is very related to the spin parameter.
+Spin parameter is the amount of rotational support given your angular momentum and assuming your radius is Rvir, regardless of your actual location (J/sqrt(2)M Rvir Vc).
+It measures angular momentum, normalized by a constant but meaningful quantity.
+Note that the spin parameter of all halo gas increases as a function of radius, but the opposite is true for our accreting gas...
+}
+
 % Tjitske comments about second and third panel
-% \textbf{
-% You may be right. What I meant was that it seems from panel 3 that there is a lot of change of angular momentum direction: the allowed range is -1 - +1 and the 1-sigma distribution spans close to that entire range. But both j_z and |j| don't have very large scatter and are pretty constant. So what is going on? especially at the low j_z/|j| end? I expect those particles have maybe very low |j| anyway so small changes in j_z can mean big changes in j_z/|j|?
-% My sense is that people tend to interpret a distribution like in the 3rd panel as a distribution with not very aligned angular momentum and a lot of evolution, but the 2nd panels show that this is actually not the case. So I'm trying to understand what the 3rd panel really means.
-% Looking at the 2d histograms or 3d distributions may help getting more intuition?
-% }
+\textbf{
+You may be right. What I meant was that it seems from panel 3 that there is a lot of change of angular momentum direction: the allowed range is -1 - +1 and the 1-sigma distribution spans close to that entire range. But both $j_z$ and |j| don't have very large scatter and are pretty constant. So what is going on? especially at the low $j_z/|j|$ end? I expect those particles have maybe very low |j| anyway so small changes in $j_z$ can mean big changes in $j_z/|j|$?
+My sense is that people tend to interpret a distribution like in the 3rd panel as a distribution with not very aligned angular momentum and a lot of evolution, but the 2nd panels show that this is actually not the case. So I'm trying to understand what the 3rd panel really means.
+Looking at the 2d histograms or 3d distributions may help getting more intuition?
+}
+
+% Angular momentum processes in the halo
+n\textbf{
+Torquing of cold gas streams in the outer halo (Danovich et al. 2015).
+For cold streams the net contribution of the pressure torques is negligible compared to the gravitational torques at all radii~\citep{danovichFourPhasesAngularmomentum2015}.
+The angular momentum in the cold streams is significantly more coherent than that of dark matter~\citep{danovichFourPhasesAngularmomentum2015}.
+Increasing angular momentum of accreting material a as a function of time prefers newer material (often colder).
+Winds can eject gas preferentially from the inner halo, where sAM is low (Zjupa \& Springel 2017).
+}
+
+% Origins for scatter in relation between halo gas and galaxy gas angular momentum
+\textbf{
+As discussed in Faucher-Giguere+in prep:
+if the accreted gas is not representative or if it's not conserved.
+We can address this easily and quickly.
+}
+
+% AM transport CGM mechanisms
+\textbf{
+Ala C-A's review inc. Danovich et al. 2015 :
+(i) torques on gas accreting through the halo, mediated either by gravity (via coherent anisotropy or dynamical friction against the smooth matter distribution) or pressure gradients;
+(ii) dissipative interactions between mis-aligned or counter-rotating accretion streams in the inner halo
+(iii) gravitational torques between the disk and the inner CGM
+(iv) preferential ejection of low sAM baryons into the CGM by galactic winds, as well as galactic accretion of CGM baryons stimulated by recycling outflows.
+}
+
+% Alignment with the disk
+\textbf{
+As cold gas aligns with the galaxy due to torques its angular momentum decreases~\citep{danovichFourPhasesAngularmomentum2015}.
+A source of alignment may be torques from the galaxy disk.
+}
 
 \subsubsection{Achieves full angular momentum support}
 
@@ -644,7 +689,9 @@ At 500 Myr prior to cooling the gas has approximately half the angular momentum 
 This is consistent with other cosmological simulations of $L_\star$ halos~\citep[e.g.][]{Oppenheimer2018} that find that the inner halo is strongly supported by angular momentum, with decreasing angular momentum support with increasing radius.
 }
 
-\textbf{Citations for why it has this angular momentum.}
+\textbf{Citations for why it has this angular momentum from C-A's review article (copied here temporarily for convenience):
+In the standard cosmological picture galaxies inherit their angular momentum from gas accreted from their host halos (e.g., Fall \& Efstathiou 1980, Dalcanton et al. 1997, Mo et al. 1998). In this picture, the angular momentum of halos is acquired via gravitational torques during structure formation (e.g., Peebles 1969, White 1984), so on sufficiently large scales the baryons are expected to have angular momentum properties similar to the dark matter. This is known as the tidal torque theory.}
+
 
 \subsubsection{Angular momentum support leads to cooling}
 
@@ -1090,6 +1137,15 @@ This research was supported in part by the National Science Foundation under Gra
 \appendix
 
 \section{Additional Simulations}
+
+% MECHANICS OF QUIET ACCRETION
+\begin{figure*}
+\includegraphics[width=\textwidth]{figures/before_vs_after_cr.pdf}
+\caption{
+Same as Figure~\ref{f: before and after} but for m12i\_cr.
+}
+\label{f: before and after cr}
+\end{figure*}
 
 \subsection{Metal diffusion vs non-metal diffusion vs MHDCV vs CRs}
 
