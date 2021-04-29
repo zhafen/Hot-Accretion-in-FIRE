@@ -7,6 +7,7 @@
 # Bulk data
 scratch_dir = /scratch/03057/zhafen
 root_data_dir = ${scratch_dir}/hot_accretion_data
+fire_dir = /scratch/projects/xsede/GalaxiesOnFIRE
 
 # Analysis
 paper_dir = /home1/03057/zhafen/papers/Hot-Accretion-in-FIRE
@@ -25,7 +26,10 @@ processed_data_dir = ${paper_dir}/data
 py.1 = ${code_dir}/retrieve_halo_data.py
 
 # Get IDs to track
-# nb.2 = ${code_dir}/
+nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
+
+# Run particle tracking
+jug.3 = ${code_dir}/linefinder_hot_accretion.py
 
 ########################################################################
 [CONVERSION]
@@ -34,8 +38,9 @@ py.1 = ${code_dir}/retrieve_halo_data.py
 # In particular it will check if the data products exist and mark that part
 # of the trove as complete if they do.
 
-# Get halo data
 py.1 = halo_00000_smooth.dat
+nb.2 = ids_full*hothaloacc.hdf5
+jug.3 = classifications*hothaloacc.hdf5
 
 ########################################################################
 # Parameter Variations
@@ -48,7 +53,14 @@ py.1 = halo_00000_smooth.dat
 [m12i_md]
 subpath = metal_diffusion/m12i_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+sim_data_dir = ${fire_dir}/${subpath}/output
+
+[m12i_cr]
+subpath = cr_heating_fix/m12i_res7100
+halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+sim_data_dir = ${fire_dir}/${subpath}/output
 
 [m11b]
 subpath = core/m11b_res2100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+sim_data_dir = ${fire_dir}/${subpath}/output
