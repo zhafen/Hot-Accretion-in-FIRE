@@ -4,10 +4,14 @@
 # This section named "[DEFAULT]" contains the majority of
 # parameters used in the analysis.
 
+# Project tag
+tag = hothaloacc
+
 # Bulk data
 scratch_dir = /scratch/03057/zhafen
 root_data_dir = ${scratch_dir}/hot_accretion_data
 fire_dir = /scratch/projects/xsede/GalaxiesOnFIRE
+firefly_dir = /scratch/03057/zhafen/firefly_repos/hot-halo-accretion
 
 # Analysis
 paper_dir = /home1/03057/zhafen/papers/Hot-Accretion-in-FIRE
@@ -23,13 +27,25 @@ processed_data_dir = ${paper_dir}/data
 # The prefix determines how the code will be handled.
 
 # Get halo data
-py.1 = ${code_dir}/retrieve_halo_data.py
+# py.1 = ${code_dir}/retrieve_halo_data.py
 
 # Get IDs to track
 nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
 
+# Sample particles to track, including removing duplicates
+py.3 = ${code_dir}/linefinder_track/sample.py
+
 # Run particle tracking
-jug.3 = ${code_dir}/linefinder_hot_accretion.py
+jug.4 = ${code_dir}/linefinder_track/track.py
+
+# Run galaxy linking
+jug.5 = ${code_dir}/linefinder_track/galaxy_link.py
+
+# Run particle classification
+py.6 = ${code_dir}/linefinder_track/classify.py
+
+# Create Firefly visualization
+py.7 = ${code_dir}/linefinder_track/firefly.py
 
 ########################################################################
 [CONVERSION]
@@ -39,8 +55,11 @@ jug.3 = ${code_dir}/linefinder_hot_accretion.py
 # of the trove as complete if they do.
 
 py.1 = halo_00000_smooth.dat
-nb.2 = ids_full*hothaloacc.hdf5
-jug.3 = classifications*hothaloacc.hdf5
+nb.2 = ids_full_${tag}.hdf5
+py.3 = ids_${tag}.hdf5
+jug.4 = ptracks_${tag}.hdf5
+jug.5 = galids_${tag}.hdf5
+py.6 = classifications_${tag}.hdf5
 
 ########################################################################
 # Parameter Variations
