@@ -27,25 +27,25 @@ processed_data_dir = ${paper_dir}/data
 # The prefix determines how the code will be handled.
 
 # Get halo data
-# py.1 = ${code_dir}/retrieve_halo_data.py
+py.1 = ${code_dir}/retrieve_halo_data.py
 
-# Get IDs to track
-nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
-
-# Sample particles to track, including removing duplicates
-py.3 = ${code_dir}/linefinder_track/sample.py
-
-# Run particle tracking
-jug.4 = ${code_dir}/linefinder_track/track.py
-
-# Run galaxy linking
-jug.5 = ${code_dir}/linefinder_track/galaxy_link.py
-
-# Run particle classification
-py.6 = ${code_dir}/linefinder_track/classify.py
-
-# Create Firefly visualization
-py.7 = ${code_dir}/linefinder_track/firefly.py
+# # Get IDs to track
+# nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
+# 
+# # Sample particles to track, including removing duplicates
+# py.3 = ${code_dir}/linefinder_tracking/sample.py
+# 
+# # Run particle tracking
+# jug.4 = ${code_dir}/linefinder_tracking/track.py
+# 
+# # Run galaxy linking
+# jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
+# 
+# # Run particle classification
+# py.6 = ${code_dir}/linefinder_tracking/classify.py
+# 
+# # Create Firefly visualization
+# py.7 = ${code_dir}/linefinder_tracking/firefly.py
 
 ########################################################################
 [CONVERSION]

@@ -26,10 +26,11 @@ export_to_firefly_kwargs = {
     ],
     'use_default_colors': True,
     'include_halo_tracks': True,
+    'data_subdir': pm['variation'],
 }
 
 visualize.export_to_firefly(
-    out_dir = pm['data_dir'],
+    data_dir = pm['data_dir'],
     tag = pm['tag'],
     halo_data_dir = pm['halo_data_dir'],
     install_firefly = False,
