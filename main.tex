@@ -254,12 +254,43 @@ Reference Shea and Kareem's papers.
     \label{f: emission}
 \end{figure}
 
+\section{NOTES FOR AUTHORS}
+
 \subsection{KEY FOR COAUTHORS}
 \textbf{Bold: Notes for things to implement.} \\
 \textit{Italics: Rough text, needs polishing.} \\
 Normal: Normal text, polished enough to be included in a draft.
 
-\subsection{Outstanding Questions/Discussion Points}
+\subsection{OUTSTANDING QUESTIONS/DISCUSSION POINTS}
+
+% Target audience
+\textbf{
+The target audience is:
+At the broadest level anyone who wants to understand the general picture of how disks form.
+Galaxy theorists.
+CGM theorists.
+Galaxy observers.
+CGM observers.
+People who like interpretable results.
+}
+
+% Assess the overall message
+\textbf{
+Imagine sitting down with the target audience.
+What are the most important points you want to convey?
+In particular, what could they really use?
+Think first and foremost of that, and shape accordingly.
+}
+
+% Review
+\textbf{
+Read through the paper with each targeted group in mind.
+Edit accordingly.
+Even better, get a member of the target group to provide feedback.
+}
+\textbf{
+At the end, decide on the title and the abstract.
+}
 
 Reproduce this analysis for simulations with cold mode accretion so we have an idea of what could be diff
 Come up with a "quietness" variable and use it to show that it occurs for a number of halos.
@@ -308,30 +339,35 @@ Galactic star formation is itself informed by accretion from the circumgalactic 
 This accretion from the CGM provides fuel without which star formation would cease in only a couple of Gyrs~\cite[e.g.][]{Prochaska2009, Bauermeister2010, Spring2017}.
 }
 
-% Accretion types
-\textit{
-There are believed to be a number of modes of accretion from the CGM, each with different characteristics, mechanics, prevalences, and affects on galactic star formation.
-One canonical accretion mode is filamentary accretion, wherein cool, $T \sim 10^4$ K cosmological filaments travel into the galaxy  from the IGM~\cite[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a}.
-Filamentary accretion is especially relevant at high redshift when the universe is denser~\citep[e.g.][]{Keres2009a, Stern2019, Huscher2020}.
-Filamentary accretion can often be accompanied by ``clumpy'' accretion in the form of accreting satellite galaxies and their CGMs~\citep[e.g.][]{Hafen2019, Hafen2020}, which in some cases can provide fuel that produces more than a third of stars formed in MW-mass galaxies~\citep{Angles-Alcazar2017}.
-For halos that have hot, volume-filling gas additional accretion modes come from the transfer of the hot gas into the galaxy.
-One such accretion mode is instability-driven accretion, wherein gas precipitates out of the halo due to hydrodynamic instabilities~\citep[e.g.][]{Maller2004, Mccourt2012, Voit2015, Armillotta2016, Gronke2019a, Esmerian2020, Voit2021}.
-}
-
-% Quiet accretion
-\textit{
-Another mode of accretion is ``quiet'' accretion, wherein the accreting gas remains hot down to the galaxy-halo interface, at which time it cools and accretes onto the galaxy.
-~\textbf{quiet accretion refs.}
-While quiet accretion has been \textbf{insert what's been done here}, quiet accretion has yet to be explored in detail.
-This is especially a challenge for interpreting CGM observations because cold gas signatures in the halo may be decoupled from the mass flow of quiet accretion onto the galaxy.
-}
-
 % Cosmological simulations
 \textit{
 Modern cosmological simulations provide a means to understand the prevalence, mechanics, and characteristics of different accretion modes.
 These simulations include a combination of cosmological environment and galactic physics, which has allowed simulators to investigate accretion while accounting for both its cosmological nature and its interaction with galaxies and their CGM~\citep[e.g.][Trapp et al,. in prep.]{Oppenheimer2010, Stewart2011, Fernandez2012, Ford2014, Angles-Alcazar2017, Hafen2019, Hafen2020, Ho2019, Rottgers2020}.
 Of special note are ``zoom-in'' simulations that focus on resolving a single halo and its environment, enabling high resolution while preserving cosmological structure~\citep[e.g.][]{Katz1993, Hopkins2014, Hopkins2018, Wang2015, Agertz2020}.
-The FIRE simulations are one such set of zoom-in simulations, and have been shown to \textbf{FIRE references}.
+The FIRE simulations~\citep{Hopkins2014, Hopkins2017}\footnote{\url{https://fire.northwestern.edu/}} are a set of zoom-in simulations that resolve stellar feedback on the scale of giant molecular clouds in the ISM, producing winds that naturally expand into the CGM and interact with accreting gas~\citep{Muratov2015,Muratov2016, Hafen2019, Hafen2020}.
+The resultant galaxies are broadly consistent with the stellar mass-halo mass relation~\cite{Hopkins2017}, the mass-metallicity relation~\citep{Ma2015}, satellite galaxy populations~\cite{Wetzel2016,Garrison-Kimmel2019a}, and can have thin-disks consistent with Milky Way-like galaxies~\cite{Garrison-Kimmel2018, El-Badry2018}.
+}
+
+% Accretion types - cool
+\textit{
+There are believed to be a number of modes of accretion from the CGM, each with different characteristics, mechanics, prevalences, and affects on galactic star formation.
+One canonical accretion mode is cool, filamentary accretion, wherein cool, $T \sim 10^4$ K cosmological filaments travel into the galaxy  from the IGM~\cite[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a}.
+Filamentary accretion is especially relevant at high redshift when the universe is denser~\citep[e.g.][]{Keres2009a, Stern2019, Huscher2020}.
+Filamentary accretion can often be accompanied by ``clumpy'' accretion in the form of accreting satellite galaxies and their CGMs~\citep[e.g.][]{Hafen2019, Hafen2020}, which in some cases can provide fuel that produces more than a third of stars formed in MW-mass galaxies~\citep{Angles-Alcazar2017}.
+}
+
+% Accretion types - hot
+\textit{
+For Milky Way-analogs, hot gas with temperature $T>10^5$ K dominates the inflow of gas, as found commonly by cosmological simulations~\citep{Faucher-Giguere2011a, VandeVoort2011, VandeVoort2012a, Joung2012, Murante2012, Nelson2013}.
+One such accretion mode is instability-driven accretion, wherein gas precipitates out of the halo due to hydrodynamic instabilities~\citep[e.g.][]{Maller2004, Mccourt2012, Voit2015, Armillotta2016, Gronke2019a, Esmerian2020, Voit2021}.
+}
+
+% Quiet accretion
+\textit{
+Another type of hot accretion is ``quiet'' accretion, wherein the accreting gas remains hot down to the galaxy-halo interface, at which time it cools and accretes onto the galaxy~\citep{Putman2012}.
+Consistent with a quiet accretion mode, some observations detect ionized, inflowing gas at the galaxy-halo interface~\citep{Zheng2017}.
+Previous idealized simulations have simulated cool gas clouds condensing onto galaxies and found that disrupted and heated clouds could condense and cool at disk edge~\citep{Heitsch2009}.
+However, to-date little work has been done to distinguish how prevalent quiet accretion is in a cosmological environment and the detailed mechanics of how it proceeds.
 }
 
 % This paper
@@ -345,13 +381,6 @@ In \S\ref{s: fueling} and \S\ref{s: disk formation} we discuss the implications 
 We offer some brief insight on observational expectations for quiet accretion in \S\ref{s: observational expectations} before concluding in \S\ref{s: conclusions}.
 }
 
-% To Read
-\textbf{Fall2002}
-\textbf{RomanowskyFall2012}
-\textbf{FallRomanowsky2018}
-
-% Accretion in cosmological simulations
-\textbf{Read intros thoroughly and extract all info.}
 
 % Angular momentum theoretical estimates
 \textbf{
@@ -370,6 +399,7 @@ See also Yong+2017ab.
 Bielby et al. 2017; Péroux et al. 2017; Diamond-Stanic et al. 2016; Muzahid et al. 2016
 Wong et al., 2004; Martin et al., 2012; Rubin et al., 2012; Ho \& Martin, 2020
 Zabl 2019
+Zheng2017
 }
 
 % C-A comments
@@ -513,8 +543,9 @@ To focus on understanding hot accretion we center our analysis on the last time 
 We first determine if accretion is dominated by hot or cold flows of gas.
 Figure~\ref{f: Mdot} shows the mass inflow rate of different gas phases in two of our simulated halos averaged over the course of one Gyr, ending at $z=0$.
 We calculate the mass inflow rate as
-\begin{equation}\label{e: Mdot}
+\begin{equation}
      \Mdot = \frac{\int_{\rm shell} v_r dm}{\Delta r} = \frac{M_{\rm shell}}{\Delta r} \langle v_r\rangle_{\rm mass\, weighted}
+     \label{e: Mdot}
 \end{equation}
 where $\Delta r$ is the shell thickness, and the integration is done on all particles with centers within the shell.
 The inwards mass flux from all gas (black curve) is approximately constant down to $\sim 20$ kpc.
@@ -820,11 +851,17 @@ A wide variety of work points to $M_{\rm h} \sim 10^{12} M_\odot$ as a ``critica
 \end{itemize}
 emphasize cold clouds due to over-densities heat back up and join the hot inflow, as in Illustris (see fig.~12 in Nelson+20
 
-\subsubsection{Thermal-Balance}
+% Relation to our CGMs
+\textit{
+As we discuss in \S\ref{s: prevalence -- conditions}, our halos are largely thermally stable.
+}
+
+\subsubsection{Hydrostatic}
 
 (No accretion; e.g. Faerman model)
 
 Our mode is the opposite case.
+
 
 \subsubsection{Filaments}
 
@@ -881,6 +918,7 @@ These conditions may be met in some halos with non-thermal support.
 }
 
 \subsubsection{Conditions for quiet accretion}
+\label{s: prevalence -- conditions}
 
 % Voluminous phase condition
 \textit{
@@ -888,11 +926,16 @@ The first condition for quiet accretion is that the accreting gas must be able t
 This allows the gas to collapse into a thin disk after cooling, a characteristic of quiet accretion we discussed in \S\ref{s: aligns}.
 The exact degree of coherence required for the gas to collapse neatly into a thin disk is an avenue for future study.
 One way for the gas to equilibriate its angular momentum is for the inflowing gas to exist as part of a voluminous phase through which gas can exchange angular momentum faster than it accretes.
-$L^*$ halos may have volume-filling subsonic cooling flows that fit this condition~\ref{Stern2019}, as is the case in the FIRE simulations~\citep{Stern2020}.
+$L^*$ halos may have volume-filling subsonic cooling flows that fit this condition~\ref{Stern2019}, as is the case in the FIRE simulations~\citep{Stern2020a}.
 }
 
 % Thermal instabilities
-\textbf{Discuss resolution effects and Balbus\&Soker}
+\textit{
+In the case of our halos, \cite{Stern2019} analyzed the stability of cooling flow solutions in Milky Way-like halos to linear instabilities and found that they were stable to small perturbations in the subsonic provided the cooling time was longer than the free-fall time, i.e. gas mixed via inward movement faster than it cools.
+This is consistent with linear perturbation theory~\citep[e.g.][]{Balbus1989}.
+\textbf{Why are they stable?}
+(However, large perturbations such as those from satellite halos may still produce persistent cool gas~\citep{Esmerian2020}.)
+}
 
 %  Disruption condition
 \textit{
@@ -1009,6 +1052,12 @@ If this is true, one convenient feature is that cooling flow solutions can easil
 % Decreasing halo mass implications
 \textbf{
 Earlier onset of quiet accretion.
+}
+
+% Observational evidence
+\textit{
+Galaxies with a higher \ion{H}{I} content, i.e. containing cool gas suitable for star formation, have bluer, more actively star-forming outer discs compared to the inner part of the galaxy~\citep{Wang2011}.
+Further, \citeauthor{Wang2011} show that \ion{H}{I}-rich galaxies have morphologies consistent with control galaxies, i.e. there are no noticeable signatures of accreting cool gas, suggesting this gas may quietly accrete.
 }
 
 \textbf{Look at \cite{Dekel2014}.}
