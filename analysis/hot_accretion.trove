@@ -23,7 +23,7 @@ processed_data_dir = ${paper_dir}/data
 [SCRIPTS]
 ########################################################################
 # This section named "[SCRIPTS]" contains code that will be run.
-# Code will be run in order from lowest to highest number
+# Code will be run in order listed.
 # The prefix determines how the code will be handled.
 
 # Get halo data
@@ -45,10 +45,13 @@ jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
 py.6 = ${code_dir}/linefinder_tracking/classify.py
 
 # Create Firefly visualization
-py.7 = ${code_dir}/linefinder_tracking/firefly.py
+# py.7 = ${code_dir}/linefinder_tracking/firefly.py
+
+# Trajectories and geometric evolution
+nb.8 = ${code_dir}/characteristics.ipynb
 
 ########################################################################
-[CONVERSION]
+[DATA PRODUCTS]
 ########################################################################
 # This section helps convert existing pipelines to trove pipelines.
 # In particular it will check if the data products exist and mark that part
@@ -77,10 +80,10 @@ subpath = core/m12i_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
 
-[m12m]
-subpath = core/m12m_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
+# [m12m]
+# subpath = core/m12m_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
 
 # A metal diffusion version of this exists
 # [m12f]
@@ -109,25 +112,26 @@ sim_data_dir = ${fire_dir}/${subpath}/output
 # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 # sim_data_dir = ${fire_dir}/${subpath}/output
 
-[m10v]
-subpath = core/m10v_res250
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m10q]
-subpath = core/m10q_res250
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m10y]
-subpath = core/m10y_res250
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m10z]
-subpath = core/m10z_res250
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
+# Skip m10s for now
+# [m10v]
+# subpath = core/m10v_res250
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m10q]
+# subpath = core/m10q_res250
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m10y]
+# subpath = core/m10y_res250
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m10z]
+# subpath = core/m10z_res250
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
 
 # Metal Diffusion
 ########################################################################

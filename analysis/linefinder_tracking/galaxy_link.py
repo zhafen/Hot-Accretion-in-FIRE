@@ -17,6 +17,8 @@ gal_linker = galaxy_link.ParticleTrackGalaxyLinker(
     tag = pm['tag'],
     main_mt_halo_id = 0,
     halo_data_dir = pm['halo_data_dir'],
+    # This is only okay to use for low-z-focused analysis!
+    mt_length_scale = 'Rstar0.5',
 )
 gal_linker.find_galaxies_for_particle_tracks_jug()
     
