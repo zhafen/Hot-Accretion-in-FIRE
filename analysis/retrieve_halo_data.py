@@ -15,7 +15,7 @@ archive_dir = 'ranch.tacc.utexas.edu:' + os.path.join(
 os.makedirs( pm['data_dir'], exist_ok=True )
 os.makedirs( pm['halo_data_dir'], exist_ok=True )
 
-for tar in [ 'mt_halo_files.tar', 'AHF_halos.tar' ]:
+for tar in [ 'mt_halo_files.tar', 'AHF_halos.tar', 'AHF_profiles.tar' ]:
 
     archive_fp = archive_dir + '/' + tar
 
