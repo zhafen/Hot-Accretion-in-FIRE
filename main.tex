@@ -214,36 +214,36 @@ Change tick labels in last panel.
 \label{f: before and after}
 \end{figure*}
 
-% OBSERVATIONAL COMPARISON
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{figures/brightness_profile.pdf}
-\caption{
-I-band surface brightness profile for an edge-on stellar disk.
-Black line (shaded region) is the median (16th-84th percentile) brightness among pixels 7.5 kpc above/below the disk.
-The disk truncates at $\approx 12$ kpc, as seen by the sharp drop-off in the brightness for the percentiles, consistent with observations.
-\textbf{
-Fill out observations description.
-Put on log-linear axis.
-Cut out inner radii where dust obscuration is likely an issue.
-Maybe cut out entirely and just reference Cameron's paper.
-Reference Shea and Kareem's papers.
-}
-}
-\label{f:stellar_profile}
-\end{figure}
+% % OBSERVATIONAL COMPARISON
+% \begin{figure}
+% \centering
+% \includegraphics[width=\columnwidth]{figures/brightness_profile.pdf}
+% \caption{
+% I-band surface brightness profile for an edge-on stellar disk.
+% Black line (shaded region) is the median (16th-84th percentile) brightness among pixels 7.5 kpc above/below the disk.
+% The disk truncates at $\approx 12$ kpc, as seen by the sharp drop-off in the brightness for the percentiles, consistent with observations.
+% \textbf{
+% Fill out observations description.
+% Put on log-linear axis.
+% Cut out inner radii where dust obscuration is likely an issue.
+% Maybe cut out entirely and just reference Cameron's paper.
+% Reference Shea and Kareem's papers.
+% }
+% }
+% \label{f:stellar_profile}
+% \end{figure}
 
 % SPARE FIGURE
-\begin{figure}
-    \centering
-    % \includegraphics{}
-    \caption{
-    \textbf{Spare figure, but maybe
-    cooling emission in X-ray, optical and UV lines vs.\ radius, only from tracked particles
-    }
-    }
-    \label{f: emission}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     % \includegraphics{}
+%     \caption{
+%     \textbf{Spare figure, but maybe
+%     cooling emission in X-ray, optical and UV lines vs.\ radius, only from tracked particles
+%     }
+%     }
+%     \label{f: emission}
+% \end{figure}
 
 \section{NOTES FOR AUTHORS}
 
@@ -598,9 +598,6 @@ All particles with $\Rcon>100$  were added to the $R=100$ bin, although these am
 \textit{
 To enhance qualitative understanding of the distribution of $\Rcon$ the bottom panels of Figure~\ref{f: T vs R} show the temperature and radial history of 10 randomly-selected particles in Figure~\ref{f: T vs R}.
 }
-\textbf{
-What causes gas temperature to increase again?
-}
 
 % Distribution of r1e5
 \textit{
@@ -849,12 +846,18 @@ Relation to Putman's Quiet accretion? She has some of the relevant refs in secti
 %Daniel Wang: \url{https://ui.adsabs.harvard.edu/#abs/2011ApJ...730...84L/abstract} shows evidence for cooling of hot gas near galactic disks
 }
 
+\subsection{Prevalence of Quiet Accretion}
+
+\textbf{
+This is the section where we will discuss how prevalent quiet accretion is among our simulations.
+}
+
 \section{Discussion}
 \label{s: discussion}
 
 % Intro
 \textit{
-In the previous section we identified quiet accretion as a primary channel for accretion onto Milky Way-like galaxies and analyzed the mechanics through which quiet accretion operates.
+In the results section we identified quiet accretion as a primary channel for accretion onto Milky Way-like galaxies and analyzed the mechanics through which quiet accretion operates.
 In the discussion we now turn to the implications of our findings.
 In \S\ref{s: prevalence} we discuss conditions that may enable quiet accretion to occur, including in halos that have non-thermal support.
 We then turn to comparing and contrasting quiet accretion with other accretion modes in \S\ref{s: other modes}.
@@ -1118,8 +1121,7 @@ Galaxies with a mass comparable to the MW have long been of special interest, bo
 % FIRE-centric recent work
 \textit{
 Recent work has revealed correlations between a number of evolving properties of the galaxy and CGM, all showing a critical transition at $L \sim L^*$.
-In the FIRE simulations these properties include the inner CGM transitioning from a supersonic and free-falling inner to a subsonic and virialized, the star formation rate transitioning from bursty to steady, and the stellar morphology transitioning from more spheroidal to a thin disk~(\citealt{Stern2020, Yu2021}, Gurvich et al., in prep).
-The mechanics driving this transition are clearly important to understanding galaxy formation and evolution, and are the subject of ongoing work.
+In the FIRE simulations these properties include a transition from a supersonic and free-falling inner CGM to a subsonic and virialized inner CGM, a transition from bursty to steady star formation, and a transition from spheroidal or thick disk to thin disk stellar morphology~(\citealt{Stern2020, Yu2021}, Gurvich et al., in prep).
 }
 \textbf{
 \cite{El-Badry2018a}:
@@ -1136,9 +1138,15 @@ We broadly reproduce the observed scaling relations between galaxy mass, gas rot
 % Quiet accretion and the transition
 \textit{
 Here we note that while the causal direction of the transition is yet to be determined, the emergence of quiet accretion as a result of a virialized halo is highly conducive to disk formation and a steady star formation.
-In particular quiet accretion is co-rotating and closely aligned with the galaxy, likely time-steady, and deposited on the disk edge before moving inwards~(as discussed here and in Trappe et al., in prep).
+In particular quiet accretion is co-rotating and closely aligned with the galaxy, likely time-steady, and deposited on the disk edge before moving inwards~(as discussed here and in \citealt{Trapp2021}).
 These properties suggest that any stars formed out of the accreting gas will already be in the morphology of a thin disk, and if star formation follows the accretion rate then they will form at a steady rate.
-As such, the development of a virialized halo at least partially enables a steady star formation rate and thin disk formation, although a change in ISM properties may in turn allow for the presence of a virialized halo.
+As such, the development of a virialized halo at least partially enables a steady star formation rate and thin disk formation.
+}
+
+% Necessary or sufficient?
+\textit{
+Whether or not quiet accretion is a condition, either necessary or sufficient, for disk formation may depend on the evolution of the gas after it enters the galaxy.
+However, previous cosmological simulations lacking resolved stellar feedback may provide a clue.\textbf{Bird2013, Guedes2011}
 }
 
 \textbf{
@@ -1150,7 +1158,7 @@ https://ui.adsabs.harvard.edu/abs/2011ApJ...742...76G/abstract
 }
 
 \textbf{
-Compare to classic pictures of disk formation, Fall \& Efstathiou (1980) and Mo, Mao\&White (1998).
+Compare to classic pictures of disk formation, Fall \& Efstathiou (1980) and Mo, Mao\&White (1998)?
 }
 
 \subsubsection{Setting disk size}
