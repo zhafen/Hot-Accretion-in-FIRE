@@ -353,6 +353,12 @@ Before column(s), at column, after column.
 Try mollweide projection.
 Try classic kinematic picture showing blue/red-shift along LOS.
 
+% What does the disk galaxy literature have to say?
+\textit{
+    Look at \cite{Bird2019}, which looks at alignment of galaxy disks with filaments.
+    Look at \cite{Bird2020}, which seems to be a typical classic disk galaxy paper.
+}
+
 % Misaligned or warped disks
 Can quiet accretion produce misaligned or warped disks?
 Tjitske has seen in large scale simulations a misaligned disk being preceeded by a change in halo angular momentum.
@@ -1121,21 +1127,15 @@ Galaxies with a mass comparable to the MW have long been of special interest, bo
 % FIRE-centric recent work
 \textit{
 Recent work has revealed correlations between a number of evolving properties of the galaxy and CGM, all showing a critical transition at $L \sim L^*$.
-In the FIRE simulations these properties include a transition from a supersonic and free-falling inner CGM to a subsonic and virialized inner CGM, a transition from bursty to steady star formation, and a transition from spheroidal or thick disk to thin disk stellar morphology~(\citealt{Stern2020, Yu2021}, Gurvich et al., in prep).
-}
-\textbf{
-\cite{El-Badry2018a}:
-Gas becomes increasingly rotationally supported with increasing galaxy mass. In the lowest-mass galaxies (Mstar < 108 Msun), gas fails to form a morphological disk and is primarily dispersion and pressure supported.
-At intermediate masses (Mstar = 108-10 Msun), galaxies display a wide range of gas kinematics and morphologies, from thin, rotating disks, to irregular spheroids with negligible net rotation.
-All the high-mass (Mstar = 1010-11 Msun) galaxies form rotationally supported gas disks.
-We broadly reproduce the observed scaling relations between galaxy mass, gas rotation velocity, size, and angular momentum, but may somewhat underpredict the incidence of disky, high-angular momentum galaxies at the lowest observed masses (Mstar = 106 - 2 $\times$ 107) M)
+In the FIRE simulations these properties include a transition from a supersonic and free-falling inner CGM to a subsonic and virialized inner CGM;
+a transition from bursty to steady star formation;
+a transition from dispersion and pressure supported to rotationally supported;
+and a transition from spheroidal or thick disk to thin disk stellar morphology~(\citealt{El-Badry2018a, Stern2020, Yu2021}, Gurvich et al., in prep).
 }
 
 \subsubsection{Quiet accretion is conducive for disk formation}
 
-% Other accretion modes are not nearly as conducive to disk formation
-
-% Quiet accretion and the transition
+% Quiet accretion mechanical conduciveness
 \textit{
 Here we note that while the causal direction of the transition is yet to be determined, the emergence of quiet accretion as a result of a virialized halo is highly conducive to disk formation and a steady star formation.
 In particular quiet accretion is co-rotating and closely aligned with the galaxy, likely time-steady, and deposited on the disk edge before moving inwards~(as discussed here and in \citealt{Trapp2021}).
@@ -1143,18 +1143,29 @@ These properties suggest that any stars formed out of the accreting gas will alr
 As such, the development of a virialized halo at least partially enables a steady star formation rate and thin disk formation.
 }
 
-% Necessary or sufficient?
+% Lack of alternatives
 \textit{
-Whether or not quiet accretion is a condition, either necessary or sufficient, for disk formation may depend on the evolution of the gas after it enters the galaxy.
-However, previous cosmological simulations lacking resolved stellar feedback may provide a clue.\textbf{Bird2013, Guedes2011}
+No other known accretion modes provide fuel that is clearly conducive to disk formation.
+Simulations predict that cold flows and satellites approach the galaxy from a variety of angles, and arguably precipitation should do the same~(\S\ref{s: other modes}).
 }
 
-\textbf{
-James: Older cosmological sims showed a similar thick-thin disk transition, suggesting that something present in those sims for the transition may also be present in our sims, and might produce the bursty-steady transition.
-The similar thing may be CGM virialization.
-Sims: 
-https://iopscience.iop.org/article/10.1088/0004-637X/773/1/43
-https://ui.adsabs.harvard.edu/abs/2011ApJ...742...76G/abstract
+% Thin stellar disk but no feedback
+\textit{
+The conditions under which simulated galaxies produce disk galaxies also points to the role of quiet accretion in disk formation.
+The first piece of evidence is the presence of galaxies with thin stellar disks in cosmological simulations absent strong galactic winds~\citep{Guedes2011, Bird2013}.
+If disk galaxies are produced under similar conditions in these simulations and our simulations then the accretion mode must be one that occurs absent feedback affecting the CGM.
+Quiet accretion fits this condition well:
+quiet accretion is the accretion mode for cooling flows, which are solutions for hot gaseous halos that are \textit{not} strongly affected by feedback~\citep{Stern2019}.
+Instead the hot or cool nature of the halo is determined solely by the halo baryon content and/or the accretion rate, which increases with increasing dark matter halo mass.
+}
+
+% Underprediction of thin disks at low mass
+\textit{
+The second piece of evidence is the underprediction in FIRE of a galaxy population with thin stellar disks for galaxies with $M_* = 10^6 -- 2 \times 10^7 M_\odot$~\citep{El-Badry2018a}, where our galaxies are fed primarily by cold flows~\citep{Stern2020}.
+If quiet accretion is a necessary condition for disk formation then the absence of quiet accretion in these halos also explains the underprediction of disky galaxies.
+Inducing quiet accretion in these halos would require the halo to have a larger baryon content.
+Determining if quiet accretion is a sufficient condition for disk formation requires analysis of the ISM in addition to the existing CGM-focused analysis.
+This is the subject of ongoing work (Gurvich et al., in prep).
 }
 
 \textbf{
