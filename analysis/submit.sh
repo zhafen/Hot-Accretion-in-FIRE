@@ -4,7 +4,7 @@
 #SBATCH --partition=skx-normal
 #SBATCH --nodes=1
 #SBATCH --ntasks=48
-#SBATCH --time=6:00:00
+#SBATCH --time=8:00:00
 #SBATCH --output=/scratch/03057/zhafen/hot_accretion_data/logs/trove.out
 #SBATCH --error=/scratch/03057/zhafen/hot_accretion_data/logs/trove.err
 #SBATCH --mail-user=zhafen@u.northwestern.edu
@@ -17,4 +17,4 @@ CONFIG=$1
 
 trove clean $CONFIG
 trove evaluate $CONFIG
-trove execute $CONFIG
+trove execute -n 3 $CONFIG
