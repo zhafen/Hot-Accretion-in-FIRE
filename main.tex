@@ -209,6 +209,8 @@ The hitch may be driving inflow, because the disk could be giving angular moment
 Hint: the hitch is much less apparent in jmag.
 Try showing for the fourth panel ( jvec - jz )/j, which we expect to go to zero, and shows the coherence and only the coherence pretty well.
 Change tick labels in last panel.
+Zoom-in on axis labels.
+Try adding ratio of radiative cooling/compressive heating.
 }
 }
 \label{f: before and after}
@@ -339,6 +341,10 @@ Far enough out in an m11 the inner halo is virialized, and compressive heating c
 This would suggest the cooling radius is max( edge of the virialized area, angular momentum radius), potentially true across all halo masses MW and below.
 Can be checked by making an equivalent to Figure~\ref{f: before and after} for an m11.
 
+
+% Decreasing halo mass implications
+Do we want to discuss the conditions under which there could be an early onset of quiet accretion for lower-halo mass halos?
+
 % Firefly changes
 Good preset. Requires changing using options. Can load a preset using the Options class.)
 Change loading screen.
@@ -365,6 +371,7 @@ Tjitske has seen in large scale simulations a misaligned disk being preceeded by
 Anna has some plots of this. This might be more present in the ELVIS sims.
 The angular momentum vector of the CGM is in general misaligned with that of the stars in the central galaxy by large angles  30 to 60 degrees (DeFelippis et al. 2020).
 See also Roskar2010.
+Yuan Li finds changing angle of disk due to accretion in her cluster sims.
 
 \section{Introduction}
 \label{s: introduction}
@@ -817,6 +824,11 @@ At roughly the same time compressive heating drops off dramatically due to the l
 The result is gas that cools very quickly.
 }
 
+\textbf{
+Does the gas mix with the ISM, and does that induce cooling? (Evidence is no because it cools and changes morphology at the same time.)
+}
+
+% This is old stuff Jonathan wrote. Keeping around for now.
 % To demonstrate that the hot radial inflow is driven by cooling, we compare the different terms of the energy conservation equation. In steady-state, and assuming the gravitational potential is constant,  energy conservation in the radial direction dictates \citep[e.g.][]{Shu82}
 % \begin{equation}\label{e: energy}
 %     \rho g v_r + H_{\rm feedback} - \frac{d}{dr}(v_r P)= 
@@ -827,7 +839,6 @@ The result is gas that cools very quickly.
 % \begin{equation}
 %     \Mdot\frac{d}{dr}\left(\Phi+\frac{3}{2}\epsilon + \frac{1}{2}v^2\right) = 4\pi r^2 \left(\langle\nH^2\Lambda\rangle-\langle H_{\rm feedback}\rangle\right)
 % \end{equation}
-
 % In Fig.~\ref{f: Edot} we plot each of the terms in eqn.~(\ref{e: energy}), averaged over radial shells and over time. Shell averages of quantity $Q$ are calculated via 
 % \begin{equation}
 %     \frac{d\dot{E}_Q}{d r} = \frac{\int_{\rm shell} Q\rho^{-1} dm}{\Delta r} 
@@ -840,17 +851,6 @@ The result is gas that cools very quickly.
 %     \Mdot P \frac{d\langle V \rangle_{\rho v_r} }{dr}
 % \end{equation}
 % Note that since $d\ln\rho/ d\ln r$ is of order unity, and in hot virial temperature gas $\epsilon/r \approx c_{\rm s}^2/r \approx v_{\rm c}^2/r = g$, we get that $\dot{E}_{\rm comp}$ (eqn.~\ref{e: Ecomp}) and $\dot{E}_{\rm grav}$ (eqn.~\ref{e: Egrav}) are of the same order.
-
-\textbf{Zoom-in on axis labels for Figure 4, add ratio of radiative cooling/compressive heating.}
-
-\textbf{
-Lots of interest in KITP slack on how the gas joins the disk and affects it.
-Questions: how does it interact with the ISM?
-How much angular momentum does it impart on the disk? Does that change the angle of the disk? Yuan Li finds changing angle in her cluster sims.
-Does the gas mix with the ISM, and does that induce cooling? (Evidence is no because it cools and changes morphology at the same time.)
-Relation to Putman's Quiet accretion? She has some of the relevant refs in section 2.5 of the review article and the lagging halo with z-height for other galaxies as observed in Halpha in section 3.2.
-%Daniel Wang: \url{https://ui.adsabs.harvard.edu/#abs/2011ApJ...730...84L/abstract} shows evidence for cooling of hot gas near galactic disks
-}
 
 \subsection{Prevalence of Quiet Accretion}
 
@@ -896,10 +896,9 @@ $L^*$ halos may have volume-filling subsonic cooling flows that fit this conditi
 
 % Thermal instabilities
 \textit{
-In the case of our halos, \cite{Stern2019} analyzed the stability of cooling flow solutions in Milky Way-like halos to linear instabilities and found that they were stable to small perturbations in the subsonic provided the cooling time was longer than the free-fall time, i.e. gas mixed via inward movement faster than it cools.
-This is consistent with linear perturbation theory~\citep[e.g.][]{Balbus1989}.
-\textbf{Why are they stable?}
-(However, large perturbations such as those from satellite halos may still produce persistent cool gas~\citep{Esmerian2020}.)
+In the case of our halos, \cite{Stern2019} analyzed the stability of cooling flow solutions in Milky Way-like halos to linear instabilities and found that they were stable to small perturbations in the subsonic provided the cooling time was longer than the free-fall time, i.e. gas is mixed via inward movement faster than it cools.
+Linear perturbation theory also predicts that perturbations will grow slower than the infall of the gas~\citep[e.g.][]{Balbus1989}.
+However, large perturbations such as those from satellite halos may still produce persistent cool gas~\citep{Esmerian2020}.
 }
 
 %  Disruption condition
@@ -938,7 +937,7 @@ These characteristics are all consistent with quiet accretion, suggesting that t
 % Analysis replication
 \textit{
 To confirm the presence of quiet accretion in halos with non-thermal support we performed the same tracking outlined in \S\ref{s: methods} on a MW-mass halo simulated with cosmic-ray feedback.
-\textbf{Do this.}
+\textbf{Do this. Until then the rest of this subsubsection are notes.}
 }
 
 % CR vs MHDCV differences
@@ -965,20 +964,24 @@ I think these potential overlaps are fine, and if anything beneficial to reinfor
 
 \subsubsection{Other cosmological simulations}
 
-% EAGLE
-\textit{
-Is the cold accretion described by \cite{Ho2019} consistent with quiet accretion?
-\textbf{Finding out would likely involve reproducing the ballistic approximation, which identifies the most strongly inflowing gas.}
-It's not clear, but the cold gas around the galaxy is mostly aligned with the galaxy plane, including for the most strongly-inflowing gas.
-The hot gas that is most strongly cooling is best fit by a singular isothermal sphere, while all hot gas is best fit by a $\beta$ profile~\citep{Stevens2017}.
-\textbf{Is this consistent with what we expect? Do we expect an isothermal sphere?}
-\textbf{If important for comparison, Stevens2017 give the cooling time profiles for their halos, so we can check if it's a cooling flow.}
-In the EAGLE simulations specific angular momentum is not conserved for cooling gas, including for gas cooling onto disky galaxies~\citep{Stevens2017}.
-This may cause differences in the characteristics of the accretion at the gaalxy-halo interface.
-\cite{Stevens2017} find that the most cooling gas within $R_{\rm vir}$ has a comparable, but slightly higher, magnitude of angular momentum distribution as all hot gas in the halo.
-\textbf{I think this is support for the halos being similar.}
-\cite{Stevens2017} also find that gas will orient itself parallel to the cold disk as it cools.
+\textbf{
+Would it be useful to have a section here searching for other simulation analyses that show accretion consistent with quiet accretion?
 }
+
+% % EAGLE
+% \textit{
+% Is the cold accretion described by \cite{Ho2019} consistent with quiet accretion?
+% \textbf{Finding out would likely involve reproducing the ballistic approximation, which identifies the most strongly inflowing gas.}
+% It's not clear, but the cold gas around the galaxy is mostly aligned with the galaxy plane, including for the most strongly-inflowing gas.
+% The hot gas that is most strongly cooling is best fit by a singular isothermal sphere, while all hot gas is best fit by a $\beta$ profile~\citep{Stevens2017}.
+% \textbf{Is this consistent with what we expect? Do we expect an isothermal sphere?}
+% \textbf{If important for comparison, Stevens2017 give the cooling time profiles for their halos, so we can check if it's a cooling flow.}
+% In the EAGLE simulations specific angular momentum is not conserved for cooling gas, including for gas cooling onto disky galaxies~\citep{Stevens2017}.
+% This may cause differences in the characteristics of the accretion at the gaalxy-halo interface.
+% \cite{Stevens2017} find that the most cooling gas within $R_{\rm vir}$ has a comparable, but slightly higher, magnitude of angular momentum distribution as all hot gas in the halo.
+% \textbf{I think this is support for the halos being similar.}
+% \cite{Stevens2017} also find that gas will orient itself parallel to the cold disk as it cools.
+% }
 
 \subsection{Comparison to other accretion modes}
 \label{s: other modes}
@@ -1079,16 +1082,20 @@ The distinguishing trait is simply whether or not the gas will accrete onto the 
 \label{s: fueling}
 
 % Maximum accretion rate onto DM halos
-\textbf{Reread Jonathan's max acc rate paper and add in some of the most relevant notes here.}
+\textit{
+Using previous work we can constrain the rate at which quiet accretion provides fuel for galaxies.
+\cite{Stern2020a} derive and simulate the maximum accretion rate a hot halo can sustain while remaining hot, finding $\dot M_{\rm crit} \approx 0.7 M_\odot/{\rm yr}$ for an $L^*$ halo.
+If the halo accretes gas at a higher rate than $\dot M_{\rm crit}$ then the cooling rate will surpass the free-fall time and the gas will cool and accrete as cold-mode accretion.
+}
 
 % Overprediction of star formation
 \textit{
-The fiducial FIRE simulations overpredict the observed SFR in MW-mass halos by a factor of $\sim 4$ \textbf{citation needed}.
+The fiducial FIRE simulations may overpredict the observed SFR in MW-mass halos by a factor of a few, although this is uncertain due to scatter in the SFR at fixed stellar mass and potential underestimation of molecular gas content in the FIRE simulations~\citep{Sparre2017, Orr2018}.
 FIRE simulations also underpredict the number of red galaxies~\citep{Garrison-Kimmel2017}.
-This discrepancy may be a result of an elevated accretion rate relative to the real accretion rate.
+This potential discrepancy may be a result of an elevated accretion rate relative to the real accretion rate.
 If so, a potential solution lies in feedback absent in the fiducial FIRE simulations that can suppress gas accretion.
-The FIRE simulations that include cosmic-rays have star-formation rates more consistent with observations, in support of this picture~\textbf{TK CR paper citation}.
-Similarly, AGN feedback may be able to suppress star formation, although the effect of AGN feedback on some FIRE halos would increase X-ray emissivity beyond observed levels~\textbf{citation needed}. 
+The FIRE simulations that include cosmic-rays have reduced star-formation rates in support of this picture~\citep{Chan2019, Hopkins2020, Hopkins2020a, Hopkins2020b}.
+Similarly, AGN feedback may be able to suppress star formation, although the effect of AGN feedback on some FIRE halos would increase X-ray emissivity beyond observed levels~\textbf{(Citation needed: Jonathan, where did you get this from?)}. 
 }
 
 % Alternate solution
@@ -1096,22 +1103,9 @@ Similarly, AGN feedback may be able to suppress star formation, although the eff
 An alternative solution to the discrepancy in SFR is if the CGM is still described by a sub-sonic cooling flow with no feedback terms, but the mass in the CGM is reduced by a factor of  $\sim2$.
 For a cooling flow, decreasing the total mass in the CGM by a factor of $\sim 2$ reduces the accretion rate by a factor of $\sim4$~\cite{Stern2019}, potentially bringing the star formation rate into better agreement with observations.
 The total mass in the CGM at a given time is determined by the full history of the CGM at previous times.
-Even without including additional feedback terms it would be unsurprising if the energy and momentum deposition by wind was inconsistent with real values by an amount necessary to account for this mass difference. \textbf{citation needed?}
+Even without including additional feedback terms it would be unsurprising if the energy and momentum deposition by wind was inconsistent with real values by an amount necessary to account for this mass difference. \textbf{(Citation needed?)}
 If this is true, one convenient feature is that cooling flow solutions can easily be scaled up/down to predict the properties of the hot CGM in accordance with an appropriate accretion rate.
 }
-
-% Decreasing halo mass implications
-\textbf{
-Earlier onset of quiet accretion.
-}
-
-% Observational evidence
-\textit{
-Galaxies with a higher \ion{H}{I} content, i.e. containing cool gas suitable for star formation, have bluer, more actively star-forming outer discs compared to the inner part of the galaxy~\citep{Wang2011}.
-Further, \citeauthor{Wang2011} show that \ion{H}{I}-rich galaxies have morphologies consistent with control galaxies, i.e. there are no noticeable signatures of accreting cool gas, suggesting this gas may quietly accrete.
-}
-
-\textbf{Look at \cite{Dekel2014}.}
 
 \subsection{Quiet accretion and disk formation}
 \label{s: discussion -- disk formation}
@@ -1166,7 +1160,7 @@ The first piece of evidence is the presence of galaxies with thin stellar disks 
 If disk galaxies are produced under similar conditions in these simulations and our simulations then the accretion mode must be one that occurs absent feedback affecting the CGM.
 Quiet accretion fits this condition well:
 quiet accretion is the accretion mode for cooling flows, which are solutions for hot gaseous halos that are \textit{not} strongly affected by feedback~\citep{Stern2019}.
-Instead the hot or cool nature of the halo is determined solely by the halo baryon content and/or the accretion rate, which increases with increasing dark matter halo mass.
+Instead the hot or cool nature of the halo is determined solely by the halo baryon content and/or the accretion rate, which increases with increasing dark matter halo mass~\citep{Stern2020a}.
 }
 
 % Underprediction of thin disks at low mass
@@ -1192,6 +1186,13 @@ Provided angular momentum is conserved shouldn't galaxy size always be set by an
 
 % \textbf{
 % Cite Cameron's paper and leave it at that?
+% }
+
+
+% % Observational evidence
+% \textit{
+% Galaxies with a higher \ion{H}{I} content, i.e. containing cool gas suitable for star formation, have bluer, more actively star-forming outer discs compared to the inner part of the galaxy~\citep{Wang2011}.
+% Further, \citeauthor{Wang2011} show that \ion{H}{I}-rich galaxies have morphologies consistent with control galaxies, i.e. there are no noticeable signatures of accreting cool gas, suggesting this gas may quietly accrete.
 % }
 
 % \textbf{
