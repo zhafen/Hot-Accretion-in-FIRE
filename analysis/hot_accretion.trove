@@ -45,13 +45,13 @@ jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
 py.6 = ${code_dir}/linefinder_tracking/classify.py
 
 # Create Firefly visualization
-py.7 = ${code_dir}/linefinder_tracking/firefly.py
+# py.7 = ${code_dir}/linefinder_tracking/firefly.py
 
-# Trajectories and geometric evolution
-nb.8 = ${code_dir}/characteristics.ipynb
- 
-# Before and after cooling
-nb.9 = ${code_dir}/before_and_after.ipynb
+# # Trajectories and geometric evolution
+# nb.8 = ${code_dir}/characteristics.ipynb
+#  
+# # Before and after cooling
+# nb.9 = ${code_dir}/before_and_after.ipynb
 
 ########################################################################
 [DATA PRODUCTS]

@@ -15,6 +15,6 @@
 # Config path
 CONFIG=$1
 
-trove clean $CONFIG
-trove evaluate $CONFIG
+# trove clean $CONFIG
+# trove evaluate $CONFIG
 trove execute -n 3 $CONFIG
