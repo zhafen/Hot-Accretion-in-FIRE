@@ -12,6 +12,7 @@ scratch_dir = /scratch/03057/zhafen
 root_data_dir = ${scratch_dir}/hot_accretion_data
 fire_dir = /scratch/projects/xsede/GalaxiesOnFIRE
 firefly_dir = /scratch/03057/zhafen/firefly_repos/hot-halo-accretion
+archive_dir = ranch.tacc.utexas.edu:/stornext/ranch_01/ranch/users/03057/zhafen/hot_accretion_data
 
 # Analysis
 paper_dir = /home1/03057/zhafen/papers/Hot-Accretion-in-FIRE
@@ -47,11 +48,11 @@ py.6 = ${code_dir}/linefinder_tracking/classify.py
 # Create Firefly visualization
 # py.7 = ${code_dir}/linefinder_tracking/firefly.py
 
-# # Trajectories and geometric evolution
-# nb.8 = ${code_dir}/characteristics.ipynb
-#  
-# # Before and after cooling
-# nb.9 = ${code_dir}/before_and_after.ipynb
+# Trajectories and geometric evolution
+nb.8 = ${code_dir}/characteristics.ipynb
+ 
+# Before and after cooling
+nb.9 = ${code_dir}/before_and_after.ipynb
 
 ########################################################################
 [DATA PRODUCTS]
@@ -166,20 +167,22 @@ sim_data_dir = ${fire_dir}/${subpath}/output
 # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 # sim_data_dir = ${fire_dir}/${subpath}/output
 
-[m12c_md]
-subpath = metal_diffusion/m12c_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
+# DEBUG: stuck on before and after
+# [m12c_md]
+# subpath = metal_diffusion/m12c_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
 
 [m12b_md]
 subpath = metal_diffusion/m12b_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
 
-[m11d_md]
-subpath = metal_diffusion/m11d_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
+# DEBUG
+# [m11d_md]
+# subpath = metal_diffusion/m11d_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
 
 [m11e_md]
 subpath = metal_diffusion/m11e_res7100
