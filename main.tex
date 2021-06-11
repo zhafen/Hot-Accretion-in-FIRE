@@ -50,7 +50,7 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Quiet Accretion in FIRE]{The Quiet Growth of MW-Like Disks}
+\title[Quiet Accretion onto $L^*$ Galaxies]{The Quiet Fueling of MW-Like Disks}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -76,7 +76,16 @@ $^1$ \ldots
 
 % Abstract of the paper
 \begin{abstract}
-% We study how gas accretes onto $\sim L^\star$ star-forming galaxies at redshift $z\sim0$ using the FIRE cosmological simulations.
+We study how gas accretes onto $\sim L^\star$ star-forming galaxies at redshift $z\sim0$ using FIRE cosmological simulations.
+We find three primary characteristics:
+(i) hot gas dominates the inflowing gas mass, accounting for $\sim4/5$ of the mass;
+(ii) accreting gas cools at the galaxy-halo interface, with the peak of the cooling occuring just outside the galaxy;
+(iii) as accreting gas cools it circularizes, transitioning from quasi-spherical to disc-like over the course of $\lesssim 200$ Myr.
+This accretion mode, which we refer to as \textit{quiet accretion}, occurs when volume-filling, stable gas reaches the radius at which it is rotationally-supported.
+The rotational support increases density and prevents compressive heating, inducing rapid cooling.
+Prior to cooling the volume-filling gas equilibriates to a coherent rotation.
+Subsequently when the gas cools it forms a disk that is on-average co-rotating with the galaxy.
+Quiet accretion is expected to be more conducive to disk formation than other modes of accretion, and is a general outcome of volume-filling, stable inflow.
 % We evaluate the relative importance of three different modes of accretion: 
 % gas that never heats to the virial temperature (``cold accretion''), 
 % cool clouds which condense out of the hot halo, lose buoyancy and accrete  (``condensation''), 
@@ -95,7 +104,7 @@ $^1$ \ldots
 % Select between one and six entries from the list of approved keywords.
 % Don't make up new ones.
 \begin{keywords}
-keyword1 -- keyword2 -- keyword3
+galaxies: disc -- galaxies: evolution -- galaxies: halos -- cosmology: theory
 \end{keywords}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -696,7 +705,7 @@ The z-direction is defined as parallel to the net angular momentum of stars with
 We compare to the specific angular momentum necessary for gas to be fully supported by angular momentum at a given radius ($Rv_c(R)$; dashed).
 From $\tcon - 500$ Myr to $\tcon$ the magnitude of specific angular momentum for individual particles decreases from $\mid \vec j \mid \approx 5000$ kpc km/s to $\mid \vec j \mid \approx 3000\,{\rm kpc\,km/s} \approx j_z$.
 However, the angular momentum needed for support scales as $\sim R$ and therefore decreases faster, resulting in the gas having large rotational support at $\tcon$ and becoming fully rotationally-supported shortly after.
-This rotational support is responsible for the stalling seen in panel (B).
+This rotational support is responsible for the stalling seen in panel (B), and is a feature of many simulations of $L^*$ halos~\citep[][]{Oppenheimer2018}.
 }
 
 % The angular momentum increase
@@ -1223,29 +1232,29 @@ Our analysis was centered on the history of gas found inside MW-like FIRE-2~\cit
 Our main takeaways are as follows\ldots
 }
 \begin{itemize}
-    \item \textbf{Characteristics:}
+    \item \textbf{Characteristics (\S\ref{s: characteristics}):}
     Accretion onto $z=0$ $L^*$ galaxies is best described by hot/voluminous CGM gas (Figure~\ref{f: Mdot}) that cools at the galaxy-halo interface (Figure~\ref{f: T vs R}), and as it cools it collapses into a disk oriented with the galaxy (Figure~\ref{f: theta vs t}).
     We use the existing term \textit{quiet accretion} for this gas mode, so called for its lack of cool gas signatures in the CGM and its expected tendency to settle softly onto the existing galaxy disk.
-    \item \textbf{Mechanics:}
+    \item \textbf{Mechanics (\S\ref{s: mechanics}):}
     Quiet accretion occurs when gas proceeds inwards through the CGM while maintaining a voluminous state.
     The gas cools out of the voluminous state when it becomes fully angular-momentum supported, stagnating inward movement, causing an increase in density, and halting compressive heating.
     Prior to cooling its voluminous nature allows the gas to equilibriate to a coherent angular momentum, and therefore when the gas cools it quickly flattens into a shapely disk.
     These mechanics of quiet accretion are summarized in Figure~\ref{f: before and after}.
-    \item \textbf{Prevalence:} Our work suggests that quiet accretion may be the main accretion mechanism for many virialized halos (\S\ref{s: prevalence}).
+    \item \textbf{Prevalence (\S\ref{s: prevalence}):} Quiet accretion may be the main accretion mechanism for many virialized halos (\S\ref{s: prevalence}).
     \textbf{Fill out more when that section is done.}
 \end{itemize}
 
 % Discussion conclusions
 \textit{
-In addition to the characteristics, mechanics, and prevalence, we discussed the expected prevalence beyond our simulation sample, the relationship between quiet accretion and other accretion modes, and the fueling of star and disk formation.
+In addition to the characteristics, mechanics, and prevalence, we discussed the following.
 \begin{itemize}
-    \item We argue that quiet accretion is the expected accretion mode for volume-filling infalling gas~(\S\ref{s: broader prevalence}).
-    As such this accretion mode should be especially evident in virialized halos where feedback and cold accretion are weak, as is borne out in MW-mass FIRE simulations at z=0.
-    Quiet accretion may also occur in halos affected by feedback in the form of isotropic non-thermal support, provided by e.g. cosmic rays, and Trappe et al., in prep identify accretion with consistent characteristics in an analysis of FIRE with cosmic ray feedback.
-    \item We compare quiet accretion to both cold and hot modes, including stable hot accretion, precipitation, cold-flow streams, the accretion of satellite CGMs, and the absence of accretion due to a hydrostatic halo~(\S\ref{s: other modes}).
+    \item Quiet accretion is the expected accretion mode for volume-filling infalling gas~(\S\ref{s: broader prevalence}).
+    As such this accretion mode should be especially evident in virialized halos where feedback and cold-flow streams are weak, as is borne out in MW-mass FIRE simulations at z=0.
+    Quiet accretion may also occur in halos affected by feedback in the form of isotropic non-thermal support, provided by e.g. cosmic rays.
+    \item We compare quiet accretion to stable hot accretion, precipitation, cold-flow streams, the accretion of satellite CGMs, and the absence of accretion due to a hydrostatic halo~(\S\ref{s: other modes}).
     Quiet accretion is the only mode where gas has a highly coherent angular momentum prior to accreting.
     Quiet accretion is also one of the few modes absent a significant inward flux of $T\sim 10^4$ K gas.
-    \item The accretion rate for quiet accretion is constrained by the maximum accretion possible for hot mode accretion and the CGM mass, which is tied to the cumulative feedback history of a halo and related uncertainties~(\S\ref{s: fueling}).
+    \item Quiet accretion is constrained by the maximum accretion possible for hot mode accretion, and when the result of a cooling flow the accretion rate is solely a function of the CGM mass and subsequently the cumulative feedback history of a halo~(\S\ref{s: fueling}).
     \item Quiet accretion is expected to be highly conducive to disk formation because it is "soft-landing", circularized accretion that smoothly cools onto the disk at same rotation speed as the disk.~(\S\ref{s: disk formation}).
     The onset of quiet accretion is expected when the inner halo virializes, which is correlated with the development of a thin disk in the FIRE simulations.
 \end{itemize}
@@ -1253,9 +1262,8 @@ In addition to the characteristics, mechanics, and prevalence, we discussed the 
 
 % Final paragraph
 \textit{
-There are a number of analyses and observations necessary to expand our understanding of quiet accretion.
 \cite{Trapp2021} find gas infall at the galaxy-halo interface of FIRE-2 $L^*$ galaxies is roughly consistent with observational constraints on mass flux~\citep[e.g.][]{Putman2012, Rohser2016} and cloud infall speed~\citep[e.g.][]{Zheng2017, Werk2019, Bish2019, Ho2020}.
-Comprehensive mock observations of quiet accretion may be necessary to provide predictions observations can test, and to enable observers to identify galaxies undergoing quiet accretion, potentially including our own.
+Comprehensive mock observations of quiet accretion may be necessary to provide testable predictions, and to enable identification of galaxies undergoing quiet accretion, potentially including our own.
 The relationship between quiet accretion, disk formation, and a transition in galaxy and CGM properties needs to be further disentangled, with causal directions determined (Gurvich et al., in prep).
 To this end, analyses that probe the parameter regime over which quiet accretion occurs in cosmological simulations (including redshift and halo mass) would be valuable.
 }
