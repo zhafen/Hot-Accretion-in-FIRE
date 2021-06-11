@@ -27,23 +27,23 @@ processed_data_dir = ${paper_dir}/data
 # Code will be run in order listed.
 # The prefix determines how the code will be handled.
 
-# Get halo data
-py.1 = ${code_dir}/retrieve_halo_data.py
-
-# Get IDs to track
-nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
-
-# Sample particles to track, including removing duplicates
-py.3 = ${code_dir}/linefinder_tracking/sample.py
-
-# Run particle tracking
-jug.4 = ${code_dir}/linefinder_tracking/track.py
-
-# Run galaxy linking
-jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
-
-# Run particle classification
-py.6 = ${code_dir}/linefinder_tracking/classify.py
+# # Get halo data
+# py.1 = ${code_dir}/retrieve_halo_data.py
+# 
+# # Get IDs to track
+# nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
+# 
+# # Sample particles to track, including removing duplicates
+# py.3 = ${code_dir}/linefinder_tracking/sample.py
+# 
+# # Run particle tracking
+# jug.4 = ${code_dir}/linefinder_tracking/track.py
+# 
+# # Run galaxy linking
+# jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
+# 
+# # Run particle classification
+# py.6 = ${code_dir}/linefinder_tracking/classify.py
 
 # Create Firefly visualization
 # py.7 = ${code_dir}/linefinder_tracking/firefly.py
@@ -102,10 +102,11 @@ subpath = core/m11a_res2100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
 
-[m11b]
-subpath = core/m11a_res2100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
+# DEBUG: Issue with r_gal when selecting particles to track.
+# [m11b]
+# subpath = core/m11b_res2100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
 
 [m11c]
 subpath = core/m11c_res2100
