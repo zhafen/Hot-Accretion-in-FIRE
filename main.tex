@@ -144,14 +144,13 @@ Consider adding additional complementary visualizations.
     \includegraphics[width=\columnwidth]{figures/tracks/tracks_m12i_md.pdf}
     \includegraphics[width=\columnwidth]{figures/tracks/tracks_m12b_md.pdf}
     \caption{
+    Radial and temperature trends for gas accreting onto two $L^\star$ halo at $z\approx0$
     \textbf{Top:} Distribution of $\Rcon$, the radius at which gas particles last transitioned from $T > 10^5$ K to $T < 10^5$ K prior to accreting, i.e. the radius at which they cooled prior to accretion.
-    \textbf{Bottom:} 10 T vs.\ R and K vs.\ R tracks for two $L^\star$ halo at $z=0$, with color indicating time relative to the time at which gas cools.
+    \textbf{Bottom:} Temperature vs radius tracks for five randomly-selected particles per halo, with color indicating time relative to the time at which gas cools.
     Gas either remains hot or cools only temporarily down to $\lesssim 0.1 R_{\rm vir}$.
     \textbf{
     Consider plotting an edge-on image of the system to-scale above the histogram.
     }
-     \textbf{Compare accretion radii (this plot) to a textbook angular momentum support radii distribution.}
-    \textbf{This plot should be complemented in the prevalence section with a plot that shows the distribution for more simulations.}
     }
     \label{f: T vs R}
 \end{figure*}
@@ -160,16 +159,26 @@ Consider adding additional complementary visualizations.
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{figures/ang_dist_evolution/theta_vs_t_m12i_md.pdf}
+    \includegraphics[width=\columnwidth]{figures/ang_dist_evolution/theta_vs_t_m12b_md.pdf}
+    \includegraphics[width=\columnwidth]{figures/ang_dist_evolution/theta_vs_t_m11i_md.pdf}
     \caption{
-    Angular distribution of accreting gas over 150 Myr before/after cooling. Cooling and circularization occur together -- prior to cooling the gas is distributed quasi-spherically, while after cooling the gas has a disc like configuration.
-    \textbf{note `disc distribution' near vertical line'}.
-    \textbf{Definitely m11d back in for comparison. An advantage for including is that it provides a powerful contrast.}.
-    \textbf{Try splitting up into two panels side-by-side with a "before" panel and an "after" panel.}
-    \textbf{Make a plot using the same particle bins as here, but showing the sum of the angular momentum for all particles in the bin, divided by vcR}
-    \textbf{See if the distribution becomes narrower if selecting a narrower range of particles.}
-    \textbf{Change to KDE}
+    Angular distribution of accreting gas over 150 Myr before/after cooling for two Milky Way-mass galaxies (\texttt{m12i\_md}, \texttt{m12b\_md}) and one LMC-mass central galaxy (\texttt{m11i\_md}).
+    Angle is relative to the stellar disk, with $\cos\theta=0$ for gas along the disk plane.
+    For $L^*$ galaxies accreting gas cools and circularizes at the same time -- prior to cooling the gas is distributed quasi-spherically, while after cooling the gas has a disc-like configuration.
+    The same change in morphology is not seen for lower-mass, unvirialized halos.
     }
     \label{f: theta vs t}
+\end{figure}
+
+% PREVALENCE OF QUIET ACCRETION
+\begin{figure}
+    \centering
+    % \includegraphics[width=\columnwidth]{figures/ang_dist_evolution/theta_vs_t_m12i_md.pdf}
+    \caption{
+    \textbf{Summary plot for multiple simulations.}
+    \textbf{Compare accretion radii to textbook angular momentum support radii using spin parameters and ang momentum conservation.}
+    }
+    \label{f: r1e5 summary}
 \end{figure}
 
 % MECHANICS OF QUIET ACCRETION
@@ -521,7 +530,8 @@ We offer some brief insight on observational expectations for quiet accretion in
 The metal distribution in the CGM affects cooling processes and therefore the treatment of metal diffusion is important for resolving substructure and small clouds~\cite{rennehan2021}.
 More diffusive metal diffusion typically produces less substructure, with possible exceptions for stripping processes, and many current prescriptions for metal diffusion may under-resolve metal diffusion~\citep[e.g.][]{rennehan2019, rennehan2021}.
 }
-\textbf{Non-md simulations have unexpected cooling at large radii, according to Jonathan. This would be good to cite here.}
+\textbf{Non-md simulations have unexpected cooling at large radii, according to Jonathan.
+If this is referenced somewhere it would be good to cite it here.}
 
 % How we select the particles
 \textit{
@@ -581,7 +591,7 @@ The inwards mass flux of hot CGM gas (red curve; $T>10^5$ K)  is $\gtrsim 4\time
 The greater mass flux of hot gas suggests hot mode accretion is the dominant form of accretion in our halos.
 This inner radius of $\approx 20$ kpc is the edge of galactic star formation, as shown by the flattening of the enclosed star formation rate~($\dot M_{\rm stars}(<R)$; black dashed curve).
 The inwards mass flux of all gas (top panel) as well as hot gas is approximately constant down to $\approx 20$ kpc.
-The constant mass flow with changing radius indicates a halo in a steady state, consistent with with hot accretion modes including cooling flows~\citep{Stern2019}.
+The constant mass flow across radii indicates a halo in a steady state, consistent with with hot accretion modes including cooling flows~\citep{Stern2019}.
 
 \textbf{$\dot{M}_{\rm stars}$ in Fig.~\ref{f: Mdot} is currently SFR$/2$. Change to SFR minus gas returned from winds/SNe.}
 
@@ -595,18 +605,15 @@ For gas that cools in the halo and subsequently precipitates $\Rcon$ will be at 
 The top panels of Figure~\ref{f: T vs R} show the distribution of  $\Rcon$.
 Inconsistent with a precipitation model, the distribution is approximately centered at the galaxy edge, and does not extend into the CGM beyond $\sim 40$ kpc.
 All particles with $\Rcon>100$ kpc were added to the $R=100$ kpc bin, although these amount to very few.
+By comparison, isotropic cooling occurring randomly within $R_{\rm vir}$ would cool in a wide distribution with a median at $0.8 R_{\rm vir}$, while for our accreted gas the median $\Rcon \approx 0.06 R_{\rm vir}$.
 }
 
 % Accretion tracks figure description
 \textit{
-To enhance qualitative understanding of the distribution of $\Rcon$ the bottom panels of Figure~\ref{f: T vs R} show the temperature and radial history of 10 randomly-selected particles in Figure~\ref{f: T vs R}.
+The bottom panels of Figure~\ref{f: T vs R} show the temperature and radial history of 5 randomly-selected particles in Figure~\ref{f: T vs R}.
+The bottom panels provide qualitative confirmation that individual accreting particles typically have $T>10^5$ K, with only temporary periods of cooling.
+Nevertheless, the temperature-distance trajectories through the hot halo are highly variable, including some potentially periodic features.
 }
-
-% Distribution of r1e5
-\textit{
-As an explicit example of how far our distribution is from a condensation model, isotropic cooling occurring randomly within $R_{\rm vir}$ would cool in a wide distribution with a median at $0.8 R_{\rm vir}$, while for our accreted gas the median $\Rcon \approx 0.06 R_{\rm vir}$.
-}
-\textbf{Just add the radial mass distribution.}
 
 \subsubsection{Aligns with the galaxy as it cools}
 \label{s: characteristics -- aligns}
@@ -616,8 +623,8 @@ As an explicit example of how far our distribution is from a condensation model,
 Figure~\ref{f: theta vs t} provides insight into the geometry of accreting gas before cooling (red) and after cooling (blue).
 The value on the x-axis corresponds to the cosine of the angle between the gas elements and the total angular momentum vector of the stars inside the galaxy radius.
 A spherical distribution would have a flat pdf with a value of 0.5.
-The pdf of an infinitely thin disk would be a delta function centered at $\cos\theta$ = 0.
-Over approximately a galaxy dynamical time gas moves from being distributed without a strong preference for direction to being distributed in a plane aligned with the galaxy.
+The pdf of an infinitely thin disk would be a delta function centered at $\cos\theta = 0$.
+Gas accreting onto $L^*$ galaxies transitions over approximately a galaxy dynamical time from being distributed without a strong preference for direction to being distributed in a plane aligned with the galaxy.
 }
 
 \subsubsection{Quiet accretion}
@@ -653,7 +660,7 @@ Quiet accretion may still occur for halos with angular momentum significantly mi
 \label{s: prevalence}
 
 \textbf{
-This is the section where we will discuss how prevalent quiet accretion is among our simulations.
+This is the section where we will discuss how prevalent quiet accretion is among our simulations, i.e. this will be analysis of multiple simulations.
 }
 
 \subsection{Mechanics of quiet accretion}
@@ -730,6 +737,7 @@ This is consistent with other cosmological simulations of $L_\star$ halos~\citep
 \textbf{Do we want to add some discussion here on how the gas gets its angular momentum from the IGM, i.e. tidal torque theory?}
 
 \subsubsection{Support leads to cooling}
+\label{s: mechanics -- energy balance}
 
 % Energy balance description
 \textit{
@@ -788,7 +796,7 @@ We wrap up our discussion with by briefly addressing observational predictions a
 }
 
 \subsection{Broader prevalence of quiet accretion}
-\label{s: prevalence}
+\label{s: broader prevalence}
 
 % Primary mode for MW-mass virialized halos
 \textit{
@@ -799,7 +807,7 @@ These conditions may be met in some halos with non-thermal support.
 }
 
 \subsubsection{Conditions for quiet accretion}
-\label{s: prevalence -- conditions}
+\label{s: broader prevalence -- conditions}
 
 % Voluminous phase condition
 \textit{
@@ -835,6 +843,7 @@ These halos may be in a mass range where stellar feedback is no longer sufficien
 }
 
 \subsubsection{Halos with non-thermal support}
+\label{s: broader prevalance -- non-thermal}
 
 % Comparison to Trapp+2021
 \textit{
@@ -879,6 +888,7 @@ Similar for CR, but gas starts to organize into a disk earlier?
 I think these potential overlaps are fine, and if anything beneficial to reinforce.
 
 \subsubsection{Other cosmological simulations}
+\label{s: broader prevalance -- other sims}
 
 \textbf{
 Would it be useful to have a section here searching for other simulation analyses that show accretion consistent with quiet accretion?
@@ -900,9 +910,10 @@ Would it be useful to have a section here searching for other simulation analyse
 % }
 
 \subsection{Comparison to other accretion modes}
-\label{s: other modes}
+\label{s: modes}
 
 \subsubsection{Stable Hot Accretion}
+\label{s: modes -- hot}
 
 % What is stable hot accretion?
 \textit{
@@ -920,6 +931,7 @@ That the cooling gas subsequently forms a disk is a new result that requires int
 }
 
 \subsubsection{Precipitation}
+\label{s: modes -- precipitation}
 
 % What is instability-driven accretion?
 \textit{
@@ -941,6 +953,7 @@ Related, a potential diagnostic of quiet accretion vs precipitation may be the g
 }
 
 \subsubsection{Cold-flow Streams}
+\label{s: modes -- cold}
 
 % What are cold-flow streams?
 \textit{
@@ -972,6 +985,7 @@ It may be possible to use the geometric distribution of cold gas at the galaxy-h
 }
 
 \subsubsection{Satellite Winds and Halos}
+\label{s: modes -- satellite}
 
 % What is satellite CGM accretion
 \textit{
@@ -988,14 +1002,18 @@ Therefore satellite CGM that isn't ejected and/or stripped and subsequently mixe
 }
 
 \subsubsection{Recycled Winds}
+\label{s: modes -- winds}
 
-\textit{
-Brook et al. (2012) and Ubler et al. (2014) found that, because gas in the CGM has higher specific angular momentum than gas in the galaxy, gas that falls back onto galaxies following a galactic fountain often has higher angular momentum.
-In simulations with feedback that produces bipolar winds the wind can evacuate low-angular momentum gas found preferentially along the galaxy poles~\citep[e.g.][]{DeFelippis2017}, helping produced aligned accretion.
-Wind is only weakly bipolar for MW-mass halos in the FIRE simulations~\citep{Hafen2019}, so this is not as strong of an effect.
-}
+\textbf{Add some text about winds?}
+
+% \textit{
+% Brook et al. (2012) and Ubler et al. (2014) found that, because gas in the CGM has higher specific angular momentum than gas in the galaxy, gas that falls back onto galaxies following a galactic fountain often has higher angular momentum.
+% In simulations with feedback that produces bipolar winds the wind can evacuate low-angular momentum gas found preferentially along the galaxy poles~\citep[e.g.][]{DeFelippis2017}, helping produced aligned accretion.
+% Wind is only weakly bipolar for MW-mass halos in the FIRE simulations~\citep{Hafen2019}, so this is not as strong of an effect.
+% }
 
 \subsubsection{Hydrostatic Halos}
+\label{s: modes -- hydrostatic}
 
 % What is the hydrostatic scenario?
 \textit{
@@ -1007,7 +1025,7 @@ Models based on hydrostatic equilibrium can fit a variety of observational const
 \textit{
 The hot halos present in $L^*$ FIRE-2 simulation are near, but not in, hydrostatic equilibrium~\citep{Esmerian2020, Stern2020}, and cooling flow solutions in general are close to hydrostatic equilibrium~\citep{Stern2019}.
 As such, hot halo gas that will become quiet accretion shares many traits with hot halo gas in hydrostatic equilibrium.
-The distinguishing trait is simply whether or not the gas will accrete onto the galaxy.
+The distinguishing trait is primarily whether or not the gas will accrete onto the galaxy.
 }
 
 \subsection{Quiet accretion fueling star formation}
@@ -1104,6 +1122,7 @@ Compare to classic pictures of disk formation, Fall \& Efstathiou (1980) and Mo,
 }
 
 \subsubsection{Setting disk size}
+\label{s: disk formation -- disk size}
 
 \textbf{
 Is there something to say here?
@@ -1199,33 +1218,36 @@ Provided angular momentum is conserved shouldn't galaxy size always be set by an
 
 % Summary paragraph
 \textit{
-In this paper we studied the characteristics, mechanics, and prevalence of quiet accretion--hot accretion that cools as it accretes at the galaxy-halo interface.
-We studied quiet accretion by analyzing MW-mass halos at $z \sim 0$ produced as part of the FIRE-2 simulation suite~\cite{Hopkins2018}, including tracking all gas found inside the central galaxy at $z=0$ and outside the galaxy 1 Gyr prior.
-The primary takeaways are summarized below.
+In this paper we studied the characteristics, prevalence, and mechanics of accretion onto MW-mass halos at $z \sim 0$.
+Our analysis was centered on the history of gas found inside MW-like FIRE-2~\citep{Hopkins2018} simulated galaxies at $z=0$, and outside one Gyr prior.
+Our main takeaways are as follows\ldots
 }
 \begin{itemize}
-    \item \textbf{Characteristics:} Quiet accretion is characterized by hot/voluminous CGM gas (Figure~\ref{f: Mdot}) that cools at the galaxy-halo interface (Figure~\ref{f: T vs R}), and as it cools it collapses into a disk oriented with the galaxy (Figure~\ref{f: theta vs t}).
-    \item \textbf{Mechanics:} Quiet accretion occurs when gas falls through the CGM while maintaining a voluminous state.
+    \item \textbf{Characteristics:}
+    Accretion onto $z=0$ $L^*$ galaxies is best described by hot/voluminous CGM gas (Figure~\ref{f: Mdot}) that cools at the galaxy-halo interface (Figure~\ref{f: T vs R}), and as it cools it collapses into a disk oriented with the galaxy (Figure~\ref{f: theta vs t}).
+    We use the existing term \textit{quiet accretion} for this gas mode, so called for its lack of cool gas signatures in the CGM and its expected tendency to settle softly onto the existing galaxy disk.
+    \item \textbf{Mechanics:}
+    Quiet accretion occurs when gas proceeds inwards through the CGM while maintaining a voluminous state.
     The gas cools out of the voluminous state when it becomes fully angular-momentum supported, stagnating inward movement, causing an increase in density, and halting compressive heating.
     Prior to cooling its voluminous nature allows the gas to equilibriate to a coherent angular momentum, and therefore when the gas cools it quickly flattens into a shapely disk.
-    The mechanics of quiet accretion are summarized in Figure~\ref{f: before and after}.
+    These mechanics of quiet accretion are summarized in Figure~\ref{f: before and after}.
     \item \textbf{Prevalence:} Our work suggests that quiet accretion may be the main accretion mechanism for many virialized halos (\S\ref{s: prevalence}).
-    We argue that quiet accretion is the expected accretion mode for undisturbed volume-filling infalling gas.
-    As such this accretion mode should be especially evident in virialized halos where feedback and cold accretion are weak, as is borne out in MW-mass FIRE simulations at z=0.
-    Quiet accretion may also occur in halos affected by feedback in the form of isotropic non-thermal support, provided by e.g. cosmic rays, and Trappe et al., in prep identify accretion with consistent characteristics in an analysis of FIRE with cosmic ray feedback.
+    \textbf{Fill out more when that section is done.}
 \end{itemize}
 
 % Discussion conclusions
 \textit{
-In addition to the characteristics, mechanics, and prevalence, we discussed the relationship between quiet accretion and other accretion modes, star formation, disk formation, and a theorized transition in galaxy and CGM properties.
+In addition to the characteristics, mechanics, and prevalence, we discussed the expected prevalence beyond our simulation sample, the relationship between quiet accretion and other accretion modes, and the fueling of star and disk formation.
 \begin{itemize}
-    \item We compare quiet accretion to both cold and hot modes, including stable hot accretion, precipitation, cold-flow streams, the accretion of satellite CGMs, and lack of accretion due to a hydrostatic halo(\S\ref{s: other modes}).
+    \item We argue that quiet accretion is the expected accretion mode for volume-filling infalling gas~(\S\ref{s: broader prevalence}).
+    As such this accretion mode should be especially evident in virialized halos where feedback and cold accretion are weak, as is borne out in MW-mass FIRE simulations at z=0.
+    Quiet accretion may also occur in halos affected by feedback in the form of isotropic non-thermal support, provided by e.g. cosmic rays, and Trappe et al., in prep identify accretion with consistent characteristics in an analysis of FIRE with cosmic ray feedback.
+    \item We compare quiet accretion to both cold and hot modes, including stable hot accretion, precipitation, cold-flow streams, the accretion of satellite CGMs, and the absence of accretion due to a hydrostatic halo~(\S\ref{s: other modes}).
     Quiet accretion is the only mode where gas has a highly coherent angular momentum prior to accreting.
     Quiet accretion is also one of the few modes absent a significant inward flux of $T\sim 10^4$ K gas.
-    \item Quiet accretion may be significantly intertwined with the formation of thin disks (\S\ref{s: disk formation}).
-    The onset of quiet accretion is expected when the inner halo virializes, which is correlated with the development of the thin disk.
-    From a mechanistic standpoint, quiet accretion is expected to be highly conducive to disk formation because it is "soft-landing", circularized accretion that smoothly cools onto the disk at same rotation speed as the disk.
-    \item As the accretion mechanism for halos absent feedback, quiet accretion describes the maximum accretion rate onto galaxies for a given CGM mass (\S\ref{s: fueling}). Differences in star formation rates between theory and observations for halos fed by quiet accretion can therefore be linked to the CGM mass, which is tied to the cumulative feedback history of a halo and related uncertainties.
+    \item The accretion rate for quiet accretion is constrained by the maximum accretion possible for hot mode accretion and the CGM mass, which is tied to the cumulative feedback history of a halo and related uncertainties~(\S\ref{s: fueling}).
+    \item Quiet accretion is expected to be highly conducive to disk formation because it is "soft-landing", circularized accretion that smoothly cools onto the disk at same rotation speed as the disk.~(\S\ref{s: disk formation}).
+    The onset of quiet accretion is expected when the inner halo virializes, which is correlated with the development of a thin disk in the FIRE simulations.
 \end{itemize}
 }
 
