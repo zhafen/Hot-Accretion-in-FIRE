@@ -265,41 +265,36 @@ Normal: Normal text, polished enough to be included in a draft.
 
 % Target audience
 \textbf{
-The target audience is:
+Who is the target audience?
+}
+My thoughts are\ldots
 At the broadest level anyone who wants to understand the general picture of how disks form.
 Galaxy theorists.
 CGM theorists.
 Galaxy observers.
 CGM observers.
 People who like interpretable results.
-}
 
 % Assess the overall message
-\textbf{
+\textbf{What points are likely to resonate with the target audience(s)?}
 Imagine sitting down with the target audience.
 What are the most important points you want to convey?
 In particular, what could they really use?
 Think first and foremost of that, and shape accordingly.
-}
 
 % Review
-\textbf{
 Read through the paper with each targeted group in mind.
 Edit accordingly.
 Even better, get a member of the target group to provide feedback.
-}
-\textbf{
 At the end, decide on the title and the abstract.
-}
+
+% Citations
+\textbf{I'm a bit citation-happy right now, what should I trim?}
 
 % Temporary cooling investigation
-Some trajectories cool and then reheat shortly before accreting, check why.
+\textbf{Why do some trajectories cool and then reheat?}
+They cool because of perturbations~\citep{Esmerian2020}, but why do they reheat?
 Why is there cool gas visible in the intuition-building plots 100 Myr prior to cooling?
-
-% Additional simulation analysis questions
-Why do m12f and m12r have a very extended distribution of $\Rcon$?
-Why does m12f have increasing diskiness as it cools, but it starts from already being disky?
-Why does m12r have no change in angular distribution?
 
 % How much to include on CR sims
 Pros of including CR-analysis:
@@ -311,6 +306,11 @@ Pros of including CR-analysis:
 Cons:
 - CR halos are regarded as fundamentally different to hydro halos
 - Jonathan's previous work doesn't touch on CR halos.
+
+% Additional simulation analysis questions
+Why do m12f and m12r have a very extended distribution of $\Rcon$?
+Why does m12f have increasing diskiness as it cools, but it starts from already being disky?
+Why does m12r have no change in angular distribution?
 
 % Summary plot
 Metric of diskiness vs metric of quiet accretion.
@@ -324,7 +324,7 @@ In Figure~\ref{f: T vs R}, as part of an ancient decision, I'm not plotting recy
 Is that a good choice?
 
 % Name: Quiet accretion?
-Is quiet accretion the term we want to use?
+\textbf{Is quiet accretion the term we want to use?}
 Use inspiration from the pre-virilization comparison.
 Alternatives:
 Soft, soft-landing.
@@ -335,21 +335,14 @@ Sharp? (Sudden and ubiquitous at angular momentum support radius.)
 Write to Mary Putman and ask why she called it quiet accretion.
 
 % More terminology
-Decoherent, incoherent, or something else?
-Compression heating and radiation cooling, or radiative cooling and compression heating.
+\textbf{In regards to coherence, should we use decoherent, incoherent, or something else?}
+\textbf{Compression heating and radiation cooling, or radiative cooling and compression heating?}
 
 % The hitch
 Does the gas mix with the ISM, and does that induce cooling? (Evidence is no because it cools and changes morphology at the same time.)
 
-% CRs or no?
-Do we want to include CRs in this paper?
-If including, plot temperature distribution while tracking to compare and contrast CRs and non-CRs.
-When doing CR-comparison panel overplot fiducial simulation results.
-
-% Check differentation of definition and results
-When presenting we should ensure we're clearly differentiating definition and results.
-
 % Not overly centered on disk formation
+Are we overly-centered on disk formation?
 Framing of conducive to disk formation might give your listeners the impression that this is the only theory for disk formation.
 
 % Outer virialized halo effects
@@ -358,12 +351,11 @@ Far enough out in an m11 the inner halo is virialized, and compressive heating c
 This would suggest the cooling radius is max( edge of the virialized area, angular momentum radius), potentially true across all halo masses MW and below.
 Can be checked by making an equivalent to Figure~\ref{f: before and after} for an m11.
 
-
 % Decreasing halo mass implications
 Do we want to discuss the conditions under which there could be an early onset of quiet accretion for lower-halo mass halos?
 
 % Firefly changes
-Good preset. Requires changing using options. Can load a preset using the Options class.)
+I need to set up a good preset. Requires changing using options. Can load a preset using the Options class.)
 Change loading screen.
 Include labels for scale.
 
@@ -377,9 +369,7 @@ Try mollweide projection.
 Try classic kinematic picture showing blue/red-shift along LOS.
 
 % Additional visualizations
-\textbf{
 Try making a 2D histogram of $\Rcon$ and the angle at which it accretes.
-}
 
 % Angular momentum reading
 There's still more angular momentum reading to be done, including:
@@ -392,7 +382,7 @@ Maller\&Dekel2002: angular momentum as a function of origin.
 
 % Angular momentum of accreting gas vs all gas at a given radius
 How does the angular momentum of all gas at a given radius compare to the angular momentum of the accreting gas?
-Check by calculating the inner product between the two.
+Check by calculating the inner product between the two?
 
 % Misaligned or warped disks
 Can quiet accretion produce misaligned or warped disks?
@@ -406,7 +396,7 @@ Yuan Li finds changing angle of disk due to accretion in her cluster sims.
 \label{s: introduction}
 
 % Star formation and CGM accretion
-Star formation on a galactic scale informs the distribution of formation times for systems ranging from stellar populations~\cite{Yu2021} to star clusters~\citep[e.g.][]{Grudic2020} to planets~\textbf{(Anyone know of a good star-formation, planet-formation paper?)}.
+Star formation on a galactic scale informs the distribution of formation times for systems ranging from stellar populations~\cite{Yu2021} to star clusters~\citep[e.g.][]{Grudic2020} to planets~\textbf{(I'm looking for a good paper linking galactic star formation and planet formation.)}.
 In this way galactic star formation is one of the main intersections between the many fields of astrophysics.
 Galactic star formation is itself informed by accretion from the circumgalactic medium (CGM) that surrounds galaxies.
 This accretion from the CGM provides fuel without which star formation would cease in only a couple of Gyrs~\cite[e.g.][]{Prochaska2009, Bauermeister2010, Spring2017}.
@@ -535,7 +525,7 @@ The metal distribution in the CGM affects cooling processes and therefore the tr
 More diffusive metal diffusion typically produces fewer cool clouds, with possible exceptions for stripping processes, and many current prescriptions for metal diffusion may under-resolve metal diffusion~\citep[e.g.][]{rennehan2019, rennehan2021}.
 Therefore if cool cloud substructure is not present with under-resolved metal diffusion, as may be the case in our simulations, we do not expect it to arise with an alternative treatment.
 
-\subsubsection{Simulation analysis}
+\subsubsection{Analysis}
 \label{s: methods -- analysis}
 
 % How we select the particles
@@ -556,7 +546,7 @@ For gas that cools as it accretes, $\tcon$ occurs as the gas passes through the 
 When selecting values in the simulation corresponding to $\tcon$ we use the last snapshot an accreted particle had $T > 10^5$ K, i.e. the snapshot immediately before the transition.
 Note that we do not account for gas particles being heated to $T > 10^5$ K while still in the ISM.
 Because our sample of tracked particles focuses on recently accreted particles this is expected to be a small population that will not contaminate our analysis.
-This is confirmed a posteriori in Figure~\ref{f: theta vs R}, where gas is not preferentially oriented in a disky ISM prior to $\tcon$.
+This is confirmed a posteriori in Figure~\ref{f: theta vs t}, where gas is not preferentially oriented in a disky ISM prior to $\tcon$.
 
 \section{Results}
 \label{s: results}
@@ -635,7 +625,7 @@ The characteristics highlighted in \S\ref{s: characteristics -- inflowing gas ph
 
 % Notes on the name
 Hot accreting gas that cools and accretes at the galaxy-halo interface has previously been termed \textit{quiet accretion}~\citep{Putman2012}.
-The name ``quiet accretion'' reflects both the challenge in detecting the hot, low-density gas prior to cooling (\textbf{Good citations for this?}), and the ``soft-landing'' of the coherent disk gas onto the galaxy (more in \S\ref{s: discussion -- disk formation}).
+The name ``quiet accretion'' reflects both the challenge in detecting the hot, low-density gas prior to cooling (\textbf{Good citations for this?}), and the ``soft-landing'' of the coherent disk gas onto the galaxy (more in \S\ref{s: disk formation}).
 
 % Notes on the definition
 Two aspects of the definition:
@@ -690,7 +680,7 @@ Any angular momentum gained is expected to be lost by other particles, driving i
 % Coherence
 As the gas gains support it also becomes more coherent.
 The near constant value of $j_z$ over 500 Myr prior to $\tcon$ while $\mid \vec j \mid$ decreases over the same period indicates that the decrease in $\mid \vec j \mid$ is due to components unaligned with the net angular momentum canceling each other out, likely due to interaction in the halo.
-Other cosmological simulations show similar angular momentum cancellation trends as gas proceeds through the halo, e.g.~\cite{DeFelippis2017}.
+Other cosmological simulations show similar angular momentum cancellation trends as gas proceeds through the halo~\citep[e.g.][]{DeFelippis2017}.
 We can see the increasing coherence of the halo more explicitly in panel (D), which shows the ratio $j_z/\mid\vec j\mid$ on a per-particle-basis.
 Gas is rotating parallel to the galaxy if $j_z/\mid \vec j \mid=1$, while $j_z/\mid \vec j \mid=0$ signals perpendicular rotation and $j_z/\mid \vec j \mid=-1$ signals counter-rotation.
 The width of the distribution (as shown by the shaded region) indicates the rotational coherence of the gas, regardless of its alignment with the disk.
@@ -753,7 +743,7 @@ The result is gas that cools over the course of $\lesssim 50$ Myr.
 In the results section we identified quiet accretion as a primary channel for accretion onto Milky Way-like galaxies and analyzed the mechanics through which quiet accretion operates.
 In the discussion we now turn to the implications of our findings.
 In \S\ref{s: broader prevalence} we discuss conditions that may enable quiet accretion to occur, including in halos that have non-thermal support.
-We then turn to comparing and contrasting quiet accretion with other accretion modes in \S\ref{s: other modes}.
+We then turn to comparing and contrasting quiet accretion with other accretion modes in \S\ref{s: modes}.
 We wrap up our discussion in \S\ref{s: fueling} and \S\ref{s: disk formation} with the implications of quiet accretion for fueling star formation and disk formation.
 
 \subsection{Broader prevalence of quiet accretion}
@@ -770,10 +760,10 @@ These conditions may be met in some halos with non-thermal support.
 
 % Voluminous phase condition
 The first condition for quiet accretion is that the accreting gas must be able to equilibriate to a sufficiently coherent angular momentum prior to cooling (as in Figure~\ref{f: before and after}).
-This allows the gas to collapse into a thin disk after cooling, a characteristic of quiet accretion we discussed in \S\ref{s: aligns}.
+This allows the gas to collapse into a thin disk after cooling, a characteristic of quiet accretion we discussed in \S\ref{s: characteristics -- aligns}.
 The exact degree of coherence required for the gas to collapse neatly into a thin disk is an avenue for future study.
 One way for the gas to equilibriate its angular momentum is for the inflowing gas to exist as part of a voluminous phase through which gas can exchange angular momentum faster than it accretes.
-$L^*$ halos may have volume-filling subsonic cooling flows that fit this condition~\ref{Stern2019}, as is the case in the FIRE simulations~\citep{Stern2020a}.
+$L^*$ halos may have volume-filling subsonic cooling flows that fit this condition~\citep{Stern2019}, as is the case in the FIRE simulations~\citep{Stern2020a}.
 
 % Thermal instabilities
 In the case of our halos, \cite{Stern2019} analyzed the stability of cooling flow solutions in Milky Way-like halos to instabilities and found that they were stable to small perturbations provided the cooling time was longer than the free-fall time, i.e. gas is mixed via inward movement faster than it cools.
@@ -882,7 +872,7 @@ That the cooling gas subsequently forms a disk is a new result that requires int
 % What is instability-driven accretion?
 Accretion that occurs due to hydrodynamic instabilities that cause hot halo gas to cool and accrete onto the galaxy is broadly classified as precipitation~\citep[e.g.][]{Sharma2012, Voit2015a, Voit2018, Voit2021}.
 Precipitation may be an important accretion mode because many analytic and simulation analyses suggest hot halo gas may be unstable~\citep[e.g.][]{Balbus1989, Maller2004, McCourt2012, McCourt2016, Joung2012a, Li2014, Armillotta2016, McNamara2016, Schneider2018, Liang2018a, Gronke2019, Gronke2019a, Li2019, Fielding2020}.
-As we discuss in \S\ref{s: prevalence -- conditions}, our halos are largely thermally stable, however recent ``enhanced halo resolution'' simulations suggest that cosmological simulations typically under-resolve cool gas in the halo~\citep{VandeVoort2018, Peeples2019a, Hummels2019, Suresh2019}.
+As we discuss in \S\ref{s: broader prevalence -- conditions}, our halos are largely thermally stable, however recent ``enhanced halo resolution'' simulations suggest that cosmological simulations typically under-resolve cool gas in the halo~\citep{VandeVoort2018, Peeples2019a, Hummels2019, Suresh2019}.
 Nevertheless, the gas that condenses out of the halo may not reach the galaxy, as is the case for the gas that does condense in FIRE-2 Milky-Way mass halos~\citep{Esmerian2020}.
 
 % Relation to the three criteria
@@ -891,7 +881,7 @@ However, precipitation is qualitatively different from quiet accretion.
 First, in quiet accretion hot gas dominates the inflow rate, while in precipitation a significant cold gas mass flow is expected because gas condenses at a variety of radii and remains at $T\sim 10^4$ K until it accretes onto the galaxy.
 Second, we expect precipitating gas to have less coherent angular momentum compared to quiet accretion.
 This is because precipitating gas spends less time hot and therefore has less time to cancel out random angular momentum while hot, and cannot easily exchange angular momentum while cool.
-This suggests precipitation is not as conducive to disk formation~(\S\ref{s: discussion -- disk formation}).
+This suggests precipitation is not as conducive to disk formation~(\S\ref{s: disk formation}).
 Related, a potential diagnostic of quiet accretion vs precipitation may be the geometric distribution of cool gas at the galaxy-halo interface.
 
 \subsubsection{Cold-flow Streams}
@@ -903,7 +893,7 @@ Cold-flow streams are capable of producing the largest cold gas mass inflow rate
 The streams are, on-average, aligned with the central galaxy, but with wide variability~\citep[e.g.][]{Danovich2012, Stewart2011a, Stewart2013, Stewart2017}.
 The streams are also not volume-filling, but have covering fractions as little as $\sim 1/2$ that of hot-mode accretion~\citep[e.g.][]{Wright2021}.
 The large scatter in approaching angle and lack of angular momentum exchange between accreting streams suggests that this mode of accretion is not as conducive to disk formation quiet accretion.
-Not, however, that some cold flow streams may form extended messy disks prior to accreting onto the galaxy, and these disks can be torqued to be aligned with the galaxy~\cite{danovich2012, Danovich2015}.
+Not, however, that some cold flow streams may form extended messy disks prior to accreting onto the galaxy, and these disks can be torqued to be aligned with the galaxy~\cite{Danovich2012, Danovich2015}.
 
 % Cold flow streams and angular momentum
 For a number of reasons, cold-flow streams have higher angular momentum than the dark matter halo, and are likely to have higher angular momentum than the hot halo.
@@ -1148,7 +1138,7 @@ In addition to the characteristics, mechanics, and prevalence, we discussed the 
     \item Quiet accretion is the expected accretion mode for stable volume-filling infalling gas~(\S\ref{s: broader prevalence}).
     As such this accretion mode should be especially evident in virialized halos where feedback and cold-flow streams are weak, as is borne out in MW-mass FIRE simulations at z=0.
     Quiet accretion may also occur in halos affected by feedback in the form of isotropic non-thermal support, provided by e.g. cosmic rays.
-    \item We compare quiet accretion to stable hot accretion, precipitation, cold-flow streams, the accretion of satellite CGMs, and the absence of accretion due to a hydrostatic halo~(\S\ref{s: other modes}).
+    \item We compare quiet accretion to stable hot accretion, precipitation, cold-flow streams, the accretion of satellite CGMs, and the absence of accretion due to a hydrostatic halo~(\S\ref{s: modes}).
     Quiet accretion is the only mode where gas has a highly coherent angular momentum prior to accreting.
     Quiet accretion is also one of the few modes absent a significant inward flux of $T\sim 10^4$ K gas.
     \item Quiet accretion is constrained by the maximum accretion possible for hot mode accretion, and when the result of a cooling flow the accretion rate is solely a function of the CGM mass and subsequently the cumulative feedback history of a halo~(\S\ref{s: fueling}).
