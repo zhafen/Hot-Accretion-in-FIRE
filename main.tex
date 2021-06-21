@@ -43,6 +43,9 @@
 \newcommand{\Rcirc}{R_{\rm circ}} %need better name as R_cool means something else
 \newcommand{\Rvir}{R_{\rm vir}}
 \newcommand{\nH}{n_{\rm H}}
+\newcommand{\Tvir}[]{T_{\rm vir}}
+\newcommand{\msun}[]{{\rm M}_\odot}
+\newcommand{\vvir}[]{v_{\rm vir}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -82,14 +85,14 @@ $^1$,
 \begin{abstract}
 We study how gas accretes onto $\sim L^\star$ star-forming galaxies at redshift $z\sim0$ using FIRE cosmological simulations.
 We find three primary characteristics:
-(i) hot gas dominates the inflowing gas mass, accounting for $\gtrsim4/5$ of the mass;
+(i) hot virial temperature gas dominates ($\gtrsim80\%$) the inflowing gas mass on halo scales ($\gtrsim 20$ kpc);
 (ii) accreting gas cools at the galaxy-halo interface, with the peak of the cooling occuring just outside the galaxy;
-(iii) as accreting gas cools it circularizes, transitioning from quasi-spherical to disc-like over the course of $\lesssim 200$ Myr.
+(iii) cooling and circularization occur simultaneously; accretion transitions from a hot quasi-spherical configuration to a cool disc-like configuration over the course of $\lesssim 200$ Myr.
 This accretion mode, which we refer to as \textit{quiet accretion}, occurs when volume-filling, stable gas reaches the radius at which it is rotationally-supported.
 The rotational support increases density and prevents compressive heating, inducing rapid cooling.
 Prior to cooling the volume-filling gas equilibriates to a coherent rotation.
 Subsequently when the gas cools it forms a disk that is on-average co-rotating with the galaxy.
-Quiet accretion is expected to be more conducive to disk formation than other modes of accretion, and is a general outcome of volume-filling, stable inflow.
+Quiet accretion is expected to be more conducive to disk formation than other modes of accretion, and is a general outcome of a radiatively cooling hot volume-filling CGM phase.
 % We evaluate the relative importance of three different modes of accretion: 
 % gas that never heats to the virial temperature (``cold accretion''), 
 % cool clouds which condense out of the hot halo, lose buoyancy and accrete  (``condensation''), 
@@ -120,13 +123,14 @@ galaxies: disc -- galaxies: evolution -- galaxies: halos -- cosmology: theory
     \centering
     \includegraphics[width=\textwidth]{figures/illustrative_tracks/illustrative_tracks.png}
     \caption{
-Example trajectories showing how gas accretes onto Milky-Way mass galaxies at $z\approx0$.
-Trajectories are representative trajectories selected from gas that is outside a Milky-Way-like simulated FIRE-2 galaxy one Gyr prior to $z=0$, and inside the galaxy at $z=0$.
-We show the trajectories for 1 Gyr prior to the final time gas cools below $T=10^5$ K prior to accreting onto the galaxy, and 0.5 Gyr after cooling.
+Example trajectories showing how gas accretes onto Milky-Way mass galaxies at $z\approx0$ in FIRE.
+Trajectories are representative of gas that is outside a Milky-Way-like galaxy one Gyr prior to $z=0$, and inside the galaxy at $z=0$.
+% We show the trajectories for 1 Gyr prior to the final time gas cools below $T=10^5$ K prior to accreting onto the galaxy, and 0.5 Gyr after cooling.
 The trajectories are characteristic of \textit{quiet accretion}:
-accretion that remains hot and voluminous until it cools at the galaxy-halo interface, at which time it becomes coherent and softly accretes onto the galaxy disk.
+Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, at which time it also forms a rotating disc structure.
 \textbf{
 Consider adding additional complementary visualizations, maybe in the unused black space.
+Especially ones that show the voluminous property.
     }
     }
     \label{f: overview}
@@ -138,10 +142,10 @@ Consider adding additional complementary visualizations, maybe in the unused bla
     \centering
     \includegraphics{figures/Mdot_normalized.pdf}
     \caption{
-    Average mass inflow rate over the course of one Gyr prior to $z=0$ in two $L_\star$ simulated halos.
-    Black lines in the top panels show the total mass inflow rate while colored lines in the bottom panels show the division into the hot, cool and cold phases. 
-    The inflow is dominated by hot gas at $r\gtrsim 20 $ kpc, suggesting the dominance of hot mode accretion in these halos.
-    For comparison the dotted line in the top panel shows the rate of gas conversion into stars within a given radius, and the radius at which it flattens suggests an edge to the galaxy.
+    Average mass inflow rate over the course of one Gyr prior to $z=0$ in two $\sim L^\star$ FIRE halos.
+    Black lines in the top panels show the total mass inflow rate while colored lines in the bottom panels show the division into the hot, cool and cold phases.
+    The dotted line in the top panel shows the rate of gas conversion into stars within a given radius.
+    The hot phase dominates the mass inflow in these halos, down to the galaxy scale of $\approx15$ kpc.
     \textbf{Verify conversion SFR to Mdot\_stars, add SFR of satellites}
     \textbf{Try adding labels relative to $T_{\rm vir}$ (Drummond's suggestion).}
     \textbf{Consider removing top panels, as scientists who are very aware of SFR discrepancies may become fixated.}
@@ -157,10 +161,10 @@ Consider adding additional complementary visualizations, maybe in the unused bla
     \includegraphics[width=\columnwidth]{figures/tracks/tracks_m12i_md.pdf}
     \includegraphics[width=\columnwidth]{figures/tracks/tracks_m12b_md.pdf}
     \caption{
-    Radial and temperature trends for gas accreting onto two $L^\star$ halo at $z\approx0$
-    \textbf{Top:} Distribution of $\Rcon$, the radius at which gas particles last transitioned from $T > 10^5$ K to $T < 10^5$ K prior to accreting, i.e. the radius at which they cooled prior to accretion.
+    Radial and temperature trends for gas accreting onto two $L^\star$ FIRE halos at $z\approx0$.
+    \textbf{Top panels:} Distribution of $\Rcon$, the radius at which gas particles last cooled below $T=10^5$ K prior to accreting.
     \textbf{Bottom:} Temperature vs radius tracks for five randomly-selected particles per halo, with color indicating time relative to the time at which gas cools.
-    Gas either remains hot or cools only temporarily down to $\lesssim 0.1 R_{\rm vir}$.
+    At $r\gtrsim0.1 R_{\rm vir}$ accreted gas either remains hot or cools only temporarily.
     \textbf{
     Consider plotting an edge-on image of the system to-scale above the histogram.
     }
@@ -175,10 +179,10 @@ Consider adding additional complementary visualizations, maybe in the unused bla
     \includegraphics[width=\columnwidth]{figures/ang_dist_evolution/theta_vs_t_m12b_md.pdf}
     \includegraphics[width=\columnwidth]{figures/ang_dist_evolution/theta_vs_t_m11i_md.pdf}
     \caption{
-    Angular distribution of accreting gas over 150 Myr before/after cooling for two Milky Way-mass galaxies (\texttt{m12i\_md}, \texttt{m12b\_md}) and one LMC-mass central galaxy (\texttt{m11i\_md}).
+    Angular distribution of accreting gas over 150 Myr before/after cooling for two MW-mass FIRE galaxies (\texttt{m12i\_md}, \texttt{m12b\_md}) and one LMC-mass central galaxy (\texttt{m11i\_md}).
     Angle is relative to the stellar disk, with $\cos\theta=0$ for gas along the disk plane.
-    For $L^*$ galaxies accreting gas cools and circularizes at the same time -- prior to cooling the gas is distributed quasi-spherically, while after cooling the gas has a disc-like configuration.
-    The same change in morphology is not seen for lower-mass, unvirialized halos.
+    For $\sim L^*$ galaxies (top two panels) accreting gas is quasi-spherical prior to cooling while after cooling the gas has a disc-like configuration, indicating that cooling and circularization occur simultaneously. 
+    In contrast, in the lower-mass halo in the bottom panel the gas is quasi-spherical both prior and after cooling, indicating that cooling is not associated with circularization.
     }
     \label{f: theta vs t}
 \end{figure}
@@ -198,24 +202,26 @@ Consider adding additional complementary visualizations, maybe in the unused bla
 \begin{figure*}
 \includegraphics[height=0.75\textheight]{figures/before_and_after/before_and_after_m12i_md.pdf}
 \caption{
-Mechanics of quiet accretion.
-\textbf{A:} Temperature vs time relative to final cooling ($t - \tcon$) for particles that accrete within 1 Gyr prior to $z=0$.
-Solid line is the median temperature and shaded region shows the 16th to 84th interval among particles.
+Mechanics of accretion onto $z\sim0$ MW-mass galaxies in FIRE.
+In each panel we plot a characteristic of accreted gas versus time relative to the final cooling time ($t - \tcon$).
+Solid lines and shaded regions mark the medians and 16th to 84th percentile ranges of all particles accreted within 1 Gyr prior to $z=0$.
+\textbf{A:} Temperature. Gas last cools at $t - \tcon = 0$ (by definition).
 \textbf{B:}
-3D distance from the galaxy.
-Gas moves inward smoothly until it cools, afterwards it moves inward much more slowly.
+3D distance from halo center. 
+Last cooling occurs at the galaxy scale (dashed line), after which the inflow stalls.
 \textbf{C:}
-The magnitude of the specific angular momentum of particles (green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
-Values are compared to the angular momentum needed to become fully rotationally supported at a given radius ($Rv_{\rm c}(R)$; dashed).
-Gas becomes fully rotationally-supported at the time it cools, contributing to the slower inward movement shown in the top panel.
+The magnitude of the specific angular momentum of particles ($\mid\vec{j}\mid$, green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
+Dashed line shows the angular momentum needed for full rotational support.
+Gas becomes fully rotationally-supported at the time of last cooling, indicating circularization and cooling occur simultaneously.
 \textbf{D:}
 The ratio of $j_z / \mid \vec j \mid$.
-Dashed is $j_z / \mid \vec j \mid$ for the net angular momentum vector of all particles with same $t - \tcon$.
-As gas flows inward it becomes more coherent (the shaded region shrinks), cancelling out angular momentum not aligned with the total angular momentum.
+The solid line and grey band show the distribution of individual accreted particles, while the dashed line shows the vector sum of all accreted particles.
+The shaded region shrinks as gas flows inward, indicating the flow becomes more coherent and that angular momentum not aligned with the total angular momentum is cancelled out. 
 \textbf{E:}
 Energy loss from radiative cooling (blue) and heating from $PdV$ work on the gas particles (red).
-Each line represents the average change in specific energy for particles that cool at the same time (i.e. the same 100 Myr bin in $\tcon$; line opacity scales with number of particles in the bin).
-Prior to being rotationally-supported cooling is offset by heating, but lack of inward movement decreases the compression heating afterwards while radiative cooling increases greatly due to increased density.
+Each line represents the average change in specific energy for particles within a 100 Myr window in $\tcon$.
+Darker colors indicate time windows with more accreted particles.
+At $t<\tcon$ radiative cooling equals compressional heating, as expected in a cooling flow. 
 \textbf{
 Adjust final aspect ratio to maximize plot size.
 }
@@ -262,6 +268,21 @@ Adjust final aspect ratio to maximize plot size.
 Normal: Normal text, polished enough to be included in a draft.
 
 \subsection{OUTSTANDING QUESTIONS/DISCUSSION POINTS}
+
+\textbf{
+Which framing(s) of results to emphasize?
+}
+1. Accretion is an outcome of cooling flows.
+2. Accretion occurs for any volume-filling, stable halo gas.
+3. Accretion occurs for MW-mass halos.
+
+\textbf{Which term to use?}
+Cooling flow accretion vs quiet accretion.
+Or a different one?
+Cooling flow accretion provides a stronger connection to previous work.
+I use quiet accretion because cooling flow accretion is arguably a subset of a more general type of accretion.
+I'd really like to use a single term, because people really catch on to that.
+I'd also like the definition to be done with an eye towards the future.
 
 % Target audience
 \textbf{
@@ -396,26 +417,39 @@ Yuan Li finds changing angle of disk due to accretion in her cluster sims.
 \label{s: introduction}
 
 % Star formation and CGM accretion
-Star formation on a galactic scale informs the distribution of formation times for systems ranging from stellar populations~\cite{Yu2021} to star clusters~\citep[e.g.][]{Grudic2020} to planets~\textbf{(I'm looking for a good paper linking galactic star formation and planet formation.)}.
-In this way galactic star formation is one of the main intersections between the many fields of astrophysics.
-Galactic star formation is itself informed by accretion from the circumgalactic medium (CGM) that surrounds galaxies.
-This accretion from the CGM provides fuel without which star formation would cease in only a couple of Gyrs~\cite[e.g.][]{Prochaska2009, Bauermeister2010, Spring2017}.
+Galactic star formation is likely fueled by accretion from the circumgalactic medium (CGM), without which star formation would cease in only a couple of Gyrs~\cite[e.g.][]{Prochaska2009, Bauermeister2010, Spring2017}.
+There are believed to be a number of modes of accretion from the CGM, each with different characteristics, mechanics, prevalences, and implications for star formation.
+% Accretion types - hot
+In the `hot' accretion mode, which has classically been associated with massive galaxies, gas first shocks to the virial temperature $\Tvir$ at the halo scale, and then radiates its gravitational and thermal energy until accreting onto the galaxy. Beyond this general framework, however, there is no consensus on the specific mechanics of hot accretion or on whether the hot gas actually manages to cool rather than being reheated by galactic feedback processes. 
+% For Milky Way-analogs, theory predicts that hot gas with temperature $T>10^5$ K dominates the inflow~\citep{Faucher-Giguere2011a, VandeVoort2011, VandeVoort2012a, Joung2012, Murante2012, Nelson2013}.
+
+One potential route for hot accretion, which has been extensively discussed in recent years, is instability-driven accretion wherein gas precipitates out of the hot halo due to thermal instabilities, forming cool clouds which lose buoyancy and accrete onto the galaxy~\citep[e.g.][]{Maller2004, Mccourt2012, Voit2015, Armillotta2016, Gronke2019a, Voit2021}.
+% Quiet accretion
+Alternatively, radiative cooling in the hot CGM can cause the entire hot phase to flow inward.
+In this latter scenario the inward flow occurs at a rate where compressional heating of the hot phase roughly balances radiative losses, so the hot gas roughly retains its temperature.
+This type of hot accretion has been discussed extensively by early studies in the context of the inner intercluster medium (ICM), where it has been termed a `cooling flow' \citep[][see \citealt{McNamara2007} for a review]{Mathews78, Cowie80, Fabian84, balbus88, Bertschinger1989}. \cite{Stern2019, Stern2020a} recently revisited these cooling flows solutions and discussed  their applicability to galaxy-scale halos.
+They argued that cooling flows could be prevalent even at masses $\ll10^{12}\msun$ if halos are baryon-depleted as suggested by some theoretical and observational studies of $z\sim0$ halos \citep[e.g.,][]{Bregman2018, Hafen2019}. 
 
 % Accretion types - cool
-There are believed to be a number of modes of accretion from the CGM, each with different characteristics, mechanics, prevalences, and affects on galactic star formation.
-One canonical accretion mode is cool, filamentary accretion, wherein cool, $T \sim 10^4$ K cosmological filaments travel into the galaxy from the IGM~\cite[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a}.
-Filamentary accretion is especially relevant at high redshift when the universe is denser~\citep[e.g.][]{Keres2009a, Stern2019, Huscher2020}.
-Filamentary accretion can often be accompanied by ``clumpy'' accretion in the form of accreting satellite galaxies and their CGMs~\citep[e.g.][]{Hafen2019, Hafen2020}, which in some cases can fuel the formation of more than a third of the stars formed in MW-mass galaxies~\citep{Angles-Alcazar2017}.
+A third canonical accretion mode is cool, filamentary accretion, wherein cool, $T \sim 10^4$ K cosmological filaments travel into the galaxy from the IGM~\cite[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a}. At halo scales this mode is expected to dominate the mass inflow rate at high-redshift \citep[$z\gtrsim2$, e.g.][]{Keres2009a, Dekel2009, Huscher2020}. It is unclear however if the cool filaments remain intact down to the galaxy, or rather heat up and dissolve into the surrounding hot phase \citep{Nelson2016, Mandelker+}, in which case hot accretion onto the galaxy would be important also at high redshift. 
 
-% Accretion types - hot
-For Milky Way-analogs, theory predicts that hot gas with temperature $T>10^5$ K dominates the inflow~\citep{Faucher-Giguere2011a, VandeVoort2011, VandeVoort2012a, Joung2012, Murante2012, Nelson2013}.
-One way for this gas to accrete onto the galaxy is instability-driven accretion, wherein gas precipitates out of the halo due to hydrodynamic instabilities~\citep[e.g.][]{Maller2004, Mccourt2012, Voit2015, Armillotta2016, Gronke2019a, Esmerian2020, Voit2021}.
+% Filamentary accretion can often be accompanied by ``clumpy'' accretion in the form of accreting satellite galaxies and their CGMs~\citep[e.g.][]{Hafen2019, Hafen2020}, which in some cases can fuel the formation of more than a third of the stars formed in MW-mass galaxies~\citep{Angles-Alcazar2017}.
 
-% Quiet accretion
-Another type of hot accretion is ``quiet'' accretion, wherein the accreting gas remains hot down to the galaxy-halo interface, at which time it cools and accretes onto the galaxy~\citep{Putman2012}.
-Consistent with a quiet accretion mode, some observations detect ionized, inflowing gas at the galaxy-halo interface~\citep{Zheng2017}.
-Previous idealized simulations have studied cool gas clouds condensing onto galaxies and found that disrupted and heated clouds could condense and cool at disk edge~\citep{Heitsch2009}.
-However, to-date little work has been done to determine how prevalent quiet accretion is in a cosmological environment, as well as the detailed mechanics of how it proceeds.
+% maybe another paragraph on other 'modes' of accretion (e.g. fountains (Oppenheimer+10) and galaxy transfer (Angles-Alcazar+17))). These modes are not really distinct from the cold/hot dichotomy, since they discuss the mass origin of the accretion, which is a different question then its thermal history and geometry which we focus on here. 
+
+
+The present work focuses on hot accretion, and specifically on cooling flows where the entire hot phase is inflowing.  
+From an observational perspective, cooling flows are difficult to observe for galaxies beyond
+$z\sim0$ \citep{Putman2012}.
+This follows since the cool CGM gas is significantly more accessible to observations than the hot CGM, but in cooling flows the accreting gas becomes cool only when it has no significant spatial or kinematic offset from the galaxy.
+\citeauthor{Putman2012} thus called this accretion mode ``quiet accretion''. 
+% This quiet accretion could explain observations at higher redshifts that show substantial SFRs and outﬂows with little, if any, evidence for accretion (e.g., Erb 2008, Steidel et al. 2010, Shapley 2011)~\citep{Putman2012}.
+Consistent with quiet accretion, some observational studies argue that the accretion implied by cool gas observe in the halos of massive disks is insufficient to sustain star formation \citep{Binney09}, while others detect ionized, inflowing gas at the galaxy-halo interface~\citep{Zheng2017}. 
+
+% Previous idealized simulations have studied cool gas clouds condensing onto galaxies and found that disrupted and heated clouds could condense and cool at disk edge~\citep{Heitsch2009}.
+% However, to-date little work has been done to determine how prevalent quiet accretion is in a cosmological environment, as well as the detailed mechanics of how it proceeds.
+
+% \citep{Miller16}
 
 % Cosmological simulations
 Modern cosmological simulations provide a means to understand the prevalence, mechanics, and characteristics of the different accretion modes.
@@ -424,8 +458,13 @@ Of special note are ``zoom-in'' simulations that focus on resolving a single hal
 Among these the FIRE simulations~\citep{Hopkins2014, Hopkins2017}\footnote{\url{https://fire.northwestern.edu/}} are a set of zoom-in simulations that resolve stellar feedback on the scale of giant molecular clouds in the ISM, producing winds that naturally expand into the CGM and interact with accreting gas~\citep{Muratov2015, Muratov2017, Hafen2019, Hafen2020}.
 The resultant galaxies are broadly consistent with the stellar mass-halo mass relation~\citep{Hopkins2017}, the mass-metallicity relation~\citep{Ma2016a}, satellite galaxy populations~\citep{Wetzel2016, Garrison-Kimmel2019a}, and can have thin-disks consistent with Milky Way-like galaxies~\citep{Garrison-Kimmel2018, El-Badry2018}.
 
+In this paper we demonstrate that cooling flows (or `quiet accretion') is the primary mode of gas accretion onto central Milky Way-mass galaxies at $z \sim 0$ in the FIRE simulations. 
+We utilize the 3D nature of the simulations to explore the mechanics of quiet accretion near the disc-halo interface, thus going beyond the 1D steady-state solutions developed in classic ICM studies, and extending the idealized 3D simulations in \cite{Stern2020} to a more realistic cosmological setting. 
+% Our simulations include stellar feedback processes but no AGN feedback processes, this result suggests that cooling flows may be  prevalent in galaxies where AGN feedback is weak or absent, and that cooling flows can be used as a benchmark for AGN feedback studies. 
+
 % This paper
-In this paper we show that quiet accretion is the primary mode of gas accretion onto central Milky Way-mass galaxies at $z \sim 0$ in the FIRE simulations.
+This paper is structured as follows. 
+In \S\ref{s: methods} we describe our simulation sample and primary sample of particles selcted from the simulations.
 In \S\ref{s: characteristics} and \S\ref{s: prevalence} we show that the vast majority of accreting gas has characteristics consistent with quiet accretion.
 In \S\ref{s: mechanics} we analyze the mechanics through which quiet accretion occurs.
 In \S\ref{s: broader prevalence} we discuss the prevalence of the quiet accretion mode, focusing on the conditions that enable quiet accretion, including an equivalent mode in halos with non-thermal support.
@@ -559,15 +598,16 @@ This is confirmed a posteriori in Figure~\ref{f: theta vs t}, where gas is not p
 % Summary picture description
 To characterize gas accretion we analyze the central galaxy and its CGM from $z=0$ to one Gyr prior.
 Figure~\ref{f: overview} shows three example trajectories of how gas accretes onto MW-mass galaxies, selected as described in \S\ref{s: methods}.
+Tracks are shown for \texttt{m12i}.
 Gas moves inwards with a temperature $T \sim T_{\rm vir} \sim 10^{5.5}$ K, cools at the galaxy-halo interface, and aligns with the galaxy as it cools.
 We show in the following sections (\S\ref{s: characteristics -- inflowing gas phase}--\ref{s: characteristics -- aligns}) that these are the primary characteristics of gas accretion onto our simulated MW-mass galaxies.
-We define gas accretion with these characteristics as \textit{quiet accretion}~(\S\ref{s: characteristics -- definition}).
+% We define gas accretion with these characteristics as \textit{quiet accretion}~(\S\ref{s: characteristics -- definition}).
 
 \subsubsection{Hot inflow through the CGM}
 \label{s: characteristics -- inflowing gas phase}
 
 % Intro and figure description
-We first determine if accretion is dominated by hot or cold flows of gas.
+We first determine if accretion in the inner halo is dominated by hot or cold flows of gas.
 Figure~\ref{f: Mdot} shows the mass inflow rate of different gas phases at a given radius in two of our simulated halos.
 Mass flow rates are the average over the course of one Gyr, ending at $z=0$.
 We calculate the mass inflow rate as
@@ -575,14 +615,16 @@ We calculate the mass inflow rate as
      \Mdot = \frac{\int_{\rm shell} v_r dm}{\Delta r} = \frac{M_{\rm shell}}{\Delta r} \langle v_r\rangle_{\rm mass\, weighted}
      \label{e: Mdot}
 \end{equation}
-where $\Delta r$ is the shell thickness, and the integration is done on all particles with centers within the shell.
+where $\Delta r=0.05\,{\rm dex}$ is the shell thickness, and the integration is done on all particles with centers within the shell.
 
 % Consequences
-The inwards mass flux of hot CGM gas (red curve; $T>10^5$ K)  is $\gtrsim 4\times$ that of the cool CGM gas (blue curves; $T < 10^5\,{\rm K}$) down to $r \approx 20-30$ kpc, just outside the galaxy.
-The greater mass flux of hot gas suggests hot mode accretion is the dominant form of accretion in our halos.
-This inner radius of $\approx 20$ kpc is the edge of galactic star formation, as shown by the flattening of the enclosed star formation rate~($\dot M_{\rm stars}(<R)$; black dashed curve).
-The inwards mass flux of all gas (top panel) as well as all hot gas is approximately constant down to $\approx 20$ kpc.
-The constant mass flow across radii indicates a halo in a steady state, consistent with with hot accretion modes including cooling flows~\citep{Stern2019}.
+The inwards mass flux of hot CGM gas (red curve; $T>10^5$ K)  is $\gtrsim 4\times$ that of the cool CGM gas (blue curves; $T < 10^5\,{\rm K}$) down to $r \approx 20-30$ kpc.
+% The greater mass flux of hot gas suggests hot mode accretion is the dominant form of accretion in our halos.
+The greater mass flux of hot gas indicates that \textit{the dominant form of accretion in our halos is an inflowing hot phase}, rather than cold flows or cool clouds precipitating from the hot phase. 
+
+The radius of $\approx 20$ kpc where the hot inflow rate drops is the edge of galactic star formation, as shown by the flattening of the enclosed star formation rate~($\dot M_{\rm stars}(<R)$; black dashed curve), and the radius where angular momentum support in the hot gas becomes significant, as shown below. 
+Note also that the inwards mass flux of all gas (top panel) as well as all hot gas is approximately constant down to $\approx 20$ kpc.
+The constant mass flow across radii indicates gas in the inner halo is roughly in a steady state, similar to the assumption of cooling flow solutions~\citep{Stern2019}.
 
 \textbf{$\dot{M}_{\rm stars}$ in Fig.~\ref{f: Mdot} is currently SFR$/2$. Change to SFR minus gas returned from winds/SNe.}
 
@@ -591,49 +633,53 @@ The constant mass flow across radii indicates a halo in a steady state, consiste
 
 % Rcon
 A key quantity for differentiating modes of hot accretion is the radius at which gas last cools before accreting onto the galaxy, i.e. the radius at time $\tcon$, $\Rcon \equiv R (\tcon)$.
-For gas that cools in the halo and subsequently precipitates $\Rcon$ will be at CGM scales, while for quiet accretion we expect $\Rcon$ to be at the galaxy-halo interface.
+For gas that cools in the halo and subsequently precipitates $\Rcon$ will be at CGM scales, while for a cooling flow we expect $\Rcon$ to be at the galaxy-halo interface.
 The top panels of Figure~\ref{f: T vs R} show the distribution of $\Rcon$ for two MW-like galaxies at $z\sim0$.
-Inconsistent with a precipitation model, the distribution peaks just outside the galaxy edge, and does not extend into the CGM beyond $\sim 40$ kpc.
-All particles with $\Rcon>100$ kpc were placed at $R=100$ kpc bin, although this is not a large population.
-By comparison, isotropic cooling occurring randomly within $R_{\rm vir}$ would cool in a wide distribution with a median at $0.8 R_{\rm vir}$, while for our accreted gas the median $\Rcon \approx 0.06 R_{\rm vir}$.
+All particles with $\Rcon>100$ kpc were placed at $R=100$ kpc bin. 
+The distribution peaks just outside the galaxy edge, with a median of $\Rcon \approx 0.06 R_{\rm vir}$ and only xx\%\ of particles cooling beyond $\sim 40$ kpc.
+This result is consistent with cooling flows and quiet accretion, and inconsistent with a precipitation scenario where clouds cool far in the halo and subsequently accrete.
+% By comparison, isotropic cooling occurring randomly within $R_{\rm vir}$ would cool in a wide distribution with a median at $0.8 R_{\rm vir}$, while for our accreted gas 
 
 % Accretion tracks figure description
-The bottom panels of Figure~\ref{f: T vs R} show the temperature and radial history of 5 randomly-selected particles in Figure~\ref{f: T vs R}.
-The bottom panels provide qualitative confirmation that individual accreting particles typically have $T>10^5$ K, with only temporary periods of cooling.
-Nevertheless, the temperature-distance trajectories through the hot halo are highly variable, including times where gas can cool to $T \sim 10^4$ K.
-Previous work shows that such events are typically the result of perturbations in the CGM, usually from satellite galaxies and their CGMs~\citep{Esmerian2020}.
+The bottom panels of Figure~\ref{f: T vs R} show the temperature and radial history of 5 randomly-selected accreted particles.
+These particles typically have $T>10^5$ K, with only temporary periods of cooling to lower temperatures.
+% Nevertheless, the temperature-distance trajectories through the hot halo are highly variable, including times where gas can cool to $T \sim 10^4$ K.
+Previous work shows that such cooling events are typically the result of perturbations in the CGM, usually from satellite galaxies and their CGMs~\citep{Esmerian2020}.
+These cool condensations however typically heat up and rejoin the hot phase prior to accreting onto the galaxy. 
 
-\subsubsection{Aligns with the galaxy as it cools}
+\subsubsection{Cooling is simultaneous with circularization}
 \label{s: characteristics -- aligns}
 
 % Figure description/introduction
-Figure~\ref{f: theta vs t} provides insight into the geometry of accreting gas before cooling (red) and after cooling (blue).
-The value on the x-axis corresponds to the cosine of the angle between the gas elements and the total angular momentum vector of the stars inside the galaxy radius.
-A spherical distribution would have a flat pdf with a value of 0.5.
-The pdf of an infinitely thin disk would be a delta function centered at $\cos\theta = 0$.
-Gas accreting onto $L^*$ galaxies transitions over $\lesssim 200$ Myrs from being distributed without a strong preference for direction to being distributed in a plane aligned with the galaxy, suggesting coherent rotation prior to cooling.
+Figure~\ref{f: theta vs t} plots the geometry of accreting gas at different times relative to $\tcon$.
+Times prior to cooling are colored in red, while times after cooling are plotted in blue.
+The curves shows the PDF of $\cos \theta$, where $\theta$ is defined as the angle between the gas element position and the total angular momentum vector of the stars inside the galaxy.
+A spherical distribution of accreted gas would have a flat pdf with a value of 0.5, while 
+the pdf of accretion in the disc plane would be a delta function centered at $\cos\theta = 0$.
+The plot shows that gas accreting onto $\sim L^\star$ FIRE galaxies transitions from being distributed quasi-spherically prior to cooling to being distributed in the galaxy plane after cooling, over $\lesssim 200$ Myr.
+This indicates that cooling and circularization of the accreted gas occurs simultaneously, as suggested also by 1D cooling flow solutions \citep{Stern2020}. 
 
-\subsubsection{Quiet accretion}
-\label{s: characteristics -- definition}
+% \subsubsection{Quiet accretion}
+% \label{s: characteristics -- definition}
 
-The characteristics highlighted in \S\ref{s: characteristics -- inflowing gas phase} to \S\ref{s: characteristics -- aligns} are the primary characteristics of \textit{quiet accretion}:
-\begin{enumerate}
-    \item The accreting gas is predominantly hot ($T \sim T_{\rm vir}$) from $R_{\rm vir}$ down to the galaxy-halo interface~(\S\ref{s: characteristics -- inflowing gas phase}).
-    \item The accreting gas rapidly cools to $T \sim 10^4$ K at the galaxy-halo interface~(\S\ref{s: characteristics -- cools}).
-    \item The accreting gas forms a coherent disk as it cools, prior to which it is distributed largely without preferred direction~(\S\ref{s: characteristics -- aligns}).
-\end{enumerate}
+% The characteristics highlighted in \S\ref{s: characteristics -- inflowing gas phase} to \S\ref{s: characteristics -- aligns} are the primary characteristics of \textit{quiet accretion}:
+% \begin{enumerate}
+%     \item The accreting gas is predominantly hot ($T \sim T_{\rm vir}$) from $R_{\rm vir}$ down to the galaxy-halo interface~(\S\ref{s: characteristics -- inflowing gas phase}).
+%     \item The accreting gas rapidly cools to $T \sim 10^4$ K at the galaxy-halo interface~(\S\ref{s: characteristics -- cools}).
+%     \item The accreting gas forms a coherent disk as it cools, prior to which it is distributed quasi-spherically~(\S\ref{s: characteristics -- aligns}).
+% \end{enumerate}
 
 % Notes on the name
-Hot accreting gas that cools and accretes at the galaxy-halo interface has previously been termed \textit{quiet accretion}~\citep{Putman2012}.
-The name ``quiet accretion'' reflects both the challenge in detecting the hot, low-density gas prior to cooling (\textbf{Good citations for this?}), and the ``soft-landing'' of the coherent disk gas onto the galaxy (more in \S\ref{s: disk formation}).
+% Hot accreting gas that cools and accretes at the galaxy-halo interface has previously been termed \textit{quiet accretion}~\citep{Putman2012}.
+% The name ``quiet accretion'' reflects both the challenge in detecting the hot, low-density gas prior to cooling (\textbf{Good citations for this?}), and the ``soft-landing'' of the coherent disk gas onto the galaxy (more in \S\ref{s: disk formation}).
 
 % Notes on the definition
-Two aspects of the definition:
-First, while quiet accretion should be predominantly hot down to the galaxy-halo interface, temporary cooling can occur, as is demonstrated for some trajectories in Figure~\ref{f: T vs R}.
-Importantly, cooling in the halo (as opposed to near the galaxy-halo interface) is not predictive of whether or not the gas will accrete onto the galaxy~\citep{Esmerian2020}.
-This allows us to separate this temporary behavior from our definition of quiet accretion.
-Second, while the accreting gas should form a coherent disk as it cools, our definition does not require it to be aligned with the galaxy.
-Quiet accretion may still occur for halos with angular momentum significantly misaligned with the galaxy, and analysis of cosmological simulations suggests that misaligned CGMs can produce warped, misaligned, or counter-rotating disks~\citep[e.g.][]{Roskar2010, Starkenburg2019}.
+% Two aspects of the definition:
+% First, while quiet accretion should be predominantly hot down to the galaxy-halo interface, temporary cooling can occur, as is demonstrated for some trajectories in Figure~\ref{f: T vs R}.
+% Importantly, cooling in the halo (as opposed to near the galaxy-halo interface) is not predictive of whether or not the gas will accrete onto the galaxy~\citep{Esmerian2020}.
+% This allows us to separate this temporary behavior from our definition of quiet accretion.
+% Second, while the accreting gas should form a coherent disk as it cools, our definition does not require it to be aligned with the galaxy.
+% Quiet accretion may still occur for halos with angular momentum significantly misaligned with the galaxy, and analysis of cosmological simulations suggests that misaligned CGMs can produce warped, misaligned, or counter-rotating disks~\citep[e.g.][]{Roskar2010, Starkenburg2019}.
 
 \subsection{Prevalence of quiet accretion}
 \label{s: prevalence}
@@ -642,34 +688,54 @@ Quiet accretion may still occur for halos with angular momentum significantly mi
 This is the section where we will discuss how prevalent quiet accretion is among our simulations, i.e. this will be analysis of multiple simulations.
 }
 
-\subsection{Mechanics of quiet accretion}
+\subsection{Mechanics of cooling flows at the galaxy-halo interface}
 \label{s: mechanics}
 
 % Figure description
-In this section we examine the mechanics responsible for the trajectories and properties of quiet accretion.
-Figure~\ref{f: before and after} shows a selection of properties as a function of time relative to cooling for each tracked gas element ($t - \tcon$; \S\ref{s: methods}).
-Figure~\ref{f: before and after} demonstrates that gas cools (A; temperature vs time) and stalls at the galaxy edge (B; radius vs time) because it becomes fully angular-momentum supported (C; ratio of angular momentum vs time), by which time it is rotating coherently in the same direction (D; fraction of angular momentum aligned with galaxy), allowing the gas to quickly collapse into a disk when the cooling exceeds the heating (E; change in specific energy).
-The properties of particles at each $t - \tcon$ are binned together and used to calculate the median of the property (black line) and its 16th to 84th percentile (shaded region).
+In this section we examine the mechanics responsible for the trajectories and properties of accretion onto MW-mass halos.
+Figure~\ref{f: before and after} shows a selection of properties for each accreted gas element as a function of time relative to cooling  ($t - \tcon$; \S\ref{s: methods}).
+% Figure~\ref{f: before and after} demonstrates that gas cools (A; temperature vs time) and stalls at the galaxy edge (B; radius vs time) because it becomes fully angular-momentum supported (C; ratio of angular momentum vs time), by which time it is rotating coherently in the same direction (D; fraction of angular momentum aligned with galaxy), allowing the gas to quickly collapse into a disk when the cooling exceeds the heating (E; change in specific energy).
+The properties of particles at each $t - \tcon$ are binned together and used to calculate the median of the property (black line) and its 16th to 84th percentile range (shaded region).
 We now go through each panel in detail.
 
 \subsubsection{Inflowing and hot to stalled and cool}
 \label{s: mechanics -- temp and radius}
-
-Panel (A) and (B) in Figure~\ref{f: before and after} show gas temperature and radius at a given time relative to cooling.
-This panel is primarily descriptive, showing behavior characteristic of quiet accretion.
-More than $80\%$ of particles have $T > 10^5$ K at any time prior to cooling, with the inverse being true post cooling.
-At the same time the accreting gas moves in at an approximately steady rate prior to cooling, and asymptotes to $R_{\rm gal}$ after cooling.
+Panels (A) and (B) in Figure~\ref{f: before and after} respectively show gas temperature and radius at a given time relative to the final cooling time.
+% By definition, gas last cools at $t=\tcon$. 
+The temperature panel shows that the distribution of accreted gas temperatures are practically disjoint prior and post the last cooling time, with $80\%$ of particles having $T > 10^5$~K prior to last cooling, in contrast with the gas temperature spanning $\sim100- 10^4$ K after cooling. 
+The radius panel demonstrates that last cooling occurs at $R_{\rm gal}$ (defined to enclose the $\sim90\%$ of the stellar mass), consistent with the result of  Figures~1-4.
+At earlier times the accreted gas is inflowing, traversing the inner 50 kpc of the halo within $\approx500$ Myr, corresponding to an average inflow velocity of $v_r\approx-100$ km s$^{-1}$.
+This radial velocity is smaller than the characteristic circular velocity of 200 km s$^{-1}$ in these halos, suggesting significant pressure support $(\approx1-(v_r/v_c)^2\approx75\%)$ as expected for a hot inflow.
+After reaching $R_{\rm gal}$ the inflow almost entirely stalls, and proceeds within the disc at a significantly slower velocity of $xx$ km s$^{-1}$ (ref Trapp's paper). 
+% showing behavior characteristic of quiet accretion.
 
 \subsubsection{Angular momentum support and coherence}
 \label{s: mechanics -- angular momentum}
 
 % Support
 Figure~\ref{f: before and after}, panel (C) shows the magnitude of the specific angular momentum ($\mid \vec j \mid = \mid \vec r \times \vec v \mid$; green) and the z-component of the specific angular momentum ($j_z$; purple).
-The z-direction is defined as parallel to the net angular momentum of stars within the galaxy, i.e. within $R_{\rm gal}$.
-We compare to the specific angular momentum necessary for gas to be fully supported by angular momentum at a given radius (i.e. the angular momentum of a circular orbit at the same radus, $Rv_c(R)$; dashed).
-From $\tcon - 500$ Myr to $\tcon$ the magnitude of specific angular momentum for individual particles decreases from $\mid \vec j \mid \approx 5000$ kpc km/s to $\mid \vec j \mid \approx 3000\,{\rm kpc\,km/s} \approx j_z$.
-However, the angular momentum needed for support scales as $\sim R$ and therefore decreases faster, resulting in the gas having large rotational support at $\tcon$ and becoming fully rotationally-supported shortly after.
-This increasing rotational support with decreasing radius is responsible for the stalling seen in panel (B), and is a feature of many simulations of $L^*$ halos~\citep[][]{Oppenheimer2018}.
+The z-direction is defined as parallel to the net angular momentum of stars within $R_{\rm gal}$.
+The median $j_z$ is equal to $\approx 2500$ kpc km s$^{-1}$, comparable to the average specific angular momentum of $\lambda \vvir \Rvir=\mathbf{xx}\lambda_{0.035}$ expected in dark matter halos due to tidal torques (\cite{Rodriguez2016}, where $\lambda = 0.035 \lambda_{0.035}$ is the spin parameter,  $\Rvir=zz$ is the virial radius, and $\vvir$ is the virial velocity).
+The panel further demonstrates that the value of $j_z$ is practically constant prior to accretion, indicating the inflow conserves angular momentum in this direction.
+For comparison, the dashed line plots the specific angular momentum necessary for gas to be fully supported by angular momentum at a given radius, i.e. $Rv_c(R)$.
+The two curves converge shortly after $t=\tcon$, again indicating the cooling and a transition to rotational support occur almost simultaneously. 
+
+% Coherence
+% As the gas gains support it also becomes more coherent.
+Panel C also shows that $\mid \vec j \mid$ decreases prior to cooling, from $\approx 5000$ kpc km s$^{-1}$ to $\approx 3000\,{\rm kpc\,km s}^{-1}$, in contrast with  $j_z$ which remains constant.
+This trend is explored in  panel (D), which shows the distribution in the ratio $j_z/\mid\vec j\mid$ of accreting gas.
+% Gas is rotating parallel to the galaxy if $j_z/\mid \vec j \mid=1$, while $j_z/\mid \vec j \mid=0$ signals perpendicular rotation and $j_z/\mid \vec j \mid=-1$ signals counter-rotation.
+The width of the distribution (as shown by the shaded region) indicates the rotational coherence of the gas. 
+%, regardless of its alignment with the disk.
+At $t-\tcon=-500$ Myr the ratio $j_z/\mid\vec j\mid$ spans a large range of $\approx -0.3 - 0.9$ (negative values indicate counter-rotation).
+% , i.e. ranging from rotation perpendicular to the galaxy to nearly fully-aligned, with the 16th to 84th percentile interval spanning $\sim 0.3$.
+By $\tcon$ nearly all the accreting gas has $j_z\approx\mid\vec j\mid$, indicating all hot accreting gas particles are co-rotating. 
+These trends suggest that components unaligned with the net angular momentum are canceling each other out due to interaction in the hot halo, as found also by other cosmological simulations ~\citep[e.g.][]{DeFelippis2017}.
+% From $t-\tcon = 500$ Myr to $t=\tcon$ the j_zmagnitude of specific angular momentum for individual particles decreases 
+% However, This increasing rotational support with decreasing radius is responsible for the stalling seen in panel (B), and is a feature of many simulations of $L^*$ halos~\citep[][]{Oppenheimer2018}.
+The result that the hot halo just outside the galaxy is co-rotating with the galaxy is also consistent with recent kinematic analyses of hot gas in the Milky-Way halo \citep{Miller2016}. 
+
+
 
 % The angular momentum increase
 There is small-but-noticeable increase in the specific angular momentum of each gas particle at $t \approx \tcon$.
@@ -677,22 +743,13 @@ This increase is not the focus of our analysis, but we note that it may be a nat
 The explicit mechanism to increase $j_z$ may be exchange of angular momentum via gravitational torques~\citep[e.g.][]{Danovich2015} or via collisional interactions.
 Any angular momentum gained is expected to be lost by other particles, driving inflow of existing gas particles in the galaxy or galaxy-halo interface.
 
-% Coherence
-As the gas gains support it also becomes more coherent.
-The near constant value of $j_z$ over 500 Myr prior to $\tcon$ while $\mid \vec j \mid$ decreases over the same period indicates that the decrease in $\mid \vec j \mid$ is due to components unaligned with the net angular momentum canceling each other out, likely due to interaction in the halo.
-Other cosmological simulations show similar angular momentum cancellation trends as gas proceeds through the halo~\citep[e.g.][]{DeFelippis2017}.
-We can see the increasing coherence of the halo more explicitly in panel (D), which shows the ratio $j_z/\mid\vec j\mid$ on a per-particle-basis.
-Gas is rotating parallel to the galaxy if $j_z/\mid \vec j \mid=1$, while $j_z/\mid \vec j \mid=0$ signals perpendicular rotation and $j_z/\mid \vec j \mid=-1$ signals counter-rotation.
-The width of the distribution (as shown by the shaded region) indicates the rotational coherence of the gas, regardless of its alignment with the disk.
-At the start of the time window $j_z/\mid\vec j\mid \approx -0.3 -- 0.9$, i.e. ranging from rotation perpendicular to the galaxy to nearly fully-aligned, with the 16th to 84th percentile interval spanning $\sim 0.3$.
-By $\tcon$ nearly all the accreting gas is co-rotating, and remains so.
 
 % Distribution of R1e5
 Comparison between panel (C) and panel (D) reveals the origin of the spread in $\Rcon$ values seen per halo in \S\ref{s: characteristics -- cools}:
 there is a range of specific angular momentum values spanning $\mid\vec j\mid \sim$, but in all cases $\mid\vec j\mid = j_z$ after cooling.
 The range in specific angular momentum values sets a range in radii at which gas stalls and cools, while still becoming fully aligned with the disk.
 
-\textbf{Do we want to add some discussion here on how the gas gets its angular momentum from the IGM, i.e. tidal torque theory?}
+% \textbf{Do we want to add some discussion here on how the gas gets its angular momentum from the IGM, i.e. tidal torque theory?}
 
 \subsubsection{Support leads to cooling}
 \label{s: mechanics -- energy balance}
@@ -700,15 +757,18 @@ The range in specific angular momentum values sets a range in radii at which gas
 % Energy balance description
 In Figure~\ref{f: before and after} panel (E) we assess the energetics of the gas to determine why it cools.
 We study the energetics through two types of change in specific energy: radiative cooling (blue lines) and compressive heating (red lines).
-Radiative cooling per unit mass for an individual particle is calculated as $\nH^2 \Lambda / n$, where $\nH$ is the Hydrogen density, $n$ is the baryon density, and $\Lambda$ is the cooling function, which we take from \cite{Wiersma2009a}.
-Compressive heating per unit mass for an individual particle is calculated as $P \frac{dV}{dt} \approx \frac{ P }{ n^2 } \frac{ \Delta n }{ \Delta t }$, where $P = n k_B T$, $\Delta n$ is the change in density from one snapshot to the next, and $\Delta t$ is the typical snapshot time spacing.
+Radiative cooling per unit mass for an individual particle is calculated as $\nH^2 \Lambda / \rho$, where $\nH$ is the Hydrogen density, $\rho$ is the mass density, and $\Lambda$ is the cooling function, which we take from \cite{Wiersma2009a}.
+Compressive heating per unit mass for an individual particle is calculated as $P \frac{dV}{dt} \approx \frac{ P }{ \rho^2 } \frac{ \Delta \rho }{ \Delta t }$, where $P = n k_B T$, $\Delta \rho$ is the change in density from one snapshot to the next, and $\Delta t$ is the typical snapshot time spacing.
 Because accreting gas elements interact with other accreting gas elements thermodynamically we show the mean specific energy tracks of all gas elements binned into 100 Myr bins of $\tcon$.
 To avoid outliers with artificially-large heating or cooling rates affecting the results we discard the $1\%$ of particles with highest change in specific energy.
-Some $\tcon$ bins contain much more accreting gas than others, and to reflect this we set the opacity of the lines proportional to the number of particles in the bin.
+Some $\tcon$ bins contain much more accreting gas than others, and to reflect this we set the darkness of the lines proportional to the number of particles in the bin.
 
 % Energy balance trend
-Prior to $\tcon$ radiative cooling increases by a factor of $\sim 10$ over the course of 500 Myr, but is nearly completely offset by an equal increase in compressive heating at a given snapshot, consistent with the roughly flat temperature profile of the cooling flows found in these halos~\citep{Stern2020}.
-At or shortly before $\tcon$ the cooling rate increases sharply, a result of increased density from gas piling up at the angular momentum support radius (as also seen in \citealt{Trapp2021}, including for halos that include cosmic-ray feedback).
+Prior to $\tcon$ radiative cooling increases by a factor of $\sim 10$ over the course of 500 Myr, from 0.01 erg s$^{-1}$ g$^{-1}$ (corresponding to a cooling time of \textbf{xx}) to 0.1 erg s$^{-1}$ g$^{-1}$ (corresponding to a cooling time of \textbf{yy}).
+The radiative cooling is however nearly completely offset by compressive heating, consistent with the roughly flat temperature profile shown in Panel (A).
+This equality of radiative cooling and compressive heating is a defining characteristic of cooling flows \citep{Mathews78, McNamara2007, Stern20}. 
+
+At $t=\tcon$ the cooling rate increases sharply, a result of increased density from gas piling up at the angular momentum support radius (as also seen in \citealt{Trapp2021}).
 At roughly the same time compressive heating drops off dramatically due to the lack of inward movement.
 The result is gas that cools over the course of $\lesssim 50$ Myr.
 
