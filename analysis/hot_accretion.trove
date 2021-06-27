@@ -14,11 +14,16 @@ fire_dir = /scratch/projects/xsede/GalaxiesOnFIRE
 firefly_dir = /scratch/03057/zhafen/firefly_repos/hot-halo-accretion
 archive_dir = ranch.tacc.utexas.edu:/stornext/ranch_01/ranch/users/03057/zhafen/hot_accretion_data
 
-# Analysis
+# Analysis filetree
 paper_dir = /home1/03057/zhafen/papers/Hot-Accretion-in-FIRE
 code_dir = ${paper_dir}/analysis
 figure_dir = ${paper_dir}/figures
 processed_data_dir = ${paper_dir}/data
+
+# Analysis parameters
+# For defining quiet accretion
+t_cut = 60. # In Myr
+c_cut = 0.8 # jz/j
 
 ########################################################################
 [SCRIPTS]
@@ -46,13 +51,13 @@ processed_data_dir = ${paper_dir}/data
 # py.6 = ${code_dir}/linefinder_tracking/classify.py
 
 # Create Firefly visualization
-py.7 = ${code_dir}/linefinder_tracking/firefly.py
+# py.7 = ${code_dir}/linefinder_tracking/firefly.py
 
 # Trajectories and geometric evolution
 # nb.8 = ${code_dir}/characteristics.ipynb
  
 # Before and after cooling
-# nb.9 = ${code_dir}/before_and_after.ipynb
+nb.9 = ${code_dir}/before_and_after.ipynb
 
 ########################################################################
 [DATA PRODUCTS]
