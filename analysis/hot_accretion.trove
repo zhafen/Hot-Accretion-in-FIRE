@@ -31,7 +31,7 @@ processed_data_dir = ${paper_dir}/data
 # py.1 = ${code_dir}/retrieve_halo_data.py
 # 
 # Get IDs to track
-nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
+# nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
 # 
 # # Sample particles to track, including removing duplicates
 # py.3 = ${code_dir}/linefinder_tracking/sample.py
@@ -46,10 +46,10 @@ nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
 # py.6 = ${code_dir}/linefinder_tracking/classify.py
 
 # Create Firefly visualization
-# py.7 = ${code_dir}/linefinder_tracking/firefly.py
+py.7 = ${code_dir}/linefinder_tracking/firefly.py
 
 # Trajectories and geometric evolution
-nb.8 = ${code_dir}/characteristics.ipynb
+# nb.8 = ${code_dir}/characteristics.ipynb
  
 # Before and after cooling
 # nb.9 = ${code_dir}/before_and_after.ipynb
@@ -168,22 +168,20 @@ sim_data_dir = ${fire_dir}/${subpath}/output
 # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 # sim_data_dir = ${fire_dir}/${subpath}/output
 
-# DEBUG: stuck on before and after
-# [m12c_md]
-# subpath = metal_diffusion/m12c_res7100
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
+[m12c_md]
+subpath = metal_diffusion/m12c_res7100
+halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+sim_data_dir = ${fire_dir}/${subpath}/output
 
 [m12b_md]
 subpath = metal_diffusion/m12b_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
 
-# DEBUG
-# [m11d_md]
-# subpath = metal_diffusion/m11d_res7100
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
+[m11d_md]
+subpath = metal_diffusion/m11d_res7100
+halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+sim_data_dir = ${fire_dir}/${subpath}/output
 
 [m11e_md]
 subpath = metal_diffusion/m11e_res7100
@@ -208,10 +206,11 @@ sim_data_dir = ${fire_dir}/${subpath}/output
 # MHDCV
 ########################################################################
 
-[m12i_mhdcv]
-subpath = mhdcv/m12i_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}_mhdcv_old/output
+# DEBUG: Because this simulation is unusual we should prioritize a larger sample size.
+# [m12i_mhdcv]
+# subpath = mhdcv/m12i_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}_mhdcv_old/output
 
 # Cosmic Rays
 ########################################################################
