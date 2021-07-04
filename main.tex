@@ -195,6 +195,10 @@ Especially ones that show the voluminous property.
     For $\sim L^*$ galaxies (top two panels) accreting gas is quasi-spherical prior to cooling while after cooling the gas has a disc-like configuration, indicating that cooling and circularization occur simultaneously. 
     In contrast, in the lower-mass halo in the bottom panel the gas is quasi-spherical both prior and after cooling, indicating that cooling is not associated with circularization.
     \textbf{Try rotating 90 degrees.}
+    \textbf{Compile into one figure.}
+    \textbf{Add h/R ratios.}
+    \textbf{Add typical costheta ranges for jz/jc>0.8.}
+    \textbf{Add annotation for DeltaPDF.}
     }
     \label{f: theta vs t}
 \end{figure}
@@ -291,6 +295,19 @@ Normal: Normal text, polished enough to be included in a draft.
 
 \subsection{OUTSTANDING QUESTIONS/DISCUSSION POINTS}
 
+\textbf{Is the weirdness with \texttt{m12i\_mhdcv} a general property of MHD sims?}
+Leaving it out until I understand this.
+
+\textbf{Change total angular momentum to that of stellar component.}
+
+\textbf{Why is delta PDF so much better of a predictor of thin disk fraction, compared to ones that are ratio of PDF or involve the larger distribution?}
+A hint is that both m12f and m12c, ones most sensitive to this, have merging galaxies $10^11 M_\odot$ halos within the last Gyr.
+I think it's that Delta PDF is most-strongly correlated with quiet accretion fraction, which might predict thin disk fraction.
+Next step: estimate quiet accretion fraction.
+Two methods:
+a) estimate peak by subtracting distribution prior to cooling.
+b) particle-by-particle estimate with quiet accretion fulfilling the criteria: $j_z/j \approx 1$ within two snapshots after cooling
+
 \textbf{How do we refer to this accretion mode?}
 \textbf{Cooling flow accretion:}
 Pros: Strong connection to previous work.
@@ -334,10 +351,8 @@ Who is the target audience?
 }
 My thoughts are\ldots
 At the broadest level anyone who wants to understand the general picture of how disks form.
-Galaxy theorists.
-CGM theorists.
-Galaxy observers.
-CGM observers.
+Always need both theorists and observers, though a bit more focus on theorists.
+Explaining a galaxy observation using CGM theory.
 People who like interpretable results.
 
 % Assess the overall message
@@ -372,15 +387,6 @@ Cons:
 - CR halos are regarded as fundamentally different to hydro halos
 - Jonathan's previous work doesn't touch on CR halos.
 
-% Additional simulation analysis questions
-Why do m12f and m12r have a very extended distribution of $\Rcon$?
-Why does m12f have increasing diskiness as it cools, but it starts from already being disky?
-Why does m12r have no change in angular distribution?
-
-% Summary plot
-Metric of diskiness vs metric of quiet accretion.
-Quiet accretion metric: violin plot/median of $\Rcon$.
-
 % Definition
 Check my definition of $\tcon$.
 First vs last time cooled.
@@ -388,23 +394,11 @@ Dependence on galaxy density criterion.
 In Figure~\ref{f: T vs R}, as part of an ancient decision, I'm not plotting recycled material.
 Is that a good choice?
 
-% Name: Quiet accretion?
-\textbf{Is quiet accretion the term we want to use?}
-Use inspiration from the pre-virilization comparison.
-Alternatives:
-Soft, soft-landing.
-Slow?
-Gentle?
-Spiraling?
-Sharp? (Sudden and ubiquitous at angular momentum support radius.)
-Write to Mary Putman and ask why she called it quiet accretion.
-
 % More terminology
 \textbf{In regards to coherence, should we use decoherent, incoherent, or something else?}
-\textbf{Compression heating and radiation cooling, or radiative cooling and compression heating?}
-
-% The hitch
-Does the gas mix with the ISM, and does that induce cooling? (Evidence is no because it cools and changes morphology at the same time.)
+Don't use the term coherence on its own, use dispersion of jz around the average.
+\textbf{Compression heating and radiation cooling, or radiative cooling and compressive heating?}
+Radiative cooling and compression heating.
 
 % Not overly centered on disk formation
 Are we overly-centered on disk formation?
@@ -483,7 +477,7 @@ A third canonical accretion mode is cool, filamentary accretion, wherein cool, $
 
 The present work focuses on hot accretion, and specifically on cooling flows where the entire hot phase is inflowing.  
 From an observational perspective, cooling flows are difficult to observe for galaxies beyond
-$z\sim0$ \citep{Putman2012}.
+$z\sim0$~\citep{Putman2012}.
 This follows since the cool CGM gas is significantly more accessible to observations than the hot CGM, but in cooling flows the accreting gas becomes cool only when it has no significant spatial or kinematic offset from the galaxy.
 \citeauthor{Putman2012} thus called this accretion mode ``quiet accretion''. 
 % This quiet accretion could explain observations at higher redshifts that show substantial SFRs and outﬂows with little, if any, evidence for accretion (e.g., Erb 2008, Steidel et al. 2010, Shapley 2011)~\citep{Putman2012}.
@@ -888,13 +882,17 @@ We wrap up our discussion in \S\ref{s: fueling} and \S\ref{s: disk formation} wi
 \label{s: broader prevalence}
 
 % Primary mode for MW-mass virialized halos
-The importance of an accretion mode to the astrophysics community depends partially on how many galaxy types it is relevant to and the extent to which such galaxy types are essential to understanding galaxy evolution.
-We suggest that quiet accretion may be the dominant mode of accretion for MW-mass halos at low redshift, as is shown in \S\ref{s: results} for galaxies from the FIRE simulations.
-As we will discuss, this is because sufficient conditions for quiet accretion are met for any halo with an inward-flowing, voluminous phase not subject to runaway thermal instabilities and with weak disruption by feedback or other galaxies.
-These conditions may be met in some halos with non-thermal support.
+% The importance of an accretion mode to the astrophysics community depends partially on how many galaxy types it is relevant to and the extent to which such galaxy types are essential to understanding galaxy evolution.
+We find that circularizing cooling flows are the dominant accretion mode onto MW-mass halos at low redshift in the FIRE simulation, as is shown in \S\ref{s: results} for galaxies from the FIRE simulations.
+% As we will discuss, this is because sufficient conditions for quiet accretion are met for any halo with an inward-flowing, voluminous phase not subject to runaway thermal instabilities and with weak disruption by feedback or other galaxies.
+% These conditions may be met in some halos with non-thermal support.
 
 \subsubsection{Conditions for quiet accretion}
 \label{s: broader prevalence -- conditions}
+
+\textbf{Look through and be careful about talking about cold flows as not coherent, because people don't think of them that way.}
+
+\textbf{This is not yet convincing. Rethink.}
 
 % Voluminous phase condition
 The first condition for quiet accretion is that the accreting gas must be able to equilibriate to a sufficiently coherent angular momentum prior to cooling (as in Figure~\ref{f: before and after}).
@@ -971,6 +969,8 @@ I think these potential overlaps are fine, and if anything beneficial to reinfor
 Would it be useful to have a section here searching for other simulation analyses that show accretion consistent with quiet accretion?
 }
 
+\textbf{Compare to Fraternali papers.}
+\textbf{Fillipo's model requires mixing of outflows with the hot halo to induce accrete, our results suggest this is not needed, the hot halo cools on its own }
 % % EAGLE
 % \textit{
 % Is the cold accretion described by \cite{Ho2019} consistent with quiet accretion?
@@ -1070,7 +1070,7 @@ Or should we focus on modes that provide fresh fuel?
 % Wind is only weakly bipolar for MW-mass halos in the FIRE simulations~\citep{Hafen2019}, so this is not as strong of an effect.
 % }
 
-\subsubsection{Hydrostatic Halos}
+\subsection{Cooling Flows versus Hydrostatic Hot Halos}
 \label{s: modes -- hydrostatic}
 
 % What is the hydrostatic scenario?
@@ -1086,23 +1086,29 @@ The distinguishing trait is the accretion that occurs at the galaxy-halo interfa
 \label{s: fueling}
 
 % Maximum accretion rate onto DM halos
-Using previous work we can constrain the rate at which quiet accretion provides fuel for galaxies.
-\cite{Stern2020a} derive and simulate the maximum accretion rate a hot halo can sustain while remaining hot, finding $\dot M_{\rm crit} \approx 0.7 M_\odot/{\rm yr}$ for an $L^*$ halo.
-If the halo accretes gas at a higher rate than $\dot M_{\rm crit}$ then the cooling rate will surpass the free-fall time and the gas will cool and accrete as cold-mode accretion.
+% Using previous work we can constrain the rate at which quiet accretion provides fuel for galaxies.
+% \cite{Stern2020a} derive and simulate the maximum accretion rate a hot halo can sustain while remaining hot, finding $\dot M_{\rm crit} \approx 0.7 M_\odot/{\rm yr}$ for an $L^*$ halo.
+% If the halo accretes gas at a higher rate than $\dot M_{\rm crit}$ then the cooling rate will surpass the free-fall time and the gas will cool and accrete as cold-mode accretion.
 
 % Overprediction of star formation
-The fiducial FIRE simulations may overpredict the observed SFR in MW-mass halos by a factor of a few, although this is uncertain due to scatter in the SFR at fixed stellar mass and potential underestimation of molecular gas content in the FIRE simulations~\citep{Sparre2017, Orr2018}.
-FIRE simulations also underpredict the number of red galaxies~\citep{Garrison-Kimmel2017}.
-This potential discrepancy may be a result of an elevated accretion rate relative to the real accretion rate.
-If so, one solution is to include additional feedback to suppress star formation such as cosmic rays~\citep{Chan2019, Hopkins2020, Hopkins2020a, Hopkins2020b}.
-Similarly, AGN feedback may be able to suppress star formation, although the effect of AGN feedback on some FIRE halos would increase X-ray emissivity beyond observed levels~\textbf{(Citation needed: Jonathan, where did you get this from?)}. 
+\textbf{Say: "In our m12s the average SFR is XX, while in observations the observed value is YY. Take observed from behroozi plots.}
+The fiducial FIRE simulations may overpredict the median observed SFR in MW-mass halos by a factor of xx, although this is uncertain due to scatter in the SFR at fixed stellar mass and potential underestimation of molecular gas content in the FIRE simulations~\citep{Sparre2017, Orr2018}.
+% FIRE simulations also underpredict the number of red galaxies~\citep{Garrison-Kimmel2017}.
+Given that in FIRE SFR is regulated by $\Mdot$ (Fig.~2), this potential discrepancy may be a result of an elevated CGM accretion rate relative to the real accretion rate.
 
+
+The CGM accretion rate may be reduced by including additional feedback to suppress star formation such as cosmic rays~\citep{Chan2019, Hopkins2020, Hopkins2020a, Hopkins2020b}
+or AGN feedback (Wellons in prep.(?)). 
 % Alternate solution
-An alternative solution to the discrepancy in SFR is if the CGM is still described by a sub-sonic cooling flow with no feedback terms, but the mass in the CGM is reduced by a factor of  $\sim2$.
-For a cooling flow, decreasing the total mass in the CGM by a factor of $\sim 2$ reduces the accretion rate by a factor of $\sim4$~\citep{Stern2019}.
-The total mass in the CGM at a given time is determined by the full history of the CGM at previous times.
-Even without including additional feedback terms it would be unsurprising if the energy and momentum deposition by wind was inconsistent with real values by an amount necessary to account for this mass difference. \textbf{(Citation needed?)}
-If this is true, one convenient feature is that cooling flow solutions can easily be scaled up/down to predict the properties of the hot CGM in accordance with an appropriate accretion rate.
+Our result that the CGM in FIRE forms a cooling flow suggests an alternative solution to this problem, that the CGM mass or metallicity are somewhat overpredicted in MW-mass halos in FIRE.
+This follow since in a cooling flow $\Mdot\propto M_{\rm CGM}^2 \Lambda(Z)$, so if say the CGM mass is overpredicted by a factor of two, than $\Mdot$ and the SFR would be overestimated by a factor of four.
+Both the CGM mass and metallicity are a result of the integrated enrichment and depletion of the CGM by outflows over cosmic time, and thus are somewhat uncertain. %refer to arXiv:2106.08618
+A lower CGM mass than suggested in FIRE would also be more consistent with several studies of X-ray emission from the MW which find $M_{\rm CGM}/0.17M_{\rm halo}=xx$ (Li17, Bregman18), in contrast with $M_{\rm CGM}/0.17M_{\rm halo}=yy$ in FIRE (Hafen+18), though note that other studies deduce $M_{\rm CGM}/0.17M_{\rm halo}=xx$ based on the same X-ray data (Faerman17).
+A lower CGM mass in units of the halo baryon budget may also help alleviate the discrepancy between the $z\sim0$ thin disk fraction predicted by FIRE and observations (El-badry+18a,b,Peebles+19, Stern+20).
+This follows since a lower $M_{\rm CGM}$ implies that $t_{\rm cool}$ exceeds $t_{\rm ff}$ and the inner CGM can virialize at lower halo masses (Stern+20b), which given the relation between virialization and thin disk fraction found above would increase the thin disc fraction relative to that predicted by FIRE. 
+% The total mass in the CGM at a given time is determined by the full history of the CGM at previous times.
+% Even without including additional feedback terms it would be unsurprising if the energy and momentum deposition by wind was inconsistent with real values by an amount necessary to account for this mass difference. \textbf{(Citation needed?)}
+% If this is true, one convenient feature is that cooling flow solutions can easily be scaled up/down to predict the properties of the hot CGM in accordance with an appropriate accretion rate.
 
 \subsection{Quiet accretion and disk formation}
 \label{s: disk formation}
