@@ -22,6 +22,7 @@ processed_data_dir = ${paper_dir}/data
 
 # Analysis parameters
 # For defining quiet accretion
+disk_costheta = 0.1 # Contains roughly 2/3 of thin disk stars
 t_cut = 60. # In Myr
 c_cut = 0.8 # jz/j
 r_cut = 3 # R/Rgal
