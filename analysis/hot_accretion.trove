@@ -27,6 +27,10 @@ t_cut = 60. # In Myr
 c_cut = 0.8 # jz/j
 r_cut = 3 # R/Rgal
 
+# Aesthetic parameters
+background_linecolor = '.4'
+lighter_background_linecolor = '.6'
+
 ########################################################################
 [SCRIPTS]
 ########################################################################
