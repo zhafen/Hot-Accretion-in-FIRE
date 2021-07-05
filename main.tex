@@ -232,7 +232,15 @@ Adjust final aspect ratio to maximize plot size.
     \centering
     \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction.pdf}
     \caption{
-    \textbf{Summary plot for multiple simulations.}
+    \textbf{Left:}
+    Fraction of accreting mass strongly aligned ($\mid z/R \mid < 0.1$) with the disk 150 Myr before and after cooling (red and blue respectively) for our set of $\mathbf{N}$ analyzed halos.
+    X-axis tracks fraction of formed within the last Gyr prior to zero that are in the thin disk ($j_z/j_c(E)>0.8$).
+    Prior to cooling $\lesssim 30\%$ of accreting gas is strongly aligned with the galaxy plane,
+    while after cooling that fraction increases to $\gtrsim 50\%$ for galaxies forming thin disks.
+    \textbf{Right:}
+    Change in aligned mass over $\pm 150$ Myr before/after accreting gas drops below $T = 10^5$ K.
+    The extent to which the accreting gas changes alignment as it cools strongly tracks thin disk fraction.
+    Galaxies with circularized cooling flows (quiet accretion) are in the upper right-hand corner.
     }
     \label{f: prevalence}
 \end{figure*}
@@ -242,7 +250,11 @@ Adjust final aspect ratio to maximize plot size.
     \centering
     \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction_vs_galaxy_props.pdf}
     \caption{
-    \textbf{Summary plot for multiple simulations.}
+    Change in aligned mass over $\pm 150$ Myr versus $M_{\rm vir}$ (\textbf{left}), $M_\star$ (\textbf{center}), and $t_{\rm cool}/t_{\rm ff}$ evaluated at $0.1 R_{\rm vir}$ (\textbf{right}).
+    Color tracks thin disk fraction of young stars.
+    $\Delta M(\mid z/R \mid<0.1)/M \sim 0$ for $M_{\rm vir} < 10^{12} M_\odot$ or $M_\star < M_{\star, {\rm MW}}$, and spans a wide range for $\sim L_\star$ galaxies.
+    This demonstrates galaxy/halo mass alone is insufficient to predict accretion mode and thin disk fraction.
+    The ratio of cooling time to free fall time in the inner CGM indicates the extent to which the inner CGM is in a cooling flow, and subsequently better tracks the extent to which accreting gas aligns.
     }
     \label{f: prevalence vs galaxy properties}
 \end{figure*}
@@ -1328,30 +1340,6 @@ This research was supported in part by the National Science Foundation under Gra
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
 
 \appendix
-
-\section{Additional Simulations}
-
-% MECHANICS OF QUIET ACCRETION
-\begin{figure*}
-\includegraphics[width=\textwidth]{figures/before_vs_after_cr.pdf}
-\caption{
-Same as Figure~\ref{f: before and after} but for m12i\_cr.
-}
-\label{f: before and after cr}
-\end{figure*}
-
-\subsection{Metal diffusion vs non-metal diffusion vs MHDCV vs CRs}
-
-\textbf{Plot of distribution $\Rcon$ for m12i and m12i\_md overlapping. Show cooling only happens at large radii in metal diffusion sims.}
-
-\textbf{Add mhdcv comparison.}
-
-\section{Dependence on Deposited Mass}
-
-\begin{figure}
-\includegraphics[width=\columnwidth]{figures/mass_dep_vs_R1e5.pdf}
-\label{f: deposited mass vs R1e5}
-\end{figure}
 
 % \section{Angular Momentum of Accreting Material}
 
