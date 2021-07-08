@@ -63,7 +63,7 @@ lighter_background_linecolor = '.6'
 nb.8 = ${code_dir}/characteristics.ipynb
  
 # Before and after cooling
-# nb.9 = ${code_dir}/before_and_after.ipynb
+nb.9 = ${code_dir}/before_and_after.ipynb
 
 ########################################################################
 [DATA PRODUCTS]
