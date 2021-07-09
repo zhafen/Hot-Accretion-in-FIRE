@@ -133,10 +133,12 @@ galaxies: disc -- galaxies: evolution -- galaxies: halos -- cosmology: theory
     \centering
     \includegraphics[width=\textwidth]{figures/illustrative_tracks/illustrative_tracks.png}
     \caption{
-Example trajectories showing how gas accretes onto Milky-Way mass disc galaxies at $z\approx0$ in FIRE.
+\textbf{Left:}
+Example trajectories showing how gas accretes onto Milky-Way mass disk galaxies at $z\approx0$ in FIRE.
 Trajectories are representative of gas that is outside a Milky-Way-like galaxy one Gyr prior to $z=0$, and inside the galaxy at $z=0$.
 % We show the trajectories for 1 Gyr prior to the final time gas cools below $T=10^5$ K prior to accreting onto the galaxy, and 0.5 Gyr after cooling.
 The trajectories are characteristic of \textit{quiet accretion}:
+\textbf{Right:} Positions of all gas particles before and after they cool, colored by temperature.
 Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, at which time it also forms a rotating disc structure.
     }
     \label{f: overview}
@@ -170,10 +172,7 @@ Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, 
     Radial and temperature trends for gas accreting onto two $L^\star$ FIRE halos at $z\approx0$.
     \textbf{Top panels:} Distribution of $\Rcon$, the radius at which gas particles last cooled below $T=10^5$ K prior to accreting.
     \textbf{Bottom:} Temperature vs radius tracks for five randomly-selected particles per halo, with color indicating time relative to the time at which gas cools.
-    At $r \gtrsim 0.1 R_{\rm vir}$ accreted gas either remains hot or cools only temporarily.
-    \textbf{
-    Consider plotting an edge-on image of the system to-scale above the histogram.
-    }
+    At $r \gtrsim 0.1 R_{\rm vir}$ accreting gas typically remains hot.
     }
     \label{f: T vs R}
 \end{figure*}
@@ -294,6 +293,15 @@ Adjust final aspect ratio to maximize plot size.
 Normal: Normal text, polished enough to be included in a draft.
 
 \subsection{OUTSTANDING QUESTIONS/DISCUSSION POINTS}
+
+\textbf{Double-check the definition of t1e5.}
+I need to especially make sure that there's no weird behavior in the following case:
+gas that's cool and within Rgal but insufficiently dense that becomes denser and therefore part of the galaxy.
+This event should *not* be counted as $\tcon$.
+\textit{However}, this should be done after the manuscript is out to collabs.
+If I'm being overly inclusive then fixing that will just strengthen results.
+
+\textbf{Make movies for other orientations.}
 
 \textbf{Is the weirdness with \texttt{m12i\_mhdcv} a general property of MHD sims?}
 Leaving it out until I understand this.
