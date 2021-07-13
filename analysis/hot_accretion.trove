@@ -60,10 +60,13 @@ lighter_background_linecolor = '.6'
 # py.7 = ${code_dir}/linefinder_tracking/firefly.py
 
 # Trajectories and geometric evolution
-nb.8 = ${code_dir}/characteristics.ipynb
+# nb.8 = ${code_dir}/characteristics.ipynb
  
 # Before and after cooling
 # nb.9 = ${code_dir}/before_and_after.ipynb
+ 
+# FIRE studio images
+nb.10 = ${code_dir}/fire_studio.ipynb
 
 ########################################################################
 [DATA PRODUCTS]
@@ -80,6 +83,7 @@ jug.5 = galids_${tag}.hdf5
 py.6 = classifications_${tag}.hdf5
 nb.8 = executed_characteristics.ipynb
 nb.9 = executed_before_and_after.ipynb
+nb.10 = executed_fire_studio.ipynb
 
 ########################################################################
 # Parameter Variations
