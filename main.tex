@@ -53,7 +53,8 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Cooling flows and thin galactic disks]{Thin galactic disks assembled from rotating cooling-flow accretion}
+\title[Cooling flows and thin galactic disks]{Thin galactic disks are assembled from rotating cooling flows}
+% \title[Thin disks and rotating cooling flows]{Rotating cooling flows and thin-disk galaxy assembly in an LCDM universe}
 
 % This title fulfills four conditions:
 % 1. Link to galaxies is direct and the first thing the reader sees.
@@ -126,6 +127,17 @@ galaxies: disc -- galaxies: evolution -- galaxies: halos -- cosmology: theory
 
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 
+% THE THIN DISKS
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{figures/stars.pdf}
+    \caption{
+    Mock hubble images of three FIRE-2 Milky Way-like disc galaxies, and one lower-mass irregular galaxy.
+    Most FIRE-2 MW-mass galaxies have extremely thin disks.
+    }
+    \label{f: stars}
+\end{figure*}
+
 % INTUITIVE OVERVIEW
 \begin{figure*}
     \centering
@@ -146,7 +158,7 @@ Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, 
 % HOT IN HALO
 \begin{figure*}
     \centering
-    \includegraphics{figures/Mdot_normalized.pdf}
+    \includegraphics{figures/Mdot.pdf}
     \caption{
     Average mass inflow rate over the course of one Gyr prior to $z=0$ in two $\sim L^\star$ FIRE halos.
     Black lines in the top panels show the total mass inflow rate while colored lines in the bottom panels show the division into the hot, cool and cold phases.
@@ -161,19 +173,29 @@ Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, 
     \label{f: Mdot}
 \end{figure*}
 
-% COOLS AT disc INTERFACE
+% COOLS AT DISC INTERFACE
 \begin{figure*}
     \centering
-    \includegraphics[width=\columnwidth]{figures/tracks/tracks_m12i_md.pdf}
-    \includegraphics[width=\columnwidth]{figures/tracks/tracks_m12b_md.pdf}
+    \includegraphics[width=\textwidth]{figures/R1e5K.pdf}
     \caption{
-    Radial and temperature trends for gas accreting onto two $L^\star$ FIRE halos at $z\approx0$.
-    \textbf{Top panels:} Distribution of $\Rcon$, the radius at which gas particles last cooled below $T=10^5$ K prior to accreting.
-    \textbf{Bottom:} Temperature vs radius tracks for five randomly-selected particles per halo, with color indicating time relative to the time at which gas cools.
-    At $r \gtrsim 0.1 R_{\rm vir}$ accreting gas typically remains hot.
+    Distribution of $\Rcon$, the radius at which gas particles last cooled below $T=10^5$ K prior to accreting.
     }
-    \label{f: T vs R}
+    \label{f: R1e5K}
 \end{figure*}
+
+% OLD
+% \begin{figure*}
+%     \centering
+%     \includegraphics[width=\columnwidth]{figures/tracks/tracks_m12i_md.pdf}
+%     \includegraphics[width=\columnwidth]{figures/tracks/tracks_m12b_md.pdf}
+%     \caption{
+%     Radial and temperature trends for gas accreting onto two $L^\star$ FIRE halos at $z\approx0$.
+%     \textbf{Top panels:} Distribution of $\Rcon$, the radius at which gas particles last cooled below $T=10^5$ K prior to accreting.
+%     \textbf{Bottom:} Temperature vs radius tracks for five randomly-selected particles per halo, with color indicating time relative to the time at which gas cools.
+%     At $r \gtrsim 0.1 R_{\rm vir}$ accreting gas typically remains hot.
+%     }
+%     \label{f: T vs R}
+% \end{figure*}
 
 % ORIENTS AS IT COOLS
 \begin{figure*}
@@ -284,6 +306,18 @@ Adjust final aspect ratio to maximize plot size.
 % \end{figure}
 
 \section{NOTES FOR AUTHORS}
+
+\subsection{Framing ideas from James -- these paragraphs could potentially be inserted before the first paragraph of the current introduction}
+The formation and evolution of galactic disks is one of the most venerable topics in galaxy formation, with ties to a broad array of astrophysics. From the earliest seeds of modern galaxy formation theory, there has been a perceived tension between rapid, early formation of thin disks \citep{eggen1962} and their subsequent stability and ability to survive for a Hubble time \citep{ostriker1973,toth1992}. 
+
+Our present picture for the formation of galactic disks  can be largely traced to insightful, though idealistic, analytic ideas first explored by \citet{fall1980}
+where a galaxy's angular momentum is intimately tied to the corresponding properties of its host dark matter halo.  Collapsing structures in an otherwise expanding universe will be spun up by the large-scale matter field \citep{Peebles69};  this can deliver enough angular momentum to allow (at least some) galaxies to have significant angular-momentum support \citep[e.g.][]{MMW98}. While useful for first-order estimates for galaxy properties, models that assume a tight coupling between halo spin and galaxy sizes do not explain the detailed properties of disks formed in cosmological simulations\citep[e.g.][]{GK18}.  This suggests that our understanding of disk formation in a cosmological context is incomplete. 
+
+Given what we know about the angular momentum distribution in galactic halos, it somewhat surprising that so many galaxies are not only spinning, but are dominated by cold, {\em thin} disks.    We know, for example, that the angular momentum distribution of dark matter \citep{B01} and gas \citep{Stewart13,DeFelippis2020} in galactic halos is quite broad.  This means that in order for a tightly-ordered thin disk to emerge, the gas must be very well mixed and  coherently aligned along a single plane {\em before} star formation proceeds.  This suggests that the ability for gas to mix and exchange angular momentum prior to becoming dense enough or star formation will be essential for thin disk formation. 
+ 
+
+
+
 
 \subsection{KEY FOR COAUTHORS}
 \textbf{Bold: Notes for things to implement.} \\
@@ -1351,7 +1385,7 @@ This research was supported in part by the National Science Foundation under Gra
 % The best way to enter references is to use BibTeX:
 
 \bibliographystyle{mnras}
-\bibliography{references} % if your bibtex file is called example.bib
+\bibliography{references,jsbref} % if your bibtex file is called example.bib
 
 % Alternatively you could enter them by hand, like this:
 % This method is tedious and prone to error if you have lots of references
