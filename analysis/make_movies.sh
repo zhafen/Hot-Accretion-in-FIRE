@@ -1,19 +1,19 @@
 variations=(
-#    m12i
-#    m11a
-#    m11c
+    # m12i
+    # m11a
+    # m11c
     m12i_md
-#    m12r_md
-#    m12w_md
-#    m12f_md
-#    m12c_md
-#    m12b_md
-#    m11d_md
-#    m11e_md
-#    m11h_md
-#    m11i_md
-#    m11q_md
-#    m12i_cr
+    # m12r_md
+    # m12w_md
+    # m12f_md
+    # m12c_md
+    # m12b_md
+    # m11d_md
+    # m11e_md
+    # m11h_md
+    # m11i_md
+    # m11q_md
+    # m12i_cr
 )
 base_dir=/Users/zhafen/Data/hot_halo_accretion/movies
 
