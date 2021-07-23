@@ -53,8 +53,8 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Cooling flows and thin galactic disks]{Thin galactic disks assembled from rotating cooling flows}
-%\title[]{Rotating cooling flows and the physics of thin-disk galaxy formation}
+% \title[Cooling flows and thin galactic disks]{Thin galactic disks assembled from rotating cooling flows}
+\title[Rotating cooling flows and thin disks]{Rotating cooling flows and the physics of thin-disk galaxy formation}
 % \title[Thin disks and rotating cooling flows]{Rotating cooling flows and thin-disk galaxy assembly in an LCDM universe}
 
 % This title fulfills four conditions:
@@ -100,11 +100,11 @@ We find three primary characteristics:
 (i) accretion transitions from a hot quasi-spherical configuration to a cool disc-like configuration over the course of $\lesssim 300$ Myr;
 (ii) hot virial temperature gas dominates ($\gtrsim80\%$) the inflowing gas mass on halo scales ($\gtrsim 20$ kpc);
 (iii) accreting gas cools at the galaxy-halo interface, with the peak of the cooling located just outside the galaxy.
-These characteristics are the result of a \textit{cooling spiral}---a rotating cooling flow that circularizes and cools at the galaxy edge.
-In a cooling spiral gas inflows until its angular momentum halts progress.
-During the journey the variability of angular momentum direction decreases strongly.
-When the cooling spiral becomes rotationally supported it experiences increased radiative cooling and decreased compressive heating, and the now-aligned gas rapidly collapses into a disk.
-The presence of a cooling spiral is strongly correlated with thin disk formation.
+These characteristics are the result of a rotating cooling flow that circularizes and cools at the galaxy edge.
+Gas inflows until its angular momentum halts progress.
+During the journey the dispersion in angular momentum direction decreases strongly.
+When the accreting gas becomes rotationally supported it experiences increased radiative cooling and decreased compressive heating, and the now-aligned gas rapidly collapses into a disk.
+The presence of a rotating cooling flow is strongly correlated with thin disk formation.
 In galaxies with thin disk fractions $>0.7$ within 150 Myrs of cooling $\gtrsim 80\%$ of the accreting gas mass is as aligned as the thin disk.
 % 80% comes from f_aligned_gas / f_aligned_thin_disk >~ 0.8.
 % Alternate sentence that we don't explicitly show but is implied:
@@ -145,13 +145,13 @@ galaxies: disc -- galaxies: evolution -- galaxies: halos -- cosmology: theory
     \centering
     \includegraphics[width=\textwidth]{figures/illustrative_tracks/illustrative_tracks.png}
     \caption{
-\textbf{Left:}
+\textbf{Side Panels:}
+Temperature and spatial evolution of accreting gas prior to cooling ($t-\tcon < 0$) and after cooling ($t-\tcon > 0)$.
+\textbf{Main Panel:}
 Example trajectories showing how gas accretes onto Milky-Way mass disc galaxies at $z\approx0$ in FIRE.
 Trajectories are representative of gas that is outside a Milky-Way-like galaxy one Gyr prior to $z=0$, and inside the galaxy at $z=0$.
 % We show the trajectories for 1 Gyr prior to the final time gas cools below $T=10^5$ K prior to accreting onto the galaxy, and 0.5 Gyr after cooling.
 The trajectories are characteristic of \textit{quiet accretion}:
-\textbf{Right:} Positions of all gas particles before and after they cool, colored by temperature.
-Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, at which time it also forms a rotating disc structure.
     }
     \label{f: overview}
 \end{figure*}
@@ -178,11 +178,7 @@ Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, 
     \includegraphics[width=\textwidth]{figures/R1e5K.pdf}
     \caption{
     Distribution of $\Rcon$, the radius at which gas particles last cooled below $T=10^5$ K prior to accreting.
-    \textbf{Add additional labels.}
-    \textbf{This is not the message we want to share.}
     \textbf{The m11 seems incompatible with figure 3. I need to double check my $\Rcon$ calculation.}
-    \textbf{m11i,c,q,a are all good choices}
-    \textbf{Try absolute units.}
     \textbf{Possible origin of inconsistency between Figs 3 and 4: constant reheating of accreting cool gas.}
     }
     \label{f: R1e5K}
@@ -212,8 +208,6 @@ Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, 
     For $\sim L^*$ galaxies accreting gas is quasi-spherical prior to cooling.
     After cooling the gas has a disc-like configuration, indicating that cooling and circularization occur simultaneously. 
     In contrast, in the lower-mass halo the gas is quasi-spherical both prior to and after cooling, indicating that cooling is not associated with circularization.
-    \textbf{Change label from 2/3 to actual fraction.}
-    \textbf{Change axis label to costheta=z/R}
     }
     \label{f: theta vs t}
 \end{figure*}
@@ -232,9 +226,8 @@ Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, 
     Change in aligned mass over $\pm 150$ Myr before/after accreting gas drops below $T = 10^5$ K.
     The extent to which the accreting gas changes alignment as it cools strongly tracks thin disc fraction.
     Galaxies with circularized cooling flows (quiet accretion) are in the upper right-hand corner.
-    \textbf{in the legend add '150 Myr' before the 'before' and 'after'}
 \textbf{maybe shift a bit some of the galaxies in the x-axis to avoid overlap}
-\textbf{how do you calculate the location of the tick corresponding to 'at T=10^5'. Is this the snapshot before T=10^5? if yes maybe try also interpolation between the before and after snapshot (interpolate in log T and in linear aligned accretion)}
+\textbf{how do you calculate the location of the tick corresponding to 'at $T=10^5$'. Is this the snapshot before $T=10^5$? if yes maybe try also interpolation between the before and after snapshot (interpolate in log T and in linear aligned accretion)}
     }
     \label{f: prevalence}
 \end{figure*}
