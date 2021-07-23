@@ -1,24 +1,24 @@
 variations=(
-    m12i
-    m11a
-    m11c
+#    m12i
+#    m11a
+#    m11c
     m12i_md
-    m12r_md
-    m12w_md
-    m12f_md
-    m12c_md
-    m12b_md
-    m11d_md
-    m11e_md
-    m11h_md
-    m11i_md
-    m11q_md
-    m12i_cr
+#    m12r_md
+#    m12w_md
+#    m12f_md
+#    m12c_md
+#    m12b_md
+#    m11d_md
+#    m11e_md
+#    m11h_md
+#    m11i_md
+#    m11q_md
+#    m12i_cr
 )
 base_dir=/Users/zhafen/Data/hot_halo_accretion/movies
 
 copy=True
-make_movie=True
+make_movie=False
 
 # Copy
 if $copy; then
@@ -36,5 +36,6 @@ if $make_movie; then
         frames_dir=${base_dir}/frames/${var}/projected_frames
         ffmpeg -r 30 -f image2 -s 1080x1080 -i ${frames_dir}/${var}_%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p ${base_dir}/${var}.mp4
         ffmpeg -r 10 -f image2 -s 1080x1080 -i ${frames_dir}/${var}_focused_%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p ${base_dir}/${var}_focused.mp4
+        ffmpeg -r 30 -f image2 -s 1080x1080 -i ${frames_dir}/${var}_colden_%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p ${base_dir}/${var}_colden.mp4
     done
 fi

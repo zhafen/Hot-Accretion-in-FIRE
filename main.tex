@@ -53,7 +53,8 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Cooling flows and thin galactic disks]{Thin galactic disks are assembled from rotating cooling flows}
+\title[Cooling flows and thin galactic disks]{Thin galactic disks assembled from rotating cooling flows}
+%\title[]{Rotating cooling flows and the physics of thin-disk galaxy formation}
 % \title[Thin disks and rotating cooling flows]{Rotating cooling flows and thin-disk galaxy assembly in an LCDM universe}
 
 % This title fulfills four conditions:
@@ -134,6 +135,7 @@ galaxies: disc -- galaxies: evolution -- galaxies: halos -- cosmology: theory
     \caption{
     Mock hubble images of three FIRE-2 Milky Way-like disc galaxies, and one lower-mass irregular galaxy.
     Most FIRE-2 MW-mass galaxies have extremely thin disks.
+    \textbf{Note no attenuation.}
     }
     \label{f: stars}
 \end{figure*}
@@ -164,11 +166,8 @@ Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, 
     Black lines in the top panels show the total mass inflow rate while colored lines in the bottom panels show the division into the hot, cool and cold phases.
     The dotted line in the top panel shows the rate of gas conversion into stars within a given radius.
     The hot phase dominates the mass inflow in these halos, down to the galaxy scale of $\approx15$ kpc.
-    \textbf{Verify conversion SFR to Mdot\_stars, add SFR of satellites}
     \textbf{Try adding labels relative to $T_{\rm vir}$ (Drummond's suggestion).}
-    \textbf{Consider removing top panels, as scientists who are very aware of SFR discrepancies may become fixated.}
-    \textbf{Use consistent r notation (caps vs not, units in brackets vs parenthesis.).}
-    \textbf{Add top x-axis with radius in units of $\Rvir$}.
+    \textbf{Add ``hot accretion'' and ``cold accretion'' to lines.}
     }
     \label{f: Mdot}
 \end{figure*}
@@ -179,6 +178,12 @@ Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, 
     \includegraphics[width=\textwidth]{figures/R1e5K.pdf}
     \caption{
     Distribution of $\Rcon$, the radius at which gas particles last cooled below $T=10^5$ K prior to accreting.
+    \textbf{Add additional labels.}
+    \textbf{This is not the message we want to share.}
+    \textbf{The m11 seems incompatible with figure 3. I need to double check my $\Rcon$ calculation.}
+    \textbf{m11i,c,q,a are all good choices}
+    \textbf{Try absolute units.}
+    \textbf{Possible origin of inconsistency between Figs 3 and 4: constant reheating of accreting cool gas.}
     }
     \label{f: R1e5K}
 \end{figure*}
@@ -207,13 +212,54 @@ Accreted gas is hot and voluminous until it cools at the galaxy-halo interface, 
     For $\sim L^*$ galaxies accreting gas is quasi-spherical prior to cooling.
     After cooling the gas has a disc-like configuration, indicating that cooling and circularization occur simultaneously. 
     In contrast, in the lower-mass halo the gas is quasi-spherical both prior to and after cooling, indicating that cooling is not associated with circularization.
+    \textbf{Change label from 2/3 to actual fraction.}
+    \textbf{Change axis label to costheta=z/R}
     }
     \label{f: theta vs t}
 \end{figure*}
 
+% PREVALENCE OF QUIET ACCRETION
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction.pdf}
+    \caption{
+    \textbf{Left:}
+    Fraction of accreting mass strongly aligned ($\mid z/R \mid < 0.1$) with the disc 150 Myr before and after cooling (red and blue respectively) for our set of $\mathbf{N}$ analyzed halos.
+    X-axis tracks fraction of formed within the last Gyr prior to zero that are in the thin disc ($j_z/j_c(E)>0.8$).
+    Prior to cooling $\lesssim 30\%$ of accreting gas is strongly aligned with the galaxy plane,
+    while after cooling that fraction increases to $\gtrsim 50\%$ for galaxies forming thin discs.
+    \textbf{Right:}
+    Change in aligned mass over $\pm 150$ Myr before/after accreting gas drops below $T = 10^5$ K.
+    The extent to which the accreting gas changes alignment as it cools strongly tracks thin disc fraction.
+    Galaxies with circularized cooling flows (quiet accretion) are in the upper right-hand corner.
+    \textbf{in the legend add '150 Myr' before the 'before' and 'after'}
+\textbf{maybe shift a bit some of the galaxies in the x-axis to avoid overlap}
+\textbf{how do you calculate the location of the tick corresponding to 'at T=10^5'. Is this the snapshot before T=10^5? if yes maybe try also interpolation between the before and after snapshot (interpolate in log T and in linear aligned accretion)}
+    }
+    \label{f: prevalence}
+\end{figure*}
+
+% PREVALENCE OF QUIET ACCRETION -- VS GALAXY PROPERTIES
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction_vs_galaxy_props.pdf}
+    \caption{
+    Change in aligned mass over $\pm 150$ Myr versus $M_{\rm vir}$ (\textbf{left}), $M_\star$ (\textbf{center}), and $t_{\rm cool}/t_{\rm ff}$ evaluated at $0.1 R_{\rm vir}$ (\textbf{right}).
+    Color tracks thin disc fraction of young stars.
+    $\Delta M(\mid z/R \mid<0.1)/M \sim 0$ for $M_{\rm vir} < 10^{12} M_\odot$ or $M_\star < M_{\star, {\rm MW}}$, and spans a wide range for $\sim L_\star$ galaxies.
+    This demonstrates galaxy/halo mass alone is insufficient to predict accretion mode and thin disc fraction.
+    The ratio of cooling time to free fall time in the inner CGM indicates the extent to which the inner CGM is in a cooling flow, and subsequently better tracks the extent to which accreting gas aligns.
+    \textbf{Consider swapping aligned accretion with fthin disk.
+    Motivation: much better for those who think more about thin disk fraction than aligned accretion.
+}
+    }
+    \label{f: prevalence vs galaxy properties}
+\end{figure*}
+
+
 % MECHANICS OF QUIET ACCRETION
 \begin{figure*}
-\includegraphics[height=0.75\textheight]{figures/before_and_after/before_and_after_m12i_md.pdf}
+\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_m12i_md.pdf}
 \caption{
 Mechanics of accretion onto $z\sim0$ MW-mass galaxies in FIRE.
 In each panel we plot a characteristic of accreted gas versus time relative to the final cooling time ($t - \tcon$).
@@ -236,42 +282,12 @@ Each line represents the average change in specific energy for particles within 
 Darker colors indicate time windows with more accreted particles.
 At $t<\tcon$ radiative cooling equals compressional heating, as expected in a cooling flow. 
 \textbf{
-Adjust final aspect ratio to maximize plot size.
+Change annotation text to appropriate color.
 }
+\textbf{The bottom panel suggests that artificially low SF thresholds will have trouble producing thin disks.}
+\textbf{Change text in bottom panel.}
 }
 \label{f: before and after}
-\end{figure*}
-
-% PREVALENCE OF QUIET ACCRETION
-\begin{figure*}
-    \centering
-    \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction.pdf}
-    \caption{
-    \textbf{Left:}
-    Fraction of accreting mass strongly aligned ($\mid z/R \mid < 0.1$) with the disc 150 Myr before and after cooling (red and blue respectively) for our set of $\mathbf{N}$ analyzed halos.
-    X-axis tracks fraction of formed within the last Gyr prior to zero that are in the thin disc ($j_z/j_c(E)>0.8$).
-    Prior to cooling $\lesssim 30\%$ of accreting gas is strongly aligned with the galaxy plane,
-    while after cooling that fraction increases to $\gtrsim 50\%$ for galaxies forming thin discs.
-    \textbf{Right:}
-    Change in aligned mass over $\pm 150$ Myr before/after accreting gas drops below $T = 10^5$ K.
-    The extent to which the accreting gas changes alignment as it cools strongly tracks thin disc fraction.
-    Galaxies with circularized cooling flows (quiet accretion) are in the upper right-hand corner.
-    }
-    \label{f: prevalence}
-\end{figure*}
-
-% PREVALENCE OF QUIET ACCRETION -- VS GALAXY PROPERTIES
-\begin{figure*}
-    \centering
-    \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction_vs_galaxy_props.pdf}
-    \caption{
-    Change in aligned mass over $\pm 150$ Myr versus $M_{\rm vir}$ (\textbf{left}), $M_\star$ (\textbf{center}), and $t_{\rm cool}/t_{\rm ff}$ evaluated at $0.1 R_{\rm vir}$ (\textbf{right}).
-    Color tracks thin disc fraction of young stars.
-    $\Delta M(\mid z/R \mid<0.1)/M \sim 0$ for $M_{\rm vir} < 10^{12} M_\odot$ or $M_\star < M_{\star, {\rm MW}}$, and spans a wide range for $\sim L_\star$ galaxies.
-    This demonstrates galaxy/halo mass alone is insufficient to predict accretion mode and thin disc fraction.
-    The ratio of cooling time to free fall time in the inner CGM indicates the extent to which the inner CGM is in a cooling flow, and subsequently better tracks the extent to which accreting gas aligns.
-    }
-    \label{f: prevalence vs galaxy properties}
 \end{figure*}
 
 % % OBSERVATIONAL COMPARISON
@@ -326,6 +342,14 @@ Normal: Normal text, polished enough to be included in a draft.
 
 \subsection{OUTSTANDING QUESTIONS/DISCUSSION POINTS}
 
+\textbf{Experiment with the color for the top panels of Fig 2.}
+Change 1e5 to white.
+Remove hot/cold color scale to focus on just density.
+Maybe add contours that highlight the geometric changes.
+
+\textbf{Consider adding in a figure that emphasizes gas must be coherent, aligned, and rotationally supported prior to reaching star forming densities to form thin disks.}
+Maybe a version of Figure 8 relative to SF density.
+
 \textbf{Double-check the definition of t1e5.}
 I need to especially make sure that there's no weird behavior in the following case:
 gas that's cool and within Rgal but insufficiently dense that becomes denser and therefore part of the galaxy.
@@ -336,24 +360,7 @@ If I'm being overly inclusive then fixing that will just strengthen results.
 \textbf{Make movies for other orientations.}
 
 \textbf{Is the weirdness with \texttt{m12i\_mhdcv} a general property of MHD sims?}
-Leaving it out until I understand this.
-
-\textbf{Change total angular momentum to that of stellar component.}
-
-\textbf{Why is delta PDF so much better of a predictor of thin disc fraction, compared to ones that are ratio of PDF or involve the larger distribution?}
-A hint is that both m12f and m12c, ones most sensitive to this, have merging galaxies $10^11 M_\odot$ halos within the last Gyr.
-I think it's that Delta PDF is most-strongly correlated with quiet accretion fraction, which might predict thin disc fraction.
-Next step: estimate quiet accretion fraction.
-Two methods:
-a) estimate peak by subtracting distribution prior to cooling.
-b) particle-by-particle estimate with quiet accretion fulfilling the criteria: $j_z/j \approx 1$ within two snapshots after cooling
-
-\textbf{How do we refer to this accretion mode?}
-\textbf{Cooling flow accretion:}
-Pros: Strong connection to previous work.
-Cons: This accretion mode can occur in halos not undergoing cooling flows, e.g. CR halos.
-Brings to mind clusters.
-\textbf{Quiet accretion:}																																									
+Leaving it out until I understand this.																																								
 Pros: General term. Some connection to existing work, but very lightly used.
 Cons: Doesn't make the connection to cooling flows clear.
 \textbf{A name related to cooling flows, but not ``cooling flow accretion'':}
@@ -495,6 +502,7 @@ Yuan Li finds changing angle of disc due to accretion in her cluster sims.
 \label{s: introduction}
 
 % Star formation and CGM accretion
+Suggested: Over the last decade it's become increasingly apparent that the source term for gas is important for galaxy morphology. (Paraphrased.)
 Galactic star formation is likely fueled by accretion from the circumgalactic medium (CGM), without which star formation would cease in only a couple of Gyrs~\cite[e.g.][]{Prochaska2009, Bauermeister2010, Spring2017}.
 There are believed to be a number of modes of accretion from the CGM, each with different characteristics, mechanics, prevalences, and implications for star formation.
 % Accretion types - hot
