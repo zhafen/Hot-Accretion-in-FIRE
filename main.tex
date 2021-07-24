@@ -134,8 +134,8 @@ galaxies: disk -- galaxies: evolution -- galaxies: halos -- cosmology: theory
     \centering
     \includegraphics[width=\textwidth]{figures/stars.pdf}
     \caption{
-    Mock hubble images of three FIRE-2 Milky Way-like disk galaxies, and one lower-mass irregular galaxy.
-    Most FIRE-2 MW-mass galaxies have extremely thin disks.
+    Mock hubble images of three FIRE-2 Milky-Way-mass disk galaxies, and one lower-mass irregular galaxy.
+    Most FIRE-2 MW-mass galaxies have extremely thin disks, in contrast to the morphology of lower-mass galaxies.
     \textbf{Note no attenuation.}
     }
     \label{f: stars}
@@ -154,7 +154,7 @@ Over $\lesssim 300$ Myrs accreting gas collapses from a hot, voluminous, pseudo-
 \textbf{Bottom-left panel:}
 Three representative trajectories for accreting gas elements.
 % We show the trajectories for 1 Gyr prior to the final time gas cools below $T=10^5$ K prior to accreting onto the galaxy, and 0.5 Gyr after cooling.
-Gas accretion accretes onto disk galaxies as a rotating cooling flow that forms a coherent, rotationally-supported disk at the galaxy edge.
+Gas accretes onto disk galaxies as a rotating cooling flow that forms a coherent, rotationally-supported disk at the galaxy edge.
     }
     \label{f: overview}
 \end{figure*}
@@ -165,22 +165,24 @@ Gas accretion accretes onto disk galaxies as a rotating cooling flow that forms 
     \centering
     \includegraphics{figures/Mdot.pdf}
     \caption{
-    Average mass inflow rate over the course of one Gyr prior to $z=0$ in two $\sim L^\star$ FIRE halos.
-    Black lines in the top panels show the total mass inflow rate while colored lines in the bottom panels show the division into the hot, cool and cold phases.
-    The dotted line in the top panel shows the rate of gas conversion into stars within a given radius.
-    The hot phase dominates the mass inflow in these halos, down to the galaxy scale of $\approx15$ kpc.
+    Average mass inflow rate over the course of one Gyr prior to $z=0$ in the same halos as Figure~\ref{f: stars}.
+    Hot mode ($T>10^5$ K) gas accretion dominates the mass inflow onto MW-mass thin-disk galaxies at $r \gtrsim R_{\rm gal} \sim 10-20$ kpc, in contrast to the cold-mode gas accretion onto the lower-mass galaxy in the bottom-right panel.
+    \textbf{Use consistent capitalization: R or r.}
     \textbf{Try adding labels relative to $T_{\rm vir}$ (Drummond's suggestion).}
     \textbf{Add ``hot accretion'' and ``cold accretion'' to lines.}
     }
     \label{f: Mdot}
 \end{figure*}
 
-% COOLS AT disk INTERFACE
+% COOLS AT DISK INTERFACE
 \begin{figure*}
     \centering
     \includegraphics[width=\textwidth]{figures/R1e5K.pdf}
     \caption{
-    Distribution of $\Rcon$, the radius at which gas particles last cooled below $T=10^5$ K prior to accreting.
+    Distribution of the radius at which gas particles cools below $T=10^5$ K for the last time prior to accreting, $\Rcon$.
+    For MW-mass halos gas cooling peaks just outside $R_{\rm gal}$, and doesn't extend beyond 0.1-0.2 $R_{\rm vir}$.
+    This, and Figure~\ref{f: Mdot}, shows gas does not precipitate and fall in while cool from large radii.
+    For completeness we show a $M_{\rm \star} \sim 10^9 M_\odot$ halo, which has a more-extended distribution.
     \textbf{Change colors to make the m11 orange.}
     \textbf{The m11 seems incompatible with figure 3. I need to double check my $\Rcon$ calculation.}
     \textbf{Possible origin of inconsistency between Figs 3 and 4: constant reheating of accreting cool gas.}
@@ -239,11 +241,12 @@ Gas accretion accretes onto disk galaxies as a rotating cooling flow that forms 
     \centering
     \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction_vs_galaxy_props.pdf}
     \caption{
-    Change in aligned mass over $\pm 150$ Myr versus $M_{\rm vir}$ (\textbf{left}), $M_\star$ (\textbf{center}), and $t_{\rm cool}/t_{\rm ff}$ evaluated at $0.1 R_{\rm vir}$ (\textbf{right}).
+    Change in aligned mass over $\pm 150$ Myr versus $M_{\rm vir}$, $M_\star$, $t_{\rm cool}/t_{\rm ff}$ evaluated at $0.1 R_{\rm vir}$, and Sloan-r-band-weighted thin disk fraction.
     Color tracks thin disk fraction of young stars.
     $\Delta M(\mid z/R \mid<0.1)/M \sim 0$ for $M_{\rm vir} < 10^{12} M_\odot$ or $M_\star < M_{\star, {\rm MW}}$, and spans a wide range for $\sim L_\star$ galaxies.
     This demonstrates galaxy/halo mass alone is insufficient to predict accretion mode and thin disk fraction.
     The ratio of cooling time to free fall time in the inner CGM indicates the extent to which the inner CGM is in a cooling flow, and subsequently better tracks the extent to which accreting gas aligns.
+    The thin disk fraction for stars less than a Gyr old closely tracks the luminosity-weighted thin disk fraction.
     }
     \label{f: prevalence vs galaxy properties}
 \end{figure*}
@@ -333,6 +336,8 @@ Given what we know about the angular momentum distribution in galactic halos, it
 Normal: Normal text, polished enough to be included in a draft.
 
 \subsection{OUTSTANDING QUESTIONS/DISCUSSION POINTS}
+
+\textbf{Connect to Shea's work.}
 
 \textbf{The results could be even stronger if we could test this for one or two more irregular MW-mass galaxies.}
 
@@ -720,6 +725,7 @@ The constant mass flow across radii indicates gas in the inner halo is roughly i
 \label{s: characteristics -- cools}
 
 \textbf{Mention that we don't show particles ejected from the galaxy.}
+\textbf{Mention that gas can cool within Rgal because accretion has a density criterion.}
 
 % Rcon
 A key quantity for differentiating modes of hot accretion is the radius at which gas last cools before accreting onto the galaxy, i.e. the radius at time $\tcon$, $\Rcon \equiv R (\tcon)$.
