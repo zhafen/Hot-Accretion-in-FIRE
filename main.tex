@@ -95,23 +95,24 @@ $^1$,
 
 % Abstract of the paper
 \begin{abstract}
-We study how cosmological accretion fuels $\sim L^\star$ star-forming disk galaxies at redshift $z\sim0$ using FIRE cosmological simulations.
-We find three primary characteristics:
-(i) accretion transitions from a hot quasi-spherical configuration to a cool disk-like configuration over the course of $\lesssim 300$ Myr;
-(ii) hot virial temperature gas dominates ($\gtrsim80\%$) the inflowing gas mass on halo scales ($\gtrsim 20$ kpc);
-(iii) accreting gas cools at the galaxy-halo interface, with the peak of the cooling located just outside the galaxy.
+We study how cosmological accretion fuels thin-disk star formation in $z\sim 0$, Milky-Way-mass galaxies.
+In simulated $L^\star$ FIRE halos we find three primary characteristics:
+(i) hot, virial-temperature gas dominates ($\gtrsim80\%$) the inflowing gas mass on halo scales ($\gtrsim 20$ kpc);
+(ii) accreting gas cools at the galaxy-halo interface, with the peak of the cooling located just outside the galaxy;
+(iii) accretion transitions from a hot quasi-spherical configuration to a cool disk-like configuration over the course of $\lesssim 300$ Myr.
 These characteristics are the result of a rotating cooling flow that circularizes and cools at the galaxy edge.
-Gas inflows until its angular momentum halts progress.
+Hot gas inflows until its angular momentum halts progress.
 During the journey the dispersion in angular momentum direction decreases strongly.
-When the accreting gas becomes rotationally supported it experiences increased radiative cooling and decreased compressive heating, and the now-aligned gas rapidly collapses into a disk.
-The presence of a rotating cooling flow is strongly correlated with thin disk formation.
-In galaxies with thin disk fractions $>0.7$ within 150 Myrs of cooling $\gtrsim 80\%$ of the accreting gas mass is as aligned as the thin disk.
+When the accreting gas becomes rotationally supported it experiences increased radiative cooling and decreased compressive heating, and the now co-rotating gas cools rapidly into a disk.
+Across a sample of 15 galaxies spanning $10^{11} M_\odot < M_{\rm h} < 10^{13} M_\odot$ the fraction of thin disk stars formed is tightly correlated with the fraction of mass accreted as a rotating cooling flow.
+% The presence of a rotating cooling flow is strongly correlated with thin disk formation.
+% In galaxies with thin disk fractions $>0.7$ within 150 Myrs of cooling $\gtrsim 80\%$ of the accreting gas mass is as aligned as the thin disk.
 % 80% comes from f_aligned_gas / f_aligned_thin_disk >~ 0.8.
 % Alternate sentence that we don't explicitly show but is implied:
 % within 150 Myrs of cooling $\gtrsim 80\%$ of the accreting gas mass aligns with the thin disk.
 % Another alternate sentence treating only z/R < 0.1 as aligned:
 % $\gtrsim 50\%$ of the accreting gas mass aligns with the galaxy plane within 150 Myrs of cooling.
-Conversely, in galaxies with thin disk fractions near zero the aligned gas mass changes by $\lesssim 5\%$ as gas cools.
+% Conversely, in galaxies with thin disk fractions near zero the aligned gas mass changes by $\lesssim 5\%$ as gas cools.
 \end{abstract}
 
 % Notes on the revised abstract:
@@ -145,16 +146,15 @@ galaxies: disk -- galaxies: evolution -- galaxies: halos -- cosmology: theory
     \centering
     \includegraphics[width=\textwidth]{figures/illustrative_tracks/illustrative_tracks.png}
     \caption{
-Rotating cooling flow accretion onto a Milky-Way-mass disk galaxy near $z\approx0$ in FIRE.
-\textbf{Top-right panels:}
+Gas accretion onto a Milky-Way-mass disk galaxy near $z\approx0$ in a FIRE simulation.
+\textbf{Top and right panels:}
 Temperature and spatial evolution of accreting gas prior to cooling ($t-\tcon < 0$) and after cooling ($t-\tcon > 0)$.
-Red, white, and blue indicates $T=10^6$ K, $10^6$ K, and $10^4$ K respectively.
-Over $\lesssim 150$ Myrs accreting gas collapses from a hot, voluminous, pseudo-spherical distribution into a cool disk.
+Red, white, and blue indicates $T=10^6$ K, $10^5$ K, and $10^4$ K respectively.
+Over $\lesssim 300$ Myrs accreting gas collapses from a hot, voluminous, pseudo-spherical distribution into a cool disk.
 \textbf{Bottom-left panel:}
-Example trajectories showing how gas accretes onto Milky-Way-mass disk galaxies at $z\approx0$ in FIRE.
-Trajectories are representative of gas that is outside a Milky-Way-like galaxy one Gyr prior to $z=0$, and inside the galaxy at $z=0$.
+Three representative trajectories for accreting gas elements.
 % We show the trajectories for 1 Gyr prior to the final time gas cools below $T=10^5$ K prior to accreting onto the galaxy, and 0.5 Gyr after cooling.
-The trajectories are characteristic of \textit{quiet accretion}:
+Gas accretion accretes onto disk galaxies as a rotating cooling flow that forms a coherent, rotationally-supported disk at the galaxy edge.
     }
     \label{f: overview}
 \end{figure*}
@@ -332,12 +332,9 @@ Given what we know about the angular momentum distribution in galactic halos, it
 \textit{Italics: Rough text, needs polishing.} \\
 Normal: Normal text, polished enough to be included in a draft.
 
-\subsection{OUTSTANDING QUESTIONS/diskUSSION POINTS}
+\subsection{OUTSTANDING QUESTIONS/DISCUSSION POINTS}
 
-\textbf{Experiment with the color for the top panels of Fig 2.}
-Change 1e5 to white.
-Remove hot/cold color scale to focus on just density.
-Maybe add contours that highlight the geometric changes.
+\textbf{The results could be even stronger if we could test this for one or two more irregular MW-mass galaxies.}
 
 \textbf{Consider adding in a figure that emphasizes gas must be coherent, aligned, and rotationally supported prior to reaching star forming densities to form thin disks.}
 Maybe a version of Figure 8 relative to SF density.
