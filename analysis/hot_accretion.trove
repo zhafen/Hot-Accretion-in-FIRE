@@ -42,7 +42,7 @@ lighter_background_linecolor = '.6'
 # py.1 = ${code_dir}/retrieve_halo_data.py
 # 
 # Get IDs to track
-# nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
+nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
 # 
 # # Sample particles to track, including removing duplicates
 # py.3 = ${code_dir}/linefinder_tracking/sample.py
@@ -60,10 +60,10 @@ lighter_background_linecolor = '.6'
 # py.7 = ${code_dir}/linefinder_tracking/firefly.py
 
 # Trajectories and geometric evolution
-# nb.8 = ${code_dir}/characteristics.ipynb
+nb.8 = ${code_dir}/characteristics.ipynb
  
 # Before and after cooling
-nb.9 = ${code_dir}/before_and_after.ipynb
+# nb.9 = ${code_dir}/before_and_after.ipynb
  
 # FIRE studio images
 # nb.10 = ${code_dir}/fire_studio.ipynb
