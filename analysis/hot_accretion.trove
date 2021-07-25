@@ -38,23 +38,23 @@ lighter_background_linecolor = '.6'
 # Code will be run in order listed.
 # The prefix determines how the code will be handled.
 
-# # Get halo data
+# Get halo data
 # py.1 = ${code_dir}/retrieve_halo_data.py
-# 
+
 # Get IDs to track
 nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
-# 
-# # Sample particles to track, including removing duplicates
-# py.3 = ${code_dir}/linefinder_tracking/sample.py
-# 
-# # Run particle tracking
-# jug.4 = ${code_dir}/linefinder_tracking/track.py
-# 
-# # Run galaxy linking
-# jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
-# 
-# # Run particle classification
-# py.6 = ${code_dir}/linefinder_tracking/classify.py
+
+# Sample particles to track, including removing duplicates
+py.3 = ${code_dir}/linefinder_tracking/sample.py
+
+# Run particle tracking
+jug.4 = ${code_dir}/linefinder_tracking/track.py
+
+# Run galaxy linking
+jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
+
+# Run particle classification
+py.6 = ${code_dir}/linefinder_tracking/classify.py
 
 # Create Firefly visualization
 # py.7 = ${code_dir}/linefinder_tracking/firefly.py
@@ -63,10 +63,10 @@ nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
 nb.8 = ${code_dir}/characteristics.ipynb
  
 # Before and after cooling
-# nb.9 = ${code_dir}/before_and_after.ipynb
+nb.9 = ${code_dir}/before_and_after.ipynb
  
 # FIRE studio images
-# nb.10 = ${code_dir}/fire_studio.ipynb
+nb.10 = ${code_dir}/fire_studio.ipynb
 
 ########################################################################
 [DATA PRODUCTS]
