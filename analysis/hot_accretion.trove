@@ -39,13 +39,13 @@ lighter_background_linecolor = '.6'
 # The prefix determines how the code will be handled.
 
 # Get halo data
-# py.1 = ${code_dir}/retrieve_halo_data.py
+ py.1 = ${code_dir}/retrieve_halo_data.py
 
 # Get IDs to track
-nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
+ nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
 
 # Sample particles to track, including removing duplicates
-py.3 = ${code_dir}/linefinder_tracking/sample.py
+ py.3 = ${code_dir}/linefinder_tracking/sample.py
 
 # Run particle tracking
 jug.4 = ${code_dir}/linefinder_tracking/track.py
@@ -101,10 +101,10 @@ subpath = core/m12i_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
 
-# [m12m]
-# subpath = core/m12m_res7100
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
+[m12m]
+subpath = core/m12m_res7100
+halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+sim_data_dir = ${fire_dir}/${subpath}/output
 
 # A metal diffusion version of this exists
 # [m12f]
@@ -178,10 +178,10 @@ subpath = metal_diffusion/m12f_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
 
-# [m12z_md]
-# subpath = metal_diffusion/m12z_res4200
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
+## [m12z_md]
+## subpath = metal_diffusion/m12z_res4200
+## halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+## sim_data_dir = ${fire_dir}/${subpath}/output
 
 [m12c_md]
 subpath = metal_diffusion/m12c_res7100
