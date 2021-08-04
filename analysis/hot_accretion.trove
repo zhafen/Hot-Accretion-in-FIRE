@@ -23,9 +23,11 @@ processed_data_dir = ${paper_dir}/data
 # Analysis parameters
 # For defining quiet accretion
 disk_costheta = 0.1 # Contains roughly 2/3 of thin disk stars
+disk_jzjmag = 0.9 # Contains roughly 90% of thin disk stars
 t_cut = 60. # In Myr
 c_cut = 0.8 # jz/j
 r_cut = 3 # R/Rgal
+generate_expensive_visualizations = False
 
 # Aesthetic parameters
 background_linecolor = '.4'
@@ -39,13 +41,13 @@ lighter_background_linecolor = '.6'
 # The prefix determines how the code will be handled.
 
 # Get halo data
- py.1 = ${code_dir}/retrieve_halo_data.py
+# py.1 = ${code_dir}/retrieve_halo_data.py
 
 # Get IDs to track
- nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
+# nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
 
 # Sample particles to track, including removing duplicates
- py.3 = ${code_dir}/linefinder_tracking/sample.py
+# py.3 = ${code_dir}/linefinder_tracking/sample.py
 
 # Run particle tracking
 jug.4 = ${code_dir}/linefinder_tracking/track.py
@@ -96,141 +98,141 @@ nb.10 = executed_fire_studio.ipynb
 # Hydro
 ########################################################################
 
-[m12i]
-subpath = core/m12i_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m12m]
-subpath = core/m12m_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-# A metal diffusion version of this exists
-# [m12f]
-# subpath = core/m12f_res7100
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m11a]
-subpath = core/m11a_res2100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-# DEBUG: Issue with r_gal when selecting particles to track.
-# [m11b]
-# subpath = core/m11b_res2100
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m11c]
-subpath = core/m11c_res2100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-# A metal diffusion version of this exists
-# [m11q]
-# subpath = core/m11q_res7100
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
-
-# Skip m10s for now
-# [m10v]
-# subpath = core/m10v_res250
+# [m12i]
+# subpath = core/m12i_res7100
 # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 # sim_data_dir = ${fire_dir}/${subpath}/output
 # 
-# [m10q]
-# subpath = core/m10q_res250
+# [m12m]
+# subpath = core/m12m_res7100
 # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 # sim_data_dir = ${fire_dir}/${subpath}/output
 # 
-# [m10y]
-# subpath = core/m10y_res250
+# # A metal diffusion version of this exists
+# # [m12f]
+# # subpath = core/m12f_res7100
+# # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# # sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m11a]
+# subpath = core/m11a_res2100
 # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 # sim_data_dir = ${fire_dir}/${subpath}/output
 # 
-# [m10z]
-# subpath = core/m10z_res250
+# # DEBUG: Issue with r_gal when selecting particles to track.
+# # [m11b]
+# # subpath = core/m11b_res2100
+# # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# # sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m11c]
+# subpath = core/m11c_res2100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# # A metal diffusion version of this exists
+# # [m11q]
+# # subpath = core/m11q_res7100
+# # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# # sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# # Skip m10s for now
+# # [m10v]
+# # subpath = core/m10v_res250
+# # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# # sim_data_dir = ${fire_dir}/${subpath}/output
+# # 
+# # [m10q]
+# # subpath = core/m10q_res250
+# # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# # sim_data_dir = ${fire_dir}/${subpath}/output
+# # 
+# # [m10y]
+# # subpath = core/m10y_res250
+# # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# # sim_data_dir = ${fire_dir}/${subpath}/output
+# # 
+# # [m10z]
+# # subpath = core/m10z_res250
+# # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# # sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# # Metal Diffusion
+# ########################################################################
+# 
+# [m12i_md]
+# subpath = metal_diffusion/m12i_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m12r_md]
+# subpath = metal_diffusion/m12r_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m12w_md]
+# subpath = metal_diffusion/m12w_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m12f_md]
+# subpath = metal_diffusion/m12f_res7100
 # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 # sim_data_dir = ${fire_dir}/${subpath}/output
 
-# Metal Diffusion
-########################################################################
-
-[m12i_md]
-subpath = metal_diffusion/m12i_res7100
+[m12z_md]
+subpath = metal_diffusion/m12z_res4200
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
 
-[m12r_md]
-subpath = metal_diffusion/m12r_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m12w_md]
-subpath = metal_diffusion/m12w_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m12f_md]
-subpath = metal_diffusion/m12f_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-## [m12z_md]
-## subpath = metal_diffusion/m12z_res4200
-## halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-## sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m12c_md]
-subpath = metal_diffusion/m12c_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m12b_md]
-subpath = metal_diffusion/m12b_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m11d_md]
-subpath = metal_diffusion/m11d_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m11e_md]
-subpath = metal_diffusion/m11e_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m11h_md]
-subpath = metal_diffusion/m11h_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m11i_md]
-subpath = metal_diffusion/m11i_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-[m11q_md]
-subpath = metal_diffusion/m11q_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
-
-# MHDCV
-########################################################################
-
-# DEBUG: Because this simulation is unusual we should prioritize a larger sample size.
-# [m12i_mhdcv]
-# subpath = mhdcv/m12i_res7100
+# [m12c_md]
+# subpath = metal_diffusion/m12c_res7100
 # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}_mhdcv_old/output
-
-# Cosmic Rays
-########################################################################
-
-[m12i_cr]
-subpath = cr_heating_fix/m12i_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m12b_md]
+# subpath = metal_diffusion/m12b_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m11d_md]
+# subpath = metal_diffusion/m11d_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m11e_md]
+# subpath = metal_diffusion/m11e_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m11h_md]
+# subpath = metal_diffusion/m11h_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m11i_md]
+# subpath = metal_diffusion/m11i_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# [m11q_md]
+# subpath = metal_diffusion/m11q_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
+# 
+# # MHDCV
+# ########################################################################
+# 
+# # DEBUG: Because this simulation is unusual we should prioritize a larger sample size.
+# # [m12i_mhdcv]
+# # subpath = mhdcv/m12i_res7100
+# # halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# # sim_data_dir = ${fire_dir}/${subpath}_mhdcv_old/output
+# 
+# # Cosmic Rays
+# ########################################################################
+# 
+# [m12i_cr]
+# subpath = cr_heating_fix/m12i_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
