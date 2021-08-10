@@ -256,10 +256,6 @@ Caution from Jonathan: in results section of figure 8 esp. be careful about doin
 }
 
 \textbf{
-Consider making a four-panel version of panel D in the Figure~\ref{f: before and after}.
-}
-
-\textbf{
 Make a Delta(Aligned) but for Jz, which may be more peaked, and may allow us to get an actual aligned accretion fraction.
 }
 
@@ -834,6 +830,8 @@ We define thin disk stars as stars with $j_z/j_c(E) > 0.8$, where $j_c(E)$ is th
 This is the same definition used in~\cite{Yu2021}.
 As above our tracked particles were selected to be stars or gas in the galaxy at $z=0$ and gas outside the galaxy a Gyr prior.
 
+\textbf{Mention smoothing.}
+
 % Presence of circularized cooling flow accretion
 For most halos the accreting gas is largely unaligned prior to cooling, with aligned mass fractions $f_{\rm aligned} \equiv M(\vert z/R \vert  <0.1)/M\sim 0.1 - 0.2$.
 For reference, $f_{\rm aligned} = 0.1$ is the value for an isotropic distribution.
@@ -886,6 +884,8 @@ The luminosity-weighted $f_{\rm thin\,disk}$ highlights the extent to which the 
     We argue this increase in coherence is essential for the gas to collapse quickly into a disk after cooling and prior to forming stars.
     % Subsequently, the increase in thin-disk-like ($j_z/ \vert \vec j \vert > 0.9$) gas fraction is strongest over the the 200 Myr after cooling.
     % The exception is the non-disky \texttt{m11q}, which experiences little change in coherence or angular momentum direction before or after cooling.
+    \textbf{Try ``accretion fraction above''.}
+    \textbf{Try adding ``co-rotating'' and ``disky'' lines and labels.}
     }
     \label{f: coherence}
 \end{figure*}
@@ -935,28 +935,34 @@ The properties of particles at each $t - \tcon$ are binned together and used to 
 We only show particles that accrete at least 30 snapshots prior to the end of the simulation, i.e. particles that are present for most of the time displayed with $t > \tcon$.
 We now go through each panel in detail.
 
-\subsubsection{Accretion gains coherence in the halo}
+\subsubsection{Accretion becomes coherent in the halo}
 \label{s: mechanics -- coherence}
 
 % Description
-Figure~\ref{f: coherence} shows the evolution of angular momentum coherence as tracked by cumulative distribution functions of $j_z / \vert \vec j \vert$.
-We display cumulative distribution functions centered on times $\tcon - 1 {\rm Gyr} < t_{\rm bin} < \tcon + 0.5 {\rm Gyr}$ with 25 Myrs between adjacent distributions.
-Each CDF includes $j_z / \vert \vec j \vert$ values for all particles with $t - \tcon$ within $\pm$30 Myr of $\t_{bin}$.
+Figure~\ref{f: coherence} shows the evolution of angular momentum coherence by displaying a series of cumulative distribution functions of $j_z / \vert \vec j \vert$.
 This figure is the angular momentum analog to Figure~\ref{f: theta vs t}.
+The displayed cumulative distribution functions center on 61 times evenly spaced over $\tcon - 1 {\rm Gyr} < t_{\rm bin} < \tcon + 0.5 {\rm Gyr}$.
+Each CDF includes $j_z / \vert \vec j \vert$ values for all particles with $t - \tcon$ within $\pm$30 Myr of $t_{\rm bin}$.
 Gas that is co-rotating, perpendicular, and counter-rotating relative to the stellar population has $j_z / \vert \vec j \vert$ = 1, 0, and -1 respectively.
-The dashed grey $j_z / \vert \vec j \vert = 0.9$ line indications the range of values containing $\approx 90\%$ of thin disk stars.
-We outline in black the CDFs for three important times: $t - \tcon =$ -200, 0, 200 Myr.
+The dashed grey $j_z / \vert \vec j \vert = 0.9$ line indicates the range of values containing $\approx 90\%$ of thin disk stars.
+Outlined in black are the CDFs for three important times: $t - \tcon =$ -200, 0, 200 Myr.
+As in Figure~\ref{f: theta vs t}, the z-axis is aligned with the total angular momentum of the stellar component within $R_{\rm gal}$.
 
 % Overall evolution
-Over the course of 1.5 Gyr accretion onto thin-disk galaxies transitions from decoherent, with gently-sloping CDFs similar to the isotropic CDF, to highly coherent, with $j_z/\vert \vec j \vert > 0.9$ for $\gtrsim 90\%$ of accretion.
-The majority of the evolution in coherence occurs over $\approx 400$ Myr centered on $\tcon$, as seen by the differences between the outlined CDFs.
-Before $t = \tcon - 200$ Myr and after $t = \tcon + 200$ Myr the distributions see only minor evolution.
+Over the course of 1.5 Gyr, accretion onto thin-disk galaxies transitions from decoherent, gently-sloping CDFs similar to the isotropic CDF, to highly coherent CDFs with $j_z/\vert \vec j \vert > 0.9$ for $\gtrsim 90\%$ of accretion.
+The majority of the evolution in coherence occurs over $\lesssim 400$ Myr centered on $\tcon$, as seen by the differences between the outlined CDFs.
+Before $t = \tcon - 200$ Myr and after $t = \tcon + 200$ Myr the distributions exhibit only minor evolution.
+The representative irregular galaxy, \texttt{m11q}, experiences only a very mild evolution in angular momentum coherence---angular momentum direction remains largely isotropic over the full 1.5 Gyr displayed.
 
 % Before
-For thin-disk galaxies the increase in co-rotating ($j_z/\vert \vec j \vert > 0$) gas fraction or disky ($j_z/\vert \vec j \vert > 0.5$) gas fraction is largest over the 200 Myr prior to cooling and accreting.
-    We argue this increase in coherence is essential for the gas to collapse quickly into a disk after cooling and prior to forming stars.
-    % Subsequently, the increase in thin-disk-like ($j_z/ \vert \vec j \vert > 0.9$) gas fraction is strongest over the the 200 Myr after cooling.
-    % The exception is the non-disky \texttt{m11q}, which experiences little change in coherence or angular momentum direction before or after cooling.
+For thin-disk galaxies the increase in co-rotating ($j_z/\vert \vec j \vert > 0$) gas fraction or disky ($j_z/\vert \vec j \vert > 0.5$) gas fraction is largest over the 200 Myr prior to cooling.
+This increase in coherence allows the gas to collapse quickly into a disk after cooling and prior to forming stars.
+Figure~\ref{f: theta vs t} and the left panel of Figure~\ref{f: prevalence} are consistent with this picture---most of the flattening into a disk occurs \textit{after} cooling.
+
+% After
+The fraction of accretion with momentum characteristic of a thin-disk ($j_z / \vert \vec j \vert > 0.9$) increases only mildly over the 200 Myrs prior to $\tcon$.
+Instead, the thin-disk gas fraction increases significantly after cooling, increasing from $\approx 25--50\%$ to $\approx 60--90\%$ over 200 Myrs after $\tcon$.
+This is consistent with gas collapsing into a disk immediately as it cools, and then becoming significantly more coherent immediately afterwards.
 
 \subsubsection{Hot, inflowing, and extended to cool, stalled, and collapsed}
 \label{s: mechanics -- temp and radius}
