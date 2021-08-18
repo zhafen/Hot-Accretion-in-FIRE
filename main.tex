@@ -799,7 +799,6 @@ This indicates that cooling and circularization of the accreted gas occurs simul
     \textbf{Right:}
     Change in aligned mass fraction over $\pm 150$ Myr before/after accreting gas drops below $T = 10^5$ K, defined to scale with the fraction of mass accreted as a rotating cooling flow.
     $\Delta f_{\rm aligned}$ strongly tracks thin disk fraction.
-    \textbf{Add $f_{\rm aligned}$ to figure as shorthand, alongside the existing two words.}
     }
     \label{f: prevalence}
 \end{figure*}
@@ -923,6 +922,8 @@ Each line represents the average change in specific energy for particles within 
 Darker colors indicate time windows with more accreted particles.
 At $t<\tcon$ radiative cooling equals compressional heating, as expected in a cooling flow.
 The energy balance falters as the gas obtains rotational support and piles up.
+\textbf{Change panel C label to "puffy to thin".}
+\textbf{Consider re-ordering to tell the story better.}
 }
 \label{f: before and after}
 \end{figure*}
@@ -1103,12 +1104,73 @@ We now assess several other aspects of the connection between rotating cooling f
 Consider repeating some stuff from the intro to hammer it home.
 }
 
+\subsubsection{Gas must become disky prior to star formation}
+\label{s: disk formation -- condition}
+
+% Star-forming gas constraints
+In our simulations, thin disks at $z=0$ are composed of stars that form in a thin disk, and remain in a thin disk thereafter~\citep{Yu2021}.
+This is in contrast to spheroidal and thick disk components, which may be partially composed of stars that gravitationally interacted with mergers, spiral arms, and giant molecular clouds.
+If thin disks are composed of undisturbed stars then there is a  constraint on the star-forming gas that fuels them:
+for a given sample of stars, the fraction of stars in a thin disk provides a lower limit on the fraction of star-forming gas in a thin disk at the time of formation, $f_{\rm thin\,disk,\,SF\,gas} \ge f_{\rm thin\,disk,\,stars}$.
+For most of the thin disk galaxies in our sample this suggests $f_{\rm thin\,disk,\,SF\,gas} \gtrsim 0.8$ for star-formation within the last Gyr prior to $z=0$.
+
+% Time-scale argument
+This constraint on $f_{\rm thin\,disk,\,SF\,gas}$ subsequently constrains which accretion modes fuel thin disk formation.
+Given sufficient time, radiatively-cooling gas in thermal contact will eventually form a thin disk.
+At first glance this suggests that it does not matter how gas enters the galaxy:
+any mode of gas accretion is capable of forming a thin disk given sufficient time for the gas to equilibriate.
+However, whether or not the gas eventually forms a thin disk is less important than whether or not the gas forms a thin disk \textit{prior} to becoming star forming.
+Thin-disk star-forming gas must satisfy the condition $t_{\rm thin\,disk} < t_{\rm SF}$, where $t_{\rm thin\,disk}$ is the time for gas to form a thin disk after entering the ISM and $t_{\rm SF}$ is the time for gas to become star-forming after entering the ISM.
+Combined with the above constraint on $f_{\rm thin\,disk,\,SF\,gas}$, gas accretion that fuels thin-disk star-formation must satisfy
+\begin{equation}
+    f( t_{\rm thin\,disk} < t_{\rm SF} ) \ge f_{\rm thin\,disk,\,stars}
+    \label{e: timescale constraint}
+\end{equation}
+noting that $f_{\rm thin\,disk,\,SF\,gas} = f( t_{\rm thin\,disk} < t_{\rm SF} )$.
+
+% Satisfaction of condition for rotating cooling flows
+Equation~\ref{e: timescale constraint} constrains which accretion modes may contribute to thin-disk star-formation.
+Rotating cooling flows easily satisfy this condition:
+typically $t_{\rm thin\,disk} < 200$ Myr for $\gtrsim 80\%$ of the gas accretion (Figure~\ref{f: coherence}) and $t_{\rm SF} > 500$ Myr for all gas accretion (Figure~\ref{f: before and after}; Panel F).
+Therefore $f( t_{\rm thin\,disk} < t_{\rm SF} ) > 0.8$ for rotating cooling flows.
+
+% Other modes
+Exploring the extent to which other modes satisfy Equation~\ref{e: timescale constraint} is beyond the scope of our work.
+However, we note that one of the defining features of a rotating cooling flow is that it forms a disk as it accretes onto the galaxy (as stated $t_{\rm thin\,disk} \lesssim 200$ Myr).
+This is only possible because the gas exchanges angular momentum and gains coherence prior to accretion while the gas is in the halo (Figure~\ref{f: coherence}).
+Not all accretion mechanisms may exchange angular momentum amongst accreting gas while the gas is in the halo.
+For example supersonic cold flow accretion is not in thermal contact, and can therefore not equilibriate to a coherent rotation while in the halo.
+Therefore cold flow accretion and other accretion modes that do not exchange angular momentum while in the halo \textit{must} take longer to form a thin disk in the galaxy than a rotating cooling flow does.
+This makes satisfying Equation~\ref{e: timescale constraint} more challenging.
+
+% Necessary but not sufficient
+Note that Equation~\ref{e: timescale constraint} is a necessary-but-not-sufficient condition for thin disk star formation.
+A merger, feedback event, or other disruption may take a thin gaseous disk and disturb it, preventing thin disk stars from forming.
+Simulation \texttt{m12m} provides evidence of this:
+it has comparable rotating cooling flow accretion to galaxies with $f_{\rm thin\,disk}\sim 0.8$ (i.e. $\Delta f_{\rm aligned} \approx 0.25$), but only has $f_{\rm thin\,disk} \approx 0.4$.
+
+% % Cold flows and satellites
+% While simulations predict that cold flow streams are on-average aligned with the central galaxy, they also predict that the variability between stream alignmens is very large~\citep[e.g.][]{Danovich2012, Stewart2011a, Stewart2013, Stewart2017}.
+% The same is true for gas accreted from satellite galaxies or their winds~\citep[e.g.][]{Stewart2011, Hafen2019}.
+% As such, the accreting gas from these modes will enter the galaxy without already being aligned in a co-rotating disk.
+% Cold flows and satellite accretion is also highly time-variable, leading to large bursts in star formation~\citep[e.g.][]{Muratov2015, Muratov2017}.
+
+% % Precipitation
+% We also expect the accretion mode of precipitation to be less conducive to disk formation than rotating cooling flows.
+% Precipitation by definition cools farther out in the halo.
+% As such, precipitating gas spends less time hot and therefore has less time to cancel out random angular momentum through thermal contact with other gas.
+% The accreting gas will therefore enter the galaxy with a wider variety of angular momenta and directions than rotating cooling flows.
+
+% % Galactic fountains
+% Recycled winds, especially in the form of a smooth galactic fountain, may be an exception.
+% If recycled gas retains its angular momentum direction during recycling then it may be co-rotating as it re-accretes.
+% If it passes into a hot corona or halo then it can become more coherent during the process as well.
+% In addition, in simulations with bipolar winds the wind can evacuate low-angular momentum gas found preferentially along the galaxy poles~\citep[e.g.][]{DeFelippis2017}, helping produced aligned accretion.
+% Nevertheless, even if recycling helps gas to become more disk-like the stated condition provides a strong constraint:
+% if recycled gas primarily forms thin disks then it cannot become star-forming prior to being recycled.
+
 \subsubsection{$L^*$ halos mark a transition in galaxy and CGM properties}
 \label{s: disk formation -- transition}
-
-\textbf{
-Move to end of this section.
-}
 
 \textbf{
 Highlight mass scale as thin-disk mass scale location.
@@ -1129,45 +1191,6 @@ If rotating-cooling-flow accretion is a condition for disk formation then this e
 This is independent of the behavior of the galaxy, provided galactic feedback is not affecting the CGM in a way that disrupts the cooling flow.
 The strong correlation between rotating cooling flows and thin disk formation (Figure~\ref{f: prevalence} suggests rotating cooling flows are a sufficient condition for disk formation, but confirmation of this requires analysis of the ISM in addition to the existing CGM-focused analysis.
 This is the subject of ongoing work (Gurvich et al., in prep).
-
-\subsubsection{Accretion modes conducive to disk formation}
-\label{s: disk formation -- conducive}
-
-\textbf{
-This section can probably be cut down/removed.
-The points here are not as strong.
-Any framing of other modes should be brought back to disk formation.
-}
-
-
-% General point
-In thin-disk-forming galaxies gas must be disk-like \textit{prior} to becoming star forming, or it will form stars in a morphology other than a thin disk.
-This is especially important because it is challenging to produce thin disks from existing stars, unlike spheroidal or irregular stellar morphologies.
-This suggests that accretion modes that deliver gas that is already disk-like prior to becoming star forming are much more conducive to thin disk formation.
-
-% Conduciveness of rotating cooling flows
-As stated previously, rotating cooling deliver gas that is already disk-like prior to becoming star forming (the density evolution is displayed in panel F of Figure~\ref{f: before and after}).
-No other known accretion mode provides fuel that is as clearly conducive to disk formation.
-
-% Cold flows and satellites
-While simulations predict that cold flow streams are on-average aligned with the central galaxy, they also predict that the variability between stream alignmens is very large~\citep[e.g.][]{Danovich2012, Stewart2011a, Stewart2013, Stewart2017}.
-The same is true for gas accreted from satellite galaxies or their winds~\citep[e.g.][]{Stewart2011, Hafen2019}.
-As such, the accreting gas from these modes will enter the galaxy without already being aligned in a co-rotating disk.
-Cold flows and satellite accretion is also highly time-variable, leading to large bursts in star formation~\citep[e.g.][]{Muratov2015, Muratov2017}.
-
-% Precipitation
-We also expect the accretion mode of precipitation to be less conducive to disk formation than rotating cooling flows.
-Precipitation by definition cools farther out in the halo.
-As such, precipitating gas spends less time hot and therefore has less time to cancel out random angular momentum through thermal contact with other gas.
-The accreting gas will therefore enter the galaxy with a wider variety of angular momenta and directions than rotating cooling flows.
-
-% Galactic fountains
-Recycled winds, especially in the form of a smooth galactic fountain, may be an exception.
-If recycled gas retains its angular momentum direction during recycling then it may be co-rotating as it re-accretes.
-If it passes into a hot corona or halo then it can become more coherent during the process as well.
-In addition, in simulations with bipolar winds the wind can evacuate low-angular momentum gas found preferentially along the galaxy poles~\citep[e.g.][]{DeFelippis2017}, helping produced aligned accretion.
-Nevertheless, even if recycling helps gas to become more disk-like the stated condition provides a strong constraint:
-if recycled gas primarily forms thin disks then it cannot become star-forming prior to being recycled.
 
 \subsubsection{The presence or absence of thin disks in simulations}
 \label{s: disk formation -- population}
@@ -1238,8 +1261,13 @@ They show a correlation between the hot accretion fraction and the morphology, b
 The origin may be that rotational cooling flow accretion is a subset of hot accretion.
 }
 
+% Coronal mixing
+\cite{Marinacci2010} propose that gas accretion onto the galaxy can be induced by cold clouds launched into the corona, which induce cooling of corona gas as they mix with the corona.
 \textbf{Compare to Fraternali papers, e.g. Marinacci2010, Pezzulli2016, Fraternali2018.}
-\textbf{Fillipo's model requires mixing of outflows with the hot halo to induce accrete, our results suggest this is not needed, the hot halo cools on its own}
+\textbf{
+Fillipo's model requires mixing of outflows with the hot halo to induce accrete, our results suggest this is not needed, the hot halo cools on its own.
+This means we do not need to determine if the stripped gas evaporates or condenses.
+}
 
 % Aligned vs unaligned gas determines disk formation
 
