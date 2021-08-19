@@ -22,6 +22,7 @@ processed_data_dir = ${paper_dir}/data
 
 # Analysis parameters
 # For defining quiet accretion
+aligned_fraction_half_dt = 200 # In Myr
 disk_costheta = 0.1 # Contains roughly 2/3 of thin disk stars
 disk_jzjmag = 0.9 # Contains roughly 90% of thin disk stars
 t_cut = 60. # In Myr
@@ -181,10 +182,10 @@ subpath = metal_diffusion/m12f_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
 
-[m12z_md]
-subpath = metal_diffusion/m12z_res4200
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
+# [m12z_md]
+# subpath = metal_diffusion/m12z_res4200
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
 
 [m12c_md]
 subpath = metal_diffusion/m12c_res7100
