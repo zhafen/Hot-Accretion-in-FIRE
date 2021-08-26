@@ -815,7 +815,7 @@ We now extend our analysis to our full simulation sample, focusing on the extent
 Figure~\ref{f: prevalence} shows for our full sample of halos simulated to $z=0$ which halos have accreting gas that aligns with the galaxy as it cools, a property of rotating cooling flow accretion.
 We parametrize the alignment of accreting gas as the fraction of mass with $\vert z/R \vert < 0.1$, $f_{\rm aligned}$.
 The range is $\vert z/R \vert < 0.1$ is noted on Figure~\ref{f: theta vs t}, and contains $\approx 60\%$ of stars in a galaxy's thin disk.
-The left panel shows the evolution of the aligned mass from 150 Myr before $\tcon$ (red) to 150 Myr after $\tcon$ (blue).
+The left panel shows the evolution of the aligned mass from 200 Myr before $\tcon$ (red) to 200 Myr after $\tcon$ (blue).
 We relate alignment to thin disk formation via the fraction of stars formed between $z=0$ and a Gyr prior that reside in the thin disk at $z=0$ ($f_{\rm thin\,disk}(z=0,$ age$<1$ Gyr), or $f_{\rm thin\,disk}$ when abbreviated).
 We define thin disk stars as stars with $j_z/j_c(E) > 0.8$, where $j_c(E)$ is the angular momentum the star would have if it had the same energy but was in a circular orbit.
 This is the same definition used in~\cite{Yu2021}.
@@ -866,7 +866,7 @@ The luminosity-weighted $f_{\rm thin\,disk}$ highlights the extent to which the 
     \centering
     \includegraphics[width=\textwidth]{figures/jzjmag_vs_t.pdf}
     \caption{
-    Evolution of angular momentum coherence, shown by the evolution of the cumulative distribution of $j_z / \vert \vec j \vert$ over 1.5 Gyr.
+    Evolution of angular momentum coherence, shown by the evolution of the fraction of mass above a given $j_z / \vert \vec j \vert$ over 1.5 Gyr.
     Gas with angular momentum aligned with the stellar angular momentum has $j_z / \vert \vec j \vert$ = 1.
     % A Gyr prior to cooling gas is relatively decoherent, with gently-sloping CDFs similar to the CDF for an isotropic distribution.
     % As gas approaches and the time of cooling it becomes highly coherent, with $j_z / \vert \vec j \vert > 0.9$ for $\gtrsim 50\%$ of the accreting gas.
@@ -875,8 +875,6 @@ The luminosity-weighted $f_{\rm thin\,disk}$ highlights the extent to which the 
     We argue this increase in coherence is essential for the gas to collapse quickly into a disk after cooling and prior to forming stars.
     % Subsequently, the increase in thin-disk-like ($j_z/ \vert \vec j \vert > 0.9$) gas fraction is strongest over the the 200 Myr after cooling.
     % The exception is the non-disky \texttt{m11q}, which experiences little change in coherence or angular momentum direction before or after cooling.
-    \textbf{Try ``accretion fraction above''.}
-    \textbf{Try adding ``co-rotating'' and ``disky'' lines and labels.}
     }
     \label{f: coherence}
 \end{figure*}
@@ -914,8 +912,6 @@ Each line represents the average change in specific energy for particles within 
 Darker colors indicate time windows with more accreted particles.
 At $t<\tcon$ radiative cooling equals compressional heating, as expected in a cooling flow.
 The energy balance falters as the gas obtains rotational support and piles up.
-\textbf{Change panel C label to "puffy to thin".}
-\textbf{Consider re-ordering to tell the story better.}
 }
 \label{f: before and after}
 \end{figure*}
@@ -966,7 +962,7 @@ The temperature panel shows that the distribution of accreted gas temperatures a
 The radius panel demonstrates that last cooling occurs at $R_{\rm gal}$ (defined to enclose the $\sim90\%$ of the stellar mass), consistent with the result of  Figures~1-4.
 At earlier times the accreted gas is inflowing, traversing the inner 50 kpc of the halo within $\approx500$ Myr, corresponding to an average inflow velocity of $v_r\approx-100$ km s$^{-1}$.
 This radial velocity is smaller than the characteristic circular velocity of $\approx$ 200 km s$^{-1}$ in these halos, suggesting significant pressure support $(\approx1-(v_r/v_c)^2\approx75\%)$ as expected for a hot inflow.
-After reaching $R_{\rm gal}$ the inflow almost entirely stalls, and proceeds within the disk at a significantly slower velocity of \textbf{XX} km s$^{-1}$~\citep{Trapp2021}.
+After reaching $R_{\rm gal}$ the inflow almost entirely stalls, and proceeds within the disk at a significantly slower velocity of $\approx1-3$ km s$^{-1}$~\citep{Trapp2021}.
 At the same time the gas collapses to a median height of $\lesssim 1$ kpc.
 Note that while the gas is very close to the center of the disk plane, it is still at the outer edge of the galaxy, $R \sim R_{\rm gal}$.
 
@@ -1039,7 +1035,7 @@ Some $\tcon$ bins contain much more accreting gas than others, and to reflect th
 % Energy balance trend
 Prior to $\tcon$ radiative cooling increases by a factor of $\sim 10$ over the course of 500 Myr, from 0.01 erg s$^{-1}$ g$^{-1}$ (corresponding to a cooling time of \textbf{xx}) to 0.1 erg s$^{-1}$ g$^{-1}$ (corresponding to a cooling time of \textbf{yy}).
 The radiative cooling is however nearly completely offset by compressive heating, consistent with the roughly flat temperature profile shown in Panel (A).
-This equality of radiative cooling and compressive heating is a defining characteristic of cooling flows \citep{Mathews78, McNamara2007, Stern20}. 
+This equality of radiative cooling and compressive heating is a defining characteristic of cooling flows \citep{Mathews78, McNamara2007, Stern2020}. 
 
 At $t=\tcon$ the cooling rate increases sharply, a result of increased density from gas piling up at the angular momentum support radius (as also seen in \citealt{Trapp2021}).
 At roughly the same time compressive heating drops off dramatically due to the lack of inward movement.
@@ -1083,7 +1079,8 @@ As radiatively cooling, or in UVB equilibrium?
 % In \S\ref{s: broader prevalence} we discuss conditions that may enable quiet accretion to occur, including in halos that have non-thermal support.
 % We then turn to comparing and contrasting quiet accretion with other accretion modes in \S\ref{s: modes}.
 % We wrap up our discussion in \S\ref{s: fueling} and \S\ref{s: disk formation} with the implications of quiet accretion for fueling star formation and disk formation.
-\textbf{Re-add an intro once the discussion is re-organized. Or maybe not.}
+
+% \textbf{Re-add an intro once the discussion is re-organized. Or maybe not.}
 
 \subsection{Rotating cooling flows and disk formation}
 \label{s: disk formation}
@@ -1503,7 +1500,7 @@ This means we do not need to determine if the stripped gas evaporates or condens
 % If the halo accretes gas at a higher rate than $\dot M_{\rm crit}$ then the cooling rate will surpass the free-fall time and the gas will cool and accrete as cold-mode accretion.
 
 % Overprediction of star formation
-In our MW-like halos the average SFR over $z=0-0.5$ is $\approx 3-10 M_\odot/$yr, while the observationally derived average SFR for $M_{\rm vir}=10^{12} M_\odot$ halos over the same redshift range is $\approx 0.7-6 M_\odot/$yr.
+In our MW-like halos the average SFR over $z=0-0.5$ is SFR$\approx 3-10\,M_\odot/$yr, while the observationally derived average SFR for $M_{\rm vir} \sim 10^{12} M_\odot$ halos over the same redshift range is SFR$\approx 0.7-6\,M_\odot/$yr.
 % This potential discrepancy may be resolved by the SFR at fixed stellar mass and potential underestimation of molecular gas content in the FIRE simulations~\citep{Sparre2017, Orr2018}.
 % FIRE simulations also underpredict the number of red galaxies~\citep{Garrison-Kimmel2017}.
 Given that in FIRE SFR is regulated by $\Mdot$ (Fig.~\ref{f: Mdot}), this potential discrepancy may be a result of an elevated CGM accretion rate relative to the real accretion rate.
