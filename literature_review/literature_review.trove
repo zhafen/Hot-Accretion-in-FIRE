@@ -1,0 +1,48 @@
+########################################################################
+[DEFAULT]
+########################################################################
+# This section named "[DEFAULT]" contains the majority of
+# parameters used in the analysis.
+
+# Review filetree
+root_data_dir = /Users/zhafen/Data/hot_halo_accretion/literature_review
+zotero_atlas_fp = ${root_data_dir}/atlas_zotero.json
+zotero_bibtex_fp = ${root_data_dir}/zotero.bib
+zotero_projection_fp = ${root_data_dir}/projection_zotero.h5
+
+# Analysis parameters
+kernel_size = 16
+
+########################################################################
+[SCRIPTS]
+########################################################################
+# This section named "[SCRIPTS]" contains code that will be run.
+# Code will be run in order listed.
+# The prefix determines how the code will be handled.
+
+# Get halo data
+py.1 = ${code_dir}/retrieve_halo_data.py
+
+########################################################################
+[DATA PRODUCTS]
+########################################################################
+# This section helps convert existing pipelines to trove pipelines.
+# In particular it will check if the data products exist and mark that part
+# of the trove as complete if they do.
+
+py.1 = halo_00000_smooth.dat
+
+########################################################################
+# Parameter Variations
+########################################################################
+# These sections are variations on the parameters to explore.
+# Each will create a trove of data.
+# The section name should be the identifier you would
+# like to use for that set of parameters.
+
+[coronal_mixing_accretion]
+publications = [
+    'Marinacci2010',
+    'Pezzulli2016',
+    'Fraternali2018',
+    ]
