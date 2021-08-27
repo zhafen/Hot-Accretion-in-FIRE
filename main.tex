@@ -97,7 +97,7 @@ $^1$,
 % Abstract of the paper
 \begin{abstract}
 We use the FIRE cosmological simulations to study how cosmological accretion fuels thin-disk star formation in $z\sim 0$, Milky-Way-mass galaxies.
-In central galaxies with a high fraction ($>70\%$) of stars in a thin disk we find that:
+In central galaxies with a high fraction ($>70\%$) of young stars in a thin disk we find that:
 (i) hot, virial-temperature gas dominates the inflowing gas mass on halo scales ($\gtrsim 20$ kpc), with the accretion rate regulated by radiative losses;
 (ii) this hot accretion cools to $\lesssim10^4\,{\rm K}$ at the galaxy-halo interface, with the peak of the cooling located just outside the galaxy;
 (iii) concurrent with cooling the accreting gas \textit{circularizes}, i.e.\ the accretion flow transitions from a hot quasi-spherical configuration to a cool disk-like configuration.
@@ -166,7 +166,11 @@ galaxies: disk -- galaxies: evolution -- galaxies: halos -- cosmology: theory
 
 \subsection{Introduction - Draft from James}
 
-From the earliest seeds of modern galaxy formation theory, there has been a perceived tension between rapid, early formation of thin disks \citep{eggen1962} and their subsequent stability and ability to survive for a Hubble time \citep{ostriker1973,toth1992}.  Our present picture for the formation of galactic disks  can be largely traced to analytic ideas first explored by \citet{fall1980}, where a galaxy's angular momentum is intimately tied to the corresponding properties of its host dark matter halo.  Collapsing structures in an otherwise expanding universe will be spun up by the large-scale matter field \citep{Peebles69};  this can deliver enough angular momentum to allow (at least some) galaxies to have significant angular-momentum support \citep[e.g.][]{MMW98}. While useful for first-order estimates for galaxy properties, models that assume a tight coupling between halo spin and galaxy sizes do not explain the detailed properties of disks formed in cosmological simulations\citep[e.g.][]{GK18}.  This suggests that our understanding of disk formation in a cosmological context is incomplete. 
+%From the earliest seeds of modern galaxy formation theory, there has been a perceived tension between rapid, early formation of thin disks \citep{eggen1962} and their subsequent stability and ability to survive for a Hubble time \citep{ostriker1973,toth1992}.  
+Our present picture for the formation of galactic disks  can be largely traced to analytic ideas first explored by \citet{fall1980}, where a galaxy's angular momentum is intimately tied to the corresponding properties of its host dark matter halo.  Collapsing structures in an otherwise expanding universe will be spun up by the large-scale matter field \citep{Peebles69};  this can deliver enough angular momentum to allow (at least some) galaxies to have significant angular-momentum support \citep[e.g.][]{MMW98}. 
+
+Despite this understanding, a detailed accounting of the origin of  disk formation in a cosmological context is incomplete. 
+that assume a tight coupling between halo spin and galaxy sizes do not explain the detailed properties of disks formed in cosmological simulations\citep[e.g.][]{GK18}.  
 
 Given what we know about the angular momentum distribution in galactic halos, it somewhat surprising that so many galaxies are not only spinning, but are dominated by cold, {\em thin} disks, with small scale heights and vertical velocity dispersions compared to circular speeds and scale radii $\sigma_z/V_c \sim h/R \sim 0.1$ (Kregel et al. 2002;Kassin et al. 2001).  We know, for example, that the angular momentum distribution of dark matter \citep{B01} and gas \citep{Stewart13,DeFelippis2020} in galactic halos is quite broad.  This means that in order for a tightly-ordered thin disk to emerge, the gas must be very well mixed and coherently aligned along a single plane {\em before} star formation proceeds.  This suggests that the ability for gas to mix and exchange angular momentum prior to becoming dense enough for star formation will be essential for thin disk formation. 
 
@@ -992,13 +996,12 @@ These trends suggest that components unaligned with the net angular momentum are
 % However, This increasing rotational support with decreasing radius is responsible for the stalling seen in panel (B), and is a feature of many simulations of $L^*$ halos~\citep[][]{Oppenheimer2018}.
 The result that the hot halo just outside the galaxy is co-rotating with the galaxy is also consistent with recent kinematic analyses of hot gas in the Milky-Way halo \citep{Miller2016}.
 
-\textbf{Fraternalli's group has observations of this offset.}
-
 % The angular momentum increase
 There is small-but-noticeable increase in the specific angular momentum of each gas particle at $t \approx \tcon$.
 This increase is not the focus of our analysis, but we note that it may be a result of a difference in orientation and/or amplitude between the angular momentum of the galaxy and the angular momentum of the accreting gas~\citep[e.g.][]{Danovich2012, DeFelippis2017, DeFelippis2020}, which forces the accreting gas to co-rotate with the galaxy, as hinted at by the larger increase in $j_z$ compared to $\mid \vec j \mid$.
 The explicit mechanism to increase $j_z$ may be exchange of angular momentum via gravitational torques~\citep[e.g.][]{Danovich2015} or via collisional interactions.
-Any angular momentum gained is expected to be lost by other particles, driving inflow of existing gas particles in the galaxy or galaxy-halo interface.
+Any angular momentum gained is expected to be lost by other particles, driving inflow of existing gas particles in the galaxy or galaxy-halo interface~\citep[e.g.][]{Mayor1981, Pezzulli2017}.
+If the metallicity gradient of the Milky Way arises from this angular momentum conservation then the rotational velocity of accreting gas is predicted to be $\approx 70-80\%$ that of the accreted gas~\citep{Pezzulli2016b}, quantitatively consistent with the median increase in $j_z$ before and after accreting.
 
 \textbf{Evaluate whether or not to include the above citations.}
 
@@ -1378,11 +1381,12 @@ The origin may be that rotational cooling flow accretion is a subset of hot accr
 }
 
 % Coronal mixing
-\cite{Marinacci2010} propose that gas accretion onto the galaxy can be induced by cold clouds launched into the corona, which induce cooling of corona gas as they mix with the corona.
-\textbf{Compare to Fraternali papers, e.g. Marinacci2010, Pezzulli2016, Fraternali2018.}
+Hydrodynamical modeling suggests that accretion can be induced by cold clouds launched into the corona via galactic feedback~\citep[][]{Marinacci2010, Fraternali2017}.
+These models are consistent with observations of extraplanar neutral gas rotating in the same direction as the galaxy but with some lag~\citep{Fraternali2008}.
 \textbf{
 Fillipo's model requires mixing of outflows with the hot halo to induce accrete, our results suggest this is not needed, the hot halo cools on its own.
 This means we do not need to determine if the stripped gas evaporates or condenses.
+We also demonstrate that there is a sufficient, but not overwhelming, gas supply before fountains even have an opportunity to affect the CGM.
 }
 
 % Aligned vs unaligned gas determines disk formation
@@ -1491,7 +1495,7 @@ This means we do not need to determine if the stripped gas evaporates or condens
 
 % \textbf{May not need to say this, considering hydrostatic is so different from what we're talking about, where it's all about inflows.}
 
-\subsection{Rotating cooling flows and SFRs}
+\subsection{Star formation rates from rotating cooling flows}
 \label{s: fueling}
 
 % Maximum accretion rate onto DM halos
@@ -1643,6 +1647,8 @@ Our main takeaways are as follows\ldots
 Comprehensive mock observations of may be necessary to provide testable predictions, and to enable identification of galaxies undergoing rotating cooling flows, potentially including our own.
 The relationship between rotating cooling flows, disk formation, and a transition in galaxy and CGM properties needs to be further disentangled, with causal directions determined (Gurvich et al., in prep).
 To this end, analyses that probe the parameter regime over which quiet accretion occurs in cosmological simulations (including redshift and halo mass) would be valuable.
+
+\textbf{Futurue work may also assess the relationship between rotating cooling flow accretion and high-velocity clouds.}
 
 \section*{Acknowledgements}
 
