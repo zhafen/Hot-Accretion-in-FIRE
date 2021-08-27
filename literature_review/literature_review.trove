@@ -6,8 +6,13 @@
 
 # Review filetree
 root_data_dir = /Users/zhafen/Data/hot_halo_accretion/literature_review
+paper_dir = /Users/zhafen/paper_repos/Hot-Accretion-in-FIRE
+code_dir = ${paper_dir}/literature_review
+
+# Filepaths
+tex_fp = ${paper_dir}/main.tex
 zotero_atlas_fp = ${root_data_dir}/atlas_zotero.json
-zotero_bibtex_fp = ${root_data_dir}/zotero.bib
+zotero_bibtex_fp = ${paper_dir}/references.bib
 zotero_projection_fp = ${root_data_dir}/projection_zotero.h5
 
 # Analysis parameters
@@ -21,7 +26,7 @@ kernel_size = 16
 # The prefix determines how the code will be handled.
 
 # Get halo data
-py.1 = ${code_dir}/retrieve_halo_data.py
+nb.1 = ${code_dir}/search.py
 
 ########################################################################
 [DATA PRODUCTS]
@@ -30,7 +35,7 @@ py.1 = ${code_dir}/retrieve_halo_data.py
 # In particular it will check if the data products exist and mark that part
 # of the trove as complete if they do.
 
-py.1 = halo_00000_smooth.dat
+nb.1 = output
 
 ########################################################################
 # Parameter Variations
@@ -42,7 +47,28 @@ py.1 = halo_00000_smooth.dat
 
 [coronal_mixing_accretion]
 publications = [
+    'Fraternali2006',
+    'Fraternali2008',
     'Marinacci2010',
+    'Marinacci2011',
+    'Marasco2012',
+    'Fraternali2013',
+    'Marasco2013',
+    'Fraternali2015',
+    'Marasco2015',
+    'Fraternali2017',
+    ]
+
+[angular_momentum_offset]
+publications = [
     'Pezzulli2016',
-    'Fraternali2018',
+    'Pezzulli2016a',
+    'Pezzulli2017',
+    ]
+
+[galaxy_halo_interface_observations]
+publications = [
+    'Sancisi2008',
+    'Gentile2013',
+    'Marasco2019',
     ]
