@@ -1164,25 +1164,20 @@ it has comparable rotating cooling flow accretion to galaxies with $f_{\rm thin\
 \subsubsection{$L^*$ halos mark a transition in galaxy and CGM properties}
 \label{s: disk formation -- transition}
 
-\textbf{
-Highlight mass scale as thin-disk mass scale location.
-Emphasize low-redshift.
-Refer to v/sigma as the metric?
-}
-
 % Importance of L*
 Galaxies with a mass comparable to the MW have long been of special interest, both because of their relation to our galaxy and because the mass is thought to be a critical mass at which many properties of galaxies and the CGM change change~\citep[e.g.][]{Fielding2017, Correa2017, Dekel2019a}.
+In regards to disk formation, $M_{\rm h} \sim 10^{12} M_\odot$ halos are have the highest thin disk presence:
+$M_{\rm h} \lesssim 10^{11} M_\odot$ are more often irregular~(\textbf{CITATION NEEDED}) and $M_{\rm h} \gtrsim 10^{13} M_\odot$ halos are more often elliptical~(\textbf{CITATION NEEDED}).
 
 % FIRE-centric recent work
 In the FIRE simulations properties that change at $M_{\rm h}\sim10^{12} M_\odot$ include a transition from a supersonic and free-falling inner CGM to a subsonic and virialized inner CGM;
 a transition from bursty to steady star formation;
-a transition from dispersion and pressure supported to rotationally supported;
+a transition from a dynamic and morphologically-disturbed ISM to a rotationally-supported;
 and a transition from spheroidal or thick disk to thin disk stellar morphology~(\citealt{El-Badry2018a, Stern2020, Yu2021}, Gurvich et al., in prep).
-Rotating cooling flows become the main mode of accretion at the time the halo virializes~(Figure~\ref{f: prevalence vs galaxy properties}).
+Rotating cooling flows become the main mode of accretion at the mass the halo virializes~(Figure~\ref{f: prevalence vs galaxy properties}).
 If rotating-cooling-flow accretion is a condition for disk formation then this explains the correlation between the presence of a virialized halo and thin disk formation.
 This is independent of the behavior of the galaxy, provided galactic feedback is not affecting the CGM in a way that disrupts the cooling flow.
-The strong correlation between rotating cooling flows and thin disk formation (Figure~\ref{f: prevalence} suggests rotating cooling flows are a sufficient condition for disk formation, but confirmation of this requires analysis of the ISM in addition to the existing CGM-focused analysis.
-This is the subject of ongoing work (Gurvich et al., in prep).
+As discussed in the previous section, rotating cooling flows are likely not a sufficient condition for thin disks, requiring further investigation of the formation of thin gaseous disks in the ISM (Gurvich et al., in prep).
 
 \subsubsection{The presence or absence of thin disks in simulations}
 \label{s: disk formation -- population}
@@ -1333,79 +1328,54 @@ Any other accretion mode that also has a voluminous, rotating, radiatively-cooli
 \subsection{Related work on disk formation}
 \label{s: other disk formation}
 
-\subsubsection{Previous FIRE work}
+\subsubsection{Previous FIRE analyses}
 label{s: other disk formation -- FIRE}
 
-\textbf{Cameron's paper.}
-
 % Shea's work
-\textit{
 \cite{Garrison-Kimmel2018} studied the morphologies of MW-mass galaxies in the FIRE simulations.
-Two particularly relevant findings:
-Disk morphology can correlate well with gas accretion history, as parameterized by the spin parameter of the gas at the time half the stars have formed.
-Dark matter accretion history correlates poorly with disk morphology, as parameterized by the time at which half the dark matter mass is assembled and the predicted radius of the galaxy assuming angular momentum is inherited from the dark matter.
-Our work suggests that the disk fraction is driven by the accretion mode of gas, consistent with gas accretion history being more important than dark matter accretion history.
-}
-
-% El-Badry 2018ab
+\citeauthor{Garrison-Kimmel2018} found disk morphology can correlate well with gas accretion history, as parameterized by the spin parameter of the gas at the time half the stars have formed.
+On the other hand, dark matter accretion history correlates poorly with disk morphology, as parameterized by the time at which half the dark matter mass is assembled and also parameterized by the predicted radius of the galaxy assuming angular momentum is inherited from the dark matter.
+Our work suggests that the disk fraction is constrained by the accretion mode of gas, consistent with gas accretion history being more important than dark matter accretion history.
 
 \textbf{If there's more to say about Anna's and Alex's work, then we can put that here.}
 
-\subsubsection{Other explanations}
-\label{s: other disk formation -- sims}
+\subsubsection{Angular momentum alignment}
+\label{s: other disk formation -- alignment}
 
-% Kretschmer2020
-\textit{
-\cite{Kretschmer2020} study two MW-mass halos with similar mass accretion histories and halo spin parameters prior to $z=1.5$, but with one galaxy producing a disk and the other becoming bulge-dominated.
-The authors identify the origin of the difference as the alignment of the angular momentum during a period of rapid accretion.
-This part is consistent with our analysis, but the authors point to \textit{cold flow} accretion as being the primary source for disk formation.
-The authors also suggest that decreased feedback intensity per-unit-area allows the disk to survive.
-Disks in appropriately-massive galaxies (i.e. properly regulated at high z) may be a feature of simulations with high-enough feedback resolution to resolve clustering.
-}
+% Angular momentum alignment
+In rotating cooling flows the alignment of the angular momentum is essential to providing disky accretion.
+A number of previous studies have similarly noted that angular momentum alignment is crucial for disk formation.
+\cite{Sales2012} find in their cosmological simulations that angular momentum alignment of accreting gas is better correlated with disk formation than any dark matter halo property.
+\cite{Kretschmer2020} point to the alignment of angular momentum as the distinguishing factor between a cosmological zoom-in of a disk galaxy and a zoom-in of a bulge-dominated galaxy with similar mass accretion histories and halo spin parameters.
+Rotating cooling flows may explain how alignment contributes to disk formation.
 
-% Dekel2020a
-\textit{
-\cite{Dekel2020a} propose that disks form when the galaxy reaches a sufficient mass s.t. the orientation of the galaxy is not being routinely flipped by major mergers.
-However, the sample of discs they study are not nearly as thin as the disks we focus on:
-The ratio of $T < 1.5 \times 10^4$ K gas disk radii to half height for their disk population spans $\approx 4-6.4$, while the same ratio calculated using the same definitions for \texttt{m12i} is 9.6.
-In our sample the unvirialized \texttt{m11h} is perhaps the closest to their disk sample, as its a thick disk with a ratio of 4.5.
-}
-
-% Sales2012
-\textit{
-DM halo properties are poorly correlated with morphology.
-Instead, angular momentum alignment of accreting gas is much more important.
-The authors find that hot accretion at late times is more favorable to disk formation than cool accretion, though do not pinpoint why.
-They show a correlation between the hot accretion fraction and the morphology, but it's much weaker than the correlation we show.
-The origin may be that rotational cooling flow accretion is a subset of hot accretion.
-}
+\subsubsection{Feedback-driven accretion}
+\label{s: other disk formation -- feedback-driven}
 
 % Coronal mixing
-Hydrodynamical modeling suggests that accretion can be induced by cold clouds launched into the corona via galactic feedback~\citep[e.g.][]{Marinacci2010, Marinacci2011, Marinacci2012, Armillotta2016a, Fraternali2017, Hobbs2020}.
-These models are consistent with observations of extraplanar neutral gas rotating in the same direction as the galaxy but with some lag~\citep[e.g.][]{Fraternali2008,  Marasco2012, Fraternali2014a}.
-\textbf{
-Fillipo's model requires mixing of outflows with the hot halo to induce accrete, our results suggest this is not needed, the hot halo cools on its own.
-This means we do not need to determine if the stripped gas evaporates or condenses.
-We also demonstrate that there is a sufficient, but not overwhelming, gas supply before fountains even have an opportunity to affect the CGM.
-}
+Hydrodynamical models suggests that accretion can be induced by cold clouds launched into the galaxy-halo interface via galactic feedback~\citep[e.g.][]{Marinacci2010, Marinacci2011, Marinacci2012, Armillotta2016a, Fraternali2017, Hobbs2020}.
+These models are consistent with observations of extraplanar neutral gas rotating in the same direction as the galaxy but with some lag~\citep[e.g.][]{Fraternali2008,  Marasco2012}.
+In this ``feedback-driven'' accretion hot halo gas only cools when its cooling time is lowered by mixing with cold gas ejected from the galaxy.
+Feedback-driven accretion may be conducive to ongoing disk formation --- if the gas ejected from the disk preserves its angular momentum magnitude and orientation and if the hot halo is largely co-rotating with the galaxy then the induced accretion should also have a disky morphology.
+Understanding how rotating cooling flow accretion and feedback-driven accretion interact warrants further work.
+For now we note that rotating cooling flows cool out of the halo as a result of decreased compression heating and increased pileup from density, i.e. without feedback.
+In fact, in rotating cooling flow accretion the majority of cooling occurs at the edge of the galaxy~(Figure~\ref{f: R1e5K}), before feedback can induce cooling.
+Subsequently, rotating cooling flows should provide accretion conducive to disk formation regardless of the presence of a disk galaxy.
 
-% Aligned vs unaligned gas determines disk formation
-
-% Cold flows vs hot flows
-\textbf{We can frame rotating cooling flow accretion as an upper limit on the amount of coherence available prior to becoming rotationally supported.}
+\subsubsection{Cold flow disks}
+\label{s: other disk formation -- feedback-driven}
 
 % Cold flow disks
-\cite{Stewart2013, Danovich2015}
+Previous studies have also looked at disks formed out of cold mode accretion, often focusing on extended ``cold flow disks'' formed by cold flows prior to accretion onto the galaxy~\citep[e.g.][]{Stewart2011a}.
+\cite{Stewart2013} demonstrate that in cosmological simulations cold mode accretion has $\sim 70\%$ more specific angular momentum than hot mode accretion and dark matter, which may explain the presence of these disks.
+\cite{Danovich2015} show that cold flow disks can be torqued to be aligned with the central galaxy, an alignment that is aided by outflows simultaneously preferentially ejecting low angular momentum gas~\citep[e.g.][]{Ubler2014}.
+\cite{Dekel2020a} propose that cold flow disks become permanent when the central galaxy reaches a sufficient mass such that the orientation of the galaxy is not being routinely flipped by major mergers.
 
-% Induced cooling from winds
-\textbf{Fraternali work}
-
-% In-galaxy terms
-% Weak feedback enables thin disk survival
-% Strong feedback promotes disk growth
-\textit{
-\cite{Ubler2014} feedback preferentially removes low angular momentum gas.
-}
+% Thickness of disk
+However, cold flow disks are significantly thicker than the disks we study.
+In \cite{Dekel2020a} the ratio of the disk radius to the half height for $T < 1.5 \times 10^4$ K gas spans $\approx 4-6.4$, while for \texttt{m12i} at $z=0$ the same ratio calculated using the same definitions is 9.6.
+In our sample the unvirialized \texttt{m11h} is the closest to being a cold flow disk with a ratio of 4.5.
+If angular momentum alignment prior to accretion determines the thinness of the disk, as our analysis suggests, then cold mode accretion should naturally produce thicker disks than hot mode accretion because the gas cannot interact and subsequently align to the same extent.
 
 % \subsection{Comparison to other accretion modes}
 % \label{s: modes}
