@@ -1050,30 +1050,6 @@ How am I treating 1e4 K gas?
 As radiatively cooling, or in UVB equilibrium?
 }
 
-% This is old stuff Jonathan wrote. Keeping around for now.
-% To demonstrate that the hot radial inflow is driven by cooling, we compare the different terms of the energy conservation equation. In steady-state, and assuming the gravitational potential is constant,  energy conservation in the radial direction dictates \citep[e.g.][]{Shu82}
-% \begin{equation}\label{e: energy}
-%     \rho g v_r + H_{\rm feedback} - \frac{d}{dr}(v_r P)= 
-%     \frac{d}{dr}\left(\rho v_r \left(\epsilon+\frac{1}{2}v^2\right)\right)  +  \nH^2\Lambda  
-% \end{equation}
-% where the terms on the left hand side are the `source terms' -- gravity, feedback, and the work done on the shell by adjacent shells, while the terms on the right represent respectively the heating and acceleration of the flow and radiative losses. 
-% Integrating over radial shells and rearranging we get the energy integral
-% \begin{equation}
-%     \Mdot\frac{d}{dr}\left(\Phi+\frac{3}{2}\epsilon + \frac{1}{2}v^2\right) = 4\pi r^2 \left(\langle\nH^2\Lambda\rangle-\langle H_{\rm feedback}\rangle\right)
-% \end{equation}
-% In Fig.~\ref{f: Edot} we plot each of the terms in eqn.~(\ref{e: energy}), averaged over radial shells and over time. Shell averages of quantity $Q$ are calculated via 
-% \begin{equation}
-%     \frac{d\dot{E}_Q}{d r} = \frac{\int_{\rm shell} Q\rho^{-1} dm}{\Delta r} 
-% \end{equation}
-% where the intergral is over all particles within the shell and $\Delta r$ is the thickness of the shell. The factor $\rho^{-1}$ is since eqn.~\ref{e: energy} is in Eulerian form. We then take the average of all shells at a given $r$ in snapshots of the last Gyr of the simulation. 
-% In order to calculate the compression term from a single snapshot, we make the following further approximation \textbf{(TBD: check if justified)}
-% \begin{equation}
-%     \frac{d\dot{E}_{\rm comp}}{d r} \approx 
-%     \Mdot P \left\langle\frac{d V}{d r}\right\rangle_{\rho v_r} \approx
-%     \Mdot P \frac{d\langle V \rangle_{\rho v_r} }{dr}
-% \end{equation}
-% Note that since $d\ln\rho/ d\ln r$ is of order unity, and in hot virial temperature gas $\epsilon/r \approx c_{\rm s}^2/r \approx v_{\rm c}^2/r = g$, we get that $\dot{E}_{\rm comp}$ (eqn.~\ref{e: Ecomp}) and $\dot{E}_{\rm grav}$ (eqn.~\ref{e: Egrav}) are of the same order.
-
 \section{Discussion}
 \label{s: discussion}
 
