@@ -164,78 +164,6 @@ galaxies: disk -- galaxies: evolution -- galaxies: halos -- cosmology: theory
 
 \section{NOTES FOR AUTHORS}
 
-\subsection{Introduction - Draft from James}
-
-%From the earliest seeds of modern galaxy formation theory, there has been a perceived tension between rapid, early formation of thin disks \citep{eggen1962} and their subsequent stability and ability to survive for a Hubble time \citep{ostriker1973,toth1992}.  
-Our present picture for the formation of galactic disks can be largely traced to analytic ideas first explored by \citet{fall1980}, where a galaxy's angular momentum is intimately tied to the corresponding properties of its host dark matter halo.  Collapsing structures in an otherwise expanding universe will be spun up by the large-scale matter field \citep{Peebles69};  this can deliver enough angular momentum to allow (at least some) galaxies to have significant angular-momentum support \citep[e.g.][]{MMW98}. 
-
-Despite this understanding, a detailed accounting of the origin of  disk formation in a cosmological context is incomplete. 
-that assume a tight coupling between halo spin and galaxy sizes do not explain the detailed properties of disks formed in cosmological simulations\citep[e.g.][]{GK18}.  
-
-Given what we know about the angular momentum distribution in galactic halos, it somewhat surprising that so many galaxies are not only spinning, but are dominated by cold, {\em thin} disks, with small scale heights and vertical velocity dispersions compared to circular speeds and scale radii $\sigma_z/V_c \sim h/R \sim 0.1$ (Kregel et al. 2002;Kassin et al. 2001).  We know, for example, that the angular momentum distribution of dark matter \citep{B01} and gas \citep{Stewart13,DeFelippis2020} in galactic halos is quite broad.  This means that in order for a tightly-ordered thin disk to emerge, the gas must be very well mixed and coherently aligned along a single plane {\em before} star formation proceeds.  This suggests that the ability for gas to mix and exchange angular momentum prior to becoming dense enough for star formation will be essential for thin disk formation. 
-
-The fact that thin disk galaxies are common only among fairly massive systems $\sim 0.1 L_\star - L_\star$ at lower redshift (NEED CITATIONS) is an additional clue that processes within the galaxy or galaxy ...
- 
-The process by which gas is deposited into a galaxy from the CGM has been the subject of considerable exploration over the past decade \citep[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a} with broadly two paths to galaxy fueling identified: hot mode and cold mode.   In the cold-mode case, gas is deposited into the galaxy without ever virializing; this occurs typically in lower mass halos, where the gas cooling time is shorter than the infall time.
-% Accretion types - hot
-In hot mode accretion, which dominates for massive halos at late times, gas first shock-heats to the halo virial temperatures, and then radiates its gravitational and thermal energy prior to accreting onto the galaxy. As discussed above, we expect the mode of gas delivery, and the precise nature by which gas mixes, cools, and accretes should have a substantial baring on the ability to form thin, coherently rotating disks.  
-
-% Accretion types - cool
-In cold mode accretion, cool, $T \sim 10^4$ K cosmological filaments travel into the galaxy from the IGM~\cite[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a}. This mode is expected to dominate the mass inflow rate at high-redshift \citep[$z\gtrsim2$, e.g.][]{Keres2009a, Dekel2009, Huscher2020}. It is unclear, however if the cool filaments remain intact down to the galaxy, or rather heat up and dissolve into the surrounding hot phase \citep{Nelson2016, Mandelker2016, Mandelker2018, Mandelker2020a}, in which case hot accretion onto the galaxy would be important also at high redshift. While cool halo inflow if this kind typically contains more specific angular momentum (in total) than either hot gas or dark matter \citep{Stewart2017}, the tendency for such gas to reach the galactic region prior to mixing may hinder the ability to develop a thin, coherently aligned structure prior to star formation. The fact that thin disk galaxies are common only among fairly massive systems $\sim 0.1 L_\star - L_\star$ at lower redshift (NEED CITATIONS), is roughly consistent with the idea that cold-mode delivery is not conducive to thin disk formation. (THIS IS STYLISTIC - MAYBE A POINT LIKE THIS GOES IN DISCUSSION).
-
-%Hot mode
-In more massive halos, where hot-mode accretion is believed to dominate, there is no consensus on the specific mechanics of hot accretion or on whether the hot gas actually manages to cool rather than being reheated by galactic feedback processes. 
-One potential route for gas delivery in hot-mode halos is instability-driven accretion, wherein gas precipitates out of the hot halo due to thermal instabilities, forming cool clouds which lose buoyancy and accrete onto the galaxy~\citep[e.g.][]{Maller2004, Mccourt2012, Voit2015, Armillotta2016, Gronke2019a, Voit2021}.  
-% Quiet accretion
-Alternatively, radiative cooling in the hot CGM can cause the entire hot phase to flow inward.
-In this latter scenario, the inward flow occurs at a rate where compressional heating of the hot phase roughly balances radiative losses, so the hot gas roughly retains its temperature.
-This type of hot accretion has been termed a `cooling flow' in the context of galaxy cluster studies \citep[][see \citealt{McNamara2007} for a review]{Mathews1978, Cowie1980, Fabian1984, Balbus1988, Bertschinger1989}. \cite{Stern2019, Stern2020a} recently revisited these cooling flows solutions and discussed  their applicability to galaxy-scale halos.
-They argued that cooling flows could be prevalent even at masses $\ll10^{12}\msun$ if halos are baryon-depleted as suggested by some theoretical and observational studies of $z\sim0$ halos \citep[e.g.,][]{Bregman2018, Hafen2019}. 
-
-  
-% The fact that thin disk galaxies are common only among fairly massive systems $\sim 0.1 L_\star - L_\star$ at lower redshift (NEED CITATIONS), is roughly consistent with the idea that cold-mode delivery is not conducive to thin disk formation.
-% For Milky Way-analogs, theory predicts that hot gas with temperature $T>10^5$ K dominates the inflow~\citep{Faucher-Giguere2011a, VandeVoort2011, VandeVoort2012a, Joung2012, Murante2012, Nelson2013}.
-
-
-% Filamentary accretion can often be accompanied by ``clumpy'' accretion in the form of accreting satellite galaxies and their CGMs~\citep[e.g.][]{Hafen2019, Hafen2020}, which in some cases can fuel the formation of more than a third of the stars formed in MW-mass galaxies~\citep{Angles-Alcazar2017}.
-
-% maybe another paragraph on other 'modes' of accretion (e.g. fountains (Oppenheimer+10) and galaxy transfer (Angles-Alcazar+17))). These modes are not really distinct from the cold/hot dichotomy, since they diskuss the mass origin of the accretion, which is a different question then its thermal history and geometry which we focus on here. 
-
-The present work focuses on hot accretion, and specifically on cooling flows where the entire hot phase is inflowing.  
-From an observational perspective, cooling flows are difficult to observe for galaxies beyond
-$z\sim0$~\citep{Putman2012}.
-This follows since the cool CGM gas is significantly more accessible to observations than the hot CGM, but in cooling flows the accreting gas becomes cool only when it has no significant spatial or kinematic offset from the galaxy.
-\citeauthor{Putman2012} thus called this accretion mode ``quiet accretion''. 
-% This quiet accretion could explain observations at higher redshifts that show substantial SFRs and outﬂows with little, if any, evidence for accretion (e.g., Erb 2008, Steidel et al. 2010, Shapley 2011)~\citep{Putman2012}.
-Consistent with quiet accretion, some observational studies argue that the accretion implied by cool gas observe in the halos of massive disks is insufficient to sustain star formation \citep{Sancisi2008}, while others detect ionized, inflowing gas at the galaxy-halo interface~\citep{Zheng2017}. 
-
-% Previous idealized simulations have studied cool gas clouds condensing onto galaxies and found that disrupted and heated clouds could condense and cool at disk edge~\citep{Heitsch2009}.
-% However, to-date little work has been done to determine how prevalent quiet accretion is in a cosmological environment, as well as the detailed mechanics of how it proceeds.
-
-% \citep{Miller16}
-
-% Cosmological simulations
-Modern cosmological simulations provide a means to understand the prevalence, mechanics, and characteristics of the different accretion modes.
-These simulations include a combination of cosmological environment and galactic physics, which has allowed simulators to investigate accretion while accounting for both its cosmological nature and its interaction with galaxies and their CGM~\citep[e.g.][]{Oppenheimer2010, Stewart2011, Fernandez2012, Ford2014, Angles-Alcazar2017, Hafen2019, Hafen2020, Ho2019, Rottgers2020, Trapp2021}.
-Of special note are ``zoom-in'' simulations that focus on resolving a single halo and its environment, enabling high resolution while preserving cosmological structure~\citep[e.g.][]{Katz1993, Hopkins2014, Hopkins2018, Wang2015, Agertz2020}.
-Among these the FIRE simulations~\citep{Hopkins2014, Hopkins2017}\footnote{\url{https://fire.northwestern.edu/}} are a set of zoom-in simulations that resolve stellar feedback on the scale of giant molecular clouds in the ISM, producing winds that naturally expand into the CGM and interact with accreting gas~\citep{Muratov2015, Muratov2017, Hafen2019, Hafen2020}.
-The resultant galaxies are broadly consistent with the stellar mass-halo mass relation~\citep{Hopkins2017}, the mass-metallicity relation~\citep{Ma2016a}, satellite galaxy populations~\citep{Wetzel2016, Garrison-Kimmel2019a}, and can have thin-disks consistent with Milky Way-like galaxies~\citep{Garrison-Kimmel2018, El-Badry2018}.
-
-In this paper we demonstrate that cooling flows (or `quiet accretion') is the primary mode of gas accretion onto central Milky Way-mass galaxies at $z \sim 0$ in the FIRE simulations. 
-We utilize the 3D nature of the simulations to explore the mechanics of quiet accretion near the disk-halo interface, thus going beyond the 1D steady-state solutions developed in classic ICM studies, and extending the idealized 3D simulations in \cite{Stern2020} to a more realistic cosmological setting. 
-% Our simulations include stellar feedback processes but no AGN feedback processes, this result suggests that cooling flows may be  prevalent in galaxies where AGN feedback is weak or absent, and that cooling flows can be used as a benchmark for AGN feedback studies. 
-
-% This paper
-% This paper is structured as follows. 
-% In \S\ref{s: methods} we describe our simulation sample and primary sample of particles selcted from the simulations.
-% In \S\ref{s: characteristics} and \S\ref{s: prevalence} we show that the vast majority of accreting gas has characteristics consistent with quiet accretion.
-% In \S\ref{s: mechanics} we analyze the mechanics through which quiet accretion occurs.
-% In \S\ref{s: broader prevalence} we discuss the prevalence of the quiet accretion mode, focusing on the conditions that enable quiet accretion, including an equivalent mode in halos with non-thermal support.
-% In \S\ref{s: modes} we compare quiet accretion as seen in our simulations to other accretion modes.
-% In \S\ref{s: fueling} and \S\ref{s: disk formation} we discuss the implications of quiet accretion for fueling star formation and encouraging disk formation, respectively.
-% We conclude in \S\ref{s: conclusions}.
-
-
 \subsection{KEY FOR COAUTHORS}
 \textbf{Bold: Notes for things to implement.} \\
 \textit{Italics: Rough text, needs polishing.} \\
@@ -465,50 +393,39 @@ Given what we know about the angular momentum distribution in galactic halos, it
 We know, for example, that the angular momentum distribution of dark matter \citep{B01} and gas \citep{Stewart13,DeFelippis2020} in galactic halos is quite broad.
 This means that in order for a tightly-ordered thin disk to emerge the gas must become coherently aligned along a single plane \textit{after} being part of the extended galactic halo and \textit{before} forming stars.
 This suggests that the process by which gas is deposited from the galactic halo into the galaxy, and how this process affects the angular momentum distribution, is essential for thin disk formation.
-
-% The fact that thin disk galaxies are common only among fairly massive systems $\sim 0.1 L_\star - L_\star$ at lower redshift (NEED CITATIONS) is an additional clue that processes within the galaxy or galaxy ...
  
 % Accretion
-The process by which gas is deposited into a galaxy from the CGM has been the subject of considerable exploration over the past decade \citep[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a} with broadly two paths to galaxy fueling identified: hot mode and cold mode.
+The process by which gas is deposited into a galaxy from the CGM has been the subject of considerable exploration over the past decade~\citep[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a} with broadly two paths to galaxy fueling identified: hot mode and cold mode.
 In the cold-mode case, gas is deposited into the galaxy without ever virializing; this occurs typically in lower mass halos, where the gas cooling time is shorter than the infall time.
 % Accretion types - hot
-In hot mode accretion, which dominates for massive halos at late times, gas first shock-heats to the halo virial temperatures, and then radiates its gravitational and thermal energy prior to accreting onto the galaxy.
+In hot mode accretion, which dominates for massive halos at late times~\citep[e.g.][]{VandeVoort2011, VandeVoort2012a, Joung2012, Murante2012, Nelson2013}, gas first shock-heats to the halo virial temperature, and then radiates its gravitational and thermal energy prior to accreting onto the galaxy.
 As discussed above, we expect the mode of gas delivery, and the precise nature by which gas mixes, cools, and accretes should have a substantial baring on the ability to form thin, coherently rotating disks.  
 
-% Accretion types - cool
-In cold mode accretion, cool, $T \sim 10^4$ K cosmological filaments travel into the galaxy from the IGM~\cite[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a}. This mode is expected to dominate the mass inflow rate at high-redshift \citep[$z\gtrsim2$, e.g.][]{Keres2009a, Dekel2009, Huscher2020}. It is unclear, however if the cool filaments remain intact down to the galaxy, or rather heat up and dissolve into the surrounding hot phase \citep[e.g.][]{Nelson2016, Mandelker2016, Mandelker2018, Mandelker2020a}, in which case hot accretion onto the galaxy would be important also at high redshift. While cool halo inflow if this kind typically contains more specific angular momentum (in total) than either hot gas or dark matter \citep{Stewart2017}, the tendency for such gas to reach the galactic region prior to mixing may hinder the ability to develop a thin, coherently aligned structure prior to star formation. The fact that thin disk galaxies are common only among fairly massive systems $\sim 0.1 L_\star - L_\star$ at lower redshift (NEED CITATIONS), is roughly consistent with the idea that cold-mode delivery is not conducive to thin disk formation. (THIS IS STYLISTIC - MAYBE A POINT LIKE THIS GOES IN DISCUSSION).
+% Cold mode
+In cold mode accretion, cool, $T \sim 10^4$ K cosmological filaments travel into the galaxy from the IGM~\cite[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a}, often with by embedded satellite galaxies~\citep[e.g.][]{Hafen2019, Fielding2020a}.
+This mode is expected to dominate the mass inflow rate at high-redshift \citep[$z\gtrsim2$, e.g.][]{Keres2009a, Dekel2009, Huscher2020}.
+It is unclear however if the cool filaments remain intact down to the galaxy, or rather heat up and dissolve into the surrounding hot phase~\citep[e.g.][]{Nelson2016, Mandelker2016, Mandelker2018, Mandelker2020a}, in which case hot accretion onto the galaxy would also be important at high redshift.
+While cool halo inflow of this kind typically contains more specific angular momentum (in total) than either hot gas or dark matter~\citep{Stewart2017}, the tendency for such gas to reach the galactic region prior to mixing may hinder the ability to develop a thin, coherently aligned structure prior to star formation.
+The fact that thin disk galaxies are common only among fairly massive systems $\sim 0.1 L_\star - L_\star$ at lower redshift (NEED CITATIONS), is roughly consistent with the idea that cold-mode delivery is not conducive to thin disk formation. (THIS IS STYLISTIC - MAYBE A POINT LIKE THIS GOES IN DISCUSSION).
 
-%Hot mode
+% Hot mode
 In more massive halos, where hot-mode accretion is believed to dominate, there is no consensus on the specific mechanics of hot accretion or on whether the hot gas actually manages to cool rather than being reheated by galactic feedback processes. 
 One potential route for gas delivery in hot-mode halos is instability-driven accretion, wherein gas precipitates out of the hot halo due to thermal instabilities, forming cool clouds which lose buoyancy and accrete onto the galaxy~\citep[e.g.][]{Maller2004, Mccourt2012, Voit2015, Armillotta2016, Gronke2019a, Voit2021}.  
 % Quiet accretion
 Alternatively, radiative cooling in the hot CGM can cause the entire hot phase to flow inward.
 In this latter scenario, the inward flow occurs at a rate where compressional heating of the hot phase roughly balances radiative losses, so the hot gas roughly retains its temperature.
-This type of hot accretion has been termed a `cooling flow' in the context of galaxy cluster studies \citep[][see \citealt{McNamara2007} for a review]{Mathews1978, Cowie1980, Fabian1984, Balbus1988, Bertschinger1989}. \cite{Stern2019, Stern2020a} recently revisited these cooling flows solutions and discussed  their applicability to galaxy-scale halos.
-They argued that cooling flows could be prevalent even at masses $\ll10^{12}\msun$ if halos are baryon-depleted as suggested by some theoretical and observational studies of $z\sim0$ halos \citep[e.g.,][]{Bregman2018, Hafen2019}. 
+This type of hot accretion has been termed a `cooling flow' in the context of galaxy cluster studies~\citep[][see \citealt{McNamara2007} for a review]{Mathews1978, Cowie1980, Fabian1984, Balbus1988, Bertschinger1989}.
+\cite{Stern2019, Stern2020a} recently revisited these cooling flows solutions and discussed their applicability to galaxy-scale halos.
+They argued that cooling flows could be prevalent even at masses $M_{\star} \ll 10^{12}\msun$ if halos are baryon-depleted as suggested by some theoretical and observational studies of $z\sim0$ halos \citep[e.g.,][]{Bregman2018, Hafen2019}. 
 
-  
-% The fact that thin disk galaxies are common only among fairly massive systems $\sim 0.1 L_\star - L_\star$ at lower redshift (NEED CITATIONS), is roughly consistent with the idea that cold-mode delivery is not conducive to thin disk formation.
-% For Milky Way-analogs, theory predicts that hot gas with temperature $T>10^5$ K dominates the inflow~\citep{Faucher-Giguere2011a, VandeVoort2011, VandeVoort2012a, Joung2012, Murante2012, Nelson2013}.
-
-
-% Filamentary accretion can often be accompanied by ``clumpy'' accretion in the form of accreting satellite galaxies and their CGMs~\citep[e.g.][]{Hafen2019, Hafen2020}, which in some cases can fuel the formation of more than a third of the stars formed in MW-mass galaxies~\citep{Angles-Alcazar2017}.
-
-% maybe another paragraph on other 'modes' of accretion (e.g. fountains (Oppenheimer+10) and galaxy transfer (Angles-Alcazar+17))). These modes are not really distinct from the cold/hot dichotomy, since they diskuss the mass origin of the accretion, which is a different question then its thermal history and geometry which we focus on here. 
-
+% Quiet accretion
 The present work focuses on hot accretion, and specifically on cooling flows where the entire hot phase is inflowing.  
-From an observational perspective, cooling flows are difficult to observe for galaxies beyond
-$z\sim0$~\citep{Putman2012}.
-This follows since the cool CGM gas is significantly more accessible to observations than the hot CGM, but in cooling flows the accreting gas becomes cool only when it has no significant spatial or kinematic offset from the galaxy.
+From an observational perspective, cooling flows are difficult to observe for galaxies beyond $z\sim0$~\citep{Putman2012}.
+This follows since cool CGM gas is significantly more accessible to observations than the hot CGM, but in cooling flows the accreting gas becomes cool only when it has no significant spatial or kinematic offset from the galaxy.
 \citeauthor{Putman2012} thus called this accretion mode ``quiet accretion''. 
 % This quiet accretion could explain observations at higher redshifts that show substantial SFRs and outﬂows with little, if any, evidence for accretion (e.g., Erb 2008, Steidel et al. 2010, Shapley 2011)~\citep{Putman2012}.
 Consistent with quiet accretion, some observational studies argue that the accretion implied by cool gas observe in the halos of massive disks is insufficient to sustain star formation \citep[e.g.][]{Sancisi2008}, while others detect ionized, inflowing gas at the galaxy-halo interface~\citep{Zheng2017}. 
 
-% Previous idealized simulations have studied cool gas clouds condensing onto galaxies and found that disrupted and heated clouds could condense and cool at disk edge~\citep{Heitsch2009}.
-% However, to-date little work has been done to determine how prevalent quiet accretion is in a cosmological environment, as well as the detailed mechanics of how it proceeds.
-
-% \citep{Miller16}
-
 % Cosmological simulations
 Modern cosmological simulations provide a means to understand the prevalence, mechanics, and characteristics of the different accretion modes.
 These simulations include a combination of cosmological environment and galactic physics, which has allowed simulators to investigate accretion while accounting for both its cosmological nature and its interaction with galaxies and their CGM~\citep[e.g.][]{Oppenheimer2010, Stewart2011, Fernandez2012, Ford2014, Angles-Alcazar2017, Hafen2019, Hafen2020, Ho2019, Rottgers2020, Trapp2021}.
@@ -516,79 +433,17 @@ Of special note are ``zoom-in'' simulations that focus on resolving a single hal
 Among these the FIRE simulations~\citep{Hopkins2014, Hopkins2017}\footnote{\url{https://fire.northwestern.edu/}} are a set of zoom-in simulations that resolve stellar feedback on the scale of giant molecular clouds in the ISM, producing winds that naturally expand into the CGM and interact with accreting gas~\citep{Muratov2015, Muratov2017, Hafen2019, Hafen2020}.
 The resultant galaxies are broadly consistent with the stellar mass-halo mass relation~\citep{Hopkins2017}, the mass-metallicity relation~\citep{Ma2016a}, satellite galaxy populations~\citep{Wetzel2016, Garrison-Kimmel2019a}, and can have thin-disks consistent with Milky Way-like galaxies~\citep{Garrison-Kimmel2018, El-Badry2018}.
 
-In this paper we demonstrate that cooling flows (or `quiet accretion') is the primary mode of gas accretion onto central Milky Way-mass galaxies at $z \sim 0$ in the FIRE simulations. 
-We utilize the 3D nature of the simulations to explore the mechanics of quiet accretion near the disk-halo interface, thus going beyond the 1D steady-state solutions developed in classic ICM studies, and extending the idealized 3D simulations in \cite{Stern2020} to a more realistic cosmological setting. 
+In this paper we demonstrate that cooling flows that accrete onto the galaxy while rotating are the primary mode of gas accretion onto central Milky Way-mass galaxies at $z \sim 0$ in the FIRE simulations. 
+We utilize the 3D nature of the simulations to explore the mechanics of quiet accretion near the disk-halo interface, thus going beyond the 1D steady-state solutions developed in classic ICM studies~\citep[e.g.][]{Cowie1980}, and extending the idealized 3D simulations in \cite{Stern2020} to a more realistic cosmological setting. 
 % Our simulations include stellar feedback processes but no AGN feedback processes, this result suggests that cooling flows may be  prevalent in galaxies where AGN feedback is weak or absent, and that cooling flows can be used as a benchmark for AGN feedback studies. 
 
 % This paper
-% This paper is structured as follows. 
-% In \S\ref{s: methods} we describe our simulation sample and primary sample of particles selcted from the simulations.
-% In \S\ref{s: characteristics} and \S\ref{s: prevalence} we show that the vast majority of accreting gas has characteristics consistent with quiet accretion.
-% In \S\ref{s: mechanics} we analyze the mechanics through which quiet accretion occurs.
-% In \S\ref{s: broader prevalence} we discuss the prevalence of the quiet accretion mode, focusing on the conditions that enable quiet accretion, including an equivalent mode in halos with non-thermal support.
-% In \S\ref{s: modes} we compare quiet accretion as seen in our simulations to other accretion modes.
-% In \S\ref{s: fueling} and \S\ref{s: disk formation} we discuss the implications of quiet accretion for fueling star formation and encouraging disk formation, respectively.
-% We conclude in \S\ref{s: conclusions}.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Old intro below
-
-% Star formation and CGM accretion
-Galactic star formation is likely fueled by accretion from the circumgalactic medium (CGM), without which star formation would cease in only a couple of Gyrs~\cite[e.g.][]{Prochaska2009, Bauermeister2010, Spring2017}.
-There are believed to be a number of modes of accretion from the CGM, each with different characteristics, mechanics, prevalences, and implications for star formation.
-% Accretion types - hot
-In the `hot' accretion mode, which has classically been associated with massive galaxies, gas first shocks to the virial temperature $\Tvir$ at the halo scale, and then radiates its gravitational and thermal energy until accreting onto the galaxy. Beyond this general framework, however, there is no consensus on the specific mechanics of hot accretion or on whether the hot gas actually manages to cool rather than being reheated by galactic feedback processes. 
-% For Milky Way-analogs, theory predicts that hot gas with temperature $T>10^5$ K dominates the inflow~\citep{Faucher-Giguere2011a, VandeVoort2011, VandeVoort2012a, Joung2012, Murante2012, Nelson2013}.
-
-One potential route for hot accretion, which has been extensively diskussed in recent years, is instability-driven accretion wherein gas precipitates out of the hot halo due to thermal instabilities, forming cool clouds which lose buoyancy and accrete onto the galaxy~\citep[e.g.][]{Maller2004, Mccourt2012, Voit2015, Armillotta2016, Gronke2019a, Voit2021}.
-% Quiet accretion
-Alternatively, radiative cooling in the hot CGM can cause the entire hot phase to flow inward.
-In this latter scenario the inward flow occurs at a rate where compressional heating of the hot phase roughly balances radiative losses, so the hot gas roughly retains its temperature.
-This type of hot accretion has been diskussed extensively by early studies in the context of the inner intercluster medium (ICM), where it has been termed a `cooling flow' \citep[][see \citealt{McNamara2007} for a review]{Mathews1978, Cowie1980, Fabian1984, Balbus1988, Bertschinger1989}. \cite{Stern2019, Stern2020a} recently revisited these cooling flows solutions and diskussed  their applicability to galaxy-scale halos.
-They argued that cooling flows could be prevalent even at masses $\ll10^{12}\msun$ if halos are baryon-depleted as suggested by some theoretical and observational studies of $z\sim0$ halos \citep[e.g.,][]{Bregman2018, Hafen2019}. 
-
-% Accretion types - cool
-A third canonical accretion mode is cool, filamentary accretion, wherein cool, $T \sim 10^4$ K cosmological filaments travel into the galaxy from the IGM~\cite[e.g.][]{Keres2005, Dekel2006, Keres2009, Martin2019a}. At halo scales this mode is expected to dominate the mass inflow rate at high-redshift \citep[$z\gtrsim2$, e.g.][]{Keres2009a, Dekel2009, Huscher2020}. It is unclear however if the cool filaments remain intact down to the galaxy, or rather heat up and dissolve into the surrounding hot phase \citep{Nelson2016, Mandelker2016, Mandelker2018, Mandelker2020a}, in which case hot accretion onto the galaxy would be important also at high redshift. 
-
-% Filamentary accretion can often be accompanied by ``clumpy'' accretion in the form of accreting satellite galaxies and their CGMs~\citep[e.g.][]{Hafen2019, Hafen2020}, which in some cases can fuel the formation of more than a third of the stars formed in MW-mass galaxies~\citep{Angles-Alcazar2017}.
-
-% maybe another paragraph on other 'modes' of accretion (e.g. fountains (Oppenheimer+10) and galaxy transfer (Angles-Alcazar+17))). These modes are not really distinct from the cold/hot dichotomy, since they discuss the mass origin of the accretion, which is a different question then its thermal history and geometry which we focus on here. 
-
-The present work focuses on hot accretion, and specifically on cooling flows where the entire hot phase is inflowing.  
-From an observational perspective, cooling flows are difficult to observe for galaxies beyond
-$z\sim0$~\citep{Putman2012}.
-This follows since the cool CGM gas is significantly more accessible to observations than the hot CGM, but in cooling flows the accreting gas becomes cool only when it has no significant spatial or kinematic offset from the galaxy.
-\citeauthor{Putman2012} thus called this accretion mode ``quiet accretion''. 
-% This quiet accretion could explain observations at higher redshifts that show substantial SFRs and outﬂows with little, if any, evidence for accretion (e.g., Erb 2008, Steidel et al. 2010, Shapley 2011)~\citep{Putman2012}.
-Consistent with quiet accretion, some observational studies argue that the accretion implied by cool gas observe in the halos of massive disks is insufficient to sustain star formation \citep{Sancisi2008}, while others detect ionized, inflowing gas at the galaxy-halo interface~\citep{Zheng2017}. 
-
-% Previous idealized simulations have studied cool gas clouds condensing onto galaxies and found that disrupted and heated clouds could condense and cool at disk edge~\citep{Heitsch2009}.
-% However, to-date little work has been done to determine how prevalent quiet accretion is in a cosmological environment, as well as the detailed mechanics of how it proceeds.
-
-% \citep{Miller16}
-
-% Cosmological simulations
-Modern cosmological simulations provide a means to understand the prevalence, mechanics, and characteristics of the different accretion modes.
-These simulations include a combination of cosmological environment and galactic physics, which has allowed simulators to investigate accretion while accounting for both its cosmological nature and its interaction with galaxies and their CGM~\citep[e.g.][]{Oppenheimer2010, Stewart2011, Fernandez2012, Ford2014, Angles-Alcazar2017, Hafen2019, Hafen2020, Ho2019, Rottgers2020, Trapp2021}.
-Of special note are ``zoom-in'' simulations that focus on resolving a single halo and its environment, enabling high resolution while preserving cosmological structure~\citep[e.g.][]{Katz1993, Hopkins2014, Hopkins2018, Wang2015, Agertz2020}.
-Among these the FIRE simulations~\citep{Hopkins2014, Hopkins2017}\footnote{\url{https://fire.northwestern.edu/}} are a set of zoom-in simulations that resolve stellar feedback on the scale of giant molecular clouds in the ISM, producing winds that naturally expand into the CGM and interact with accreting gas~\citep{Muratov2015, Muratov2017, Hafen2019, Hafen2020}.
-The resultant galaxies are broadly consistent with the stellar mass-halo mass relation~\citep{Hopkins2017}, the mass-metallicity relation~\citep{Ma2016a}, satellite galaxy populations~\citep{Wetzel2016, Garrison-Kimmel2019a}, and can have thin-disks consistent with Milky Way-like galaxies~\citep{Garrison-Kimmel2018, El-Badry2018}.
-
-In this paper we demonstrate that cooling flows (or `quiet accretion') is the primary mode of gas accretion onto central Milky Way-mass galaxies at $z \sim 0$ in the FIRE simulations. 
-We utilize the 3D nature of the simulations to explore the mechanics of quiet accretion near the disk-halo interface, thus going beyond the 1D steady-state solutions developed in classic ICM studies, and extending the idealized 3D simulations in \cite{Stern2020} to a more realistic cosmological setting. 
-% Our simulations include stellar feedback processes but no AGN feedback processes, this result suggests that cooling flows may be  prevalent in galaxies where AGN feedback is weak or absent, and that cooling flows can be used as a benchmark for AGN feedback studies. 
-
-% This paper
-% This paper is structured as follows. 
-% In \S\ref{s: methods} we describe our simulation sample and primary sample of particles selcted from the simulations.
-% In \S\ref{s: characteristics} and \S\ref{s: prevalence} we show that the vast majority of accreting gas has characteristics consistent with quiet accretion.
-% In \S\ref{s: mechanics} we analyze the mechanics through which quiet accretion occurs.
-% In \S\ref{s: broader prevalence} we discuss the prevalence of the quiet accretion mode, focusing on the conditions that enable quiet accretion, including an equivalent mode in halos with non-thermal support.
-% In \S\ref{s: modes} we compare quiet accretion as seen in our simulations to other accretion modes.
-% In \S\ref{s: fueling} and \S\ref{s: disk formation} we discuss the implications of quiet accretion for fueling star formation and encouraging disk formation, respectively.
-% We conclude in \S\ref{s: conclusions}.
-% We offer some brief insight on observational expectations for quiet accretion in \S\ref{s: observational expectations} before concluding in \S\ref{s: conclusions}.
+This paper is structured as follows. 
+In \S\ref{s: methods} we describe our simulation sample and the primary sample of particles selcted from the simulations.
+In \S\ref{s: characteristics} and \S\ref{s: prevalence} we show that the vast majority of accreting gas has characteristics consistent with rotating cooling flows.
+In \S\ref{s: mechanics} we analyze the mechanics responsible for rotating cooling flows.
+In the discussion we elaborate on the connection betwen rotating cooling flows and disk formation (\S\ref{s: disk formation}) and address other disk formation mechanisms (\S\ref{s: other disk formation}).
+We conclude in \S\ref{s: conclusions}.
 
 % % Observational evidence
 % \textbf{
