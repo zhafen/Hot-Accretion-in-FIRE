@@ -12,7 +12,7 @@ code_dir = ${paper_dir}/literature_review
 # Filepaths
 tex_fp = ${paper_dir}/main.tex
 zotero_atlas_fp = ${root_data_dir}/atlas_zotero.json
-zotero_bibtex_fp = ${paper_dir}/references.bib
+zotero_bibtex_fp = ${paper_dir}/references_for_lit_review.bib
 zotero_projection_fp = ${root_data_dir}/projection_zotero.h5
 
 # Analysis parameters
@@ -72,3 +72,16 @@ publications = [
     'Gentile2013',
     'Marasco2019',
     ]
+
+[thin_disk_galaxies]
+publications = [
+    'Bizyaev2021',
+    'Kranz2003',
+    'Kassin2006',
+    ]
+search_str = 'thin disk galaxy superthin sigma rotational supported'
+
+[low_mask_thin_disk_galaxies]
+publications = [
+    'Weiner2001',
+]
