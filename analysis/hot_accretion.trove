@@ -52,25 +52,28 @@ lighter_background_linecolor = '.6'
 # py.3 = ${code_dir}/linefinder_tracking/sample.py
 
 # Run particle tracking
-jug.4 = ${code_dir}/linefinder_tracking/track.py
+# jug.4 = ${code_dir}/linefinder_tracking/track.py
+# 
+# # Run galaxy linking
+# jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
+# 
+# # Run particle classification
+# py.6 = ${code_dir}/linefinder_tracking/classify.py
+# 
+# # Create Firefly visualization
+# # py.7 = ${code_dir}/linefinder_tracking/firefly.py
+# 
+# # Trajectories and geometric evolution
+# nb.8 = ${code_dir}/characteristics.ipynb
+#  
+# # Before and after cooling
+# nb.9 = ${code_dir}/before_and_after.ipynb
+#  
+# # FIRE studio images
+# nb.10 = ${code_dir}/fire_studio.ipynb
 
-# Run galaxy linking
-jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
-
-# Run particle classification
-py.6 = ${code_dir}/linefinder_tracking/classify.py
-
-# Create Firefly visualization
-# py.7 = ${code_dir}/linefinder_tracking/firefly.py
-
-# Trajectories and geometric evolution
-nb.8 = ${code_dir}/characteristics.ipynb
- 
-# Before and after cooling
-nb.9 = ${code_dir}/before_and_after.ipynb
- 
-# FIRE studio images
-nb.10 = ${code_dir}/fire_studio.ipynb
+# Retrieve data
+py.11 = ${code_dir}/retrieve.py
 
 ########################################################################
 [DATA PRODUCTS]
@@ -88,6 +91,7 @@ py.6 = classifications_${tag}.hdf5
 nb.8 = executed_characteristics.ipynb
 nb.9 = executed_before_and_after.ipynb
 nb.10 = executed_fire_studio.ipynb
+py.11 = classifications_${tag}.hdf5
 
 ########################################################################
 # Parameter Variations
