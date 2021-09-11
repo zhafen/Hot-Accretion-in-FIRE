@@ -475,7 +475,7 @@ We conclude in \S\ref{s: conclusions}.
 \caption{Simulation parameters.}
 \begin{tabular}{cccccccccc}
 \hline
-Name  &  $f_{\rm thin\,disk,\,young}$  & $V/\sigma$ & $R/h$ & $M_{\rm vir}$  &  $M_\star$  &  $R_{\textrm{vir}}$  &  $\Delta f_{\rm aligned}$  &  Physics  &  Reference  \\
+Name  &  $f_{\rm thin\,disk,\,recent}$  & $V/\sigma$ & $R/h$ & $M_{\rm vir}$  &  $M_\star$  &  $R_{\textrm{vir}}$  &  $\Delta f_{\rm aligned}$  &  Physics  &  Reference  \\
   &   & & &  $M_\odot$  & $M_\odot$  &  kpc  &  &  &  \\
  \hline
 m12i  &  0.83  &  3.9  &  7.1  &  $1.1\times10^{12}$  &  $7.3\times10^{10}$  &  268  &  0.34  &  hydro+  &  ?    \\
@@ -498,7 +498,7 @@ m12i\_core  &  0.79  &  3.6  &  7.3  &  $1.1\times10^{12}$  &  $8.0\times10^{10}
 \\
 \begin{flushleft}
 Properties at $z=0$ of the sample of simulated galaxies analyzed in this work.
-$f_{\rm thin\,disk,\,young}$ is the fraction of stars formed in the last Gyr prior to $z=0$ that are in a thin disk configuration ($j/j_c(E) > 0.8$; e.g. \citealt{Yu2021}).
+$f_{\rm thin\,disk,\,recent}$ is the fraction of stars formed in the last Gyr prior to $z=0$ that are in a thin disk configuration ($j/j_c(E) > 0.8$; e.g. \citealt{Yu2021}).
 $V/\sigma$ is the ratio of the average rotational velocity to the average radial velocity dispersion stars formed in the last Gyr prior to $z=0$.
 $R/h$ is the ratio of the radius containing $85\%$ of the recent stars to the half height of those stars.
 $M_{\rm vir}$ is the total mass contained within $R_{\rm vir}$ and $M_\star$ is the total stellar mass contained within the galaxy radius~(\S\ref{s: methods -- analysis}). 
@@ -552,7 +552,7 @@ In the simulations and throughout our analysis we use a standard flat $\Lambda$C
 
 % Figure 1
 Figure~\ref{f: stars} shows edge-on mock Hubble images (with no dust attenuation) for the $z=0$ snapshots of four of our simulated galaxies. The top and bottom-left panels show three MW-mass galaxies (\texttt{m12i}, \texttt{m12b}, and \texttt{m12c}) while the bottom-right panel shows a $M_\star \sim 10^9 M_\odot$ galaxy, \texttt{m11q}.
-As noted in previous studies \cite{?} MW-mass galaxies in FIRE typically have thin disk morphologies, while lower mass galaxies show a thick disk / irregular morphology. We quantify this trend using $f_{\rm thin\,disk,\,young}$, defined as the fraction of stars with age $<1$ Gyr (at $z=0$) that have $j_z/j_c(E) > 0.8$, where $j_z$ is the specific angular momentum in the $z$ direction  and $j_c(E)$ is the angular momentum the star would have if it had the same energy but was in a circular orbit. The $z$ direction is defined as direction of the total angular momentum vector of stars inside the galaxy.  This definition of the thin disk is the same definition used in~\cite{Yu2021}. The values of $f_{\rm thin\,disk,\,young}$ for the four shown galaxies are noted in the panels. 
+As noted in previous studies \cite{?} MW-mass galaxies in FIRE typically have thin disk morphologies, while lower mass galaxies show a thick disk / irregular morphology. We quantify this trend using $f_{\rm thin\,disk,\,recent}$, defined as the fraction of stars with age $<1$ Gyr (at $z=0$) that have $j_z/j_c(E) > 0.8$, where $j_z$ is the specific angular momentum in the $z$ direction  and $j_c(E)$ is the angular momentum the star would have if it had the same energy but was in a circular orbit. The $z$ direction is defined as direction of the total angular momentum vector of stars inside the galaxy.  This definition of the thin disk is the same definition used in~\cite{Yu2021}. The values of $f_{\rm thin\,disk,\,recent}$ for the four shown galaxies are noted in the panels. 
 % We will use this subsample of simulated galaxies throughout much of our analysis.
 % Most of our MW-mass galaxies have high young thin disk fractions, while our lower mass galaxies have thick-disk, irregular, or spherical morphologies.
 
@@ -624,7 +624,7 @@ Similar results are seen in other thin disk galaxies in our sample. Thus, accret
 
 % MECHANICS OF QUIET ACCRETION
 \begin{figure*}
-\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_m12i_md.pdf}
+\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_characteristics_m12i_md.pdf}
 \caption{
 Temperature and geometry of gas accreting onto a $z\sim0$ thin disk galaxy in FIRE, versus time relative to the final cooling time ($t - \tcon$).
 In each panel solid lines and shaded regions mark the medians and 16th to 84th percentile ranges of all particles accreted within 1 Gyr prior to $z=0$.
@@ -639,6 +639,8 @@ Gas collapses into a disk upon cooling, with a median $\vert z \vert \approx 2$ 
 % The magnitude of the specific angular momentum of particles ($\mid\vec{j}\mid$, green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
 % The dashed line shows the angular momentum necessary for full rotational support.
 % Gas approaches full rotational support immediately before cooling.
+\textbf{Add additional lines for other m12s?}
+\textbf{Change arrangement to use up space in the upper right area?}
 }
 \label{f: before and after A}
 \end{figure*}
@@ -676,9 +678,7 @@ After reaching $\sim R_{\rm gal}$ and cooling to ISM temperature of $\sim100- 10
     \caption{
     Angular distribution of accreting gas, as a function of time relative to the last cooling time. In thin disk galaxies (top and bottom-left panels) the angular distribution of accreting gas evolves significantly at the time of cooling, from a quasi-spherical distribution prior to cooling to a disk-like configuration after cooling. 
     In contrast, in the irregular galaxy (bottom-right) accreting gas is roughly spherical both prior to and after cooling.
-    \textbf{Check time bin size.}
-    \textbf{Change disk distribution to disk plane.}
-    \textbf{Remove "contains approx 60" label.}
+    % \textbf{Check time bin size.}
     }
     \label{f: theta vs t}
 \end{figure*}
@@ -706,10 +706,8 @@ This indicates that cooling and circularization of the accreted gas occurs simul
     % while after cooling that fraction increases to $\gtrsim 50\%$ for most galaxies forming thin disks.
     \textbf{Right:}
     Change in aligned mass fraction during the $\pm200$ Myr around cooling time shown in the left panel. A large $\Delta f_{\rm aligned}$ indicates that circularization is concurrent with cooling. Color indicates virial mass. The value of $\Delta f_{\rm aligned}$ is strongly correlated with the fraction of young stars in a thin disk. 
-    \textbf{Circle and talk about the outlier?}
-    \textbf{Make legend alpha more opaque or increase in size.}
-    \textbf{Highlight the empty corner?}
-    \textbf{Change label to t(T=1e5K)?}
+    % \textbf{Circle and talk about the outlier?}
+    % \textbf{Highlight the empty corner?}
     }
     \label{f: prevalence}
 \end{figure*}
@@ -738,10 +736,8 @@ Fig.~\ref{f: prevalence} thus demonstrates on our entire FIRE sample that circul
     \caption{
     Angular momentum distribution of accreting gas, as a function of time relative to the last cooling time. Curves show the fraction of mass above a given $j_z / \vert \vec j \vert$. 
     In the thin-disk galaxies (top and bottom-left panels) the angular momentum distribution becomes more coherent and aligned with the central galaxy with time, mainly during the 200 Myr prior to cooling. In the irregular galaxy (bottom right) the angular momentum distribution is quasi-spherical both before and after cooling. 
-    \textbf{Try removing text to make cleaner.}
     % \textbf{How far back in time do we need to go to get to isotropic?}
     % \textbf{How does this compare to the DM distribution, e.g. B01?}
-    \textbf{Make sure the captions aren't being cut off by their outline.}
     }
     \label{f: coherence}
 \end{figure*}
@@ -867,8 +863,6 @@ The result is gas that cools over the course of $\lesssim 50$ Myr.
     Color indicates change in the fraction of accreted gas which is aligned with the central galaxy, during $-150\,{\rm Myr} < t-\tcon < 150\,{\rm Myr}$ (see Fig.~\ref{f: prevalence}).
     For $M_{\rm vir} < 10^{12} M_\odot$ or $M_\star < M_{\star, {\rm MW}}$, both the thin disk fraction and $\Delta f_{\rm aligned}$ are small. In more massive galaxies these quantities span a large range. A somewhat better correlation is seen between $\Delta f_{\rm aligned}$ and $t_{\rm cool}^{(s)}/t_{\rm ff}$, as expected since $t_{\rm cool}^{(s)}/t_{\rm ff}>2$ indicates that the inner CGM is virialized, a necessary condition for forming a cooling flow \citep{Stern2021}.
     The right panel shows that the thin disk fraction of young stars closely tracks the observationally-motivated luminosity-weighted thin disk fraction.
-    \textbf{Have consistent colorbar and $Delta f_{\rm aligned}$ limits.}
-    \textbf{Add 1e10 and logarithmic ticks in Mstar panel.}
     }
     \label{f: prevalence vs galaxy properties}
 \end{figure*}
