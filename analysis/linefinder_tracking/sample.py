@@ -2,7 +2,7 @@
 
 import sys
 
-import linefinder.select as select
+import linefinder.select_particles as select
 
 import trove
 

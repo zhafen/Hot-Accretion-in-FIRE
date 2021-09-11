@@ -29,7 +29,7 @@ t_cut = 60. # In Myr
 c_cut = 0.8 # jz/j
 r_cut = 3 # R/Rgal
 generate_expensive_visualizations = False
-inline_firefly = True
+inline_firefly = False
 
 # Aesthetic parameters
 background_linecolor = '.4'
@@ -53,27 +53,27 @@ lighter_background_linecolor = '.6'
 
 # Run particle tracking
 # jug.4 = ${code_dir}/linefinder_tracking/track.py
-# 
-# # Run galaxy linking
+
+# Run galaxy linking
 # jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
-# 
-# # Run particle classification
+
+# Run particle classification
 # py.6 = ${code_dir}/linefinder_tracking/classify.py
-# 
-# # Create Firefly visualization
-# # py.7 = ${code_dir}/linefinder_tracking/firefly.py
-# 
-# # Trajectories and geometric evolution
-# nb.8 = ${code_dir}/characteristics.ipynb
-#  
-# # Before and after cooling
-# nb.9 = ${code_dir}/before_and_after.ipynb
-#  
+
+# Create Firefly visualization
+# py.7 = ${code_dir}/linefinder_tracking/firefly.py
+
+# Trajectories and geometric evolution
+nb.8 = ${code_dir}/characteristics.ipynb
+ 
+# Before and after cooling
+nb.9 = ${code_dir}/before_and_after.ipynb
+  
 # # FIRE studio images
 # nb.10 = ${code_dir}/fire_studio.ipynb
 
 # Retrieve data
-py.11 = ${code_dir}/retrieve.py
+# py.11 = ${code_dir}/retrieve.py
 
 ########################################################################
 [DATA PRODUCTS]

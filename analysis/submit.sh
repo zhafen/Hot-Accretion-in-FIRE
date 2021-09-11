@@ -17,4 +17,4 @@ CONFIG=$1
 
 # trove clean $CONFIG
 # trove evaluate $CONFIG
-trove execute -n 4 $CONFIG
+trove execute -n 3 $CONFIG
