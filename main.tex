@@ -643,9 +643,6 @@ Gas collapses into a disk upon cooling, with a median $\vert z \vert \approx 2$ 
 % The magnitude of the specific angular momentum of particles ($\mid\vec{j}\mid$, green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
 % The dashed line shows the angular momentum necessary for full rotational support.
 % Gas approaches full rotational support immediately before cooling.
-\textbf{Try limiting plot B to 0.5.}
-\textbf{Fraction of gas converted to stars. (Use words.)}
-\textbf{Add velocity panel, re-order.}
 }
 \label{f: before and after A}
 \end{figure*}
@@ -862,7 +859,6 @@ Around $\tcon$ the cooling rate and compressive heating diverge. This can be und
     Color indicates change in the fraction of accreted gas which is aligned with the central galaxy, during $-150\,{\rm Myr} < t-\tcon < 150\,{\rm Myr}$ (see Fig.~\ref{f: prevalence}).
     For $M_{\rm vir} < 10^{12} M_\odot$ or $M_\star < M_{\star, {\rm MW}}$, both the thin disk fraction and $\Delta f_{\rm aligned}$ are small. In more massive galaxies these quantities span a large range. A somewhat better correlation is seen between $\Delta f_{\rm aligned}$ and $t_{\rm cool}^{(s)}/t_{\rm ff}$, as expected since $t_{\rm cool}^{(s)}/t_{\rm ff}>2$ indicates that the inner CGM is virialized, a necessary condition for forming a cooling flow \citep{Stern2021}.
     The right panel shows that the thin disk fraction of young stars closely tracks the observationally-motivated luminosity-weighted thin disk fraction.
-    \textbf{Move rightmost panel to the appendix.}
     }
     \label{f: prevalence vs galaxy properties}
 \end{figure*}
@@ -1137,7 +1133,23 @@ This research was supported in part by the National Science Foundation under Gra
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
 
 \appendix
-\section{}
+
+\section{Observed thin disk fraction}
+\label{s: appendix-sloan thin disk fraction}
+
+% PREVALENCE OF QUIET ACCRETION -- VS GALAXY PROPERTIES
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{figures/prevalence/thin_disk_v_thin_disk.pdf}
+    \caption{
+    Fraction of recent stars in a thin disk versus Sloan-r-band-weighted thin disk fraction, showing that the thin disk fraction of young stars closely tracks the observationally-motivated luminosity-weighted thin disk fraction.
+    }
+    \label{f: thin disk v thin disk}
+\end{figure*}
+
+\section{Instantaneous mass flow}
+\label{s: appendix-mass flow}
+
 % HOT IN HALO
 \begin{figure*}
     \centering
@@ -1167,6 +1179,31 @@ In the three MW mass galaxies with a large thin disk fraction, at halo scales of
 In contrast, in the lower mass galaxy shown in the bottom right the inflow is dominated by cool gas, while the hot gas is outflowing out to $\approx50$ kpc.
 
 Fig.~\ref{f: Mdot} also shows that the inflow rate of hot gas in the MW-mass galaxies drops within $R_{\rm gal}$, reflecting the cooling of the hot inflow at the galaxy-halo interface, as shown in the next section.
+
+\section{Accretion onto lower-mass halos}
+\label{s: appendix-lowmass}
+
+% MECHANICS OF QUIET ACCRETION
+\begin{figure*}
+\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m11d_md.pdf}
+\caption{
+Temperature and geometry of gas accreting onto a $z\sim0$ thin disk galaxy in FIRE, versus time relative to the final cooling time ($t - \tcon$).
+In each panel solid lines and shaded regions mark the medians and 16th to 84th percentile ranges of all particles accreted within 1 Gyr prior to $z=0$.
+\textbf{A:}
+Temperature. During the 500 Myr prior to cooling, the inflow is predominantly hot ($\gtrsim 10^5$ K), with a median temperature approaching $\Tvir\approx10^6$ K. At $t = \tcon$ the gas cools to ISM temperatures (by definition).
+\textbf{B:}
+3D distance from halo center. Prior to cooling the inflow has a typical velocity of $\approx 80$ km s$^{-1}$. Cooling occurs at the galaxy scale $R_{\rm gal}$, after which the inflow stalls.
+\textbf{C:}
+Absolute height from the disk plane.
+Gas collapses into a disk upon cooling, with a median $\vert z \vert \approx 2$ kpc at $t=\tcon$.
+% \textbf{E:}
+% The magnitude of the specific angular momentum of particles ($\mid\vec{j}\mid$, green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
+% The dashed line shows the angular momentum necessary for full rotational support.
+% Gas approaches full rotational support immediately before cooling.
+}
+\label{f: before and after A}
+\end{figure*}
+
 
 \section{Notes on individual galaxies}
 
