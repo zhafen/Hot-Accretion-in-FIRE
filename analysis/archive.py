@@ -1,3 +1,4 @@
+import glob
 import os
 import shutil
 import subprocess
@@ -12,18 +13,20 @@ archive_dir = 'ranch.tacc.utexas.edu:hot_accretion_data'
 
 tar = '{}.tar'.format( pm['variation'] )
 
+os.chdir( pm['data_dir'] )
+
 # Tar
 subprocess.run([
     'tar',
     '-cvf',
-    os.path.join( pm['data_dir'], tar ),
-    archive_dir,
+    tar,
+    *glob.glob( '*' ),
 ])
 
 # Archive
 subprocess.run([
     'rsync',
-    os.path.join( pm['data_dir'], tar ),
+    tar,
     archive_dir,
     '--progress',
 ])
