@@ -69,11 +69,14 @@ nb.8 = ${code_dir}/characteristics.ipynb
 # Before and after cooling
 nb.9 = ${code_dir}/before_and_after.ipynb
   
-# # FIRE studio images
+# FIRE studio images
 # nb.10 = ${code_dir}/fire_studio.ipynb
 
+# Archive data
+# py.11 = ${code_dir}/archive.py
+
 # Retrieve data
-# py.11 = ${code_dir}/retrieve.py
+# py.12 = ${code_dir}/retrieve.py
 
 ########################################################################
 [DATA PRODUCTS]
@@ -91,7 +94,7 @@ py.6 = classifications_${tag}.hdf5
 nb.8 = executed_characteristics.ipynb
 nb.9 = executed_before_and_after.ipynb
 nb.10 = executed_fire_studio.ipynb
-py.11 = classifications_${tag}.hdf5
+py.12 = classifications_${tag}.hdf5
 
 ########################################################################
 # Parameter Variations
@@ -238,7 +241,7 @@ sim_data_dir = ${fire_dir}/${subpath}/output
 # Cosmic Rays
 ########################################################################
 
-[m12i_cr]
-subpath = cr_heating_fix/m12i_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
+# [m12i_cr]
+# subpath = cr_heating_fix/m12i_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
