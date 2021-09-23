@@ -20,14 +20,18 @@ code_dir = ${paper_dir}/analysis
 figure_dir = ${paper_dir}/figures
 processed_data_dir = ${paper_dir}/data
 
-# Analysis parameters
-# For defining quiet accretion
+# What index do we use for what the paper calls \tcon?
+central_indices = t_1e5_inds 
+
+# Parameters for defining quiet accretion (deprecated)
 aligned_fraction_half_dt = 200 # In Myr
 disk_costheta = 0.1 # Contains roughly 2/3 of thin disk stars
 disk_jzjmag = 0.9 # Contains roughly 90% of thin disk stars
 t_cut = 60. # In Myr
 c_cut = 0.8 # jz/j
 r_cut = 3 # R/Rgal
+
+# Supplementary analysis parameters
 generate_expensive_visualizations = False
 inline_firefly = False
 
@@ -46,13 +50,13 @@ lighter_background_linecolor = '.6'
 # py.1 = ${code_dir}/retrieve_halo_data.py
 
 # Get IDs to track
-# nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
+nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
 
 # Sample particles to track, including removing duplicates
 # py.3 = ${code_dir}/linefinder_tracking/sample.py
 
 # Run particle tracking
-# jug.4 = ${code_dir}/linefinder_tracking/track.py
+#ug.4 = ${code_dir}/linefinder_tracking/track.py
 
 # Run galaxy linking
 # jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
@@ -64,10 +68,10 @@ lighter_background_linecolor = '.6'
 # py.7 = ${code_dir}/linefinder_tracking/firefly.py
 
 # Trajectories and geometric evolution
-nb.8 = ${code_dir}/characteristics.ipynb
+# nb.8 = ${code_dir}/characteristics.ipynb
  
 # Before and after cooling
-nb.9 = ${code_dir}/before_and_after.ipynb
+# nb.9 = ${code_dir}/before_and_after.ipynb
   
 # FIRE studio images
 # nb.10 = ${code_dir}/fire_studio.ipynb
@@ -209,10 +213,11 @@ subpath = metal_diffusion/m11d_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
 
-[m11e_md]
-subpath = metal_diffusion/m11e_res7100
-halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-sim_data_dir = ${fire_dir}/${subpath}/output
+# DEBUG
+# [m11e_md]
+# subpath = metal_diffusion/m11e_res7100
+# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+# sim_data_dir = ${fire_dir}/${subpath}/output
 
 [m11h_md]
 subpath = metal_diffusion/m11h_res7100
@@ -241,7 +246,8 @@ sim_data_dir = ${fire_dir}/${subpath}/output
 # Cosmic Rays
 ########################################################################
 
-# [m12i_cr]
-# subpath = cr_heating_fix/m12i_res7100
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
+[m12i_cr]
+subpath = cr_suite/m12i_mass7000_MHDCR_tkFIX
+halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+sim_data_dir = ${fire_dir}/${subpath}/cr_700/output
+central_indices = ind_first_acc
