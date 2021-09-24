@@ -444,7 +444,10 @@ In the present paper we demonstrate that such cooling flows with angular momentu
 % which satisfy this condition 
 are the primary mode of gas accretion onto disky Milky Way-mass galaxies at $z \sim 0$ in the FIRE cosmological simulations \citep{Hopkins2018}, and may be a necessary condition for the formation of thin star-forming disks.
 
-The analysis here follows \cite{Stern2021}, which showed that the formation of disks in FIRE is closely connected to the formation of a virialized and stable hot CGM.  \cite{Yu2021} subsequently showed that the emergence of an inner virialized CGM in FIRE simulations correlates specifically with a transition from {\em thick}-disk to {\em thin}-disk formation.   The conditions necessary for stars to be born in a well-aligned plane on circular orbits appears to correlate with the conditions necessary for the onset of hot accretion modes such as cooling flows. This observation partially motivates the exploration that follows.
+The analysis here follows \cite{Stern2021}, which showed that the formation of disks in FIRE is closely connected to the formation of a virialized and stable hot CGM.
+\cite{Yu2021} subsequently showed that the emergence of an inner virialized CGM in FIRE simulations correlates specifically with a transition from {\em thick}-disk to {\em thin}-disk formation.
+The conditions necessary for stars to be born in a well-aligned plane on circular orbits appears to correlate with the conditions necessary for the onset of hot accretion modes such as cooling flows.
+This observation partially motivates the exploration that follows.
 
 % . Our analysis supplements and is motivated by the results of \citep{Stern2021}, which identified in FIRE a strong relation between disk formation and virialization of the CGM\footnote{CGM virialization has also been referred to as `hot halo formation'.}, where the latter is a necessary condition for the hot accretion mode. 
 % Quiet accretion
@@ -455,11 +458,12 @@ The analysis here follows \cite{Stern2021}, which showed that the formation of d
 Modern cosmological simulations provide a means to understand the characteristics, prevalence, and mechanics of different accretion modes.
 These simulations include a combination of cosmological environment and galactic physics, which has allowed simulators to investigate accretion while accounting for both its cosmological nature and its interaction with galaxies and their CGM~\citep[e.g.][]{Oppenheimer2010, Stewart2011, Fernandez2012, Ford2014, Angles-Alcazar2017, Hafen2019, Hafen2020, Ho2019, Rottgers2020, Trapp2021}.
 Of special note are ``zoom-in'' simulations that focus on resolving a single halo and its environment, enabling high resolution while preserving cosmological structure~\citep[e.g.][]{Katz1993, Onorbe14, Wang2015, Agertz2021}.
-Among these the FIRE simulations~\citep{Hopkins2014, Hopkins2018b}\footnote{\url{https://fire.northwestern.edu/}} are a set of zoom-in simulations that resolve stellar feedback on the scale of giant molecular clouds in the ISM, producing winds that naturally expand into the CGM and interact with accreting gas~\citep{Muratov2015, Muratov2017, Hafen2019, Hafen2020}.
+Among these the FIRE simulations~\citep{Hopkins2014, Hopkins2018}\footnote{\url{https://fire.northwestern.edu/}} are a set of zoom-in simulations that resolve stellar feedback on the scale of giant molecular clouds in the ISM, producing winds that naturally expand into the CGM and interact with accreting gas~\citep{Muratov2015, Muratov2017, Hafen2019, Hafen2020}.
 The resultant galaxies are broadly consistent with the stellar mass-halo mass relation~\citep{Hopkins2017}, the mass-metallicity relation~\citep{Ma2016a}, satellite galaxy populations~\citep{Wetzel2016, Garrison-Kimmel2019a}, and can have thin-disks consistent with Milky Way-like galaxies~\citep{Ma2017a, Garrison-Kimmel2018, El-Badry2018,Yu2021}.
 
-Here we use the FIRE simulations to study gas accretion onto $z\sim0$ galaxies and its relation to thin disk morphology. Our approach uses the methodology developed in \citet{Hafen2019,Hafen2020} to 
-explore the mechanics of rotating cooling flows near the disk-halo interface where angular momentum support is substantial.  This goes beyond 1D steady-state solutions developed in classic ICM studies~\citep[e.g.][]{Cowie1980}, and extends the idealized 3D simulations in \cite{Stern2019} to a more realistic cosmological setting. 
+Here we use the FIRE simulations to study gas accretion onto $z\sim0$ galaxies and its relation to thin disk morphology.
+Our approach uses the methodology developed in \citet{Hafen2019,Hafen2020} to  explore the mechanics of rotating cooling flows near the disk-halo interface where angular momentum support is substantial.
+This goes beyond 1D steady-state solutions developed in classic ICM studies~\citep[e.g.][]{Cowie1980}, and extends the idealized 3D simulations in \cite{Stern2019} to a more realistic cosmological setting. 
 % Our simulations include stellar feedback processes but no AGN feedback processes, this result suggests that cooling flows may be  prevalent in galaxies where AGN feedback is weak or absent, and that cooling flows can be used as a benchmark for AGN feedback studies. 
 
 % This paper
@@ -535,10 +539,10 @@ The references in the final column are:
 
 % FIRE simulations
 We analyze the hydrodynamical cosmological zoom-in simulations produced as part of the FIRE project~\citep{Hopkins2014}.
-The simulation sample, listed in Table~\ref{table: simulations_used}, were run with the FIRE-2 version~\citep{Hopkins2018b} of the gravity and hydrodynamics code \textsc{GIZMO}\footnote{\url{http://www.tapir.caltech.edu/\~phopkins/Site/GIZMO.html}}~\citep{Hopkins2015}.
+The simulation sample, listed in Table~\ref{table: simulations_used}, were run with the FIRE-2 version~\citep{Hopkins2018} of the gravity and hydrodynamics code \textsc{GIZMO}\footnote{\url{http://www.tapir.caltech.edu/\~phopkins/Site/GIZMO.html}}~\citep{Hopkins2015}.
 The simulations were produced using the meshless finite-mass (``MFM'') mode of \textsc{GIZMO}, a Lagrangian method with no inter-element mass flux.
 This enables use to track the history of each resolution element.
-The full details of simulations produced with the FIRE-2 code are available in~\cite{Hopkins2018b}.
+The full details of simulations produced with the FIRE-2 code are available in~\cite{Hopkins2018}.
 The FIRE simulations include detailed prescriptions for star formation and stellar feedback.
 Each star particle contributes to the simulation momentum from radiation pressure; energy, momentum, mass, and metals from Type Ia and II supernovae and stellar winds; and photo-ionization and photo-electric heating.
 Star formation is limited to self-gravitating, molecular, self-shielding gas with a density of at least $n_{\rm SF} = 1000$ cm$^{-3}$.
@@ -570,7 +574,7 @@ For each galaxy we use the particle tracking method described in \cite{Hafen2019
 To select such particles, we require that they are
 (1) within the galaxy radius $R_{\rm gal}$ at $z=0$, either in stars or in gas with density  $n_{\rm H} > 0.13$ cm$^{-3}$, and
 (2) within the CGM (gas at $0.1 - 1 \Rvir$) in the snapshot corresponding to 1 Gyr prior to $z=0$.
-Throughout the paper we use $r$ for the 3D distance and $R$ for the cylindrical radius. 
+Throughout the paper we use $r$ for the 3D distance. 
 We define $R_{\rm gal} = 4 R_{\star,0.5}$ following \cite{Hafen2019, Hafen2020}.
 For each selected particle we retrieve the full history of the particle (including temperature, density, and metallicity). 
 % Handling duplicate IDS
@@ -1115,10 +1119,6 @@ The picture which emerges is that `disc settling', i.e.~the formation of quasi-s
 \subsection{Caveats}
 \label{s:caveats}
 
-
-
-
-
 % \subsubsection{Analogous accretion in halos with nonthermal support}
 % \label{s: disk formation -- nonthermal}
 
@@ -1199,7 +1199,7 @@ We defer to future work making predictions for hot gas cooling just outside the 
 \label{s: conclusions}
 
 % Summary paragraph
-In this paper we use the particle-tracking method developed in \cite{Hafen2019,Hafen2020} to study how gas accretes onto $z\sim0$ galaxies in the FIRE-2 cosmological zoom simulations~\citep{Hopkins2018b}, focusing on Milky-Way mass galaxies in which stars form in a thin disk. 
+In this paper we use the particle-tracking method developed in \cite{Hafen2019,Hafen2020} to study how gas accretes onto $z\sim0$ galaxies in the FIRE-2 cosmological zoom simulations~\citep{Hopkins2018}, focusing on Milky-Way mass galaxies in which stars form in a thin disk. 
 Our main results are as follows.
 \begin{enumerate}
     \item \textbf{Mechanics of rotating cooling flows:}
@@ -1393,7 +1393,7 @@ This merger is relatively well-aligned with the disk, with $f_{\rm aligned} \app
 \texttt{m12w} is a galaxy with its inner CGM is only just virializing at $z=0$~\citep{Yu2021}, and the majority of the gas accretes with angular momentum perpendicular to the galaxy angular momentum.
 The third halo, \texttt{m12m}, is galaxy undergoing significant rotating cooling flow accretion, but absent a high thin disk fraction.
 Visual inspection reveals that \texttt{m12m} has a prominent stellar bar.
-\texttt{m12m} may be evidence that if rotating cooling flows are a condition for disk formation, they are a necessary-but-not-sufficient condition (\S\ref{s: disk formation -- condition}).
+\texttt{m12m} may be evidence that if rotating cooling flows are a condition for disk formation, they are a necessary-but-not-sufficient condition (\S\ref{s: why CFs thin disks}).
 \texttt{m12m} is one of the few MW-mass halos that does not include metal diffusion, which may play a role in its morphology.
 The fourth halo is \texttt{m11h}, a galaxy that is beginning to form a disk despite its virial mass of $M_{\rm vir}(z=0) \approx 2 \times 10^{11} M_\odot$.
 Much of its accretion is still isotropic, but there is increased alignment post-cooling.
