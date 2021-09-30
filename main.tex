@@ -773,7 +773,7 @@ Rather, the geometry of accreting gas is quasi-spherical both before and after c
 % Figure description
 % We now extend our analysis to our full simulation sample, in order to understand in which galaxies accreting gas concurrently cools and circularizes. 
 Figure~\ref{f: prevalence} extends the analysis in Fig.~\ref{f: theta vs t} to the full sample.
-We parametrize the extent to which circularization and cooling are concurrent via a parameter $f_{\rm aligned}$, which corresponds to the fraction of accreting gas mass aligned with the disk plane ($\vert z/R \vert < 0.1$, marked by dashed vertical lines in Fig.~\ref{f: theta vs t}).
+We parametrize the extent to which circularization and cooling are concurrent via a parameter $f_{\rm aligned}$ (spatial aligned accretion), which corresponds to the fraction of accreting gas mass aligned with the disk plane ($\vert z/R \vert < 0.1$, marked by dashed vertical lines in Fig.~\ref{f: theta vs t}).
 This range of angles contains $\approx 60\%$ of young stars in thin disk galaxies.
 The left panel of Fig.~\ref{f: prevalence} shows the evolution of $f_{\rm aligned}$ from 200 Myr before $\tcon$ (red) to 200 Myr after $\tcon$ (blue), while the right panel shows the difference in $f_{\rm aligned}$ between these two epochs.
 The horizontal axes plot the fraction of young stars in a thin disk $f_{\rm thin\,disk,\,recent}$. 
@@ -1109,7 +1109,7 @@ This mass scale for thin disk formation is however larger than in $z\sim0$ obser
 
 The result in Fig.~\ref{f: prevalence vs galaxy properties} that cooling flows occur when $\tcoolsh>\tff$ at $0.1\Rvir$ and the inner CGM virializes indicates that any heating of the CGM by stellar feedback in FIRE is insufficient to disrupt the cooling flow.
 This is consistent with the weak outflows at this mass and redshift scale in the FIRE simulations \citep{Muratov2015, Muratov2017, Stern2021, Pandya2021} and in observations \citep[e.g.,][]{Heckman2019}.
-The potential effects of AGN feedback, not implemented in the FIRE sample used in this work, are further discussed in \S~\ref{s:caveats}. 
+The potential effects of AGN feedback, not implemented in the FIRE sample used in this work, are further discussed in \S~\ref{s: caveats}. 
 
 How does thin disk formation depend on redshift?
 While the threshold of inner CGM virialization is roughly independent of redshift, the importance of cold flows penetrating the hot halo does is expected to be redshift-dependent, and thus if thin disks form as a result of hot accretion we expect them to be rarer at high redshift.
@@ -1156,8 +1156,8 @@ and the disk edge is produced by a density-increasing pileup.
 All of the above characteristics of accreting gas are consistent with the characteristics of rotating cooling flow accretion.
 We processed one simulation with cosmic ray feedback and confirm that the accretion onto the central galaxy in \texttt{m12i\_cr} is qualitatively similar to rotating cooling flows in many aspects:
 accreting gas gains coherence in the halo, becomes rotationally supported at the galaxy edge (with a decreased radial velocity), and subsequently collapses into a disk (Appendix~\ref{s: appendix-crs}).
-However, accreting gas never shocks to a temperature $T \sim T_{\rm vir} \sim 10^5.5$ K~\citep{Ji2020} and the radiative cooling is not offset by compression heating, i.e. the accretion is not a cooling flow.
-This is because \texttt{m12i\_cr} is dominated not by thermal pressure, but by cosmic ray (CR) pressure that provides support against gravity without significantly heating the gas~\citep{Ji2020a}.
+However, accreting gas never shocks to a temperature $T \sim T_{\rm vir} \sim 10^5.5$ K~\citep{Ji2021} and the radiative cooling is not offset by compression heating, i.e. the accretion is not a cooling flow.
+This is because \texttt{m12i\_cr} is dominated not by thermal pressure, but by cosmic ray (CR) pressure that provides support against gravity without significantly heating the gas~\citep{Ji2020}.
 
 % Mechanics
 Increased coherence and decreased radial velocity prior to accretion, the two properties of rotating cooling flows we identify as promoting thin disk formation (\S\ref{s: why CFs thin disks}), are clearly present in \texttt{m12i\_cr} (Fig.~\ref{f: before and after m12i cr}).
