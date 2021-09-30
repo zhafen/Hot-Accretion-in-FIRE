@@ -48,7 +48,7 @@
 \newcommand{\Tvir}{T_{\rm vir}}
 \newcommand{\msun}{{\rm M}_\odot}
 \newcommand{\vvir}{v_{\rm vir}}
-\newcommand{\Nsample}{15}
+\newcommand{\Nsample}{16}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -505,7 +505,7 @@ m11a  &  0.018  &  $4.1\times10^{10}$  &  $1.3\times10^{8}$  &  90.3  &  -0.022 
 m11c  &  0.015  &  $1.4\times10^{11}$  &  $9.5\times10^{8}$  &  137  &  0.0068  &  no MD  &  ?    \\
 m11d  &  0.0097  &  $2.9\times10^{11}$  &  $4.9\times10^{9}$  &  169  &  0.0026  &  hydro+  &  ?    \\
 m11q  &  0.0058  &  $1.5\times10^{11}$  &  $7.4\times10^{8}$  &  138  &  0.0045  &  hydro+  &  ?    \\ %\hline
-m12i\_cr  &  0.81  & $1.1\times10^{12}$  &  $6.5\times10^{10}$  &  270  &  0.27  &  CR+  &  ?    \\
+% m12i\_cr  &  0.81  & $1.1\times10^{12}$  &  $6.5\times10^{10}$  &  270  &  0.27  &  CR+  &  ?    \\
 \end{tabular}
 \\
 \begin{flushleft}
@@ -781,6 +781,8 @@ For most halos the accreting gas is largely unaligned prior to cooling, with ali
 Upon cooling, the alignment of accreting gas sharply increases in halos with $f_{\rm thin\,disk,\,recent} > 0.5$ --- in most cases $\gtrsim 50\%$ of mass collapses to $\vert z/R \vert < 0.1$ during this time.
 In contrast, in halos with $f_{\rm thin\,disk,\,recent} \approx 0$ there is practically no change in $f_{\rm aligned}$ upon cooling.
 Intermediate cases with $f_{\rm thin\,disk,\,recent} \approx 0.2-0.4$ typically show a modest increase in $f_{\rm aligned}$ and are further discussed in appendix~\ref{s: appendix-individual}.
+The halo circled in the right panel, \texttt{m12m}, is of special note:
+gas accretes onto the halo as a rotating cooling flow, but subsequent evolution in the ISM and/or stellar population produces a stellar bar.
 The right panel of Fig.~\ref{f: prevalence} demonstrates the strong correlation between the change in $f_{\rm aligned}$ when the gas cools and the fraction of young stars in a thin disk. 
 % To track the trend we draw a simple line between $(f_{\rm thin\,disk,\,recent}, \Delta f_{\rm aligned}) = (0,0)$ and the average $(f_{\rm thin\,disk,\,recent}, \Delta f_{\rm aligned})$ for galaxies with $f_{\rm thin\,disk,\,recent} > 0.5$.
 % Halos with $f_{\rm thin\,disk,\,recent} > 0.5$ have $\Delta f_{\rm aligned} > 0.2$ and halos with $f_{\rm thin\,disk,\,recent} < 0.5$ have $\Delta f_{\rm aligned} < 0.2$, including four halos with $0.1 < f_{\rm thin\,disk,\,recent} < 0.5$.
@@ -805,6 +807,28 @@ Fig.~\ref{f: prevalence} thus demonstrates on our entire FIRE sample that circul
     % \textbf{How does this compare to the DM distribution, e.g. B01?}
     }
     \label{f: coherence}
+\end{figure*}
+
+% PREVALENCE OF QUIET ACCRETION - ANGULAR MOMENTUM SPACE
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction_ang_momentum.pdf}
+    \caption{
+    Angular momentum-space equivalent of Fig.~\ref{f: prevalence}.
+    \textbf{Left:}
+    Mass fraction of accreting gas aligned with the disk before and after cooling, defined in this figure as the fraction with $\vert j_z/\vert j \vert > 0.9$ (see Fig.~\ref{f: coherence}).
+    % The horizontal axis plots the fraction of young stars in the central galaxy that are in a thin disk.
+    % Prior to cooling $\lesssim 30\%$ of accreting gas is strongly aligned with the galaxy plane across our simulation sample,
+    % while after cooling that fraction increases to $\gtrsim 50\%$ for most galaxies forming thin disks.
+    \textbf{Right:}
+    Change in aligned mass fraction during the $\pm200$ Myr around cooling time shown in the left panel.
+    % A large $\Delta f_{\rm aligned}$ indicates that circularization is concurrent with cooling.
+    % Color indicates virial mass.
+    The greater the extent to which accretion becomes coherent as it cools, the greater the fraction of young stars in a thin disk.
+    % \textbf{Circle and talk about the outlier?}
+    % \textbf{Highlight the empty corner?}
+    }
+    \label{f: prevalence - angular momentum}
 \end{figure*}
 
 % MECHANICS OF QUIET ACCRETION
@@ -833,9 +857,6 @@ Prior to cooling compression heating offsets radiative cooling yielding the flat
 }
 \label{f: before and after B}
 \end{figure*}
-
-
-
 
 \subsection{Angular momentum coherence in accreted gas}
 \label{s: mechanics -- coherence}
@@ -1060,9 +1081,9 @@ Instead the hot or cool nature of the halo is determined solely by the halo bary
     \centering
     \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction_vs_galaxy_props.pdf}
     \caption{
-    Fraction of young stars in a thin disk versus $M_{\rm vir}$, $M_\star$, and $t_{\rm cool}^{(s)}/t_{\rm ff}$ evaluated at $0.1 R_{\rm vir}$.
-    Color indicates change in the fraction of accreted gas which is aligned with the central galaxy, during $-150\,{\rm Myr} < t-\tcon < 150\,{\rm Myr}$ (see Fig.~\ref{f: prevalence}).
-    For $M_{\rm vir} < 10^{12} M_\odot$ or $M_\star < M_{\star, {\rm MW}}$, both the thin disk fraction and $\Delta f_{\rm aligned}$ are small.
+    Fraction of young stars in a thin disk versus $M_{\rm vir}$ and $t_{\rm cool}^{(s)}/t_{\rm ff}$ evaluated at $0.1 R_{\rm vir}$.
+    Color indicates change in the fraction of accreted gas which is aligned with the central galaxy, during $-200\,{\rm Myr} < t-\tcon < 200\,{\rm Myr}$ (see Fig.~\ref{f: prevalence}).
+    For $M_{\rm vir} < 10^{12} M_\odot$ both the thin disk fraction and $\Delta f_{\rm aligned}$ are small.
     In more massive galaxies these quantities span a large range.
     % A somewhat better correlation is seen between $\Delta f_{\rm aligned}$ and $t_{\rm cool}^{(s)}/t_{\rm ff}$, as expected since $t_{\rm cool}^{(s)}/t_{\rm ff}>2$ indicates that the inner CGM is virialized, a necessary condition for forming a cooling flow \citep{Stern2021}.
     }
@@ -1088,7 +1109,7 @@ This mass scale for thin disk formation is however larger than in $z\sim0$ obser
 
 The result in Fig.~\ref{f: prevalence vs galaxy properties} that cooling flows occur when $\tcoolsh>\tff$ at $0.1\Rvir$ and the inner CGM virializes indicates that any heating of the CGM by stellar feedback in FIRE is insufficient to disrupt the cooling flow.
 This is consistent with the weak outflows at this mass and redshift scale in the FIRE simulations \citep{Muratov2015, Muratov2017, Stern2021, Pandya2021} and in observations \citep[e.g.,][]{Heckman2019}.
-The potential effects of AGN feedback, not implemented in the FIRE sample used in this work, are further discussed in section~\ref{s:caveats}. 
+The potential effects of AGN feedback, not implemented in the FIRE sample used in this work, are further discussed in \S~\ref{s:caveats}. 
 
 How does thin disk formation depend on redshift?
 While the threshold of inner CGM virialization is roughly independent of redshift, the importance of cold flows penetrating the hot halo does is expected to be redshift-dependent, and thus if thin disks form as a result of hot accretion we expect them to be rarer at high redshift.
@@ -1205,7 +1226,7 @@ Our main results are as follows.
     \item \textbf{Mechanics of rotating cooling flows:}
     We find that gas accretion onto thin disk galaxies in FIRE is dominated by rotating cooling flows, wherein the hot $T\approx T_{\rm vir}$ CGM forms a subsonic and angular momentum-conserving inflow down to the galaxy-halo interface, at which it cools to $T\lesssim10^4$ K (Figs.~\ref{f: before and after A} and \ref{f: before and after B}).
     Cooling occurs at the radius where rotational support in the flow becomes substantial, and is concurrent with circularization, i.e.~the flow transitions rapidly from a quasi-spherical hot medium into a cool thin disk (Figs. \ref{f: overview} and \ref{f: theta vs t}).
-    Prior to cooling and circularizing the hot flow decelerates and becomes coherently rotating with a narrow angular momentum distribution (Figure~\ref{f: coherence}), properties which we attribute to the subsonic nature of the flow (section~\ref{s: why CFs thin disks}).
+    Prior to cooling and circularizing the hot flow decelerates and becomes coherently rotating with a narrow angular momentum distribution (Figure~\ref{f: coherence}), properties which we attribute to the subsonic nature of the flow (\S~\ref{s: why CFs thin disks}).
     Our results thus extend classic cooling flow theory by demonstrating rotating cooling flows are a primary accretion mode for many cosmologically-simulated galaxies, and by further exploring the mechanics of cooling flows with angular momentum beyond previous studies \citep{Cowie1980, Stern2019}. 
     \item \textbf{Relation between rotating cooling flows and thin stellar disks:}
     We find that across a sample of \Nsample~galaxies spanning $10^9 M_\odot < M_\star < 10^{11} M_\odot$, there is strong correlation between the dominance of cooling flow accretion and the fraction of stars formed in a thin disk in the central galaxy (Figs.~\ref{f: theta vs t}--\ref{f: prevalence}).
@@ -1338,19 +1359,6 @@ Same as Figure~\ref{f: counterexample}, but for a MW-mass halo with a thin disk,
 \textbf{Change $\tcon$ name.}
 }
 \label{f: before and after m12i cr}
-\end{figure*}
-
-\section{Angular momentum evolution for the full sample}
-\label{s: appendix-angular momentum evolution}
-
-% PREVALENCE OF QUIET ACCRETION
-\begin{figure*}
-    \centering
-    \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction_ang_momentum.pdf}
-    \caption{
-    TBD.
-    }
-    \label{f: prevalence - angular momentume}
 \end{figure*}
 
 \section{Instantaneous mass flow}
