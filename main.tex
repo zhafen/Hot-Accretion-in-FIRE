@@ -527,15 +527,6 @@ Note that the \texttt{m12m} galaxy has a sizable bar, which forms secularly at l
 The value of $\Delta f_{\rm aligned}$ is a measure of the relation between cooling and circularization in accreted gas (\S\ref{s: characteristics -- aligns}).
 The ``hydro+'' simulations include fiducial FIRE physics, while the ``no MD'' simulations exclude a prescription for subgrid metal diffusion.
 % The ``CR+'' simulation includes cosmic rays.
-The references in the final column are:
-\textbf{TBD.}
-A: \cite{Wetzel2016},
-B: \cite{Garrison-Kimmel2019a},
-C: \cite{Hopkins2018},
-D: \cite{Garrison-Kimmel2017},
-E: \cite{Samuel2020},
-F: \cite{El-Badry2018a},
-G: \cite{Chan2018},
 % \textbf{Why are my disk metrics lower than 10? (And in one case nan.)}
 % \textbf{I may be calculating not the half height, but the h85 height.}
 % \textbf{Do V/sigma only for gas? It's *much* higher.}
@@ -642,7 +633,10 @@ At the time of cooling the geometry of accreting gas transitions from a quasi-sp
 % Summary picture description
 To characterize gas accretion we analyze the central galaxy and its CGM from $z=0$ to one Gyr prior.
 Figure~\ref{f: overview} shows a visual overview of how gas accretes onto \texttt{m12i} -- a MW-mass galaxy that forms a substantial thin disk ($f_{\rm thin\,disk,\,recent} = 0.83$). 
-The top and right panels plot the temperature and spatial evolution of accreting gas versus time prior to cooling ($t-\tcon$), while the bottom-left panel plots three representative trajectories for accreting gas elements. 
+The top and right panels plot the temperature and spatial evolution of accreting gas versus time prior to cooling ($t-\tcon$), while the bottom-left panel plots three representative trajectories for accreting gas elements.
+The trajectories were visualized using the Firefly visualization software~\citep{Geller2018}.
+\footnote{See the Firefly homepage at \url{galaxies.northwestern. edu/firefly}.
+A 3D version of the trajectories is available online at \url{zhafen.github.io/rotating-cooling-flows}.}
 Red, white, and blue indicates $T=10^6$ K, $10^5$ K, and $10^4$ K, respectively.
 The figure shows that at early times relative to cooling ($t-\tcon \sim -1000$ Myr) the accretion is hot ($\approx10^6$ K) and contracts quasi-spherically.
 Then, around the time of cooling the geometry of accreting gas transitions from quasi-spherical at $t - \tcon=-150$ Myr to a cool disk at $t - \tcon=+ 150$ Myr
@@ -1276,12 +1270,22 @@ These trends are qualitatively consistent with observations which shows that thi
 
 \section*{Acknowledgements}
 
-\textbf{TBD.}
+ZH was supported by a Gary A. McCue postdoctoral fellowship at UC Irvine.
+JSB was supported by NSF grant AST-1910346.
+Numerical calculations were performed on the Quest computing cluster at Northwestern University, the Wheeler computing cluster at Caltech, XSEDE allocations TG-AST130039, TG-AST120025, and TG-AST140023, Blue Waters PRAC allocation NSF.1713353, and NASA HEC allocation SMD16-7592.
+This research benefited from the Halo21 KITP workshop, i.e. this research was supported in part by the National Science Foundation under Grant No. NSF PHY-1748958.
 
-\textbf{Halo21 KITP workshop/ KITP primary grant number NSF PHY-1748958.
-This research was supported in part by the National Science Foundation under Grant No. NSF PHY-1748958.
-}
-
+This research used the Python programming language and the following modules:
+Firefly~\citep{Geller2018},
+Numpy~\citep{Harris2020},
+Matplotlib~\citep{Hunter2007},
+pytest~\citep{pytest3.4},
+Jug~\citep{Coelho2017},
+h5py~\citep{h5py},
+SciPy~\citep{Virtanen2020},
+pandas~\citep{McKinney2010,Reback2020},
+palettable~\url{https://github.com/jiffyclub/palettable},
+and Numba~\citep{Lam2015}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
