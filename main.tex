@@ -1284,7 +1284,7 @@ Jug~\citep{Coelho2017},
 h5py~\citep{h5py},
 SciPy~\citep{Virtanen2020},
 pandas~\citep{McKinney2010,Reback2020},
-palettable~\url{https://github.com/jiffyclub/palettable},
+palettable~(\url{https://github.com/jiffyclub/palettable}),
 and Numba~\citep{Lam2015}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1296,15 +1296,6 @@ and Numba~\citep{Lam2015}.
 \bibliographystyle{mnras}
 \bibliography{references,jsbref} % if your bibtex file is called example.bib
 
-% Alternatively you could enter them by hand, like this:
-% This method is tedious and prone to error if you have lots of references
-%\begin{thebibliography}{99}
-%\bibitem[\protect\citeauthoryear{Author}{2012}]{Author2012}
-%Author A.~N., 2013, Journal of Improbable Astronomy, 1, 1
-%\bibitem[\protect\citeauthoryear{Others}{2013}]{Others2013}
-%Others S., 2012, Journal of Interesting Stuff, 17, 198
-%\end{thebibliography}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%% APPENDICES %%%%%%%%%%%%%%%%%%%%%
@@ -1313,11 +1304,8 @@ and Numba~\citep{Lam2015}.
 
 \section{Observed thin disk fraction}
 \label{s: appendix-sloan thin disk fraction}
-% Compared to observable-ish thin disk fraction.
-Figure~\ref{f: thin disk v thin disk} also shows the relationship between $f_{\rm thin\,disk,\,recent}(z=0,$ age $<1$ Gyr) and the Sloan r band luminosity-weighted thin disk fraction, $f_{\rm thin\,disk,\,recent}(z=0,$ Sloan r band).
-The luminosity-weighted $f_{\rm thin\,disk,\,recent}$ highlights the extent to which the thin disk is observationally visible, and is closely related to the young thin disk fraction.
 
-% PREVALENCE OF QUIET ACCRETION -- VS GALAXY PROPERTIES
+% OBSERVED THIN DISK FRACTION
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{figures/prevalence/thin_disk_v_thin_disk.pdf}
@@ -1327,26 +1315,44 @@ The luminosity-weighted $f_{\rm thin\,disk,\,recent}$ highlights the extent to w
     \label{f: thin disk v thin disk}
 \end{figure}
 
-\section{Accretion onto lower-mass halos}
+% Compared to observable-ish thin disk fraction.
+Figure~\ref{f: thin disk v thin disk} shows the relationship between the fraction of stars with $j/j_c(E)>0.8$ at $z=0$ ($f_{\rm thin\,disk,\,recent}$) and the same fraction of stars weighted by their Sloan r band luminosity-weighted.
+The thin disk metric used throughout our analysis, $f_{\rm thin\,disk,\,recent}$ is closely related to the observationally-motivated luminosity-weighted thin disk fraction.
+
+\section{Accretion onto halos absent thin disks}
 \label{s: appendix-low mass}
 
-% MECHANICS OF QUIET ACCRETION
+% COUNTEREXAMPLE
 \begin{figure*}
 \includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m11d_md.pdf}
 \caption{
 Temperature and geometry of gas accreting onto a $z\sim0$ galaxy in FIRE that {\em does not} form a thin disk, versus time relative to the final cooling time ($t - \tcon$).
 In each panel solid lines and shaded regions mark the medians and 16th to 84th percentile ranges of all particles accreted within 1 Gyr prior to $z=0$.
 \textbf{A:}
-Temperature. During the 500 Myr prior to cooling, the inflow is predominantly hot ($\gtrsim 10^5$ K), with a median temperature approaching $\Tvir\approx10^6$ K. At $t = \tcon$ the gas cools to ISM temperatures (by definition).
+Temperature.
+The final cooling tends to occur shortly after the gas is heated beyond $T=10^5$ K.
 \textbf{B:}
-3D distance from halo center. Prior to cooling, the inflow has a typical velocity of $\approx 80$ km s$^{-1}$. Cooling occurs at the galaxy scale $r_{\rm gal}$, after which the inflow stalls.
+3D distance from halo center.
 \textbf{C:}
 Absolute height from the disk plane.
-Gas collapses into a disk upon cooling, with a median $\vert z \vert \approx 2$ kpc at $t=\tcon$.
-% \textbf{E:}
-% The magnitude of the specific angular momentum of particles ($\mid\vec{j}\mid$, green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
-% The dashed line shows the angular momentum necessary for full rotational support.
-% Gas approaches full rotational support immediately before cooling.
+\textbf{D:}
+Velocity components of accretion (colored lines and band), relative to circular velocity at the median radius (dash-dotted line).
+\textbf{E:}
+Fraction of gas converted into stars.
+Star formation proceeds shortly after cooling, well before gas orients into a disk.
+\textbf{F:}
+The ratio of $j_z / \mid \vec j \mid$.
+The dashed line shows this ratio for the sum total angular momentum of all accreted particles.
+The coherence of the gas does not change before/after cooling.
+\textbf{B:}
+The magnitude of the specific angular momentum of particles ($\mid\vec{j}\mid$, green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
+The dashed line shows the angular momentum necessary for rotational support.
+Rotational support occurs $\gtrsim 300$ Myr after $\tcon$, at which time inward movement stalls and gas velocity decreases.
+\textbf{C:}
+Baryon number density.
+\textbf{D:}
+Energy loss from radiative cooling (blue) and heating from $PdV$ work on the gas particles (red).
+Radiative cooling exceeds compression heating with the exception of the time when the gas is heated, shortly before cooling.
 }
 \label{f: counterexample}
 \end{figure*}
@@ -1372,21 +1378,29 @@ Same as Figure~\ref{f: counterexample}, but for another MW-mass halo with a thin
 \label{f: before and after m12c}
 \end{figure*}
 
-\section{Accretion in cosmic-ray halos}
+Figures~\ref{f: before and after m12b} and~\ref{f: before and after m12c} show the combined equivalent of Figures~\ref{f: before and after A} and~\ref{f: before and after B} for two other Milky Way-mass halos.
+The behavior is qualitatively very similar to each other and \texttt{m12i}.
+This is summarized for additional simulations in Figures~\ref{f: prevalence} and~\ref{f: prevalence - angular momentum}.
+
+\section{Accretion in cosmic ray-dominated halos}
 \label{s: appendix-crs}
 
 % M12I_CR
 \begin{figure*}
 \includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m12i_cr.pdf}
 \caption{
-Same as Figure~\ref{f: counterexample}, but for a MW-mass halo with a thin disk, \texttt{m12i\_cr}.
-\textbf{Extend bottom right axis.}
-\textbf{Avoid overlap in panel F.}
-\textbf{Add "cr" to m12i label.}
-\textbf{Change $\tcon$ name.}
+Same as Figure~\ref{f: counterexample}, but for a cosmic ray-dominated MW-mass halo, \texttt{m12i\_cr}.
+The accretion in cosmic ray-dominated halos is qualitatively similar to rotating cooling flows.
+The exceptions are the temperature (panel A) and the energy balance (panel B): nonthermal support from cosmic rays (CRs) produces a $T\sim 10^4$ K, diffuse halo absent cooling flows.
+As with rotating cooling flows accreting gas in this halo becomes coherently aligned \textit{prior to accretion}, a key mechanism that enables thin disk formation.
+Note that we center the trajectories on the time of first accretion instead of $\tcon$ because in CR-dominated halos much of the gas is never heated beyond $T = 10^5$ K.
 }
 \label{f: before and after m12i cr}
 \end{figure*}
+
+Figure~\ref{f: before and after m12i cr} shows the combined equivalent of Figures~\ref{f: before and after A} and~\ref{f: before and after B} for the same halo, but with an implementation of cosmic ray feedback~\cite{Chan2019, Hopkins2020a}.
+This halo forms a thin disk ($f_{\rm thin\,disk,\,recent}=0.71$, which we argue may be a general feature of rotating subsonic flows~(\S\ref{s: why CFs thin disks}, \S\ref{s: crs}).
+\cite{Trapp2021} studied the properties of accretion onto and through thin disk galaxies in CR-dominated halos in more detail, while \cite{Chan2021} studied pressure balance and outflows in the disk-halo interface.
 
 \section{Instantaneous mass flow}
 \label{s: appendix-mass flow}
@@ -1400,14 +1414,14 @@ Same as Figure~\ref{f: counterexample}, but for a MW-mass halo with a thin disk,
     The galaxy radius $r_{\rm gal}=4 R_{1/2}$ and fraction of stars in a thin disk are marked in the panels. 
     Hot accretion ($T>10^5$ K) dominates the mass inflow onto thin-disk galaxies at $r \gtrsim r_{\rm gal} \sim 10-20$ kpc.
     Cold accretion ($T<10^5$ K) dominates within the galaxy in thin disk galaxies, and in the halo of the lower-mass irregular galaxy shown in the bottom-right panel.
-    \textbf{Use consistent capitalization: choose and keep to either R or r.}
-    \textbf{Try adding labels relative to $T_{\rm vir}$ (Drummond's suggestion).}
-    \textbf{Add ``hot accretion'' and ``cold accretion'' to lines.}
+    % \textbf{Use consistent capitalization: choose and keep to either R or r.}
+    % \textbf{Try adding labels relative to $T_{\rm vir}$ (Drummond's suggestion).}
+    % \textbf{Add ``hot accretion'' and ``cold accretion'' to lines.}
     }
     \label{f: Mdot}
 \end{figure*}
 
-We first determine if inflow is dominated by hot or cold gas, which allows us to distinguish a hot inflow from the accretion of cool clouds (formed, e.g., via instabilities).
+In this section we analyze if inflow is dominated by hot or cold gas, which allows us to distinguish a hot inflow from the accretion of cool clouds (formed, e.g., via instabilities).
 Figure~\ref{f: Mdot} shows the mass inflow rate versus radius for hot gas (red curves; $T>10^5$ K) and for cool gas (blue curves; $T < 10^5\,{\rm K}$),  for the four simulations shown in Fig.~\ref{f: stars}. 
 We calculate the mass inflow rate at a given radius as
 \begin{equation}
@@ -1415,33 +1429,31 @@ We calculate the mass inflow rate at a given radius as
      \label{e: Mdot}
 \end{equation}
 where $\Delta r=0.05\,{\rm dex}$ is the shell thickness, and the integration is done on all particles with centers within the shell which satisfy the appropriate temperature cut. 
-We note that the virial temperature of the four halos is $\Tvir = xx, yy, zz$ and $ww$ K, so in all cases we expect an $\sim\Tvir$ inflow  to be considered `hot'. 
+% We note that the virial temperature of the four halos is $\Tvir = xx, yy, zz$ and $ww$ K, so in all cases we expect an $\sim\Tvir$ inflow  to be considered `hot'. 
 
 % Consequences
-In the three MW mass galaxies with a large thin disk fraction, at halo scales of $r>20$ kpc the inflow is dominated by hot gas, where in m12i and m12b $\Mdot$ of the hot gas is larger by a factor of $\gtrsim 4\times$ than that of cool gas. The greater mass flux of hot gas indicates that the dominant form of accretion is an inflowing hot phase, rather than cold flows or cool clouds precipitating from the hot phase.
+In the three MW-mass galaxies with a large thin disk fraction, at halo scales of $r>20$ kpc the inflow is dominated by hot gas, where in \texttt{m12i} and \texttt{m12b} $\Mdot$ of the hot gas is larger by a factor of $\gtrsim 4\times$ than that of cool gas.
+The greater mass flux of hot gas indicates that the dominant form of accretion is an inflowing hot phase, rather than cold flows or cool clouds precipitating from the hot phase.
 In contrast, in the lower mass galaxy shown in the bottom right the inflow is dominated by cool gas, while the hot gas is outflowing out to $\approx50$ kpc.
-
-Fig.~\ref{f: Mdot} also shows that the inflow rate of hot gas in the MW-mass galaxies drops within $r_{\rm gal}$, reflecting the cooling of the hot inflow at the galaxy-halo interface, as shown in the next section.
-
+Fig.~\ref{f: Mdot} also shows that the inflow rate of hot gas in the MW-mass galaxies drops within $r_{\rm gal}$, reflecting the cooling of the hot inflow at the galaxy-halo interface, as shown in \S\ref{s: characteristics -- cools}.
 
 \section{Notes on individual galaxies}
 
 \label{s: appendix-individual}
 
 % Presence of a rotating cooling flow for intermediate cases
-The halos with $0.1 < f_{\rm thin\,disk,\,recent} < 0.5$ have varying levels of circularized cooling flow accretion.
-Three of these four halos, \texttt{m12r} and \texttt{m12w}, have $M_{\rm vir} \sim 10^{12} M_\odot$.
+The halos with $0.1 \lesssim f_{\rm thin\,disk,\,recent} < 0.5$ have varying levels of circularized cooling flow accretion.
+Four of these six halos, \texttt{m12z}, \texttt{m12r}, \texttt{m12w}, and \texttt{m12m}, have $M_{\rm vir} \sim 10^{12} M_\odot$.
+\texttt{m12z} has a chaotic halo with a number of ongoing mergers.
 \texttt{m12r} has some ongoing thin disk formation, but is undergoing a major merger during the last Gyr that dominates the accreting gas supply and disrupts the galaxy structure.
 This merger is relatively well-aligned with the disk, with $f_{\rm aligned} \approx 0.3-0.4$, and the aligned mass fraction does not change significantly as the gas cools past $\tcon$.
 \texttt{m12w} is a galaxy with its inner CGM is only just virializing at $z=0$~\citep{Yu2021}, and the majority of the gas accretes with angular momentum perpendicular to the galaxy angular momentum.
-The third halo, \texttt{m12m}, is galaxy undergoing significant rotating cooling flow accretion, but absent a high thin disk fraction.
+Of these four the one with the highest thin disk fraction, \texttt{m12m}, is galaxy undergoing significant rotating cooling flow accretion, but absent a high thin disk fraction.
 Visual inspection reveals that \texttt{m12m} has a prominent stellar bar.
 \texttt{m12m} may be evidence that if rotating cooling flows are a condition for disk formation, they are a necessary-but-not-sufficient condition (\S\ref{s: why CFs thin disks}).
 \texttt{m12m} is one of the few MW-mass halos that does not include metal diffusion, which may play a role in its morphology.
-The fourth halo is \texttt{m11h}, a galaxy that is beginning to form a disk despite its virial mass of $M_{\rm vir}(z=0) \approx 2 \times 10^{11} M_\odot$.
-Much of its accretion is still isotropic, but there is increased alignment post-cooling.
-
-
+The $M_{\rm vir} \sim 10^11 M_\odot$ halos are \texttt{m11h} and \texttt{m11b} --- galaxies that are beginning to form disks despite their lower virial mass.
+Much of their accretion is still isotropic, but alignment increases mildly post-cooling.
 
 % \section{Analysis for a halo with cosmic ray feedback}
 % \label{s: appendix-crs}
