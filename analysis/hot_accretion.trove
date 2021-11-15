@@ -126,12 +126,6 @@ subpath = core/m12m_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
 
-# A metal diffusion version of this exists
-# [m12f]
-# subpath = core/m12f_res7100
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
-
 [m11a]
 subpath = core/m11a_res2100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
@@ -146,33 +140,6 @@ sim_data_dir = ${fire_dir}/${subpath}/output
 subpath = core/m11c_res2100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
-
-# A metal diffusion version of this exists
-# [m11q]
-# subpath = core/m11q_res7100
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
-
-# Skip m10s for now
-# [m10v]
-# subpath = core/m10v_res250
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
-# 
-# [m10q]
-# subpath = core/m10q_res250
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
-# 
-# [m10y]
-# subpath = core/m10y_res250
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
-# 
-# [m10z]
-# subpath = core/m10z_res250
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}/output
 
 # Metal Diffusion
 ########################################################################
@@ -238,15 +205,6 @@ sim_data_dir = ${fire_dir}/${subpath}/output
 subpath = metal_diffusion/m11q_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
-
-# MHDCV
-########################################################################
-
-# DEBUG: Because this simulation is unusual we should prioritize a larger sample size.
-# [m12i_mhdcv]
-# subpath = mhdcv/m12i_res7100
-# halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# sim_data_dir = ${fire_dir}/${subpath}_mhdcv_old/output
 
 # Cosmic Rays
 ########################################################################
