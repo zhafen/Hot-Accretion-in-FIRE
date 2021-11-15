@@ -52,25 +52,25 @@ lighter_background_linecolor = '.6'
 # The prefix determines how the code will be handled.
 
 # Get halo data
-# py.1 = ${code_dir}/retrieve_halo_data.py
+py.1 = ${code_dir}/retrieve_halo_data.py
 
 # Get IDs to track
 nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
 
 # Sample particles to track, including removing duplicates
-# py.3 = ${code_dir}/linefinder_tracking/sample.py
+py.3 = ${code_dir}/linefinder_tracking/sample.py
 
 # Run particle tracking
-# jug.4 = ${code_dir}/linefinder_tracking/track.py
+jug.4 = ${code_dir}/linefinder_tracking/track.py
 
 # Run galaxy linking
-# jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
+jug.5 = ${code_dir}/linefinder_tracking/galaxy_link.py
 
 # Run particle classification
 py.6 = ${code_dir}/linefinder_tracking/classify.py
 
 # Create Firefly visualization
-# py.7 = ${code_dir}/linefinder_tracking/firefly.py
+py.7 = ${code_dir}/linefinder_tracking/firefly.py
 
 # Trajectories and geometric evolution
 nb.8 = ${code_dir}/characteristics.ipynb
@@ -79,13 +79,13 @@ nb.8 = ${code_dir}/characteristics.ipynb
 nb.9 = ${code_dir}/before_and_after.ipynb
   
 # FIRE studio images
-# nb.10 = ${code_dir}/fire_studio.ipynb
+nb.10 = ${code_dir}/fire_studio.ipynb
 
 # Archive data
 py.11 = ${code_dir}/archive.py
 
 # Retrieve data
-# py.12 = ${code_dir}/retrieve.py
+py.12 = ${code_dir}/retrieve.py
 
 ########################################################################
 [DATA PRODUCTS]
@@ -220,6 +220,7 @@ sim_data_dir = ${fire_dir}/${subpath}/cr_700/output
 
 # Change the central indices
 [relative_to_accretion]
+global = True
 central_indices = tacc_inds
 use_variation_data_dir = [
     'py.1',
@@ -234,6 +235,53 @@ figure_dir = ${DEFAULT:figure_dir}/variations/relative_to_accretion
 processed_data_dir = ${DEFAULT:processed_data_dir}/variations/relative_to_accretion
 
 [track_all_stars]
+global = True
 identification_method = 'all_recent_stars'
 figure_dir = ${DEFAULT:figure_dir}/variations/track_all_stars
 processed_data_dir = ${DEFAULT:processed_data_dir}/variations/track_all_stars
+
+########################################################################
+[EXECUTE]
+########################################################################
+
+scripts = [
+    # 'py.1', # Get halo data
+    # 'nb.2', # Get IDs to track
+    # 'py.3', # Sample particles to track, including removing duplicates
+    'jug.4', # Run particle tracking
+    'jug.5', # Run galaxy linking
+    'py.6', # Run particle classification
+    # 'py.7', # Create Firefly visualization
+    # 'nb.8', # Angular distribution evolution
+    # 'nb.9', # Average trajectory plots
+    # 'nb.10', # FIRE studio images
+    # 'py.11', # Archive data
+    # 'py.12', # Retrieve data
+    ]
+
+variations = [
+    # 'm12i',
+    # 'm12m',
+    # 'm11a',
+    # 'm11b',
+    # 'm11c',
+    'm12i_md',
+    # 'm12r_md',
+    # 'm12w_md',
+    # 'm12f_md',
+    # 'm12z_md',
+    # 'm12c_md',
+    # 'm12b_md',
+    # 'm11d_md',
+    # 'm11e_md',
+    # 'm11h_md',
+    # 'm11i_md',
+    # 'm11q_md',
+    # 'm12i_cr',
+    ]
+
+global_variations = [
+    # '',
+    # 'relative_to_accretion',
+    'track_all_stars',
+    ]
