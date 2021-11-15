@@ -20,8 +20,13 @@ code_dir = ${paper_dir}/analysis
 figure_dir = ${paper_dir}/figures
 processed_data_dir = ${paper_dir}/data
 
+# What particles to track
+identification_method = 'out_then_in'
+
 # What index do we use for what the paper calls \tcon?
-central_indices = t1e5_inds 
+central_indices = tcools_inds 
+# And what temperature cut?
+Tcools = 4.5
 
 # Parameters for defining quiet accretion (deprecated)
 aligned_fraction_half_dt = 200 # In Myr
@@ -32,7 +37,7 @@ c_cut = 0.8 # jz/j
 r_cut = 3 # R/Rgal
 
 # Supplementary analysis parameters
-generate_expensive_visualizations = False
+generate_expensive_visualizations = True
 inline_firefly = False
 
 # Aesthetic parameters
@@ -50,7 +55,7 @@ lighter_background_linecolor = '.6'
 # py.1 = ${code_dir}/retrieve_halo_data.py
 
 # Get IDs to track
-# nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
+nb.2 = ${code_dir}/identify_accreting_gas_to_track.ipynb
 
 # Sample particles to track, including removing duplicates
 # py.3 = ${code_dir}/linefinder_tracking/sample.py
@@ -269,3 +274,8 @@ use_variation_data_dir = [
     ]
 figure_dir = ${DEFAULT:figure_dir}/variations/relative_to_accretion
 processed_data_dir = ${DEFAULT:processed_data_dir}/variations/relative_to_accretion
+
+[track_all_stars]
+identification_method = 'all_recent_stars'
+figure_dir = ${DEFAULT:figure_dir}/variations/track_all_stars
+processed_data_dir = ${DEFAULT:processed_data_dir}/variations/track_all_stars
