@@ -26,15 +26,15 @@ identification_method = 'out_then_in'
 # What index do we use for what the paper calls \tcon?
 central_indices = tcools_inds 
 # And what temperature cut?
-Tcools = 4.5
+logTcools = 4.5
 
-# Parameters for defining quiet accretion (deprecated)
-aligned_fraction_half_dt = 200 # In Myr
-disk_costheta = 0.1 # Contains roughly 2/3 of thin disk stars
-disk_jzjmag = 0.9 # Contains roughly 90% of thin disk stars
-t_cut = 60. # In Myr
-c_cut = 0.8 # jz/j
-r_cut = 3 # R/Rgal
+# Outlier handling and cuts
+# What percentile of energy outliers to toss out?
+energy_outlier_percentile = 99.
+# What to discard because it's too close to the end of the sim?
+minInd = 30 # discard particles that accrete within ~500 Myr of z=0
+# What to discard because it's too far back in time?
+maxInd = 99999999 # discard nothing
 
 # Supplementary analysis parameters
 generate_expensive_visualizations = True
@@ -43,6 +43,14 @@ inline_firefly = False
 # Aesthetic parameters
 background_linecolor = '.4'
 lighter_background_linecolor = '.6'
+
+# Parameters for defining quiet accretion (deprecated)
+aligned_fraction_half_dt = 200 # In Myr
+disk_costheta = 0.1 # Contains roughly 2/3 of thin disk stars
+disk_jzjmag = 0.9 # Contains roughly 90% of thin disk stars
+t_cut = 60. # In Myr
+c_cut = 0.8 # jz/j
+r_cut = 3 # R/Rgal
 
 ########################################################################
 [SCRIPTS]
@@ -222,6 +230,7 @@ sim_data_dir = ${fire_dir}/${subpath}/cr_700/output
 [relative_to_accretion]
 global = True
 central_indices = tacc_inds
+energy_outlier_percentile = 99.9
 use_variation_data_dir = [
     'py.1',
     'nb.2',
@@ -234,11 +243,43 @@ use_variation_data_dir = [
 figure_dir = ${DEFAULT:figure_dir}/variations/relative_to_accretion
 processed_data_dir = ${DEFAULT:processed_data_dir}/variations/relative_to_accretion
 
-[track_all_stars]
+# Don't cut out any particles due to accreting close to z=0
+[relative_to_accretion]
+global = True
+central_indices = tacc_inds
+minInd = -1
+energy_outlier_percentile = 99.9
+use_variation_data_dir = [
+    'py.1',
+    'nb.2',
+    'py.3',
+    'jug.4',
+    'jug.5',
+    'py.6',
+    'nb.10',
+    ]
+figure_dir = ${DEFAULT:figure_dir}/variations/no_cut_on_tacc
+processed_data_dir = ${DEFAULT:processed_data_dir}/variations/no_cut_on_tacc
+
+# Repeat analysis for a random sample selected from all recently-formed stars
+[track_all_recent_stars]
 global = True
 identification_method = 'all_recent_stars'
-figure_dir = ${DEFAULT:figure_dir}/variations/track_all_stars
-processed_data_dir = ${DEFAULT:processed_data_dir}/variations/track_all_stars
+figure_dir = ${DEFAULT:figure_dir}/variations/track_all_recent_stars
+processed_data_dir = ${DEFAULT:processed_data_dir}/variations/track_all_recent_stars
+use_variation_data_dir = [
+    'nb.10',
+    ]
+
+# Repeat analysis for a random sample selected from all thin-disk stars
+[track_all_thin_disk_stars]
+global = True
+identification_method = 'all_thin_disk_stars'
+figure_dir = ${DEFAULT:figure_dir}/variations/track_all_thin_disk_stars
+processed_data_dir = ${DEFAULT:processed_data_dir}/variations/track_all_thin_disk_stars
+use_variation_data_dir = [
+    'nb.10',
+    ]
 
 ########################################################################
 [EXECUTE]
@@ -272,7 +313,7 @@ variations = [
     # 'm12z_md',
     # 'm12c_md',
     # 'm12b_md',
-    # 'm11d_md',
+    'm11d_md',
     # 'm11e_md',
     # 'm11h_md',
     # 'm11i_md',
@@ -283,5 +324,6 @@ variations = [
 global_variations = [
     # '',
     # 'relative_to_accretion',
-    'track_all_stars',
+    # 'track_all_recent_stars',
+    'track_all_thin_disk_stars',
     ]
