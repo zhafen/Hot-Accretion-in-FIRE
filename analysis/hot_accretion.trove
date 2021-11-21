@@ -23,10 +23,15 @@ processed_data_dir = ${paper_dir}/data
 # What particles to track
 identification_method = 'out_then_in'
 
+# Accreting particles selection
 # What index do we use for what the paper calls \tcon?
 central_indices = tcools_inds 
 # And what temperature cut?
 logTcools = 4.5
+# How far back will we look for accretion?
+lookback_time_max = 1.
+# Choose first or last cooling/accretion
+choose_first = False
 
 # Outlier handling and cuts
 # What percentile of energy outliers to toss out?
@@ -80,20 +85,26 @@ py.6 = ${code_dir}/linefinder_tracking/classify.py
 # Create Firefly visualization
 py.7 = ${code_dir}/linefinder_tracking/firefly.py
 
-# Trajectories and geometric evolution
-nb.8 = ${code_dir}/characteristics.ipynb
+# Geometric evolution
+nb.8 = ${code_dir}/sample_overview.ipynb
  
 # Before and after cooling
 nb.9 = ${code_dir}/before_and_after.ipynb
+
+# Geometric evolution
+nb.10 = ${code_dir}/geometric_evolution.ipynb
+ 
+# Before and after cooling
+nb.11 = ${code_dir}/projected.ipynb
   
 # FIRE studio images
-nb.10 = ${code_dir}/fire_studio.ipynb
+nb.12 = ${code_dir}/fire_studio.ipynb
 
 # Archive data
-py.11 = ${code_dir}/archive.py
+py.13 = ${code_dir}/archive.py
 
 # Retrieve data
-py.12 = ${code_dir}/retrieve.py
+py.14 = ${code_dir}/retrieve.py
 
 ########################################################################
 [DATA PRODUCTS]
@@ -230,6 +241,7 @@ sim_data_dir = ${fire_dir}/${subpath}/cr_700/output
 [relative_to_accretion]
 global = True
 central_indices = tacc_inds
+choose_first = True
 energy_outlier_percentile = 99.9
 use_variation_data_dir = [
     'py.1',
@@ -244,9 +256,10 @@ figure_dir = ${DEFAULT:figure_dir}/variations/relative_to_accretion
 processed_data_dir = ${DEFAULT:processed_data_dir}/variations/relative_to_accretion
 
 # Don't cut out any particles due to accreting close to z=0
-[relative_to_accretion]
+[no_cut_on_tacc]
 global = True
 central_indices = tacc_inds
+choose_first = True
 minInd = -1
 energy_outlier_percentile = 99.9
 use_variation_data_dir = [
@@ -265,6 +278,9 @@ processed_data_dir = ${DEFAULT:processed_data_dir}/variations/no_cut_on_tacc
 [track_all_recent_stars]
 global = True
 identification_method = 'all_recent_stars'
+central_indices = tacc_inds
+choose_first = False
+lookback_time_max = 15. # No cut on how far back we look for accretion (this is 15 Gyr>age of universe)
 figure_dir = ${DEFAULT:figure_dir}/variations/track_all_recent_stars
 processed_data_dir = ${DEFAULT:processed_data_dir}/variations/track_all_recent_stars
 use_variation_data_dir = [
@@ -275,6 +291,9 @@ use_variation_data_dir = [
 [track_all_thin_disk_stars]
 global = True
 identification_method = 'all_thin_disk_stars'
+central_indices = tacc_inds
+choose_first = False
+lookback_time_max = 15. # No cut on how far back we look for accretion
 figure_dir = ${DEFAULT:figure_dir}/variations/track_all_thin_disk_stars
 processed_data_dir = ${DEFAULT:processed_data_dir}/variations/track_all_thin_disk_stars
 use_variation_data_dir = [
