@@ -73,6 +73,11 @@ publications = [
     'Marasco2019',
     ]
 
+    
+[angular_momentum_cancellation]
+publications = []
+search_str = 'angular momentum cancellation'
+
 [thin_disk_galaxies]
 publications = [
     'Bizyaev2021',
@@ -84,4 +89,4 @@ search_str = 'thin disk galaxy superthin sigma rotational supported'
 [low_mask_thin_disk_galaxies]
 publications = [
     'Weiner2001',
-]
+    ]

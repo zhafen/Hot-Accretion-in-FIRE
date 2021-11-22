@@ -2,7 +2,8 @@ variations=(
     # m12i
     # m11a
     # m11c
-    m12i_md
+    # m12i_md
+    more_variations/relative_to_accretion/m12i_md
     # m12r_md
     # m12w_md
     # m12f_md
@@ -15,15 +16,16 @@ variations=(
     # m11q_md
     # m12i_cr
 )
+global_variation=more_variations/relative_to_accretion
 base_dir=/Users/zhafen/Data/hot_halo_accretion/movies
 
 copy=True
-make_movie=False
+make_movie=True
 
 # Copy
 if $copy; then
     for var in ${variations[*]}; do
-        local_dir=${base_dir}/frames/${var}
+        local_dir=${base_dir}/frames/${global_variation}/${var}
         mkdir $local_dir
         remote_dir=/scratch/03057/zhafen/hot_accretion_data/${var}/projected_frames
         rsync -r --progress -u zhafen@stampede2.tacc.utexas.edu:$remote_dir $local_dir
@@ -33,9 +35,11 @@ fi
 # Make Movie
 if $make_movie; then
     for var in ${variations[*]}; do
-        frames_dir=${base_dir}/frames/${var}/projected_frames
+        frames_dir=${base_dir}/frames/${global_variation}/${var}/projected_frames
         ffmpeg -r 30 -f image2 -s 1080x1080 -i ${frames_dir}/${var}_%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p ${base_dir}/${var}.mp4
         ffmpeg -r 10 -f image2 -s 1080x1080 -i ${frames_dir}/${var}_focused_%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p ${base_dir}/${var}_focused.mp4
+        ffmpeg -r 30 -f image2 -s 1080x1080 -i ${frames_dir}/${var}_alignment_%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p ${base_dir}/${var}_alignment.mp4
+        ffmpeg -r 10 -f image2 -s 1080x1080 -i ${frames_dir}/${var}_alignment_focused_%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p ${base_dir}/${var}_alignment_focused.mp4
         ffmpeg -r 30 -f image2 -s 1080x1080 -i ${frames_dir}/${var}_colden_%03d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p ${base_dir}/${var}_colden.mp4
     done
 fi
