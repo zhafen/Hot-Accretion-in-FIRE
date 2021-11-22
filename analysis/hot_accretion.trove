@@ -308,41 +308,43 @@ scripts = [
     # 'py.1', # Get halo data
     # 'nb.2', # Get IDs to track
     # 'py.3', # Sample particles to track, including removing duplicates
-    'jug.4', # Run particle tracking
-    'jug.5', # Run galaxy linking
-    'py.6', # Run particle classification
+    # 'jug.4', # Run particle tracking
+    # 'jug.5', # Run galaxy linking
+    # 'py.6', # Run particle classification
     # 'py.7', # Create Firefly visualization
-    # 'nb.8', # Angular distribution evolution
-    # 'nb.9', # Average trajectory plots
-    # 'nb.10', # FIRE studio images
-    # 'py.11', # Archive data
-    # 'py.12', # Retrieve data
+    # 'nb.8', # Sample overview
+    'nb.9', # Before and after
+    'nb.10', # Geometric evolution
+    # 'nb.11', # Projected plots
+    # 'nb.12',# FIRE studio images
+    # 'py.13', # Archive data
+    # 'py.14', # Retrieve data
     ]
 
 variations = [
-    # 'm12i',
-    # 'm12m',
-    # 'm11a',
-    # 'm11b',
-    # 'm11c',
+    'm12i',
+    'm12m',
+    'm11a',
+    'm11b',
+    'm11c',
     'm12i_md',
-    # 'm12r_md',
-    # 'm12w_md',
-    # 'm12f_md',
-    # 'm12z_md',
-    # 'm12c_md',
-    # 'm12b_md',
+    'm12r_md',
+    'm12w_md',
+    'm12f_md',
+    'm12z_md',
+    'm12c_md',
+    'm12b_md',
     'm11d_md',
-    # 'm11e_md',
-    # 'm11h_md',
-    # 'm11i_md',
-    # 'm11q_md',
-    # 'm12i_cr',
+    'm11e_md',
+    'm11h_md',
+    'm11i_md',
+    'm11q_md',
+    'm12i_cr',
     ]
 
 global_variations = [
-    # '',
-    # 'relative_to_accretion',
-    # 'track_all_recent_stars',
-    'track_all_thin_disk_stars',
+    '',
+    'relative_to_accretion',
+    'track_all_recent_stars',
+    # 'track_all_thin_disk_stars',
     ]
