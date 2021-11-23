@@ -119,10 +119,12 @@ py.3 = ids_${tag}.hdf5
 jug.4 = ptracks_${tag}.hdf5
 jug.5 = galids_${tag}.hdf5
 py.6 = classifications_${tag}.hdf5
-nb.8 = executed_characteristics.ipynb
+nb.8 = executed_sample_overview.ipynb
 nb.9 = executed_before_and_after.ipynb
-nb.10 = executed_fire_studio.ipynb
-py.12 = classifications_${tag}.hdf5
+nb.10 = executed_geometric_evolution.ipynb
+nb.11 = executed_projected.ipynb
+nb.12 = executed_fire_studio.ipynb
+py.14 = ptracks_${tag}.hdf5
 
 ########################################################################
 # Parameter Variations
@@ -177,7 +179,7 @@ sim_data_dir = ${fire_dir}/${subpath}/output
 subpath = metal_diffusion/m12w_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/output
-
+ 
 [m12f_md]
 subpath = metal_diffusion/m12f_res7100
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
@@ -186,9 +188,10 @@ sim_data_dir = ${fire_dir}/${subpath}/output
 [m12z_md]
 subpath = metal_diffusion/m12z_res4200
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
-# m12z snapshot 456 is corrupted. This location contains a snapshot 456
+sim_data_dir = ${fire_dir}/${subpath}/output
+# m12z snapshot 456 is corrupted. The below location contains a snapshot 456
 # that is a duplicate of snapshot 455
-sim_data_dir = ${scratch_dir}/${subpath}/output
+# sim_data_dir = ${scratch_dir}/${subpath}/output
 
 [m12c_md]
 subpath = metal_diffusion/m12c_res7100
@@ -314,7 +317,7 @@ scripts = [
     # 'py.7', # Create Firefly visualization
     # 'nb.8', # Sample overview
     'nb.9', # Before and after
-    'nb.10', # Geometric evolution
+    # 'nb.10', # Geometric evolution
     # 'nb.11', # Projected plots
     # 'nb.12',# FIRE studio images
     # 'py.13', # Archive data
@@ -330,21 +333,21 @@ variations = [
     'm12i_md',
     'm12r_md',
     'm12w_md',
-    'm12f_md',
+    # 'm12f_md',
     'm12z_md',
     'm12c_md',
-    'm12b_md',
+    # 'm12b_md',
     'm11d_md',
     'm11e_md',
     'm11h_md',
     'm11i_md',
     'm11q_md',
-    'm12i_cr',
+    # 'm12i_cr',
     ]
 
 global_variations = [
     '',
     'relative_to_accretion',
-    'track_all_recent_stars',
+    # 'track_all_recent_stars',
     # 'track_all_thin_disk_stars',
     ]
