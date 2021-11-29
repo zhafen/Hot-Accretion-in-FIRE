@@ -799,6 +799,57 @@ and Numba~\citep{Lam2015}.
 Figure~\ref{f: thin disc v thin disc} shows the relationship between the fraction of stars with $j/j_c(E)>0.8$ at $z=0$ ($f_{\rm thin\,disc,\,recent}$) and the same fraction of stars weighted by their Sloan $r$ band luminosity-weighted.
 The thin disc metric used throughout our analysis, $f_{\rm thin\,disc,\,recent}$ is closely related to the observationally-motivated luminosity-weighted thin disc fraction.
 
+\section{Sample validation}
+\label{s: appendix-sample validation}
+
+% SAMPLE VALIDATION -- TACC
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{figures/selected_to_all_comparison/tacc_m12i_md.pdf}
+    \caption{
+    Time of accretion for the main sample (green) of 37,189 particles in \texttt{m12i} that are in the CGM at 1 Gyr prior to $z=0$ and in the galaxy at $z=0$, compared to time of accretion for all recent star formation (purple) and all thin disk stars (yellow).
+    Time plotted is age of the universe at which gas accreted, with the grey vertical line marking 1 Gyr prior to $z=0$.
+    The properties of our main sample are representative of all recent star formation in regards to the epoch at which gas accretes onto the galaxy, and overlaps with the accretion times at which \textit{all} thin disk formation peaks.
+    }
+    \label{f: sample validation -- tacc}
+\end{figure}
+
+% SAMPLE VALIDATION - SPATIAL
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{figures/selected_to_all_comparison/selected_to_all_comparison_m12i_md.pdf}
+    \caption{
+    \textbf{Topmost panel:}
+    Radial distribution for the main sample vs for all gas.
+    The main sample preferentially probes the inner CGM, as that is what can accrete prior to $z=0$.
+    \textbf{Bottom panels:}
+    From top to bottom, specific angular momentum, angular momentum alignment, and temperature for accreted gas and gas at the same radius.
+    Solid line shows the median, and the filled regions cover the 16th to 84th percentiles.
+    Opacity (darkness) of the accreted gas distribution scales with amount of the sample found at that radius.
+    Gas that accretes by $z=0$ (the main sample) does not have different angular momentum content or alignment compared to gas at the same radii.
+    The median temperature is consistent between the main sample and all gas out to 50 kpc, containing the majority of the accreted gas, but our tracked sample preferentially selects mildly cooler gas.
+    }
+    \label{f: sample validation -- spatial}
+\end{figure}
+
+Our sample was selected to allow us to track a Lagrangian region with high resolution.
+Sample selection details are in \S\ref{s: methods -- analysis}.
+In this appendix we check the extent to which our sample is representative of all gas in the halo at the same redshift, accretion that fuels all recent star formation, and all thin disk stars.
+\textbf{Describe samples in detail, including sampling.}
+
+% Accretion times
+The degree of overlap we see in the $t_{\rm acc}$ distributions between our sample and all recent star formation validates the stronge correlation between properties of our sample and the fraction of recently formed stars found in a thin disk (Figs~\ref{f: prevalence} and~\ref{f: prevalence - angular momentum}).
+For our main sample we choose the time of first accretion after being located in the CGM.
+For the other two samples we choose the time of last accretion.
+\textbf{Number of particles.}
+
+% Spatial
+\textbf{Link to CGM fates paper.}
+
+% Takeaway
+\textbf{Our sample is largely representative.}
+\textbf{By tracking all gas accretion at a given time we can do things like energy balance.}
+
 \section{Accretion onto haloes absent thin discs}
 \label{s: appendix-low mass}
 
