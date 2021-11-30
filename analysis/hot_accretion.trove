@@ -50,7 +50,8 @@ background_linecolor = '.4'
 lighter_background_linecolor = '.6'
 
 # Parameters for defining quiet accretion (deprecated)
-aligned_fraction_half_dt = 200 # In Myr
+aligned_fraction_pre_dt = -200 # Change is calculated over the 
+aligned_fraction_post_dt = 200  # interval pre to post (in Myr)
 disk_costheta = 0.1 # Contains roughly 2/3 of thin disk stars
 disk_jzjmag = 0.9 # Contains roughly 90% of thin disk stars
 t_cut = 60. # In Myr
@@ -362,7 +363,7 @@ variations = [
     ]
 
 global_variations = [
-    '',
+    # '',
     'relative_to_accretion',
     'no_cut_on_tacc',
     'diff_Tcut',
