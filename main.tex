@@ -99,7 +99,7 @@ galaxies: disc -- galaxies: evolution -- galaxies: haloes -- cosmology: theory
 \section{Introduction}
 \label{s: introduction}
 
-% THE THIN discS
+% THE THIN DISCS
 \begin{figure*}
     \centering
     \includegraphics[width=\textwidth]{figures/stars.pdf}
@@ -151,16 +151,11 @@ This type of hot accretion has been termed a `cooling flow' in the context of ga
 In the present paper we demonstrate that such cooling flows with angular momentum (i.e. `rotating cooling flows')
 are the primary mode of gas accretion onto discy Milky Way-mass galaxies at $z \sim 0$ in the FIRE-2 cosmological simulations \citep{Hopkins2018}, and may be a necessary condition for the formation of thin star-forming discs.
 
-The analysis here follows \cite{Stern2021}, which showed that the formation of discs in FIRE is closely connected to the formation of a virialized and stable hot CGM.
-\cite{Yu2021} subsequently showed that the emergence of an inner virialized CGM in FIRE simulations correlates specifically with a transition from {\em thick}-disc to {\em thin}-disc formation.
+The analysis here follows \cite{Stern2021}, which showed that the formation of discs is closely connected to the formation of a virialized and stable hot CGM.
+\cite{Yu2021} subsequently showed that the emergence of an inner virialized CGM correlates specifically with a transition from {\em thick}-disc to {\em thin}-disc formation.
 The conditions necessary for stars to be born on circular orbits in a well-aligned plane appears to correlate with the conditions necessary for the onset of hot accretion modes such as cooling flows.
 This finding partially motivates the exploration that follows.
-
-% Cosmological simulations
-Modern cosmological simulations provide a means to understand the characteristics, prevalence, and mechanics of different accretion modes.
-These simulations include a combination of cosmological environment and galactic physics, which has allowed simulators to investigate accretion while accounting for both its cosmological nature and its interaction with galaxies and their CGM~\citep[e.g.][]{Oppenheimer2010, Stewart2011, Fernandez2012, Ford2014, Wetzel2015, Angles-Alcazar2017, Hafen2019, Hafen2020, Ho2019, Rottgers2020, Trapp2021}.
-Of special note are ``zoom-in'' simulations that focus on resolving a single halo and its environment, enabling high resolution while preserving cosmological context~\citep[e.g.][]{Katz1993, Onorbe14, Wang2015, Agertz2021}.
-Among these, the FIRE simulations~(Feedback in Realistic Environments; \citealt{Hopkins2014, Hopkins2018})\footnote{\url{https://fire.northwestern.edu/}} are a set of zoom-in simulations that resolve stellar feedback on the scale of giant molecular clouds in the interstellar medium (ISM)~\citep{Guszejnov2020b, Benincasa2020}, producing winds that naturally expand into the CGM and interact with accreting gas~\citep{Muratov2015, Muratov2017, Angles-Alcazar2017, Hafen2019, Hafen2020, Pandya2021}.
+Central to our analysis, and the analyses of \citeauthor{Stern2021} and \citeauthor{Yu2021}, are the FIRE simulations~(Feedback in Realistic Environments; \citealt{Hopkins2014, Hopkins2018})\footnote{\url{https://fire.northwestern.edu/}} a set of ``zoom-in'' simulations that resolve stellar feedback on the scale of giant molecular clouds in the interstellar medium (ISM)~\citep{Guszejnov2020b, Benincasa2020}, producing winds that naturally expand into the CGM and interact with accreting gas~\citep{Muratov2015, Muratov2017, Angles-Alcazar2017, Hafen2019, Hafen2020, Pandya2021}.
 The resultant galaxies are broadly consistent with the stellar mass-halo mass relation~\citep{Hopkins2017}, satellite galaxy populations~\citep{Wetzel2016, Garrison-Kimmel2019a, Samuel2020}, and can have thin-discs consistent with Milky Way-like galaxies~\citep{Ma2017a, Garrison-Kimmel2018, El-Badry2018, Sanderson2020, Yu2021}.
 
 Here we use the FIRE-2 simulations to study gas accretion onto $z\sim0$ galaxies and its relation to thin disc morphology.
@@ -330,16 +325,15 @@ Temperature.
 During the 500 Myr prior to cooling, the inflow is predominantly hot ($\gtrsim 10^5$ K), with a median temperature approaching $\Tvir\approx10^6$ K.
 At $t = \tcools$ the gas cools (by definition), and achieves cool ISM temperatures or forms stars at later times. 
 \textbf{B:}
-3D distance from halo center.
-Cooling occurs at $10-30$ kpc, corresponding to $0.7-2.5\,r_{\rm gal}$.
+Distance from halo center (green) and absolute height from the disc plane (blue).
+Cooling occurs at $r=10-30$ kpc, corresponding to $0.7-2.5\,r_{\rm gal}$.
 Prior to cooling the gas forms an inflow while after cooling the inflow stalls.
-\textbf{C:}
 Absolute height from the disc plane.
 Most of the gas collapses into a disc upon cooling, with a median $\vert z \vert \approx 2$ kpc at $t=\tcools$.
-\textbf{D:}
+\textbf{C:}
 Velocity components of accretion (colored lines and band), relative to circular velocity at the median radius (dash-dotted line).
 The gas reaches full rotational support upon cooling.
-\textbf{E:}
+\textbf{D:}
 Fraction of gas converted into stars.
 Star formation starts after cooling, at a rate of $\sim10\%$ per $100$ Myr. 
 }
@@ -809,7 +803,7 @@ The thin disc metric used throughout our analysis, $f_{\rm thin\,disc,\,recent}$
     \caption{
     Time of accretion for the main sample (green) of 37,189 particles in \texttt{m12i} that are in the CGM at 1 Gyr prior to $z=0$ and in the galaxy at $z=0$, compared to time of accretion for all recent star formation (purple) and all thin disk stars (yellow).
     Time plotted is age of the universe at which gas accreted, with the grey vertical line marking 1 Gyr prior to $z=0$.
-    The properties of our main sample are representative of all recent star formation in regards to the epoch at which gas accretes onto the galaxy, and overlaps with the accretion times at which \textit{all} thin disk formation peaks.
+    The accretion time of our main sample is representative of the epoch at which accretion occurs for all recent star formation, and overlaps with the accretion times at which \textit{all} thin disk formation peaks.
     }
     \label{f: sample validation -- tacc}
 \end{figure}
@@ -820,35 +814,39 @@ The thin disc metric used throughout our analysis, $f_{\rm thin\,disc,\,recent}$
     \includegraphics[width=\columnwidth]{figures/selected_to_all_comparison/selected_to_all_comparison_m12i_md.pdf}
     \caption{
     \textbf{Topmost panel:}
-    Radial distribution for the main sample vs for all gas.
-    The main sample preferentially probes the inner CGM, as that is what can accrete prior to $z=0$.
+    Radial distribution of gas in the CGM of \textit{m12i} at 1 Gyr prior to $z=0$, comparing all gas (orange) to the subset found in the galaxy at $z=0$ (green).
+    The main sample preferentially probes the inner CGM, which is capable of accreting prior to $z=0$.
     \textbf{Bottom panels:}
     From top to bottom, specific angular momentum, angular momentum alignment, and temperature for accreted gas and gas at the same radius.
     Solid line shows the median, and the filled regions cover the 16th to 84th percentiles.
-    Opacity (darkness) of the accreted gas distribution scales with amount of the sample found at that radius.
+    Opacity (darkness) of the accreted gas distribution scales with sample mass fraction found at that radius.
     Gas that accretes by $z=0$ (the main sample) does not have different angular momentum content or alignment compared to gas at the same radii.
     The median temperature is consistent between the main sample and all gas out to 50 kpc, containing the majority of the accreted gas, but our tracked sample preferentially selects mildly cooler gas.
     }
     \label{f: sample validation -- spatial}
 \end{figure}
 
-Our sample was selected to allow us to track a Lagrangian region with high resolution.
-Sample selection details are in \S\ref{s: methods -- analysis}.
-In this appendix we check the extent to which our sample is representative of all gas in the halo at the same redshift, accretion that fuels all recent star formation, and all thin disk stars.
-\textbf{Describe samples in detail, including sampling.}
+% Intro
+Our main sample of tracked particles for each simulation, detailed in \S\ref{s: methods -- analysis}, was selected with the aim of following with high mass resolution the history of interacting accreting gas.
+This allows us to calculate, for example, the extent to which heating and cooling balance (Fig.~\ref{f: before and after B}, panel D).
+In this appendix we check the extent to which our sample is representative of the accretion that fuels all recent star formation, and the accretion that fuels all thin disk star formation, and gas at the same radius in the halo.
+We use single simulation, \texttt{m12i}, as a test case.
 
 % Accretion times
-The degree of overlap we see in the $t_{\rm acc}$ distributions between our sample and all recent star formation validates the stronge correlation between properties of our sample and the fraction of recently formed stars found in a thin disk (Figs~\ref{f: prevalence} and~\ref{f: prevalence - angular momentum}).
-For our main sample we choose the time of first accretion after being located in the CGM.
-For the other two samples we choose the time of last accretion.
-\textbf{Number of particles.}
+Fig.~\ref{f: sample validation -- tacc} shows the age of the universe at which resolution elements in our main sample accrete onto the main galaxy, compared to the time at which gas accretes onto the galaxy for all recently-formed stars and all thin-disk stars.
+To calculate the accretion time ($t_{\rm acc}$) distribution for all recently-formed stars and all thin-disk stars we tracked the history of $10^5$ randomly-selected star particles that formed within the last Gyr and had circularity $(j_z/j_c(E))\vert_{z=0} > 0.8$ respectively.
+Particles may accrete onto the galaxy several times (recycling; e.g. \citealt{Angles-Alcazar2017}).
+For our main sample we chose the time of accretion as the first time the gas accretes after being located in the CGM at 1 Gyr prior to $z=0$, consistent with our analysis in the main text.
+For the two alternative samples we chose the time of accretion as the last time the gas accretes onto the galaxy prior to forming a star.
+The accretion time distribution for the main sample and the sample probing all recently-formed stars overlaps strongly, and also overlaps with the time at which formation of thin disk stars peaks.
+The degree of overlap we see in the $t_{\rm acc}$ distributions between our sample and the sample probing all recent star formation validates the stronge correlation between properties of our sample and the fraction of recently formed stars found in a thin disk (Figs~\ref{f: prevalence} and~\ref{f: prevalence - angular momentum}).
 
 % Spatial
-\textbf{Link to CGM fates paper.}
-
-% Takeaway
-\textbf{Our sample is largely representative.}
-\textbf{By tracking all gas accretion at a given time we can do things like energy balance.}
+Fig.~\ref{f: sample validation -- spatial} shows the properties of our main sample compared to gas at the same radius, which allows us to assess if accreting gas is representative of all CGM gas at the same redshift.
+From Fig.~\ref{f: sample validation -- spatial} we learn that (a) gas that accretes within a fixed time of 1 Gyr is limited to $r \lesssim 100$ kpc;
+(b) on a per-particle basis the specific angular momentum magnitude, the z-direction specific angular momentum, and the ratio of the two are very similar between all gas and accreted gas;
+and (c) the temperature of accreted gas and all gas at the same radius is consistent, but some cooler, less-pressure-supported gas at larger radii can accrete onto the galaxy.
+These results are consistent with the temperature distributions for accreting gas vs gas that remains in the CGM for $>3$ Gyr~\citep{Hafen2020}.
 
 \section{Accretion onto haloes absent thin discs}
 \label{s: appendix-low mass}
