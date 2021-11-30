@@ -106,6 +106,12 @@ py.13 = ${code_dir}/archive.py
 
 # Retrieve data
 py.14 = ${code_dir}/retrieve.py
+ 
+# Combined figures
+nb.15 = ${code_dir}/combined.ipynb
+  
+# Prevalence
+nb.16 = ${code_dir}/prevalence.ipynb
 
 ########################################################################
 [DATA PRODUCTS]
@@ -247,6 +253,8 @@ global = True
 central_indices = tacc_inds
 choose_first = True
 energy_outlier_percentile = 99.9
+aligned_fraction_pre_dt = -500 # Change is calculated over the 
+aligned_fraction_post_dt = 0 # interval pre to post (in Myr)
 use_variation_data_dir = [
     'py.1',
     'nb.2',
@@ -266,6 +274,8 @@ central_indices = tacc_inds
 choose_first = True
 minInd = -1
 energy_outlier_percentile = 99.9
+aligned_fraction_pre_dt = -500 # Change is calculated over the 
+aligned_fraction_post_dt = 0 # interval pre to post (in Myr)
 use_variation_data_dir = [
     'py.1',
     'nb.2',
@@ -277,6 +287,44 @@ use_variation_data_dir = [
     ]
 figure_dir = ${DEFAULT:figure_dir}/variations/no_cut_on_tacc
 processed_data_dir = ${DEFAULT:processed_data_dir}/variations/no_cut_on_tacc
+
+# Change the central indices
+[tacc_prepost_200]
+global = True
+central_indices = tacc_inds
+choose_first = True
+energy_outlier_percentile = 99.9
+use_variation_data_dir = [
+    'py.1',
+    'nb.2',
+    'py.3',
+    'jug.4',
+    'jug.5',
+    'py.6',
+    'nb.10',
+    'nb.11',
+    'nb.12',
+    ]
+figure_dir = ${DEFAULT:figure_dir}/variations/tacc_prepost_200
+processed_data_dir = ${DEFAULT:processed_data_dir}/variations/relative_to_accretion
+
+# Change prepost cut
+[prepost_500]
+global = True
+aligned_fraction_pre_dt = -500 # Change is calculated over the 
+aligned_fraction_post_dt = 0 # interval pre to post (in Myr)
+use_variation_data_dir = [
+    'py.1',
+    'nb.2',
+    'py.3',
+    'jug.4',
+    'jug.5',
+    'py.6',
+    'nb.10',
+    'nb.11',
+    'nb.12',
+    ]
+figure_dir = ${DEFAULT:figure_dir}/variations/diff_Tcut
 
 # Change cut temperature
 [diff_Tcut]
@@ -333,12 +381,14 @@ scripts = [
     # 'py.6', # Run particle classification
     # 'py.7', # Create Firefly visualization
     # 'nb.8', # Sample overview
-    'nb.9', # Before and after
-    'nb.10', # Geometric evolution
+    # 'nb.9', # Before and after
+    # 'nb.10', # Geometric evolution
     # 'nb.11', # Projected plots
     # 'nb.12', # FIRE studio images
-    # 'py.13', # Archive data
+    'py.13', # Archive data
     # 'py.14', # Retrieve data
+    # 'nb.15', # Combined plots
+    # 'nb.16', # Prevalence
     ]
 
 variations = [
@@ -359,13 +409,15 @@ variations = [
     'm11h_md',
     'm11i_md',
     'm11q_md',
-    # 'm12i_cr',
+    'm12i_cr',
     ]
 
 global_variations = [
-    # '',
+    '',
     'relative_to_accretion',
     'no_cut_on_tacc',
+    'prepost_500',
+    'tacc_prepost_200',
     'diff_Tcut',
     # 'track_all_recent_stars',
     # 'track_all_thin_disk_stars',
