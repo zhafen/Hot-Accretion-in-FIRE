@@ -82,4 +82,13 @@ quantity_labels = {
     'delta_abs_med_cosphi': r'$\mid \Delta \cos\theta_{50}\mid$',
     'quiet_frac': r'CCF fraction, no R cut',
     'quiet_frac_strict': r'CCF fraction',
+    'f_hot': 'hot accretion fraction',
+    'delta_jperp': r'$j_\perp - j_{\perp,0}$' + '\n[kpc km/s]',
+    'delta_jmag': r'$j - j_0$' + '\n[kpc km/s]',
+    'delta_jperp_frac': r'$(j_\perp - j_{\perp,0})/j_{\perp,0}$',
+    'delta_jz': r'$j_z - j_{z,0}$' + '\n[kpc km/s]',
+    'torque_perp': r'$\vert \tau_\perp \vert$' + '\n[kpc km/s/Myr]',
+    'torque_z': r'$\tau_z$' + '\n[kpc km/s/Myr]',
+    'torque_mag': r'$\vert \vec \tau \vert$' + '\n[kpc km/s/Myr]',
+    'torque_normalized': r'$\vert \vec \tau \vert / j_0$' + '\n[1/Myr]',
 }
