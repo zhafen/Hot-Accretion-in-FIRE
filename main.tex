@@ -428,34 +428,6 @@ The right panel of Fig.~\ref{f: prevalence} demonstrates the strong correlation 
 gas accretes onto the halo as a rotating cooling flow, but subsequent evolution in the ISM and/or stellar population produces a stellar bar~\citep{Debattista2019}.
 Fig.~\ref{f: prevalence} thus demonstrates, for our entire FIRE sample, that circularization is concurrent with cooling in accretion onto thin-disc galaxies, while no such association exists for accretion onto irregular or thick disc galaxies.
 
-% COHERENCE EVOLUTION
-\begin{figure*}
-    \centering
-    \includegraphics[width=\textwidth]{figures/jzjmag_vs_t.pdf}
-    \caption{
-    Angular momentum distribution of accreting gas, as a function of time relative to the last cooling time.
-    Curves show the fraction of mass above a given $j_z / \vert \vec j \vert$. 
-    In the thin-disc galaxies (top and bottom-left panels) the angular momentum distribution becomes more coherent and aligned with the central galaxy with time, mainly during the $\pm200$ Myr around the time of cooling.
-    In the irregular galaxy (bottom right) the angular momentum distribution is quasi-spherical both before and after cooling. 
-    }
-    \label{f: coherence}
-\end{figure*}
-
-% PREVALENCE OF QUIET ACCRETION - ANGULAR MOMENTUM SPACE
-\begin{figure*}
-    \centering
-    \includegraphics[width=\textwidth]{figures/prevalence/aligned_fraction_ang_momentum.pdf}
-    \caption{
-    Angular momentum-space equivalent of Fig.~\ref{f: prevalence}.
-    \textbf{Left:}
-    Mass fraction of accreting gas aligned with the disc before and after cooling, defined in this figure as the fraction with $\vert j_z/\vert j \vert > 0.9$ (see Fig.~\ref{f: coherence}).
-    \textbf{Right:}
-    Change in aligned mass fraction during the $\pm200$ Myr around cooling time shown in the left panel.
-    The greater the extent to which accretion becomes coherent as it cools, the greater the fraction of young stars in a thin disc.
-    }
-    \label{f: prevalence - angular momentum}
-\end{figure*}
-
 % MECHANICS OF QUIET ACCRETION
 \begin{figure*}
 \includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_m12i_md.pdf}
@@ -463,11 +435,11 @@ Fig.~\ref{f: prevalence} thus demonstrates, for our entire FIRE sample, that cir
 Angular momentum and energetics of gas accreting onto the same $z\sim0$ thin disc galaxy shown in Fig.~\ref{f: before and after A}, versus time relative to the final cooling time ($t - \tcools$).
 In each panel solid lines and shaded regions mark the medians and 16th to 84th percentile ranges of all particles accreted within 1 Gyr prior to $z=0$.
 \textbf{A:}
-The ratio of $j_z / \mid \vec j \mid$.
+The ratio of $j_z / \vert \vec j \vert$.
 In only this panel the solid line shows this ratio for the sum total angular momentum of all accreted particles.
 The shaded region shrinks as gas flows inward, indicating the flow becomes more coherent and that angular momentum unaligned with the total angular momentum is cancelled out, as suggested by Fig.~\ref{f: coherence}. 
 \textbf{B:}
-The magnitude of the specific angular momentum of particles ($\mid\vec{j}\mid$, green) and the component of angular momentum aligned with the galaxy disc ($j_z$; purple).
+The magnitude of the specific angular momentum of particles ($\vert\vec{j}\vert$, green) and the component of angular momentum aligned with the galaxy disc ($j_z$; purple).
 The dashed line shows the angular momentum necessary for rotational support.
 Cooling occurs when angular momentum support becomes significant, as expected in subsonic cooling flows \citep{Cowie1980, Stern2019}.
 \textbf{C:}
@@ -482,6 +454,45 @@ Compression heating plummets after the inflow is stalled by angular momentum sup
 }
 \label{f: before and after B}
 \end{figure*}
+
+% COHERENCE EVOLUTION
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/jzjmag_vs_t.pdf}
+    \caption{
+    Angular momentum distribution of accreting gas, as a function of time relative to the last cooling time.
+    Curves show the fraction of mass above a given $j_z / \vert \vec j \vert$. 
+    In the thin-disc galaxies (top and bottom-left panels) the angular momentum distribution becomes more coherent and aligned with the central galaxy with time, mainly during the $\pm200$ Myr around the time of cooling.
+    In the irregular galaxy (bottom right) the angular momentum distribution is quasi-spherical both before and after cooling. 
+    }
+    \label{f: coherence}
+\end{figure*}
+
+% PREVALENCE OF QUIET ACCRETION - ANGULAR MOMENTUM SPACE
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/prevalence/aligned_fraction_ang_momentum.pdf}
+    \caption{
+    Angular momentum-space equivalent of Fig.~\ref{f: prevalence}.
+    \textbf{Left:}
+    Mass fraction of accreting gas aligned with the disc before and after cooling, defined in this figure as the fraction with $\vert j_z/\vert j \vert > 0.9$ (see Fig.~\ref{f: coherence}).
+    \textbf{Right:}
+    Change in aligned mass fraction during the $\pm200$ Myr around cooling time shown in the left panel.
+    The greater the extent to which accretion becomes coherent as it cools, the greater the fraction of young stars in a thin disc.
+    }
+    \label{f: prevalence - angular momentum}
+\end{figure*}
+
+% PREVALENCE OF QUIET ACCRETION - BEFORE/AFTER OVERVIEW
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_combined.pdf}
+    \caption{
+    Average properties relative to time of accretion for thin disk galaxies (orange; $f_{\rm thin\,disk}<0.5$) and irregular galaxies (purple; $f_{\rm thin\,disk}<0.5$).
+    Solid line is the median of the solid line among thin disk/irregular galaxies, and the shaded regions cover the medians of the 16th to 84th percentile regions among thin disk/irregular galaxies.
+    }
+    \label{f: before and after - combined}
+\end{figure}
 
 \subsection{Angular momentum coherence in accreted gas}
 \label{s: mechanics -- coherence}
@@ -541,6 +552,7 @@ We note that the median increase in $j_z$ upon accretion and cooling shown in Fi
 
 \subsection{Energetics of accreting gas}
 \label{s: mechanics -- energy balance}
+\textbf{Move section up.}
 
 % Density
 Figure~\ref{f: before and after B} panel (C) shows the distribution of the accreting gas density  versus time relative to cooling.
@@ -865,10 +877,10 @@ The final cooling tends to occur shortly after the gas is heated beyond $T=10^5$
 \textbf{D:} Velocity components of accretion (colored lines and band), relative to circular velocity at the median radius (dash-dotted line).
 \textbf{E:} Fraction of gas converted into stars.
 Star formation proceeds shortly after cooling, well before gas orients into a disc.
-\textbf{F:} The ratio of $j_z / \mid \vec j \mid$.
+\textbf{F:} The ratio of $j_z / \vert \vec j \vert$.
 The solid line shows this ratio for the total angular momentum of all accreted particles.
 The coherence of the gas does not change before/after cooling.
-\textbf{G:} The magnitude of the specific angular momentum of particles ($\mid\vec{j}\mid$, green) and the component of angular momentum aligned with the galaxy disc ($j_z$; purple).
+\textbf{G:} The magnitude of the specific angular momentum of particles ($\vert\vec{j}\vert$, green) and the component of angular momentum aligned with the galaxy disc ($j_z$; purple).
 The dashed line shows the angular momentum necessary for rotational support.
 Rotational support occurs $\gtrsim 300$ Myr after $\tcools$, at which time inward movement stalls and gas velocity decreases.
 \textbf{H:} Baryon number density.
