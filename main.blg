@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: mnras.bst
+Database file #1: references.bib
+Reallocated buffer (elt_size=1) to 40000 items from 20000.
+Reallocated sv_buffer (elt_size=1) to 40000 items from 20000.
+Reallocated ex_buf (elt_size=1) to 40000 items from 20000.
+Reallocated out_buf (elt_size=1) to 40000 items from 20000.
+Reallocated name_tok (elt_size=4) to 40000 items from 20000.
+Reallocated name_sep_char (elt_size=1) to 40000 items from 20000.
+Reallocated buffer (elt_size=1) to 60000 items from 40000.
+Reallocated sv_buffer (elt_size=1) to 60000 items from 40000.
+Reallocated ex_buf (elt_size=1) to 60000 items from 40000.
+Reallocated out_buf (elt_size=1) to 60000 items from 40000.
+Reallocated name_tok (elt_size=4) to 60000 items from 40000.
+Reallocated name_sep_char (elt_size=1) to 60000 items from 40000.
+Reallocated buffer (elt_size=1) to 80000 items from 60000.
+Reallocated sv_buffer (elt_size=1) to 80000 items from 60000.
+Reallocated ex_buf (elt_size=1) to 80000 items from 60000.
+Reallocated out_buf (elt_size=1) to 80000 items from 60000.
+Reallocated name_tok (elt_size=4) to 80000 items from 60000.
+Reallocated name_sep_char (elt_size=1) to 80000 items from 60000.
+Database file #2: jsbref.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 135 entries,
+            2881 wiz_defined-function locations,
+            1719 strings with 47027 characters,
+and the built_in function-call counts, 65690 in all, are:
+= -- 5241
+> -- 5236
+< -- 271
++ -- 2253
+- -- 880
+* -- 8070
+:= -- 10554
+add.period$ -- 0
+call.type$ -- 135
+change.case$ -- 270
+chr.to.int$ -- 128
+cite$ -- 135
+duplicate$ -- 3058
+empty$ -- 3015
+format.name$ -- 1274
+if$ -- 11295
+int.to.chr$ -- 8
+int.to.str$ -- 0
+missing$ -- 134
+newline$ -- 419
+num.names$ -- 934
+pop$ -- 630
+preamble$ -- 1
+purify$ -- 540
+quote$ -- 0
+skip$ -- 1833
+stack$ -- 0
+substring$ -- 3732
+swap$ -- 1539
+text.length$ -- 543
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1212
+warning$ -- 0
+while$ -- 996
+width$ -- 0
+write$ -- 1354
