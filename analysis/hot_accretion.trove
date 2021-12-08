@@ -419,8 +419,8 @@ scripts = [
     # 'py.13', # Archive data
     # 'py.14', # Retrieve data
     'nb.15', # Combined before/after plots
-    'nb.16', # Combined panel plots
-    'nb.17', # Prevalence
+    # 'nb.16', # Combined panel plots
+    # 'nb.17', # Prevalence
     ]
 
 variations = [
