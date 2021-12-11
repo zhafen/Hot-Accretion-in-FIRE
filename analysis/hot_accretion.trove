@@ -253,7 +253,7 @@ central_indices = tacc_inds
 choose_first = True
 energy_outlier_percentile = 99.9
 aligned_fraction_pre_dt = -1000 # Change is calculated over the 
-aligned_fraction_post_dt = 50 # interval pre to post (in Myr)
+aligned_fraction_post_dt = 0 # interval pre to post (in Myr)
 use_variation_data_dir = [
     'py.1',
     'nb.2',
@@ -274,7 +274,7 @@ choose_first = True
 minInd = -1
 energy_outlier_percentile = 99.9
 aligned_fraction_pre_dt = -1000 # Change is calculated over the 
-aligned_fraction_post_dt = 50 # interval pre to post (in Myr)
+aligned_fraction_post_dt = 0 # interval pre to post (in Myr)
 use_variation_data_dir = [
     'py.1',
     'nb.2',
@@ -288,10 +288,10 @@ figure_dir = ${DEFAULT:figure_dir}/variations/no_cut_on_tacc
 processed_data_dir = ${DEFAULT:processed_data_dir}/variations/no_cut_on_tacc
 
 # Change prepost cut
-[prepost_m1000_p50]
+[prepost_m1000_p0]
 global = True
-aligned_fraction_pre_dt = -500 # Change is calculated over the 
-aligned_fraction_post_dt = 50 # interval pre to post (in Myr)
+aligned_fraction_pre_dt = -1000 # Change is calculated over the 
+aligned_fraction_post_dt = 0 # interval pre to post (in Myr)
 use_variation_data_dir = [
     'py.1',
     'nb.2',
@@ -306,41 +306,16 @@ use_variation_data_dir = [
     'nb.11',
     'nb.12',
     ]
-figure_dir = ${DEFAULT:figure_dir}/variations/prepost_m1000_p50
+figure_dir = ${DEFAULT:figure_dir}/variations/prepost_m1000_p0
 processed_data_dir = ${DEFAULT:processed_data_dir}
 
 # Change the central indices
-[tacc_prepost_m1000_m50]
+[tacc_prepost_m1000_p50]
 global = True
 central_indices = tacc_inds
 choose_first = True
 energy_outlier_percentile = 99.9
 aligned_fraction_pre_dt = -1000 # Change is calculated over the 
-aligned_fraction_post_dt = -50 # interval pre to post (in Myr)
-use_variation_data_dir = [
-    'py.1',
-    'nb.2',
-    'py.3',
-    'jug.4',
-    'jug.5',
-    'py.6',
-    'py.7',
-    'nb.8',
-    'nb.9',
-    'nb.10',
-    'nb.11',
-    'nb.12',
-    ]
-figure_dir = ${DEFAULT:figure_dir}/variations/tacc_prepost_m1000_m50
-processed_data_dir = ${DEFAULT:processed_data_dir}/variations/relative_to_accretion
-
-# Change the central indices
-[tacc_prepost_m1500_p50]
-global = True
-central_indices = tacc_inds
-choose_first = True
-energy_outlier_percentile = 99.9
-aligned_fraction_pre_dt = -1500 # Change is calculated over the 
 aligned_fraction_post_dt = 50 # interval pre to post (in Myr)
 use_variation_data_dir = [
     'py.1',
@@ -356,7 +331,32 @@ use_variation_data_dir = [
     'nb.11',
     'nb.12',
     ]
-figure_dir = ${DEFAULT:figure_dir}/variations/tacc_prepost_m1500_p50
+figure_dir = ${DEFAULT:figure_dir}/variations/tacc_prepost_m1000_p50
+processed_data_dir = ${DEFAULT:processed_data_dir}/variations/relative_to_accretion
+
+# Change the central indices
+[tacc_prepost_m1500_p0]
+global = True
+central_indices = tacc_inds
+choose_first = True
+energy_outlier_percentile = 99.9
+aligned_fraction_pre_dt = -1500 # Change is calculated over the 
+aligned_fraction_post_dt = 0 # interval pre to post (in Myr)
+use_variation_data_dir = [
+    'py.1',
+    'nb.2',
+    'py.3',
+    'jug.4',
+    'jug.5',
+    'py.6',
+    'py.7',
+    'nb.8',
+    'nb.9',
+    'nb.10',
+    'nb.11',
+    'nb.12',
+    ]
+figure_dir = ${DEFAULT:figure_dir}/variations/tacc_prepost_m1500_p0
 processed_data_dir = ${DEFAULT:processed_data_dir}/variations/relative_to_accretion
 
 # Change cut temperature
@@ -419,39 +419,39 @@ scripts = [
     # 'py.13', # Archive data
     # 'py.14', # Retrieve data
     'nb.15', # Combined before/after plots
-    # 'nb.16', # Combined panel plots
-    # 'nb.17', # Prevalence
+    'nb.16', # Combined panel plots
+    'nb.17', # Prevalence
     ]
 
 variations = [
-    # 'm12i',
-    # 'm12m',
-    # 'm11a',
-    # 'm11b',
-    # 'm11c',
+    'm12i',
+    'm12m',
+    'm11a',
+    'm11b',
+    'm11c',
     'm12i_md',
-    # 'm12r_md',
-    # 'm12w_md',
-    # 'm12f_md',
-    # 'm12z_md',
-    # 'm12c_md',
-    # 'm12b_md',
-    # 'm11d_md',
-    # 'm11e_md',
-    # 'm11h_md',
-    # 'm11i_md',
-    # 'm11q_md',
-    # 'm12i_cr',
+    'm12r_md',
+    'm12w_md',
+    'm12f_md',
+    'm12z_md',
+    'm12c_md',
+    'm12b_md',
+    'm11d_md',
+    'm11e_md',
+    'm11h_md',
+    'm11i_md',
+    'm11q_md',
+    'm12i_cr',
     ]
 
 global_variations = [
     '',
     'relative_to_accretion',
-    # 'no_cut_on_tacc',
-    'prepost_m1000_p50',
-    'tacc_prepost_m1000_m50',
-    'tacc_prepost_m1500_p50',
-    # 'diff_Tcut',
+    'no_cut_on_tacc',
+    'prepost_m1000_p0',
+    'tacc_prepost_m1000_p50',
+    'tacc_prepost_m1500_p0',
+    'diff_Tcut',
     # 'track_all_recent_stars',
     # 'track_all_thin_disk_stars',
     ]
