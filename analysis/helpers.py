@@ -5,7 +5,7 @@ def get_tchange_label( pm=None, central_indices=None ):
 
     if central_indices == 'tcools_inds':
         tchange_label = (
-            r'$t_{T=10^{' +
+            r'$t_{10^{' +
             str( pm['logTcools'] ) +
             r'}{\rm K}}$'
         )
