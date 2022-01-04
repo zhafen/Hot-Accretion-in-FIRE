@@ -242,6 +242,14 @@ subpath = cr_suite/m12i_mass7000_MHDCR_tkFIX
 halo_data_dir = ${scratch_dir}/halo_files/${subpath}
 sim_data_dir = ${fire_dir}/${subpath}/cr_700/output
 
+# MHDCV
+########################################################################
+
+[m12i_mhdcv]
+subpath = multiphysics/m12i_res7100_mhdcv
+halo_data_dir = ${scratch_dir}/halo_files/${subpath}
+sim_data_dir = ${scratch_dir}/${subpath}/output
+
 ########################################################################
 # Global variations
 ########################################################################
@@ -445,8 +453,8 @@ variations = [
     ]
 
 global_variations = [
-    '',
-    'relative_to_accretion',
+    # '',
+    # 'relative_to_accretion',
     'no_cut_on_tacc',
     'prepost_m1000_p0',
     'tacc_prepost_m1000_p50',
