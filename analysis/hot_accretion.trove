@@ -418,7 +418,7 @@ scripts = [
     # 'jug.4', # Run particle tracking
     # 'jug.5', # Run galaxy linking
     # 'py.6', # Run particle classification
-    # 'py.7', # Create Firefly visualization
+    'py.7', # Create Firefly visualization
     # 'nb.8', # Sample overview
     # 'nb.9', # Before and after
     # 'nb.10', # Geometric evolution
@@ -426,9 +426,9 @@ scripts = [
     # 'nb.12', # FIRE studio images
     # 'py.13', # Archive data
     # 'py.14', # Retrieve data
-    'nb.15', # Combined before/after plots
-    'nb.16', # Combined panel plots
-    'nb.17', # Prevalence
+    # 'nb.15', # Combined before/after plots
+    # 'nb.16', # Combined panel plots
+    # 'nb.17', # Prevalence
     ]
 
 variations = [
@@ -437,12 +437,12 @@ variations = [
     # 'm11a',
     # 'm11b',
     # 'm11c',
-    'm12i_md',
+    # 'm12i_md',
     # 'm12r_md',
     # 'm12w_md',
     # 'm12f_md',
     # 'm12z_md',
-    # 'm12c_md',
+    'm12c_md',
     # 'm12b_md',
     # 'm11d_md',
     # 'm11e_md',
@@ -454,12 +454,12 @@ variations = [
 
 global_variations = [
     '',
-    'relative_to_accretion',
-    'no_cut_on_tacc',
-    'prepost_m1000_p0',
-    'tacc_prepost_m1000_p50',
-    'tacc_prepost_m1500_p0',
-    'diff_Tcut',
+    # 'relative_to_accretion',
+    # 'no_cut_on_tacc',
+    # 'prepost_m1000_p0',
+    # 'tacc_prepost_m1000_p50',
+    # 'tacc_prepost_m1500_p0',
+    # 'diff_Tcut',
     # 'track_all_recent_stars',
     # 'track_all_thin_disk_stars',
     ]

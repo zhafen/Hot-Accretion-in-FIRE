@@ -91,6 +91,7 @@ quantity_labels = {
     'delta_jmag': r'$j - j_0$' + '\n[kpc km/s]',
     'delta_jperp_frac': r'$(j_\perp - j_{\perp,0})/j_{\rm DM}$',
     'delta_jz': r'$j_z - j_{z,0}$' + '\n[kpc km/s]',
+    'delta_support': r'$\Delta \left( \vert j \vert / rv_c(r) \right)$',
     'torque_perp': r'$\vert \tau_\perp \vert$' + '\n[kpc km/s/Myr]',
     'torque_z': r'$\tau_z$' + '\n[kpc km/s/Myr]',
     'torque_mag': r'$\vert \vec \tau \vert$' + '\n[kpc km/s/Myr]',
