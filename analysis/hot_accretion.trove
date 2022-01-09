@@ -418,8 +418,8 @@ scripts = [
     # 'jug.4', # Run particle tracking
     # 'jug.5', # Run galaxy linking
     # 'py.6', # Run particle classification
-    'py.7', # Create Firefly visualization
-    # 'nb.8', # Sample overview
+    # 'py.7', # Create Firefly visualization
+    'nb.8', # Sample overview
     # 'nb.9', # Before and after
     # 'nb.10', # Geometric evolution
     # 'nb.11', # Projected plots
@@ -432,24 +432,24 @@ scripts = [
     ]
 
 variations = [
-    # 'm12i',
-    # 'm12m',
-    # 'm11a',
-    # 'm11b',
-    # 'm11c',
-    # 'm12i_md',
-    # 'm12r_md',
-    # 'm12w_md',
-    # 'm12f_md',
-    # 'm12z_md',
+    'm12i',
+    'm12m',
+    'm11a',
+    'm11b',
+    'm11c',
+    'm12i_md',
+    'm12r_md',
+    'm12w_md',
+    'm12f_md',
+    'm12z_md',
     'm12c_md',
-    # 'm12b_md',
-    # 'm11d_md',
-    # 'm11e_md',
-    # 'm11h_md',
-    # 'm11i_md',
-    # 'm11q_md',
-    # 'm12i_cr',
+    'm12b_md',
+    'm11d_md',
+    'm11e_md',
+    'm11h_md',
+    'm11i_md',
+    'm11q_md',
+    'm12i_cr',
     ]
 
 global_variations = [
