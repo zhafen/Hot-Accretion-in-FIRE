@@ -46,7 +46,7 @@ quantity_labels = {
     'median_R1e5K_rgal': r'median $R_{T=10^5\, {\rm K}}$ / $R_{\rm gal}$',
     'thin_disk_frac': r'stellar thin disk fraction',
     'thin_disk_frac_recent': r'$f_{\rm thin\,disk,\,recent}$',
-    'thin_disk_frac_tracked': r'$f_{\rm thin}(\star,z=0,$ tracked)',
+    'thin_disk_frac_tracked': r'$f_{\rm thin\,disk,\,tracked}$',
     'thin_disk_frac_sloanr': r'$f_{\rm thin\,disk}$($z=0$, Sloan r band)',
     'mvir': r'$M_{\rm vir}$ $[M_\odot]$',
     'mstar': r'$M_{\star}$ $[M_\odot]$',
