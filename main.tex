@@ -574,9 +574,9 @@ The result is gas that cools from $\approx10^6$ K to $\approx10^4$ K over the co
     \centering
     \includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_combined2.pdf}
     \caption{
-    Median properties relative to time of accretion for thin disk galaxies (yellow; $\fthin>0.5$) and irregular galaxies (purple; $\fthin<0.5$).
+    Median properties relative to time of accretion for thin disk galaxies (red; $\fthin>0.5$) and irregular galaxies (blue; $\fthin<0.5$).
     The grey line shows the median values for a cosmic ray-dominated halo, discussed in \S\ref{s: crs}.
-    Compared to accretion onto irregular galaxies, accretion onto thin disk galaxies is hotter, more spatially-aligned, has more rotational support, has an angular momentum distribution that is much more aligned, and only becomes supersonic shortly before accretion.
+    Compared to accretion onto irregular galaxies, accretion onto thin disk galaxies is hotter, more spatially-aligned, has more rotational support, and has an angular momentum distribution that is much more aligned.
     }
     \label{f: before and after combined}
 \end{figure*}
@@ -588,13 +588,13 @@ Fig.~\ref{f: before and after combined} studies the properties of accretion onto
 We analyse the properties as a function of time relative to the time at which gas accretes onto the main galaxy ($\tacc$), defined as the first time gas is within $r_{\rm gal}$ and with a density $n_{\rm H} > 0.13$ cm$^{-3}$.
 In practice the gas is typically within $r_{\rm gal}$ by the time it attains ISM densities, i.e. the density criteria is more restrictive than the distance criteria.
 As such, the distance criteria primarily serves to prevent our analysis being contaminated by accretion onto galaxies other than the main galaxy.
-An exception is when the angular momentum support radius is larger than the current galaxy radius, and therefore hot accretion will cool outside the galaxy and possibly attain ISM densities prior to reaching $r_{\rm gal}$.
+An exception is when the angular momentum support radius is larger than the current galaxy radius ($\vert j \vert > r_{\rm gal} v_c( r_{\rm gal})$), and therefore hot accretion will cool outside the galaxy and possibly attain ISM densities prior to reaching $r_{\rm gal}$.
 For a given property the colored lines show the median of the medians of the individual simulations at a given $t - \tacc$.
 Note that the properties as a function of $t - \tacc$ are not simply the properties as a function of $t - \tcools$ offset by a fixed time.
 This is because $\tacc - \tcools$ spans $0-500$ Myr across the sample.
-This is especially true for galaxies fed primarily by cold streams, because gas is typically only hot for a short period of time in such halos.
-Possibly due to cold streams or a large angular momentum support radius relative to $r_{\rm gal}$, the median properties of \texttt{m12f} as a function of $t - \tacc$ are qualitatively different from the other thin disk galaxies, despite having similar properties as a function of $t - \tcools$.
-As such we do not include \texttt{m12f} when calculating the medians for this figure, and for this figure only.
+This is especially true for galaxies fed primarily by cold streams, because gas is typically only hot for a short period of time in such halos, and for halos with $\vert j \vert > r_{\rm gal} v_c( r_{\rm gal})$.
+One halo with larger-than-usual median $\vert j \vert$ is \texttt{m12f}, which has similar behavior as the other thin disk galaxies relative to $t - \tcools$ but unusual behavior relative to $t - \tacc$.
+We show the properties of \texttt{m12f} as a function of time in Appendix~\ref{s: appendix-individual}, and exclude its contribution to the medians in Figure~\ref{f: before and after combined}..
 
 % Overview
 Fig.~\ref{f: before and after combined} demonstrates that key properties shown in Figs.~\ref{f: before and after A} and~\ref{f: before and after B} for one galaxy hold on average for all thin disk galaxies:
@@ -1018,14 +1018,14 @@ From Fig.~\ref{f: sample validation -- spatial} we learn that (a) gas that accre
 and (c) the temperature of accreted gas and all gas at the same radius is consistent, but some cooler, less-pressure-supported gas at larger radii can accrete onto the galaxy.
 These results are consistent with the temperature distributions for accreting gas vs gas that remains in the CGM for $>3$ Gyr~\citep{Hafen2020}.
 
-\section{Accretion onto additional representative haloes}
+\section{Accretion onto \texttt{m12f}}
 \label{s: appendix-more before and after}
 
-% COUNTEREXAMPLE
-\begin{figure*}\includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_allone_m11d_md.pdf}
+% M12F
+\begin{figure*}\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m12f_md.pdf}
 \caption{
-Temperature and geometry of gas accreting onto a representative $z\sim0$ galaxy in FIRE that does \textit{not} form a thin disk, versus time relative to the final cooling time ($t - \tcools$).
-This figure should be compared with Figs~\ref{f: before and after A} and~\ref{f: before and after B}.
+Temperature and geometry of gas accreting onto a $z\sim0$ galaxy in FIRE with a thin disk fraction $\fthin=0.72$ versus time relative to the final cooling time ($t - \tcools$).
+This galaxy (\texttt{m12f}) has qualitatively similar properties to other thin disk galaxies relative to $t-\tcools$, as seen via comparison with Figs~\ref{f: before and after A},~\ref{f: before and after B}, and~\ref{f: before and after combined}.
 In each panel solid lines and shaded regions mark the medians and 16th to 84th percentile ranges of all particles accreted within 1 Gyr prior to $z=0$.
 \textbf{A:} Temperature.
 The final cooling tends to occur shortly after the gas is heated beyond $T=10^5$ K.
@@ -1033,70 +1033,101 @@ The final cooling tends to occur shortly after the gas is heated beyond $T=10^5$
 \textbf{C:} Absolute height from the disk plane.
 \textbf{D:} Velocity components of accretion (colored lines and band), relative to circular velocity at the median radius (dash-dotted line).
 \textbf{E:} Fraction of gas converted into stars.
-Star formation proceeds shortly after cooling, well before gas orients into a disk.
 \textbf{F:} The ratio of $j_z / \vert \vec j \vert$.
 The solid line shows this ratio for the total angular momentum of all accreted particles.
-The coherence of the gas does not change before/after cooling.
 \textbf{G:} The magnitude of the specific angular momentum of particles ($\vert\vec{j}\vert$, green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
 The dashed line shows the angular momentum necessary for rotational support.
-Rotational support occurs $\gtrsim 300$ Myr after $\tcools$, at which time radial gas velocity decreases.
 \textbf{H:} Baryon number density.
 \textbf{I:} Energy loss from radiative cooling (blue) and heating from $PdV$ work on the gas particles (red).
-Radiative cooling exceeds compression heating with the exception of when the gas is heated, shortly before cooling.
 }
-\label{f: counterexample}
+\label{f: m12f-tcools}
 \end{figure*}
 
-Fig.~\ref{f: counterexample} shows characteristic accretion onto a halo with a small (in this case nearly zero) thin disk fraction.
-Such haloes do not show the features of rotating cooling flows, as also seen in Figs.~\ref{f: prevalence} and~\ref{f: prevalence - angular momentum}.
+% M12F
+\begin{figure*}\includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_allone_m12f_md.pdf}
+\caption{
+Same as Fig.~\ref{f: m12f-tcools}, but relative to $\tacc$.
+Prior to reaching radii and densities required to fit our definition of $\tacc$, accretion in \texttt{m12f} is already cooler and more aligned relative to other thin disk galaxies.
+}
+\label{f: m12f-tacc}
+\end{figure*}
+
+% % COUNTEREXAMPLE
+% \begin{figure*}\includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_allone_m11d_md.pdf}
+% \caption{
+% Temperature and geometry of gas accreting onto a representative $z\sim0$ galaxy in FIRE that does \textit{not} form a thin disk, versus time relative to the final cooling time ($t - \tcools$).
+% This figure should be compared with Figs~\ref{f: before and after A} and~\ref{f: before and after B}.
+% In each panel solid lines and shaded regions mark the medians and 16th to 84th percentile ranges of all particles accreted within 1 Gyr prior to $z=0$.
+% \textbf{A:} Temperature.
+% The final cooling tends to occur shortly after the gas is heated beyond $T=10^5$ K.
+% \textbf{B:} 3D distance from halo center.
+% \textbf{C:} Absolute height from the disk plane.
+% \textbf{D:} Velocity components of accretion (colored lines and band), relative to circular velocity at the median radius (dash-dotted line).
+% \textbf{E:} Fraction of gas converted into stars.
+% Star formation proceeds shortly after cooling, well before gas orients into a disk.
+% \textbf{F:} The ratio of $j_z / \vert \vec j \vert$.
+% The solid line shows this ratio for the total angular momentum of all accreted particles.
+% The coherence of the gas does not change before/after cooling.
+% \textbf{G:} The magnitude of the specific angular momentum of particles ($\vert\vec{j}\vert$, green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
+% The dashed line shows the angular momentum necessary for rotational support.
+% Rotational support occurs $\gtrsim 300$ Myr after $\tcools$, at which time radial gas velocity decreases.
+% \textbf{H:} Baryon number density.
+% \textbf{I:} Energy loss from radiative cooling (blue) and heating from $PdV$ work on the gas particles (red).
+% Radiative cooling exceeds compression heating with the exception of when the gas is heated, shortly before cooling.
+% }
+% \label{f: counterexample}
+% \end{figure*}
+
+% Fig.~\ref{f: counterexample} shows characteristic accretion onto a halo with a small (in this case nearly zero) thin disk fraction.
+% Such haloes do not show the features of rotating cooling flows, as also seen in Figs.~\ref{f: prevalence} and~\ref{f: prevalence - angular momentum}.
 
 % \section{Accretion onto other MW-mass haloes}
 % \label{s: appendix-more before and after}
 
-% M12B
-\begin{figure*}
-\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m12b_md.pdf}
-\caption{
-Same as Fig.~\ref{f: counterexample}, but for a MW-mass halo with a thin disk, \texttt{m12b}.
-}
-\label{f: before and after m12b}
-\end{figure*}
+% % M12B
+% \begin{figure*}
+% \includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m12b_md.pdf}
+% \caption{
+% Same as Fig.~\ref{f: counterexample}, but for a MW-mass halo with a thin disk, \texttt{m12b}.
+% }
+% \label{f: before and after m12b}
+% \end{figure*}
 
-% M12C
-\begin{figure*}
-\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m12c_md.pdf}
-\caption{
-Same as Fig.~\ref{f: counterexample}, but for another MW-mass halo with a thin disk, \texttt{m12c}.
-}
-\label{f: before and after m12c}
-\end{figure*}
+% % M12C
+% \begin{figure*}
+% \includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m12c_md.pdf}
+% \caption{
+% Same as Fig.~\ref{f: counterexample}, but for another MW-mass halo with a thin disk, \texttt{m12c}.
+% }
+% \label{f: before and after m12c}
+% \end{figure*}
 
-Figs.~\ref{f: before and after m12b} and~\ref{f: before and after m12c} show the combined equivalent of Figs.~\ref{f: before and after A} and~\ref{f: before and after B} for two other Milky Way-mass haloes.
-The behavior is qualitatively very similar to each other and \texttt{m12i}.
-This is summarized for additional simulations in Figs.~\ref{f: prevalence},~\ref{f: before and after combined}, and~\ref{f: prevalence - angular momentum}.
-Note that at early $t - \tcools$ the radiative cooling exceeds the compression heating.
-This is because some cool gas with high radiative cooling is present (we do not include the effect of UVB heating in this calculation).
-The cooling from the hot gas is still, on average, approximately equal to the heating.
+% Figs.~\ref{f: before and after m12b} and~\ref{f: before and after m12c} show the combined equivalent of Figs.~\ref{f: before and after A} and~\ref{f: before and after B} for two other Milky Way-mass haloes.
+% The behavior is qualitatively very similar to each other and \texttt{m12i}.
+% This is summarized for additional simulations in Figs.~\ref{f: prevalence},~\ref{f: before and after combined}, and~\ref{f: prevalence - angular momentum}.
+% Note that at early $t - \tcools$ the radiative cooling exceeds the compression heating.
+% This is because some cool gas with high radiative cooling is present (we do not include the effect of UVB heating in this calculation).
+% The cooling from the hot gas is still, on average, approximately equal to the heating.
 
-% \section{Accretion in cosmic ray-dominated haloes}
-% \label{s: appendix-crs}
+% % \section{Accretion in cosmic ray-dominated haloes}
+% % \label{s: appendix-crs}
 
-% M12I_CR
-\begin{figure*}
-\includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_allone_m12i_cr.pdf}
-\caption{
-Same as Fig.~\ref{f: counterexample}, but for a cosmic ray-dominated MW-mass halo, \texttt{m12i\_cr}.
-The accretion in cosmic ray-dominated haloes is qualitatively similar to rotating cooling flows.
-The exceptions are the temperature (panel A) and the energy balance (panel B): nonthermal support from cosmic rays (CRs) produces a $T\sim 10^4$ K, diffuse halo absent cooling flows.
-As with rotating cooling flows accreting gas in this halo becomes coherently aligned \textit{prior to accretion}, a key mechanism that enables thin disk formation.
-}
-\label{f: before and after m12i cr}
-\end{figure*}
+% % M12I_CR
+% \begin{figure*}
+% \includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_allone_m12i_cr.pdf}
+% \caption{
+% Same as Fig.~\ref{f: counterexample}, but for a cosmic ray-dominated MW-mass halo, \texttt{m12i\_cr}.
+% The accretion in cosmic ray-dominated haloes is qualitatively similar to rotating cooling flows.
+% The exceptions are the temperature (panel A) and the energy balance (panel B): nonthermal support from cosmic rays (CRs) produces a $T\sim 10^4$ K, diffuse halo absent cooling flows.
+% As with rotating cooling flows accreting gas in this halo becomes coherently aligned \textit{prior to accretion}, a key mechanism that enables thin disk formation.
+% }
+% \label{f: before and after m12i cr}
+% \end{figure*}
 
-Fig.~\ref{f: before and after m12i cr} shows the combined equivalent of Figs.~\ref{f: before and after A} and~\ref{f: before and after B} for the same halo, but with an implementation of cosmic ray feedback~\cite{Chan2019, Hopkins2020a}.
-Note that we center the trajectories on the time of first accretion instead of $\tcools$ because in CR-dominated haloes much of the gas is never heated beyond $T = 10^5$ K.
-This does not significantly affect the result, as accretion is largely concurrent with cooling in the haloes without CRs.
-This halo forms a thin disk ($\fthin=0.71$, which we argue may be a general feature of rotating subsonic flows~(\S\ref{s: why CFs thin disks}, \S\ref{s: crs}).
+% Fig.~\ref{f: before and after m12i cr} shows the combined equivalent of Figs.~\ref{f: before and after A} and~\ref{f: before and after B} for the same halo, but with an implementation of cosmic ray feedback~\cite{Chan2019, Hopkins2020a}.
+% Note that we center the trajectories on the time of first accretion instead of $\tcools$ because in CR-dominated haloes much of the gas is never heated beyond $T = 10^5$ K.
+% This does not significantly affect the result, as accretion is largely concurrent with cooling in the haloes without CRs.
+% This halo forms a thin disk ($\fthin=0.71$, which we argue may be a general feature of rotating subsonic flows~(\S\ref{s: why CFs thin disks}, \S\ref{s: crs}).
 
 \section{Instantaneous mass flow}
 \label{s: appendix-mass flow}
