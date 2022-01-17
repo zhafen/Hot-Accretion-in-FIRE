@@ -42,7 +42,7 @@
 \newcommand{\msun}{{\rm M}_\odot}
 \newcommand{\vvir}{v_{\rm vir}}
 \newcommand{\Nsample}{17}
-\newcommand{\Rcirc}[0]{R_{\rm circ}}
+\newcommand{\Rcirc}[0]{r_{\rm circ}}
 \newcommand{\vc}[0]{v_{\rm c}}
 \newcommand{\mturb}[0]{\mathcal{M}_{\rm turb}}
 
@@ -59,20 +59,21 @@
 Zachary Hafen$^{1,2}$\thanks{E-mail: zhafen@uci.edu},
 Jonathan Stern$^{2,3}$,
 James Bullock$^{1}$,
-Alex Gurvich$^2$,
+Alex B. Gurvich$^2$,
+Sijie Yu$^1$,
 Claude-Andr\'e Faucher-Gigu\`ere$^2$,
-Drummond Fielding$^4$,
+Drummond B. Fielding$^4$,
 Daniel Angl\'es-Alc\'azar$^4$,
 Eliot Quataert$^5$,
 Andrew Wetzel$^6$,
 Michael Boylan-Kolchin$^7$,
-Jorge Moreno$^{8,1}$,
+Jorge Moreno$^{8,1,9}$,
 Tjitske Starkenburg$^2$,
-Kareem El-Badry$^{9,10}$,
-T. K. Chan$^{11}$,
-Cameron Trapp$^{12}$,
-Philip F. Hopkins$^{13}$,
-Du\v{s}an Kere\v{s}$^{12}$
+Kareem El-Badry$^{10,11}$,
+T. K. Chan$^{12}$,
+Cameron Trapp$^{13}$,
+Philip F. Hopkins$^{9}$,
+Du\v{s}an Kere\v{s}$^{13}$
 } \vspace{0.4cm}\\
 \parbox{\textwidth}{
 % List of institutions
@@ -81,14 +82,14 @@ $^2$ Department of Physics \& Astronomy and CIERA, Northwestern University, 1800
 $^3$ School of Physics \& Astronomy, Tel Aviv University, Tel Aviv 69978, Israel \\
 $^4$ Center for Computational Astrophysics, Flatiron Institute, 162 5th Ave, New York, NY 10010 \\
 $^5$ Department of Astrophysical Sciences, Princeton University, Princeton, NJ 08544, USA \\
-$^6$ Department of Physics, University of California, Davis, CA, USA 95616 \\
+$^6$ Department of Physics \& Astronomy, University of California, Davis, CA, USA 95616 \\
 $^7$ Department of Astronomy, The University of Texas at Austin, 2515 Speedway, Stop C1400, Austin, TX 78712-1205, USA \\
 $^8$ Department of Physics and Astronomy, Pomona College, Claremont, CA 91711, USA \\
-$^9$ Center for Astrophysics $|$ Harvard \& Smithsonian, 60 Garden Street, Cambridge, MA 02138, USA \\
-$^{10}$ Harvard Society of Fellows, 78 Mount Auburn Street, Cambridge, MA 02138 \\
-$^{11}$ Institute for Computational Cosmology, Department of Physics, Durham University, South Road, Durham DH1 3LE, UK \\
-$^{12}$ Department of Physics, Center for Astrophysics and Space Sciences, University of California, San Diego, 9500 Gilman Drive, \\ La Jolla, CA 9209, USA \\
-$^{13}$ TAPIR, Mailcode 350-17, California Institute of Technology, Pasadena, CA 91125, USA
+$^{9}$ TAPIR, Mailcode 350-17, California Institute of Technology, Pasadena, CA 91125, USA \\
+$^{10}$ Center for Astrophysics $|$ Harvard \& Smithsonian, 60 Garden Street, Cambridge, MA 02138, USA \\
+$^{11}$ Harvard Society of Fellows, 78 Mount Auburn Street, Cambridge, MA 02138 \\
+$^{12}$ Institute for Computational Cosmology, Department of Physics, Durham University, South Road, Durham DH1 3LE, UK \\
+$^{13}$ Department of Physics, Center for Astrophysics and Space Sciences, University of California, San Diego, 9500 Gilman Drive, \\ La Jolla, CA 9209, USA \\
 }
 }
 
@@ -135,7 +136,7 @@ galaxies: disk -- galaxies: evolution -- galaxies: haloes -- cosmology: theory
     \centering
     \includegraphics[width=\textwidth]{figures/stars.pdf}
     \caption{
-    Mock Hubble images of four $z=0$ galaxies in the FIRE-2 simulations. Halo masses are noted in the panels, together with the fraction of young ($<1$ Gyr) stars which reside in a thin disk.  The Milky Way-mass galaxies have thin disk morphologies (top, bottom-left), while the lower mass galaxy has an irregular morphology (bottom-right).
+    Mock Hubble images of four $z=0$ galaxies in the FIRE-2 simulations. Halo masses are noted in the panels, together with the mass fraction of young ($<1$ Gyr) stars which reside in a thin disk.  The Milky Way-mass galaxies have thin disk morphologies (top, bottom-left), while the lower mass galaxy has an irregular morphology (bottom-right).
     }
     \label{f: stars}
 \end{figure*}
@@ -262,7 +263,7 @@ In the simulations and throughout our analysis we use a standard flat $\Lambda$C
 Fig.~\ref{f: stars} shows edge-on mock Hubble images (though neglecting dust attenuation to more clearly illustrate the stellar distribution) for the $z=0$ snapshots of four of our simulated galaxies.
 The top and bottom-left panels show three MW-mass galaxies (\texttt{m12i}, \texttt{m12b}, and \texttt{m12c}) while the bottom-right panel shows a $M_\star \sim 5 \times 10^9 M_\odot$ dwarf galaxy, \texttt{m11d}.
 As noted in previous studies~\citep{Garrison-Kimmel2018, El-Badry2018} MW-mass galaxies in FIRE typically have thin disk morphologies, while lower mass galaxies show a thick disk / irregular morphology.
-We quantify this trend using $\fthin$, defined as the fraction of stars with age $<1$ Gyr (at $z=0$) that have $j_z/j_c(E) > 0.8$~\citep[e.g.][]{Yu2021}.
+We quantify this trend using $\fthin$, defined as the mass fraction of stars with age $<1$ Gyr (at $z=0$) that have $j_z/j_c(E) > 0.8$~\citep[e.g.][]{Yu2021}.
 Here $j_z$ is the specific angular momentum in the $z$ direction and $j_c(E)$ is the angular momentum the star would have if it had the same energy but was in a circular orbit.
 The $z$ axis is defined as the direction of the total angular momentum vector of stars inside the galaxy.
 This definition of the thin disk is the same definition used in~\cite{Yu2021}.
@@ -287,7 +288,7 @@ These particles pose a problem for our tracking method because the history of th
 
 % Sample validity
 In Appendix~\ref{s: appendix-sample validation} we show for a sample halo that the accretion histories of selected particles are representative of the accretion histories of all stars formed within $1$ Gyr of $z=0$.
-Further, \cite{Yu2021} show that thin disk formation is most prominent in the steady phase of star formation and peaks at $z=0$, consistent with our samples probing the phase of galaxy evolution when thin disk formation is most dominant.
+Further, \cite{Yu2021} show that thin disk formation is most prominent in the steady phase of star formation, consistent with our samples probing the phase of galaxy evolution when thin disk formation is most dominant.
 In Appendix~\ref{s: appendix-sample validation} we also show that around thin disk galaxies our selected particles are drawn from the angular momentum distribution of the CGM without bias.
 
 % Accretion time
@@ -309,7 +310,7 @@ For a given particle, we define this time as:
 i.e., the last snapshot the particle was hot prior to $\tacc$.
 For gas that cools as it accretes, $\tcools$ occurs as the gas passes through the galaxy-halo interface.
 In all halos we find that $\gtrsim99\%$ of tracked particles heat above $T > 10^5$ K at some point prior to accretion, even in our low mass halos where the virial temperature is $T \approx 2 \times 10^5$ K and  accretion onto the galaxy is dominated by cold inflows. 
-In such halos heating is typically temporary due to the short cooling times, but hot gas still comprises $\gtrsim 30\%$ of the halo's gas mass at any given time~\cite{Hafen2019,Hafen2020}.
+In such halos heating is typically temporary due to the short cooling times, but hot gas still comprises $\gtrsim 30\%$ of the halo's gas mass at any given time~\citep{Hafen2019,Hafen2020}.
 % Note also that our lower-mass, irregular galaxies have a typical halo mass of $M_{\rm vir} \sim 10^{11} M_\odot$, corresponding to a median above the cutoff temperature.
 % As such the behavior at $t = \tcools$ probes the behavior of hot halo gas as it cools, for both thin disk \textit{and} irregular galaxies.
 Below we analyse the statistical properties of all accreting particles as a function of time relative to their cooling time ($t-\tcools$) or relative to their accretion time ($t-\tacc$).
@@ -357,7 +358,7 @@ In the temperature panel (A) we exclude from the distribution particles that hav
 Panel (A) demonstrates that during the 500 Myr prior to cooling for a final time, the inflow is predominantly hot ($\gtrsim 10^5$ K), with a median temperature of $4-8\times10^5$ K, similar to the halo virial temperature of $\Tvir(z=0)=6.5\times10^5$ K.
 This is not true by construction --- gas may have been heated only shortly before cooling.
 During this time prior to cooling the accreting gas is inflowing toward the galaxy (panel B), from a median $r=55$ kpc at $t-\tcools=-500$ Myr, to a median $r\approx18\,{\rm kpc}\approx1.4 r_{\rm gal}$ at $t=\tcools$, after which time the inflow decelerates.
-The characteristic inflow velocity of $v_r \approx-70$ km s$^{-1}$ (Panel D) is substantially lower than the circular velocity of $170-200$ km s$^{-1}$.
+The characteristic inflow velocity of $v_r \approx-70$ km s$^{-1}$ (Panel C) is substantially lower than the circular velocity of $170-200$ km s$^{-1}$.
 This radial velocity is also smaller than the median sound speed of $100-130$ km s$^{-1}$, indicating a subsonic radial flow. 
 
 
@@ -525,7 +526,8 @@ Fig.~\ref{f: before and after B} panel (B) shows the magnitude of the specific a
 The median value $\vert \vec j \vert$ decreases prior to cooling, from $\approx 5000$ kpc km s$^{-1}$ to $\approx 3000\,{\rm kpc\,km\,s}^{-1}$, in contrast with  $j_z$ which remains constant.
 The nearly constant $j_{\rm z}$ indicates the inflow conserves angular momentum in this direction. 
 The value of $j_z\approx 2500$ kpc km s$^{-1}$ is comparable to the average specific angular momentum of $j_{\rm DM} \simeq \sqrt{2}\lambda \Rvir \vvir$ expected in dark matter haloes due to tidal torques \citep[e.g.][]{Bullock2001}.
-Using a typical dimensionless spin parameter $\lambda \simeq 0.035$, and the virial radius $\Rvir=270$ kpc and virial velocity $\vvir=130$ km s$^{-1}$ of this halo, we get $j_{\rm DM}\approx1750$ kpc km s$^{-1}$, i.e.~the expected average value of the dark matter is within $30\%$ of the net angular momentum of accreting hot gas shown in Fig.~\ref{f: before and after B}. The fact that the gas has slightly more angular momentum than naively expected for the dark matter is consistent with previous findings that gas typically has a slightly higher spin than dark matter \citep[e.g.][]{Stewart2017}.
+Using a typical dimensionless spin parameter $\lambda \simeq 0.035$, and the virial radius $\Rvir=270$ kpc and virial velocity $\vvir=130$ km s$^{-1}$ of this halo, we get $j_{\rm DM}\approx1750$ kpc km s$^{-1}$, i.e.~the expected average value of the dark matter is within $30\%$ of the net angular momentum of accreting hot gas shown in Fig.~\ref{f: before and after B}.
+The fact that the gas has slightly more angular momentum than naively expected for the dark matter is consistent with previous findings that gas typically has a slightly higher spin than dark matter \citep[e.g.][]{Stewart2017}.
 
 The dashed line in panel (B) of Fig.~\ref{f: before and after B} plots the median specific angular momentum necessary for gas to be fully supported by angular momentum at a given radius, i.e. $rv_c(r)$.
 The accretion attains significant angular momentum support as it proceeds through the inner CGM, consistent with other analyses of CGM rotational support which find that rotation support is more prominent at smaller CGM radii~\citep{Oppenheimer2018, Trapp2021}.
@@ -545,27 +547,31 @@ Fig.~\ref{f: before and after B} panel (C) shows the distribution of the accreti
 Prior to cooling the gas density increases steadily due to the inflow, reaching $\approx10^{-3}$ cm$^{-3}$ just before cooling at $t\lesssim\tcools$.
 This density is comparable to observational estimates of the hot gas density just outside the Milky Way disk (e.g.,~\citealt{Li2017a}).
 At $t\approx\tcools$, the gas density sharply increases, reaching $0.1$ cm$^{-3}$ within $\approx50$ Myr, due to the decreasing radial velocity of the inflow upon accretion (Fig.~\ref{f: before and after A}), and due to the collapse from a quasi-spherical geometry into a disk geometry.
-The gas then starts forming stars shortly after cooling (Fig.~\ref{f: before and after A}). Note that star formation occurs despite that the 84th density percentile after cooling is $\approx10$ cm$^{-3}$, well below the minimum density for star formation of $n_{\rm SF} = 1000$ cm$^{-3}$ in FIRE, since gas remains at densities approaching $n_{\rm SF}$ only for a short time before forming stars.
+The gas then starts forming stars shortly after cooling (Fig.~\ref{f: before and after A}).
+Note that star formation occurs despite that the 84th density percentile after cooling is $\approx10$ cm$^{-3}$, well below the minimum density for star formation of $n_{\rm SF} = 1000$ cm$^{-3}$ in FIRE, since gas remains at densities approaching $n_{\rm SF}$ only for a short time before forming stars.
 
 % Energy balance description
-In Fig.~\ref{f: before and after B} panel (D) we assess the energetics of the gas to determine why it cools.
+In Fig.~\ref{f: before and after B} panel (D) we assess the energetics of the hot gas to determine why it cools.
 We study the energetics through two types of change in specific energy: radiative cooling (blue lines) and compression heating (red lines).
-Radiative cooling per unit mass for an individual particle is calculated as $\nH^2 \Lambda / \rho$, where $\nH$ is the hydrogen density, $\rho$ is the mass density, and $\Lambda$ is the cooling function for photoionized gas, which we take from \cite{Wiersma2009a}.
+Radiative cooling per unit mass for an individual particle is calculated as $\nH^2 \Lambda / \rho$, where $\nH$ is the hydrogen density, $\rho$ is the mass density, and $\Lambda$ is the cooling function for optically thin photoionized gas, which we take from \cite{Wiersma2009a}.
+Prior to $\tcools$ we include only fluid elements with $T>10^{4.5}$ K, to avoid optical thickness effects on cooling, and to avoid large fluctuations when $\Lambda$ approaches zero at $T\approx10^4$ K.
+As our focus is the energetics of the hot $\sim\Tvir$ gas, this cut does not affect our conclusions. 
 Compression heating per unit mass for an individual MFM resolution element is calculated as $P \frac{dV}{dt} \approx \frac{ P }{ n^2 } \frac{ \Delta n }{ \Delta t }$, where $P = n k_B T$, $\Delta \rho$ is the change in density from one snapshot to the next, and $\Delta t$ is the snapshot time spacing.
-Because accreting gas elements interact with other accreting gas elements thermodynamically we show the mean specific energy tracks of all gas elements binned into 100 Myr bins of $\tcools$.
-When the median temperature of accreting gas is larger than $T=10^5$ K we focus on the energy balance of the hot gas only, and remove any cooling or heating from gas with $T < 10^{4.5}$ K.
-Related, to focus on the behavior of the majority of the particles we do not bin the $1\%$ of particles with the highest change in specific energy.
+Because accreting gas elements interact with other accreting gas elements thermodynamically we show the mean specific energy tracks of all gas elements binned into 100 Myr bins of $\tcools$. 
+% As To avoid optically thick gas We focus on gas with $>10^4.5$
+% When the median temperature of accreting gas is larger than $T=10^5$ K we focus on the energy balance of the hot gas only, and remove any cooling or heating from gas with $T < 10^{4.5}$ K.
+Also, to focus on the behavior of the majority of the particles we do not bin the $1\%$ of particles with the highest change in specific energy.
 Some $\tcools$ bins contain much more accreting gas than others, and to reflect this we set the darkness of the lines proportional to the number of particles in the bin.
 
 % Energy balance trend
 At $t-\tcools=-500$ Myr the radiative cooling rate is $\approx0.006$ erg s$^{-1}$ g$^{-1}$, corresponding to a cooling time $t_{\rm cool}=400$ Myr for the median temperature of $T=4\times 10^5$ K at this epoch (see Fig.~\ref{f: before and after A}, panel A). 
 At later $t-\tcools$ but still prior to cooling, the radiative cooling rate increases due to the increase in gas density.
-The panel however shows that this energy loss to radiation is nearly completely offset by compressive heating, explaining the roughly flat temperature profile at $t<\tcools$ (Fig.~\ref{f: before and after A}). 
-This equality between radiative cooling and compressive heating is a defining characteristic of classic cooling flows in which angular momentum support can be neglected \citep{Mathews1978, McNamara2007, Stern2019}. 
+The panel shows that this energy loss to radiation is followed closely by compressive heating, explaining the roughly flat temperature profile at $t<\tcools$ (Fig.~\ref{f: before and after A}). 
+This approximate equality between radiative cooling and compressive heating is a defining characteristic of classic cooling flows in which angular momentum support can be neglected \citep{Mathews1978, McNamara2007, Stern2019}. 
 
 Around $\tcools$ the cooling rate and compressive heating diverge.
 This can be understood by noting that the radiative cooling rate per unit mass scales as $\propto\rho\Lambda$, while the compressive heating rate scales as $\propto\epsilon d\log\rho/d t$ where $\epsilon$ is the specific thermal energy.
-The deceleration of the hot inflow prior to accretion onto the galaxy causes $\rho$ to increase faster than $d\log\rho/d t$, causing the temperature to decrease.
+The deceleration of the hot inflow prior to accretion onto the galaxy causes $\rho$ to increase faster than $d\log\rho/d t$, causing radiative cooling to exceed compressive heating and the temperature to decrease.
 This in turn increases the cooling rate and decreases $\epsilon$, which further accelerates the drop in temperature.
 The result is gas that cools from $\approx10^6$ K to $\approx10^4$ K over the course of $\lesssim 50$ Myr.
 
@@ -574,9 +580,11 @@ The result is gas that cools from $\approx10^6$ K to $\approx10^4$ K over the co
     \centering
     \includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_combined2.pdf}
     \caption{
-    Median properties relative to time of accretion for thin disk galaxies (red; $\fthin>0.5$) and irregular galaxies (blue; $\fthin<0.5$).
-    The grey line shows the median values for a cosmic ray-dominated halo, discussed in \S\ref{s: crs}.
-    Compared to accretion onto irregular galaxies, accretion onto thin disk galaxies is hotter, more spatially-aligned, has more rotational support, and has an angular momentum distribution that is much more aligned.
+    Median properties of the accreting gas relative to time of accretion, for thin disk galaxies (red; $\fthin>0.5$) and for irregular galaxies (blue; $\fthin<0.5$).
+    The grey lines show the median values for a cosmic ray-dominated halo, discussed in \S\ref{s: crs}.
+    The temperature panel (second row on the left) shows that accretion onto thin disk galaxies is hot ($\gtrsim10^{5.5}$ K), in contrast with cool $\approx10^4$ K accretion onto irregular galaxies.
+    The bottom panels show that accretion onto thin disk galaxies also has an angular momentum distribution that is more aligned and is more rotationally supported than in irregular galaxies.
+    Accretion in the cosmic ray-dominated halo is cool, but similar in its angular momentum properties to hot accretion. 
     }
     \label{f: before and after combined}
 \end{figure*}
@@ -584,17 +592,21 @@ The result is gas that cools from $\approx10^6$ K to $\approx10^4$ K over the co
 \subsection{Comparison of accretion onto thin disk galaxies and onto irregular galaxies}
 
 % Figure description
-Fig.~\ref{f: before and after combined} studies the properties of accretion onto galaxies with $\fthin > 0.5$ (``thin disk galaxies'') compared to accretion onto galaxies with $\fthin < 0.5$ (``irregular galaxies'').
-We analyse the properties as a function of time relative to the time at which gas accretes onto the main galaxy ($\tacc$), defined as the first time gas is within $r_{\rm gal}$ and with a density $n_{\rm H} > 0.13$ cm$^{-3}$.
-In practice the gas is typically within $r_{\rm gal}$ by the time it attains ISM densities, i.e. the density criteria is more restrictive than the distance criteria.
-As such, the distance criteria primarily serves to prevent our analysis being contaminated by accretion onto galaxies other than the main galaxy.
-An exception is when the angular momentum support radius is larger than the current galaxy radius ($\vert j \vert > r_{\rm gal} v_c( r_{\rm gal})$), and therefore hot accretion will cool outside the galaxy and possibly attain ISM densities prior to reaching $r_{\rm gal}$.
-For a given property the colored lines show the median of the medians of the individual simulations at a given $t - \tacc$.
-Note that the properties as a function of $t - \tacc$ are not simply the properties as a function of $t - \tcools$ offset by a fixed time.
-This is because $\tacc - \tcools$ spans $0-500$ Myr across the sample.
-This is especially true for galaxies fed primarily by cold streams, because gas is typically only hot for a short period of time in such halos, and for halos with $\vert j \vert > r_{\rm gal} v_c( r_{\rm gal})$.
-One halo with larger-than-usual median $\vert j \vert$ is \texttt{m12f}, which has similar behavior as the other thin disk galaxies relative to $t - \tcools$ but unusual behavior relative to $t - \tacc$.
-We show the properties of \texttt{m12f} as a function of time in Appendix~\ref{s: appendix-individual}, and exclude its contribution to the medians in Figure~\ref{f: before and after combined}..
+Figure~\ref{f: before and after combined} compares the properties of accretion onto galaxies with $\fthin > 0.5$ (``thin disk galaxies'') versus accretion onto galaxies with $\fthin < 0.5$ (``irregular galaxies'').
+For each property the colored lines show the median of the medians of the individual simulations in the group at a given $t - \tacc$.
+The properties are plotted as a function of time relative to the time at which gas accretes onto the main galaxy ($\tacc$), defined as the first time gas is within $r_{\rm gal}$ and with a density $n_{\rm H} > 0.13$ cm$^{-3}$.
+This is in contrast with plotting properties versus $\tcools$ as done above, since in irregular galaxies where accretion is generally cool ($T\approx10^4$K) the last cooling time is not directly associated with accretion onto the galaxy. 
+% Also in thin disk galaxies $\tacc$ differs from $\tcools$ if the angular momentum support radius where the gas cools differs from $r_{\rm gal}$
+% In practice the gas is typically within $r_{\rm gal}$ by the time it attains ISM densities, i.e. the density criteria is more restrictive than the distance criteria.
+% As such, the distance criteria primarily serves to prevent our analysis being contaminated by accretion onto galaxies other than the main galaxy.
+% An exception is when the angular momentum support radius is larger than the current galaxy radius ($\vert j \vert > r_{\rm gal} v_c( r_{\rm gal})$), and therefore hot accretion will cool outside the galaxy and possibly attain ISM densities prior to reaching $r_{\rm gal}$.
+We also exclude \texttt{m12f} from the thin disk group since the gas cools and becomes rotationally supported at significantly larger radii than $r_{\rm gal}$, due to the exceptionally large $j_z\approx5000$ kpc km s$^{-1}$ of hot gas in this galaxy.
+This galaxy is further discussed in Appendix~\ref{s: appendix-individual}. 
+% Note that the properties as a function of $t - \tacc$ are not simply the properties as a function of $t - \tcools$ offset by a fixed time.
+% This is because $\tacc - \tcools$ spans $0-500$ Myr across the sample.
+% This is especially true for galaxies fed primarily by cold streams, because gas is typically only hot for a short period of time in such halos, and for halos with $\vert j \vert > r_{\rm gal} v_c( r_{\rm gal})$.
+% One halo with larger-than-usual median $\vert j \vert$ is \texttt{m12f}, which has similar behavior as the other thin disk galaxies relative to $t - \tcools$ but unusual behavior relative to $t - \tacc$.
+% We show the properties of  as a function of time in Appendix~, and exclude its contribution to the medians in Figure~\ref{f: before and after combined}..
 
 % Overview
 Fig.~\ref{f: before and after combined} demonstrates that key properties shown in Figs.~\ref{f: before and after A} and~\ref{f: before and after B} for one galaxy hold on average for all thin disk galaxies:
@@ -603,7 +615,8 @@ cooling and deceleration occurs at the galaxy edge,
 at which time the gas distribution also flattens.
 By comparison, accretion onto irregular galaxies is primarily cold, with no change in median temperature before and after accretion.
 Gas becomes more spatially aligned as it accretes, but still spans $0.1 \lesssim \vert z \vert / r \lesssim 0.5$, and never becomes fully rotationally supported.
-One of the most striking features of Fig.~\ref{f: before and after combined} is the fraction of CGM gas with an angular momentum that is already aligned with the thin disk $j_z/\vert j \vert > 0.9$ prior to $\tacc$ --- \textit{prior} to accreting onto the galaxy the fraction of spin-aligned accretion onto thin disk galaxies reaches ${\sim} 3 \times$ the value for accretion onto irregular galaxies.
+Accretion onto thin disks and irregulars also differ significantly in their spin-aligned fraction  prior to $\tacc$ (lower-left panel) -- at $\tacc$ the fraction of spin-aligned accretion onto thin disk galaxies is $0.75$, a factor of three higher than the fraction of $0.25$ in irregular galaxies.
+This suggests that achieving angular momentum coherence in the CGM is conducive to the formation of thin disks. 
 
 % COHERENCE EVOLUTION
 \begin{figure*}
@@ -624,9 +637,10 @@ One of the most striking features of Fig.~\ref{f: before and after combined} is 
     \includegraphics[width=\columnwidth]{figures/variations/relative_to_accretion/prevalence/delta_smooth_jdisk_frac_v_thin_disk_frac_recent.pdf}
     
     \caption{
-    Angular momentum-space equivalent of the right panel of Fig.~\ref{f: prevalence}, i.e. the change in the fraction of mass with $j_z/\vert \vec j \vert > 0.9$ over 1 Gyr prior to accretion (left) or over 1 Gyr prior to cooling (right).
-    Galaxies with $\fthin > 0.5$ are fueled by accretion where the spin-aligned gas mass increases by $\sim 50\%$ prior to entering the galaxy.
-    By comparison, irregular galaxies are fueled by accretion that undergoes only a mild in-halo increase in coherence.
+    The change in the fraction of mass with $j_z/\vert \vec j \vert > 0.9$ over 1 Gyr prior to accretion.
+    This Figure is an angular momentum-space equivalent to the right panel of Fig.~\ref{f: prevalence}.  
+    Galaxies with large thin disk fractions are fueled by accretion where half the mass becomes spin-aligned prior to entering the galaxy.
+    Galaxies with small thin disk fractions are fueled by accretion that undergoes a milder increase in coherence prior to accretion. 
     }
     \label{f: prevalence - angular momentum}
 \end{figure}
@@ -640,7 +654,7 @@ This distribution quantifies the level of alignment of angular momentum in the a
 For reference, perfectly co-rotating gas has $j_z / \vert \vec j \vert = 1$, while perpendicular and counter-rotating gas have $j_z / \vert \vec j \vert = 0$ and $-1$, respectively.
 An isotropic distribution of angular momentum would appear as a diagonal line in this plot. 
 Each curve corresponds to a different range of $t - \tacc$ as noted in the legend. 
-Outlined in black are the CDFs for the three times plotted in Fig.~\ref{f: prevalence}: $t - \tacc =$ -200, 0, 200 Myr.
+Outlined in black are the CDFs for $t - \tacc =$ -200, 0, 200 Myr.
 
 % Overall evolution
 In gas accreting onto thin disk galaxies (top and bottom-left panels of Fig.~\ref{f: coherence}) the angular momentum distribution becomes increasingly coherent with time relative to $\tacc$.
@@ -653,10 +667,10 @@ Furthermore, this result shows that accreting gas is almost entirely co-rotating
 In stark contrast with thin disk galaxies, the irregular galaxy \texttt{m11d} shown in the bottom-right panel of Fig.~\ref{f: coherence} experiences only a very mild evolution in angular momentum coherence --- angular momentum remains only marginally co-rotating both before and after accreting.
 
 % Ang Momentum Prevalence
-In Fig.~\ref{f: prevalence - angular momentum} we show the evolution of angular momentum alignment across the full sample, as Fig.~\ref{f: prevalence} did for spatial alignment. 
-In this case, spin alignment is defined as the fraction of gas with $j_z/j > 0.9$.
-In Fig.~\ref{f: prevalence - angular momentum} the change in spin alignment is calculated focusing on the time \textit{prior} to accretion, $-1$ Gyr $< t - \tacc < 0$ Gyr.
-Just as there was a correlation between thin disk formation and concurrent cooling and flattening in hot accretion, we find a correlation between thin disk formation and the increase in angular momentum alignment pre-accretion.
+In Figure~\ref{f: prevalence - angular momentum} we show the change in angular momentum alignment across the full sample, similar to Fig.~\ref{f: prevalence} for spatial alignment. 
+In this case, spin alignment is defined as the fraction of gas with $j_z/j > 0.9$
+In Fig.~\ref{f: prevalence - angular momentum} the change in spin alignment is calculated focusing on the time prior to accretion, $-1$ Gyr $< t - \tacc < 0$ Gyr.
+The figure shows a correlation between thin disk fraction and the increase in angular momentum alignment prior to accretion, suggesting that achieving angular momentum coherence in the CGM is conducive to the formation of thin disks.
 
 \section{Discussion}
 \label{s: discussion}
@@ -808,7 +822,6 @@ This constraint, combined with cooling flows being in hydrostatic equilibrium to
 \label{s: crs}
 
 In Fig.~\ref{f: before and after combined} the dashed line shows the median properties of accreting gas in a simulation that includes cosmic ray physics~\citep[][]{Chan2019, Hopkins2020a}, thus providing a window into the differences in gas accretion modes in simulations with cosmic-ray (CR) support in the CGM.
-A version of Figs.~\ref{f: before and after A} and~\ref{f: before and after B} for this simulation (\texttt{m12i\_cr}) are shown in Appendix~\ref{s: appendix-more before and after}.
 The accretion onto the central galaxy in the cosmic ray-dominated halo is similar to rotating cooling flows in many aspects:
 accreting gas gains coherence in the halo, becomes rotationally supported at the galaxy edge (with a decreased radial velocity), and subsequently collapses into a disk.
 These properties were highlighted also by \cite{Trapp2021}, who performed an analysis on the accretion of gas onto MW-mass disk galaxies with CR-dominated haloes.
@@ -818,7 +831,7 @@ However, panel A1 of Fig.~\ref{f: before and after combined} demonstrates that a
 This is because in \texttt{m12i\_cr} the CGM is not supported against gravity by thermal pressure, but rather by CR pressure \citep{Ji2020}.
 
 % Mechanics
-Increased coherence and decreased radial velocity prior to accretion are two properties of rotating cooling flows we identify as promoting thin disk formation (\S\ref{s: why CFs thin disks}), and are clearly present in \texttt{m12i\_cr} (Fig.~\ref{f: before and after m12i cr}).
+Increased coherence and decreased radial velocity prior to accretion are two properties of rotating cooling flows we identify as promoting thin disk formation (\S\ref{s: why CFs thin disks}), and are clearly present in \texttt{m12i\_cr} (Fig.~\ref{f: before and after combined}).
 Consistent with this, \texttt{m12i\_cr} has a high thin disk fraction, $\fthin=0.71$.
 In \S\ref{s: why CFs thin disks} we argue that the coherent co-rotation and deceleration of rotating cooling flows is a result of its subsonic nature.
 The accreting gas in the CR-dominated halo is also effectively subsonic --- gas velocities are below an effective sound speed $c_{s,{\rm eff}}$ and therefore have properties characteristic of subsonic gas.
@@ -834,8 +847,7 @@ The qualitatively similar behavior between both rotating cooling flows and accre
 
 % Overprediction of star formation
 In our MW-mass haloes the average SFR over $z=0-0.5$ is SFR$\approx 3-10\,M_\odot/$yr, while the observationally-based average SFR for $M_{\rm vir} \sim 10^{12} M_\odot$ haloes over the same redshift range is SFR$\approx 0.7-6\,M_\odot/$yr~\citep{Behroozi2013} (though Gandhi et al., in prep find that the SFR is consistent with other observational constraints).
-Since one component that regulates the SFR is the gas accretion rate onto the galaxy, this may suggest that our simulations have higher accretion rates from the CGM onto the galaxy $\Mdot_{\rm CGM}$ than in real galaxies at the same mass scale. 
-% (although note that observational estimators do not fully capture SFR; \citealt{FloresVelazquez2021}).
+Since one component that regulates the SFR is the gas accretion rate onto the galaxy, this may suggest that our simulations have higher accretion rates from the CGM onto the galaxy $\Mdot_{\rm CGM}$ than in real galaxies at the same mass scale (although note that observational estimators do not fully capture SFR; \citealt{FloresVelazquez2021}).
 The CGM accretion rate in FIRE may be reduced if the cooling flow is disrupted by additional physics implemented in some other suites of FIRE simulations, including cosmic rays~\citep{Chan2019, Hopkins2020a, Hopkins2021e, Hopkins2021d} and AGN feedback (Wellons et al. in prep.).
 It is however unclear whether additional processes such as these can disrupt cooling flows around MW-way mass galaxies.
 For example, CR transport models remain highly uncertain, especially in the CGM~\citep{Hopkins2021, Quataert2021, Quataert2021a}, and it is not yet known how AGN feedback couples to halo gas.
@@ -914,9 +926,23 @@ Our main results are as follows.
 ZH was supported by a Gary A. McCue postdoctoral fellowship at UC Irvine.
 JS was supported by the Israel Science Foundation (grant No. 2584/21) and by the German Science Foundation via DIP grant STE 1869/2-1 GE 625/17-1. 
 JSB was supported by NSF grant AST-1910346.
+ABG was supported by an NSF-GRFP under grant DGE-
+1842165 and was additionally supported by NSF grants
+DGE-0948017 and DGE-145000.
+SY was supported by NSF grant AST-1910346.
 CAFG was supported by NSF through grants AST-1715216, AST-2108230,  and CAREER award AST-1652522; by NASA through grant 17-ATP17-0067; by STScI through grant HST-AR-16124.001-A; and by the Research Corporation for Science Advancement through a Cottrell Scholar Award.
+DBF is supported by the Simons Foundation through the Flatiron Institute.
+DAA \textbf{HERE}.
+EQ was supported in part by a Simons Investigator grant from the Simons Foundation and NSF grant 2107872.
 AW received support from: NSF grants CAREER 2045928 and 2107772; NASA ATP grant 80NSSC20K0513; HST grants AR-15809 and GO-15902 from STScI; a Scialog Award from the Heising-Simons Foundation; and a Hellman Fellowship.
 MBK acknowledges support from NSF CAREER award AST-1752913, NSF grants AST-1910346 and AST-2108962, NASA grant NNX17AG29G, and HST-AR-15006, HST-AR-15809, HST-GO-15658, HST-GO-15901, HST-GO-15902, HST-AR-16159, and HST-GO-16226 from the Space Telescope Science Institute, which is operated by AURA, Inc., under NASA contract NAS5-26555.
+JM gratefully acknowledges sabbatical leave support from Pomona College and the Harry and Grace Steele Foundation.
+TS \textbf{HERE}.
+TKC is supported by Science and Technology Facilities Council (STFC) astronomy
+consolidated grant ST/P000541/1 and ST/T000244/1.
+CT \textbf{HERE}.
+PFH \textbf{HERE}.
+DK \textbf{HERE}.
 Numerical calculations were performed on the Quest computing cluster at Northwestern University, the Wheeler computing cluster at Caltech, XSEDE allocations TG-AST130039, TG-AST120025, TG-AST140064, and TG-AST140023, Blue Waters PRAC allocation NSF.1713353, NASA HEC allocation SMD16-7592, and allocations AST21010 and AST20016 supported by the NSF and TACC.
 This research benefited from the Halo21 KITP workshop which was supported in part by the National Science Foundation under Grant No.~NSF PHY-1748958.
 
@@ -931,6 +957,10 @@ SciPy~\citep{Virtanen2020},
 pandas~\citep{McKinney2010,Reback2020},
 palettable~(\url{https://github.com/jiffyclub/palettable}),
 and Numba~\citep{Lam2015}.
+
+\section*{Data availability}
+The data underlying this article will be shared on reasonable request to the corresponding author (ZH). The simulation initial conditions, snapshot files, and visualization can be found in \href{https://fire.northwestern.edu/data/}{https://fire.northwestern.edu/data/}.
+A public version of the GIZMO simulation code is available \href{http://www.tapir.caltech.edu/~phopkins/Site/GIZMO.html}{http://www.tapir.caltech.edu/~phopkins/Site/GIZMO.html}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -961,7 +991,7 @@ and Numba~\citep{Lam2015}.
 \end{figure}
 
 % Compared to observable-ish thin disk fraction.
-Fig.~\ref{f: thin disk v thin disk} shows the relationship between the fraction of stars with $j/j_c(E)>0.8$ at $z=0$ ($\fthin$) and the same fraction of stars weighted by their Sloan $r$ band luminosity-weighted.
+Fig.~\ref{f: thin disk v thin disk} shows the relationship between the fraction of stars with $j_z/j_c(E)>0.8$ at $z=0$ ($\fthin$) and the same fraction of stars weighted by their Sloan $r$ band luminosity-weighted.
 The thin disk metric used throughout our analysis, $\fthin$ is closely related to the observationally-motivated luminosity-weighted thin disk fraction.
 
 \section{Sample validation}
@@ -972,7 +1002,7 @@ The thin disk metric used throughout our analysis, $\fthin$ is closely related t
     \centering
     \includegraphics[width=\columnwidth]{figures/selected_to_all_comparison/tacc_m12i_md.pdf}
     \caption{
-    Time of accretion for the main sample (green) of 37,189 particles in \texttt{m12i} that are in the CGM at 1 Gyr prior to $z=0$ and in the galaxy at $z=0$, compared to time of accretion for all recent star formation (purple).
+    Time of accretion for the main sample (green) of 37,189 particles in \texttt{m12i} that are in the CGM at 1 Gyr prior to $z=0$ and in the galaxy at $z=0$, compared to time of accretion for all recent star formation (yellow).
     Time plotted is age of the universe at which gas accreted, with the grey vertical line marking 1 Gyr prior to $z=0$.
     Of stars born in the last Gyr, $> 70\%$ ($> 98\%$) are formed from gas accreted within the last one Gyr (or two).
     }
@@ -1018,39 +1048,6 @@ From Fig.~\ref{f: sample validation -- spatial} we learn that (a) gas that accre
 and (c) the temperature of accreted gas and all gas at the same radius is consistent, but some cooler, less-pressure-supported gas at larger radii can accrete onto the galaxy.
 These results are consistent with the temperature distributions for accreting gas vs gas that remains in the CGM for $>3$ Gyr~\citep{Hafen2020}.
 
-\section{Accretion onto \texttt{m12f}}
-\label{s: appendix-more before and after}
-
-% M12F
-\begin{figure*}\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m12f_md.pdf}
-\caption{
-Temperature and geometry of gas accreting onto a $z\sim0$ galaxy in FIRE with a thin disk fraction $\fthin=0.72$ versus time relative to the final cooling time ($t - \tcools$).
-This galaxy (\texttt{m12f}) has qualitatively similar properties to other thin disk galaxies relative to $t-\tcools$, as seen via comparison with Figs~\ref{f: before and after A},~\ref{f: before and after B}, and~\ref{f: before and after combined}.
-In each panel solid lines and shaded regions mark the medians and 16th to 84th percentile ranges of all particles accreted within 1 Gyr prior to $z=0$.
-\textbf{A:} Temperature.
-The final cooling tends to occur shortly after the gas is heated beyond $T=10^5$ K.
-\textbf{B:} 3D distance from halo center.
-\textbf{C:} Absolute height from the disk plane.
-\textbf{D:} Velocity components of accretion (colored lines and band), relative to circular velocity at the median radius (dash-dotted line).
-\textbf{E:} Fraction of gas converted into stars.
-\textbf{F:} The ratio of $j_z / \vert \vec j \vert$.
-The solid line shows this ratio for the total angular momentum of all accreted particles.
-\textbf{G:} The magnitude of the specific angular momentum of particles ($\vert\vec{j}\vert$, green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
-The dashed line shows the angular momentum necessary for rotational support.
-\textbf{H:} Baryon number density.
-\textbf{I:} Energy loss from radiative cooling (blue) and heating from $PdV$ work on the gas particles (red).
-}
-\label{f: m12f-tcools}
-\end{figure*}
-
-% M12F
-\begin{figure*}\includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_allone_m12f_md.pdf}
-\caption{
-Same as Fig.~\ref{f: m12f-tcools}, but relative to $\tacc$.
-Prior to reaching radii and densities required to fit our definition of $\tacc$, accretion in \texttt{m12f} is already cooler and more aligned relative to other thin disk galaxies.
-}
-\label{f: m12f-tacc}
-\end{figure*}
 
 % % COUNTEREXAMPLE
 % \begin{figure*}\includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_allone_m11d_md.pdf}
@@ -1164,13 +1161,51 @@ Fig.~\ref{f: Mdot} also shows that the inflow rate of hot gas in the MW-mass gal
 
 \label{s: appendix-individual}
 
+% M12F
+\begin{figure*}\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m12f_md.pdf}
+\caption{
+Temperature and geometry of gas accreting onto a $z\sim0$ galaxy in FIRE with a thin disk fraction $\fthin=0.72$ versus time relative to the final cooling time ($t - \tcools$).
+This galaxy (\texttt{m12f}) has qualitatively similar properties to other thin disk galaxies relative to $t-\tcools$, as seen via comparison with Figs~\ref{f: before and after A},~\ref{f: before and after B}, and~\ref{f: before and after combined}.
+In each panel solid lines and shaded regions mark the medians and 16th to 84th percentile ranges of all particles accreted within 1 Gyr prior to $z=0$.
+\textbf{A:} Temperature.
+The final cooling tends to occur shortly after the gas is heated beyond $T=10^5$ K.
+\textbf{B:} 3D distance from halo center.
+\textbf{C:} Velocity components of accretion (colored lines and band), relative to circular velocity at the median radius (dash-dotted line).
+\textbf{D:} Fraction of gas converted into stars.
+\textbf{E:} The ratio of $j_z / \vert \vec j \vert$.
+The solid line shows this ratio for the total angular momentum of all accreted particles.
+\textbf{F:} The magnitude of the specific angular momentum of particles ($\vert\vec{j}\vert$, green), the component of angular momentum aligned with the galaxy disk ($j_z$; purple), and the perpendicular component ($j_{\perp}$; pink).
+The dashed line shows the angular momentum necessary for rotational support.
+\textbf{G:} Baryon number density.
+\textbf{H:} Energy loss from radiative cooling (blue) and heating from $PdV$ work on the gas particles (red).
+}
+\label{f: m12f-tcools}
+\end{figure*}
+
+% M12F
+\begin{figure*}\includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_allone_m12f_md.pdf}
+\caption{
+Same as Fig.~\ref{f: m12f-tcools}, but relative to $\tacc$.
+Gas circularizes and flattens at approximately twice the galaxy radius (Fig.~\ref{f: m12f-tcools}), and this figure shows that subsequently accretion onto \texttt{m12f} is already cooler and more aligned relative to other thin disk galaxies.
+}
+\label{f: m12f-tacc}
+\end{figure*}
+
+In this appendix we address noticeable features of accretion onto specific galaxies.
+Accretion onto \texttt{m12f} was excluded from Fig.~\ref{f: before and after combined} because the gas has a higher-than-typical specific angular momentum, and therefore the radius at which the gas circularizes is noticeably larger than the galaxy radius, $\Rcirc \approx 2 r_{\rm gal}$.
+Gaining significant rotational support allows gas to cool and condense to ISM temperatures and densities~(\S\ref{s: mechanics -- energy balance}).
+As a result, in \texttt{m12f} $\sim70\%$ of accreting gas attains ISM densities prior to reaching $r_{\rm gal}$, in comparison to a median $\sim45\%$ for the other thin disk galaxies.
+This difference is apparent in Figures~\ref{f: m12f-tcools} and~\ref{f: m12f-tacc}, which show properties of accretion onto \texttt{m12f} relative to $\tcools$ and $\tacc$ respectively.
+From Fig.~\ref{f: m12f-tcools} we can see that, relative to final cooling, accretion onto \texttt{m12f} has the same key characteristics as accretion onto other thin disk galaxies --- inflow is hot, flattening and cooling are simultaneous, cooling occurs when angular momentum-supported, angular momentum coherence increases prior to cooling, and while hot radiative cooling is offset by compression heating.
+By comparison, Fig.~\ref{f: m12f-tacc} shows that relative to time of accretion many of the properties of \texttt{m12f} are qualitatively different from the other thin disk galaxies.
+
 % Presence of a rotating cooling flow for intermediate cases
 The haloes with $0.1 \lesssim \fthin < 0.5$ have varying levels of circularized cooling flow accretion.
 Four of these six haloes, \texttt{m12z}, \texttt{m12r}, \texttt{m12w}, and \texttt{m12m}, have $M_{\rm vir} \sim 10^{12} M_\odot$.
 \texttt{m12z} has a chaotic halo with a number of ongoing mergers.
 \texttt{m12r} has some ongoing thin disk formation, but is undergoing a major merger during the last Gyr that dominates the accreting gas supply and disrupts the galaxy structure.
 This merger is relatively well-aligned with the disk, with $f_{\rm aligned} \approx 0.3-0.4$, and the aligned mass fraction does not change significantly as the gas cools past $\tcools$.
-\texttt{m12w} is a galaxy with its inner CGM is only just virializing at $z=0$~\citep{Yu2021}, and the majority of the gas accretes with angular momentum perpendicular to the galaxy angular momentum.
+\texttt{m12w} is a galaxy where its inner CGM is only just virializing at $z=0$~\citep{Yu2021}, and the majority of the gas accretes with angular momentum perpendicular to the galaxy angular momentum.
 Of these four the one with the highest thin disk fraction, \texttt{m12m}, is galaxy undergoing significant rotating cooling flow accretion, but absent a high thin disk fraction.
 Visual inspection reveals that \texttt{m12m} has a prominent stellar bar.
 \texttt{m12m} may be evidence that if rotating cooling flows are a condition for disk formation, they are a necessary-but-not-sufficient condition (\S\ref{s: why CFs thin disks}).
