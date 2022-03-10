@@ -5,7 +5,7 @@ import sys
 
 import trove
 pm = trove.link_params_to_config(
-    config_fp = sys.argv[1]
+    config_fp = sys.argv[1],
 )
 
 archive_dir = 'ranch.tacc.utexas.edu:' + os.path.join(
@@ -15,7 +15,12 @@ archive_dir = 'ranch.tacc.utexas.edu:' + os.path.join(
 os.makedirs( pm['data_dir'], exist_ok=True )
 os.makedirs( pm['halo_data_dir'], exist_ok=True )
 
-for tar in [ 'mt_halo_files.tar', 'AHF_halos.tar', 'AHF_profiles.tar' ]:
+halo_file_tars = [
+    'mt_halo_files.tar',
+    'AHF_halos.tar',
+    'AHF_profiles.tar'
+]
+for tar in halo_file_tars:
 
     archive_fp = archive_dir + '/' + tar
 
