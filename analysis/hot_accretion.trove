@@ -47,6 +47,7 @@ inline_firefly = False
 # Aesthetic parameters
 background_linecolor = '.4'
 lighter_background_linecolor = '.6'
+plt_style = None
 
 # Parameters for evaluating prevalence
 aligned_fraction_pre_dt = -200 # Change is calculated over the 
@@ -407,20 +408,24 @@ use_variation_data_dir = [
     'nb.12',
     ]
 
+# Presentation figures
+[presentation]
+plt_style = 'dark_background'
+
 ########################################################################
 [EXECUTE]
 ########################################################################
 
 scripts = [
     # 'py.1', # Get halo data
-    # 'nb.2', # Get IDs to track
+    'nb.2', # Get IDs to track
     # 'py.3', # Sample particles to track, including removing duplicates
     # 'jug.4', # Run particle tracking
     # 'jug.5', # Run galaxy linking
     # 'py.6', # Run particle classification
     # 'py.7', # Create Firefly visualization
     # 'nb.8', # Sample overview
-    'nb.9', # Before and after
+    # 'nb.9', # Before and after
     # 'nb.10', # Geometric evolution
     # 'nb.11', # Projected plots
     # 'nb.12', # FIRE studio images
@@ -454,7 +459,7 @@ variations = [
 
 global_variations = [
     '',
-    # 'relative_to_accretion',
+    'relative_to_accretion',
     # 'no_cut_on_tacc',
     # 'prepost_m1000_p0',
     # 'tacc_prepost_m1000_p50',

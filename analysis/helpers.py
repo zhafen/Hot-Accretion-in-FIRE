@@ -48,6 +48,11 @@ quantity_labels = {
     'thin_disk_frac_recent': r'$f_{\rm thin\,disk,\,recent}$',
     'thin_disk_frac_tracked': r'$f_{\rm thin\,disk,\,tracked}$',
     'thin_disk_frac_sloanr': r'$f_{\rm thin\,disk}$($z=0$, Sloan r band)',
+    'superthin_disk_frac': r'stellar thin disk fraction',
+    'superthin_disk_frac_recent': r'$f_{\rm thin\,disk,\,recent}$',
+    'superthin_disk_frac_tracked': r'$f_{\rm thin\,disk,\,tracked}$',
+    'superthin_disk_frac_sloanr': r'$f_{\rm thin\,disk}$($z=0$, Sloan r band)',
+    'thin_disk_frac_recent_orig': r'uncorrected $f_{\rm thin\,disk,\,recent}$',
     'mvir': r'$M_{\rm vir}$ $[M_\odot]$',
     'mstar': r'$M_{\star}$ $[M_\odot]$',
     'rstar': r'$R_{\star, 0.5}$ [kpc]',
@@ -96,6 +101,9 @@ quantity_labels = {
     'torque_z': r'$\tau_z$' + '\n[kpc km/s/Myr]',
     'torque_mag': r'$\vert \vec \tau \vert$' + '\n[kpc km/s/Myr]',
     'torque_normalized': r'$\vert \vec \tau \vert / j_{\rm DM}$' + '\n[1/Myr]',
+    'spin_param': r'$\lambda$',
+    'f_j_disk': r'$J_{\rm thin\,disk\,stars}$ / $J_{\rm DM}$',
+    'f_j_galaxy': r'$J_{\rm all\,stars}$ / $J_{\rm DM}$',
 }
 
 custom_lims = {
@@ -104,7 +112,7 @@ custom_lims = {
     'mstar': [ 7e7, 2e11 ],
     'tcool_tff': [ 0.08, 30 ],
     'delta_smooth_disk_frac': [ -0.1, 0.4 ],
-    'delta_smooth_jdisk_frac': [ -0.25, 1. ],
+    'delta_smooth_jdisk_frac': [ -0.1, 0.6 ],
     'delta_jmag': [ -4200, 500 ],
     'delta_jperp': [ -3100, 250 ],
     'delta_jmag_frac': [ -2, 0.2 ],
