@@ -43,6 +43,7 @@ maxInd = 99999999 # discard nothing
 
 # Supplementary analysis parameters
 inline_firefly = False
+thin_disk_frac_key = 'superthin_disk_fraction_recent'
 
 # Aesthetic parameters
 background_linecolor = '.4'
@@ -418,16 +419,16 @@ plt_style = 'dark_background'
 
 scripts = [
     # 'py.1', # Get halo data
-    'nb.2', # Get IDs to track
+    # 'nb.2', # Get IDs to track
     # 'py.3', # Sample particles to track, including removing duplicates
     # 'jug.4', # Run particle tracking
     # 'jug.5', # Run galaxy linking
     # 'py.6', # Run particle classification
     # 'py.7', # Create Firefly visualization
     # 'nb.8', # Sample overview
-    # 'nb.9', # Before and after
-    # 'nb.10', # Geometric evolution
-    # 'nb.11', # Projected plots
+    'nb.9', # Before and after
+    'nb.10', # Geometric evolution
+    'nb.11', # Projected plots
     # 'nb.12', # FIRE studio images
     # 'py.13', # Archive data
     # 'py.14', # Retrieve data
