@@ -428,7 +428,7 @@ scripts = [
     # 'nb.8', # Sample overview
     'nb.9', # Before and after
     'nb.10', # Geometric evolution
-    'nb.11', # Projected plots
+    # 'nb.11', # Projected plots
     # 'nb.12', # FIRE studio images
     # 'py.13', # Archive data
     # 'py.14', # Retrieve data
