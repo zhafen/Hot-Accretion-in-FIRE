@@ -111,7 +111,7 @@ ENTRY
     institution
     journal
     key
-%    month              not used in apalike
+    month          %    not used in apalike
     note
     number
     organization
@@ -1689,6 +1689,7 @@ FUNCTION {presort}
   % Style apalike prefers 'title field.or.null sort.format.title *' here.
   % We don't, because we will predominantly be sorting articles in
   % this style, and we don't include their titles in the final bibliography.
+  month number.for.presort *
   volume number.for.presort *
   number number.for.presort *
   pages empty$
