@@ -614,15 +614,11 @@ This suggests that achieving angular momentum coherence in the CGM is conducive 
     \includegraphics[width=\textwidth]{figures/on_sky/angular_momentum.png}
     \caption{
     The on-sky evolution of the direction of angular momentum for gas accreting onto a MW-like galaxy, \texttt{m12i}.
+    Different panels show the distribution for different times relative to $\tacc$.
     The bin color is logarithmically proportional to the fraction of accreting mass with an angular momentum pointing in that direction.
     The angles $\theta$ and $\phi$ are spherical coordinates with $\theta$ relative to the $z$-direction, i.e. $\theta=0^\circ$ in the center of the projection points in the direction of the galaxy angular momentum at $z=0$.
     The black point outlined in white is the direction of the net angular momentum vector of accreting gsd, $\vec L$.
     Over the course 1 Gyr prior to cooling the angular momentum distribution narrows significantly (i.e. becomes more coherent), while the overall direction $\vec L$ changes only slightly.
-    \textbf{
-    Make labels bigger.
-    Remove $t-\tcools$ from labels.
-    Maybe add a line to the circle.
-    }
     }
     \label{f: coherence -- on sky}
 \end{figure*}
@@ -794,7 +790,7 @@ We note though that even in cooling flows the pressure profile of the hot CGM is
 % Precipitation
 There are some key differences between the hot CGM in the FIRE simulations and precipitation-mode accretion, as explored by previous work~\citep[e.g.][]{Esmerian2021, Stern2021}.
 \cite{Esmerian2021} showed typically only satellite galaxies and their CGM produce sufficiently large density perturbations for cool clouds to form.
-This is explained by $t_{\rm cool}/t_{\rm ff} \sim 1-100$ in the inflowing hot CGM, i.e. gas accretes onto the galaxy faster than a cooling instability spontaneously develops~\citep{Balbus1989}.
+This is explained by $t_{\rm cool}/t_{\rm flow} \sim 1-100$ in the inflowing hot CGM, i.e. gas accretes onto the galaxy faster than a cooling instability spontaneously develops~\citep{Balbus1989}.
 This explanation is consistent with idealized simulations of cooling-flow CGMs show density perturbations of order $\delta \rho / \rho \sim 0.1$ do not lead to cooling~\citep[][]{Stern2019}.
 Further, \cite{Esmerian2021} show that cooling out of the hot halo via perturbation is a poor predictor for whether or not the gas will accrete onto the galaxy, i.e. become precipitation-mode accretion.
 We note, however, that the FIRE simulations likely under-resolve cooling or mixing of already-cool gas with lengthscales $\sim c_{\rm s} t_{\rm cool} \sim 0.1$ pc~\citep[e.g.][]{McCourt2018, Mandelker2019a, Gronke2020b, Fielding2020, Mandelker2021}.
@@ -1029,7 +1025,7 @@ These results are consistent with the temperature distributions for accreting ga
 % HOT IN HALO
 \begin{figure*}
     \centering
-    \includegraphics{figures/Mdot.pdf}
+    \includegraphics[width=\textwidth]{figures/Mdot.pdf}
     \caption{
     Average mass inflow rate over the course of one Gyr prior to $z=0$ in the same haloes as in Fig.~\ref{f: stars}, by gas temperature.
     The galaxy radius $r_{\rm gal}=4 r_{\star,0.5}$ and fraction of stars in a thin disk are marked in the panels. 
@@ -1129,16 +1125,25 @@ Much of their accretion is still isotropic, but alignment increases mildly post-
 
 \section{Comparison to common metrics of galaxy and halo spin}
 
-% PREVALENCE OF QUIET ACCRETION -- VS GALAXY PROPERTIES
+% PREVALENCE OF QUIET ACCRETION -- VS angular momentum PROPERTIES
 \begin{figure*}
     \centering
     \includegraphics[width=\textwidth]{figures/prevalence/thin_disk_vs_angular_momentum_props.pdf}
     \caption{
-    Fraction of young stars in a thin disk versus spin parameter $\lambda$, ratio of specific angular momentum of thin disk stars to that of the dark matter halo, ratio of specific angular momentum of all stars to that of the dark matter halo, and change in alignment of accreting gas (see Figure~\ref{f: prevalence}).
-    We see no correlation between thin disk fraction and spin parameter
+    Fraction of young stars in a thin disk versus spin parameter $\lambda$, ratio of mean specific angular momentum of thin disk stars to that of the dark matter halo, ratio of mean specific angular momentum of all stars to that of the dark matter halo, and change in alignment of accreting gas (see Figure~\ref{f: prevalence}).
+    The last panel traces prevalence of rotating cooling flows, and correlates most strongly with thin disk fraction.
     }
     \label{f: prevalence vs j properties}
 \end{figure*}
+
+% Figure description
+Figure~\ref{f: prevalence vs j properties} compares the frequency of thin disks to some common metrics of angular momentum properties.
+We see no correlation between thin disk fraction and spin parameter, $\lambda \equiv j_{\rm DM} / ( \sqrt(2) r_{\rm vir} v_c(r_{\rm vir})$~\cite{Bullock2001}.
+Thin disk fraction and $j_{\rm thin\,disk} / j_{\rm DM}$ may be weakly correlated, but for the most part the thin disk stars in different galaxies have approximately the same specific angular momentum relative to $j_{\rm DM}$.
+Galaxies with a higher fraction of stars with $j_z / j_c(E) > 0.9$ often have a higher mean $j_{\rm all\,stars}$ than other galaxies with the $j_{\rm DM}$, as seen in the third panel.
+This may be in part because $j_c(E) \propto j_{\rm DM}$ for approximately constant $\lambda$ (both scale with dark matter mass) and $j_z \propto j$, therefore $j / j_{\rm DM} \sim j_z / j_c(E)$.
+The mean $j_{\rm all\,stars} / j_{\rm DM}$ of thin-disk galaxies is $\sim 0.3 - 0.7$ for all stars and $\sim 0.5 - 1$ for thin-disk stars, approximately consistent with observational constraints~\citep[e.g.][]{Fall2018, Posti2019}.
+The tracer of rotating cooling flow prevalence, shown in the rightmost panel, remains the strongest predictor of thin disk fraction.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
