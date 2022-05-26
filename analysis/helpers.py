@@ -105,9 +105,15 @@ quantity_labels = {
     'torque_z': r'$\tau_z$' + '\n[kpc km/s/Myr]',
     'torque_mag': r'$\vert \vec \tau \vert$' + '\n[kpc km/s/Myr]',
     'torque_normalized': r'$\vert \vec \tau \vert / j_{\rm DM}$' + '\n[1/Myr]',
-    'spin_param': r'$\lambda$',
+    'spin_param': r'$\lambda_{\rm DM}$',
     'f_j_disk': r'$j_{\rm thin\,disk\,stars}$ / $j_{\rm DM}$',
+    'f_j_disk_recent': r'$j_{\rm thin\,disk,\,recent}$ / $j_{\rm DM}$',
     'f_j_galaxy': r'$j_{\rm all\,stars}$ / $j_{\rm DM}$',
+    'f_j_galaxy_recent': r'$j_{\rm all\,stars,\,recent}$ / $j_{\rm DM}$',
+    'f_j_gas': r'$j_{\rm gas,\,galaxy}$ / $j_{\rm DM}$',
+    'j_disk_recent': r'$j_{\rm thin\,disk,\,recent}$',
+    'j_gas': r'$j_{\rm gas,\,galaxy}$',
+    'j_dm': r'$j_{\rm DM}$',
 }
 
 custom_lims = {
@@ -128,4 +134,9 @@ custom_lims = {
     'n_hot': [ 100, 100000 ],
     'n_tracked': [ 100, 100000 ],
     'n_valid': [ 100, 100000 ],
+    'f_j_disk': [ 0.015, 4 ],
+    'f_j_disk_recent': [ 0.015, 4 ],
+    'f_j_galaxy': [ 0.015, 4 ],
+    'f_j_galaxy_recent': [ 0.015, 4 ],
+    'f_j_gas': [ 0.015, 4 ],
 }
