@@ -1,0 +1,5 @@
+This folder contains multiple versions of Figure 1 combined into one for the paper.
+Why? Because the root image for m11d got deleted. However,
+I need to update the figure with the correct f_thin_disk.
+So I'm using the old image, but new f_thin_disk value.
+This is *not* deceptive image manipulation.
