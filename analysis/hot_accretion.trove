@@ -421,9 +421,9 @@ scripts = [
     # 'jug.5', # Run galaxy linking
     # 'py.6', # Run particle classification
     # 'py.7', # Create Firefly visualization
-    'nb.8', # Sample overview
+    # 'nb.8', # Sample overview
     'nb.9', # Before and after
-    'nb.10', # Geometric evolution
+    # 'nb.10', # Geometric evolution
     # 'nb.11', # Projected plots
     # 'nb.12', # FIRE studio images
     # 'py.13', # Archive data
