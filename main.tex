@@ -137,9 +137,11 @@ galaxies: disk -- galaxies: evolution -- galaxies: haloes -- cosmology: theory
 % THE THIN DISKS
 \begin{figure*}
     \centering
-    \includegraphics[width=\textwidth]{figures/stars.png}
+    \includegraphics[width=\textwidth]{figures/stars_compiled/stars.png}
     \caption{
-    Mock Hubble images of four $z=0$ galaxies in the FIRE-2 simulations. Halo masses are noted in the panels, together with the mass fraction of young ($<1$ Gyr) stars which reside in a thin disk.  The Milky Way-mass galaxies have thin disk morphologies (top, bottom-left), while the lower mass galaxy has an irregular morphology (bottom-right).
+    Mock Hubble images of four $z=0$ galaxies in the FIRE-2 simulations.
+    Halo masses are noted in the panels, together with the mass fraction of young ($<1$ Gyr) stars which reside in a thin disk.
+    The Milky Way-mass galaxies have thin disk morphologies (top, bottom-left), while the lower mass galaxy has an irregular morphology (bottom-right).
     }
     \label{f: stars}
 \end{figure*}
@@ -275,7 +277,7 @@ The $z$ axis is defined as the direction of the total angular momentum vector of
 This definition of the thin disk is the same definition used in~\cite{Yu2021}.
 Values of $j_z/j_c(E)>0.8$ correspond to height to size ratios $h/R \sim 0.1$ (confirmed across a number of choices of $h$ and $R$) and rotation to dispersion ratios $V_{\rm rot}/\sigma_z \sim10$, and correlate strongly with the observed thin disk fraction in the $r$ band (appendix \ref{s: appendix-sloan thin disk fraction}).
 The values of $\fthin$ are noted in Fig.~\ref{f: stars} and listed in Table~\ref{table: simulations_used}.
-Throughout we will refer to galaxies with $\fthin > 0.5$ as thin disk galaxies and galaxies with $\fthin < 0.5$ as irregular or thick disk galaxies.
+Throughout we will refer to galaxies with $\fthin > 0.6$ as thin disk galaxies and galaxies with $\fthin < 0.6$ as irregular or thick disk galaxies.
 
 \subsection{Analysis}
 \label{s: methods -- analysis}
@@ -342,7 +344,7 @@ At the time of cooling the geometry of accreting gas transitions from a quasi-sp
 
 % Summary picture description
 To characterize gas accretion we analyse the central galaxy and its CGM from $z=0$ to one Gyr prior.
-Fig.~\ref{f: overview} shows a visual overview of how gas accretes onto \texttt{m12i} -- a MW-mass galaxy that forms a substantial thin disk ($\fthin = 0.83$). 
+Fig.~\ref{f: overview} shows a visual overview of how gas accretes onto \texttt{m12i} -- a MW-mass galaxy that forms a substantial thin disk ($\fthin = 0.94$). 
 The top and right panels plot the temperature and spatial evolution of accreting gas versus time prior to cooling ($t-\tcools$), while the bottom-left panel plots three representative trajectories for accreting gas elements.
 The trajectories were visualized using the Firefly visualization software~\citep{Geller2018}.\footnote{
 A 3D version of these trajectories is available online at \url{zhafen.github.io/rotating-cooling-flows}. The Firefly homepage is at \url{alexbgurvi.ch/Firefly}.}
@@ -474,9 +476,9 @@ We parametrize the extent to which flattening and cooling are concurrent via a p
 The left panel of Fig.~\ref{f: prevalence} shows the evolution of $f_{\rm aligned}$ from 200 Myr before $\tcools$ (red) to 200 Myr after $\tcools$ (blue), while the right panel shows the difference in $f_{\rm aligned}$ between these two epochs.
 The horizontal axes plot the fraction of young stars in a thin disk $\fthin$. 
 For most haloes the accreting gas is largely unaligned prior to cooling, with $f_{\rm aligned}\sim 0.1 - 0.2$ comparable to $f_{\rm aligned} = 0.1$ expected for an isotropic distribution.
-Upon cooling, the alignment of accreting gas sharply increases in haloes with $\fthin > 0.5$ --- in most cases $\gtrsim 50\%$ of mass collapses to $\vert z/r \vert < 0.1$ during this time.
+Upon cooling, the alignment of accreting gas sharply increases in haloes with $\fthin > 0.6$ --- in most cases $\gtrsim 50\%$ of mass collapses to $\vert z/r \vert < 0.1$ during this time.
 In contrast, in haloes with $\fthin \approx 0$ there is practically no change in $f_{\rm aligned}$ upon cooling.
-Intermediate cases with $\fthin \approx 0.2-0.4$ typically show a modest increase in $f_{\rm aligned}$.
+Intermediate cases with $\fthin \approx 0.2-0.6$ typically show a modest increase in $f_{\rm aligned}$.
 % and are further discussed in appendix~\ref{s: appendix-individual}.
 The right panel of Fig.~\ref{f: prevalence} demonstrates the strong correlation between the change in $f_{\rm aligned}$ when the gas cools and the fraction of recent stars in a thin disk.
 That is, this panel shows that flattening is concurrent with cooling in accretion onto thin-disk galaxies, while no such association exists for accretion onto irregular or thick disk galaxies.
@@ -583,7 +585,7 @@ Panel D also shows that  after $\tcools$ when the gas is part of the ISM, radiat
     \includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_combined2.pdf}
     \caption{
     Hot accretion onto thin disk galaxies versus cool accretion onto irregular galaxies.
-    Lines plot the median properties of the accreting gas relative to time of accretion, for thin disk galaxies (red; $\fthin>0.5$) and for irregular galaxies (blue; $\fthin<0.5$).
+    Lines plot the median properties of the accreting gas relative to time of accretion, for thin disk galaxies (red; $\fthin>0.6$) and for irregular galaxies (blue; $\fthin<0.6$).
     The temperature panel (second row on the left) shows that accretion onto thin disk galaxies is hot ($T\gtrsim10^{5.5}$~K), in contrast with cool $T\approx10^4$ K accretion onto irregular galaxies.
     The bottom panels show that accretion onto thin disk galaxies also has an angular momentum distribution that is more aligned and is more rotationally supported than in irregular galaxies, suggesting that the coherence achieved in hot accretion is conducive to the formation of galaxy disks. 
     The dark grey lines show the median accretion properties in a cosmic ray-dominated halo.
@@ -596,7 +598,7 @@ Panel D also shows that  after $\tcools$ when the gas is part of the ISM, radiat
 \label{s: thin vs irregular}
 
 % Figure description
-Figure~\ref{f: before and after combined} compares the properties of accretion onto galaxies with $\fthin > 0.5$ (``thin disk galaxies'') versus accretion onto galaxies with $\fthin < 0.5$ (``irregular galaxies'').
+Figure~\ref{f: before and after combined} compares the properties of accretion onto galaxies with $\fthin > 0.6$ (``thin disk galaxies'') versus accretion onto galaxies with $\fthin < 0.6$ (``irregular galaxies'').
 For each property the colored lines show the median of the medians of the individual simulations in the group at a given $t - \tacc$.
 The properties are plotted as a function of time relative to the time at which gas accretes onto the main galaxy ($\tacc$), defined as the first time gas is within $r_{\rm gal}$ and with a density $n_{\rm H} > 0.13$ cm$^{-3}$.
 This is in contrast with plotting properties versus $\tcools$ as done above, since in irregular galaxies where accretion is generally cool ($T\approx10^4$K) the last cooling time is not  associated with accretion onto the galaxy. 
@@ -735,7 +737,7 @@ We note that accretion via a rotating cooling flow does not ensure a thin disk f
 A merger, a strong feedback event, or other disruptions may take a thin gaseous disk and disturb it, preventing stars from forming in a thin disk.
 % Conversely, there is evidence that in many of the FIRE-2 MW-mass galaxies the disk orientation may not be stabilized until after the last major merger~\citealt{Santistevan2021a}.
 Simulation \texttt{m12m} provides an example of this:
-it has rotating cooling flow accretion comparable to thin disk galaxies ($\Delta f_{\rm aligned} \approx 0.25$), but has a relatively small $\fthin \approx 0.4$ (yellow square in Fig.~\ref{f: prevalence}) due to the presence of a bar.
+it has rotating cooling flow accretion comparable to thin disk galaxies ($\Delta f_{\rm aligned} \approx 0.25$), but has a relatively small $\fthin \approx 0.5$ (circled point in Fig.~\ref{f: prevalence}) due to the presence of a bar.
 However, the strong correlation seen in Fig.~\ref{f: prevalence} between the prevalence of rotating cooling flow accretion (quantified via $\Delta f_{\rm aligned}$) and the thin disk fraction $\fthin$ suggests that such events are relatively rare. 
 
 
@@ -813,7 +815,7 @@ This is because in \texttt{m12i\_cr} the CGM is not supported against gravity by
 
 % Mechanics
 Increased coherence and decreased radial velocity prior to accretion are two properties of rotating cooling flows we identify as promoting thin disk formation (\S\ref{s: why CFs thin disks}), and are clearly present in \texttt{m12i\_cr} (Fig.~\ref{f: before and after combined}).
-Consistent with this, \texttt{m12i\_cr} has a high thin disk fraction, $\fthin=0.71$.
+Consistent with this, \texttt{m12i\_cr} has a high thin disk fraction, $\fthin=0.9.
 In \S\ref{s: why CFs thin disks} we argue that the coherent co-rotation and deceleration of rotating cooling flows is a result of its subsonic nature.
 The accreting gas in the CR-dominated halo is also effectively subsonic --- gas velocities are below the effective sound speed $c_{s,{\rm eff}}$ and therefore have properties characteristic of subsonic gas.
 The effective sound speed $c_{s,{\rm eff}}$ is defined as part of the local strong-coupling approximation used for the subgrid cosmic ray physics prescription, wherein the total pressure used to determine gas trajectories is a combination of hydrodynamic and CR pressure ($P = P_{\rm gas} + P_{\rm cr}$) and $c^2_{s,{\rm eff}}=c^2_{s}+\gamma_{\rm cr} P_{\rm cr}/\rho$~\citep{Hopkins2020a}.
@@ -1010,7 +1012,7 @@ similar between the accreted gas and general CGM gas. The bottom panel shows tha
     \includegraphics[width=\textwidth]{figures/Mdot.pdf}
     \caption{
     Average mass inflow rate versus gas temperature, during the last Gyr prior to $z=0$ in the same haloes as in Fig.~\ref{f: stars}.
-    The galaxy radius $r_{\rm gal}=4 r_{\star,0.5}$ and fraction of stars in a thin disk are marked in the panels. 
+    The galaxy radius $r_{\rm gal}=4 r_{\star,0.5}$ is marked in the panels. 
     Hot accretion ($T>10^5$ K) dominates the mass inflow onto thin-disk galaxies at $r \gtrsim r_{\rm gal} \sim 10-20$ kpc.
     Cold accretion ($T<10^5$ K) dominates the inflow onto the  
     % within the galaxy in thin disk galaxies, and 
@@ -1042,7 +1044,7 @@ Fig.~\ref{f: Mdot} also shows that the inflow rate of hot gas in the MW-mass gal
 % M11D
 \begin{figure*}\includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_allone_m11d_md.pdf}
 \caption{
-Temperature and geometry of gas accreting onto a $z\sim0$ galaxy in FIRE with a thin disk fraction $\fthin=0.01$ versus time relative to accretion ($t - \tacc$).
+Temperature and geometry of gas accreting onto a $z\sim0$ galaxy in FIRE with a thin disk fraction $\fthin=0.03$ versus time relative to accretion ($t - \tacc$).
 % This shows behavior for a single irregular galaxy, as a complement to Figs~\ref{f: before and after A},~\ref{f: before and after B}, and~\ref{f: before and after combined}.
 In each panel solid lines and shaded regions mark the medians and 16th to 84th percentile ranges of all particles accreted within 1 Gyr prior to $z=0$.
 \textbf{A:} Temperature.
@@ -1062,7 +1064,7 @@ The dashed line shows the angular momentum necessary for rotational support.
 % M12F
 \begin{figure*}\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m12f_md.pdf}
 \caption{
-Same as Figure~\ref{f: m11d} but for accretion onto a $z\sim0$ galaxy in FIRE with a thin disk fraction $\fthin=0.72$ and versus time relative to the final cooling time ($t - \tcools$).
+Same as Figure~\ref{f: m11d} but for accretion onto a $z\sim0$ galaxy in FIRE with a thin disk fraction $\fthin=0.87 and versus time relative to the final cooling time ($t - \tcools$).
 This galaxy (\texttt{m12f}) has qualitatively similar properties to other thin disk galaxies relative to $t-\tcools$, as seen via comparison with Figs~\ref{f: before and after A},~\ref{f: before and after B}, and~\ref{f: before and after combined}.
 }
 \label{f: m12f-tcools}
@@ -1094,7 +1096,7 @@ As a result, gas reaches $r_{\rm gal}$ from within the disk, and quantities meas
 
 % Presence of a rotating cooling flow for intermediate cases
 We also address noticeable features of accretion onto additional specific galaxies.
-The haloes with $0.1 \lesssim \fthin < 0.5$ have varying levels of circularized cooling flow accretion.
+The haloes with $0.1 \lesssim \fthin < 0.6$ have varying levels of circularized cooling flow accretion.
 Four of these six haloes, \texttt{m12z}, \texttt{m12r}, \texttt{m12w}, and \texttt{m12m}, have $M_{\rm vir} \sim 10^{12} M_\odot$.
 \texttt{m12z} has a chaotic halo with a number of ongoing mergers.
 \texttt{m12r} has some ongoing thin disk formation, but is undergoing a major merger during the last Gyr that dominates the accreting gas supply and disrupts the galaxy structure.
