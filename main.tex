@@ -112,7 +112,7 @@ $^{15}$ Department of Physics, Center for Astrophysics and Space Sciences, Unive
 % Abstract of the paper
 \begin{abstract}
 We use FIRE simulations to study disk formation in $z\sim 0$, Milky Way-mass galaxies, and conclude that a key ingredient for the formation of thin stellar disks is the ability for accreting gas to develop an aligned angular momentum distribution via internal cancellation \textit{prior} to joining the galaxy.
-Among galaxies with a high fraction of their young stars ($>70\%$) in a thin disk ($h/R \sim 0.1$) we find that:
+Among galaxies with a high fraction ($>70\%$) of their young stars in a thin disk ($h/R \sim 0.1$), we find that:
 (i) hot, virial-temperature gas dominates the inflowing gas mass on halo scales ($\gtrsim 20$ kpc), with radiative losses offset by compression heating;
 (ii) this hot accretion proceeds until angular momentum support slows inward motion, at which point the gas cools to $\lesssim10^4\,{\rm K}$;
 (iii) prior to cooling, the accreting gas develops an angular momentum distribution that is aligned with the galaxy disk, and while cooling transitions from a quasi-spherical spatial configuration to a more flattened, disk-like configuration.
@@ -495,7 +495,7 @@ This bar may help explain why this galaxy is somewhat offset to low $\fthin$ rel
 Angular momentum and energetics of gas accreting onto the $z\sim0$ thin disk galaxy (\texttt{m12i}) shown in Fig.~\ref{f: before and after A}, versus time relative to the final cooling time.
 \textbf{A:}
 The ratio $j_z / \vert \vec j \vert$.
-The shaded regions plots the 16th to 84th percentile range of the accreted particles, while the solid line plots the vector sum.
+The shaded regions plots the 16th to 84th percentile range of the accreted particles, while the dashed line plots the vector sum.
 The shaded region shrinks as gas flows inward, indicating the flow becomes more coherent and that angular momentum unaligned with the total angular momentum is cancelled out. 
 \textbf{B:}
 The magnitude of the specific angular momentum of particles ($\vert\vec{j}\vert$, green) and the component of angular momentum aligned with the galaxy disk ($j_z$; purple).
@@ -555,7 +555,7 @@ Note that star formation occurs despite that the 84th density percentile after c
 % Energy balance description
 In Fig.~\ref{f: before and after B} panel (D) we assess the energetics of the hot gas to determine why it cools.
 We study the energetics through two types of change in specific energy: radiative cooling (blue lines) and compression heating (red lines).
-Radiative cooling per unit mass for an individual particle is calculated as $\nH^2 \Lambda / \rho$, where $\nH$ is the hydrogen density, $\rho$ is the mass density, and $\Lambda$ is the cooling function 
+Radiative cooling per unit mass for an individual particle is calculated as $\nH^2 \Lambda / \rho$, where $\nH$ is the hydrogen density, $\rho$ is the mass density, and $\Lambda$ is the cooling function.
 % for optically thin photoionized gas, which we take from \cite{Wiersma2009a}.
 We include only fluid elements with $T>10^{4.5}$ K, to avoid optical thickness effects on cooling, and to avoid large fluctuations when $\Lambda$ approaches zero at $T\approx10^4$ K.
 As our focus is the energetics of the hot $\sim\Tvir$ gas, this cut does not affect our conclusions. 
@@ -625,7 +625,7 @@ This suggests that achieving angular momentum coherence in the CGM is conducive 
     The bin color is logarithmically proportional to the fraction of accreting mass with an angular momentum pointing in that direction.
     The angles $\theta$ and $\phi$ are spherical coordinates where $\theta=0^\circ$ is the direction of the galaxy angular momentum at $z=0$ (shown in the center of the projection).
     The black point outlined in white is the direction of the net angular momentum vector of accreting gas, $\Sigma \vec{j}$.
-    Over the course of $1$ Gyr prior to cooling the angular momentum distribution narrows significantly (i.e. becomes more coherent), while the direction of the net vector changes only slightly.
+    Over the course of $1$ Gyr prior to accreting the angular momentum distribution narrows significantly (i.e. becomes more coherent), while the direction of the net vector changes only slightly.
     }
     \label{f: coherence -- on sky}
 \end{figure*}
@@ -712,8 +712,7 @@ In this section we discuss several interpretations, caveats, and implications of
 A main result of our analysis is that when accretion occurs via rotating cooling flows, the accreted gas forms a coherently rotating disk \textit{prior} to cooling and accreting onto the ISM.
 This is due to the decrease in angular momentum dispersion prior to cooling (Figs.~\ref{f: coherence -- on sky}--\ref{f: coherence}, and panels A--B in Fig.~\ref{f: before and after B}) and due to the deceleration of the flow prior to accretion (panel D in Fig.~\ref{f: before and after A}).
 Combined, these two properties indicate that upon accretion the flow already forms a coherent disk with $v_\phi\approx v_{\rm c}$ and $v_r, v_z \ll v_{\rm c}$.
-In contrast, in other accretion modes (such as cold streams and precipitation) the inflow may reach the ISM with a large dispersion in angular momentum and substantial radial momentum, so equilibration will start only after accretion onto the ISM. That stars in FIRE galaxies which are fed by cool accretion form in irregular distributions for many Gyrs (Figures~\ref{f: before and after combined} and~\ref{f: m11d}) suggests that equilibration in the ISM alone may be insufficient to form a thin disk. Hence equilibriation in the CGM as we find in galaxies fed by rotating cooling flows is conducive to thin disk formation. 
-
+In contrast, in other accretion modes (such as cold streams and precipitation) the inflow may reach the ISM with a large dispersion in angular momentum and substantial radial momentum, so equilibration will start only after accretion onto the ISM. That stars in FIRE galaxies which are fed by cool accretion form in irregular distributions for many Gyrs (Figures~\ref{f: before and after combined} and~\ref{f: m11d}) suggests that equilibration in the ISM alone may be insufficient to form a thin disk, and hence equilibriation in the CGM as we find in galaxies fed by rotating cooling flows is conducive to the formation of thin disks. 
 
 Why is equilibration in the ISM alone insufficient to form a thin disk in FIRE? Equilibration is expected to proceed on a dynamical timescale ($\sim 100$ Myr), which is short relative to the star formation timescale of $\sim0.5-2$ Gyr (e.g. Fig.~\ref{f: before and after A}; \citealt{Bigiel2008}). However, some stars may succeed in forming while the accreting gas morphology is still a thick disk or irregular.
 Such stars inject feedback momentum and energy into their surroundings which could further delay the equilibration process, allowing even more stars to form outside of a thin disk.
@@ -721,7 +720,7 @@ Such stars inject feedback momentum and energy into their surroundings which cou
 The tendency of hot inflows to decelerate and rotate coherently prior to accretion is potentially a result of the subsonic nature of the flow. 
 In a subsonic flow gradual deceleration prior to accretion is expected since the inflow is `forewarned' (via changes in pressure) of the transition to rotational support at the galaxy scale.
 This is in contrast with supersonic accretion modes where the accreting gas is expected to shock and halt abruptly at the galaxy scale.
-Also, subsonic accretion makes it easier for the flow to reach angular momentum coherence, since the inflow timescale is longer than the sound-crossing timescale on which coherence can be achieved. In contrast, in supersonic, free-falling accretion flows as we find in low mass galaxies, the accretion and coherence timescales are both equal to the dynamical time and hence comparable to each other, so coherence is not achieved in the CGM.
+Also, subsonic accretion makes it easier for the flow to reach angular momentum coherence, since the inflow timescale is longer than the sound-crossing timescale on which coherence can be achieved. In contrast, in supersonic, free-falling accretion flows as we find in low mass galaxies, the accretion and coherence timescales are both comparable to the dynamical time and hence comparable to each other, so coherence is not achieved in the CGM.
 
 Panels A--B in Fig.~\ref{f: before and after B} and Figs.~\ref{f: coherence -- on sky}--\ref{f: coherence} demonstrate that angular momentum coherence is achieved in hot inflows just before cooling and accretion, roughly at the rotational support radius $\Rcirc$ (defined via $\Sigma\vec{j}=\vc(\Rcirc)\Rcirc$, where $\Sigma\vec{j}$ is the net angular momentum in the flow), rather than farther out in the halo.
 Since the hot inflow is subsonic at all radii, this result suggests that an accretion timescale longer than the sound-crossing timescale is not, on its own, a sufficient condition for the flow to achieve angular momentum coherence.
@@ -815,7 +814,7 @@ This is because in \texttt{m12i\_cr} the CGM is not supported against gravity by
 
 % Mechanics
 Increased coherence and decreased radial velocity prior to accretion are two properties of rotating cooling flows we identify as promoting thin disk formation (\S\ref{s: why CFs thin disks}), and are clearly present in \texttt{m12i\_cr} (Fig.~\ref{f: before and after combined}).
-Consistent with this, \texttt{m12i\_cr} has a high thin disk fraction, $\fthin=0.9.
+Consistent with this, \texttt{m12i\_cr} has a high thin disk fraction, $\fthin=0.9$.
 In \S\ref{s: why CFs thin disks} we argue that the coherent co-rotation and deceleration of rotating cooling flows is a result of its subsonic nature.
 The accreting gas in the CR-dominated halo is also effectively subsonic --- gas velocities are below the effective sound speed $c_{s,{\rm eff}}$ and therefore have properties characteristic of subsonic gas.
 The effective sound speed $c_{s,{\rm eff}}$ is defined as part of the local strong-coupling approximation used for the subgrid cosmic ray physics prescription, wherein the total pressure used to determine gas trajectories is a combination of hydrodynamic and CR pressure ($P = P_{\rm gas} + P_{\rm cr}$) and $c^2_{s,{\rm eff}}=c^2_{s}+\gamma_{\rm cr} P_{\rm cr}/\rho$~\citep{Hopkins2020a}.
@@ -864,7 +863,7 @@ Our main results are as follows.
     \item \textbf{Mechanics of rotating cooling flows at $z \sim 0$:}
     We find that gas accretion onto thin disk galaxies in FIRE is dominated by rotating cooling flows, wherein the hot $T\approx T_{\rm vir}$ CGM forms a subsonic and angular momentum-conserving inflow down to the galaxy-halo interface, at which it cools to $T\lesssim10^4$ K (Figs.~\ref{f: before and after A} and \ref{f: before and after B}).
     Cooling occurs at the radius where rotational support in the flow becomes substantial, and is concurrent with flattening of the flow, i.e.~the flow transitions rapidly from a quasi-spherical hot medium into a cool thin disk (Figs. \ref{f: overview} and \ref{f: theta vs t}).
-    Prior to cooling and flattening, the hot flow decelerates and becomes coherently rotating with a narrow angular momentum distribution (Fig.~\ref{f: coherence}), properties which we attribute to the subsonic nature of the flow (\S~\ref{s: why CFs thin disks}).
+    Prior to cooling and flattening, the hot flow decelerates and becomes coherently rotating with a narrow angular momentum distribution (Figs.~\ref{f: coherence -- on sky}-- ~\ref{f: coherence}), properties which we attribute to the subsonic nature of the flow (\S~\ref{s: why CFs thin disks}).
     Our results thus extend classic cooling flow theory by demonstrating rotating cooling flows are a primary accretion mode for many cosmologically-simulated galaxies, and by further exploring the mechanics of cooling flows with angular momentum beyond previous studies \citep{Cowie1980, Stern2020}.
     Also, the inflowing nature of the hot CGM phase surrounding disk galaxies in FIRE is in contrast with the common assumption that the hot CGM is static  \citep[e.g.,][]{Maller2004,Sharma2012, Voit2017, Faerman2017,Faerman2020}.\\ 
     \item \textbf{Relation between rotating cooling flows and thin stellar disks:}
@@ -1052,7 +1051,7 @@ In each panel solid lines and shaded regions mark the medians and 16th to 84th p
 \textbf{C:} Velocity components of accretion (colored lines and band), relative to circular velocity at the median radius (dash-dotted line).
 \textbf{D:} Fraction of gas converted into stars.
 \textbf{E:} The ratio of $j_z / \vert \vec j \vert$, the cosine of the angle between the accreting gas and the galaxy angular momentum.
-The solid line shows this ratio for the total angular momentum of all accreted particles.
+The dashed line shows this ratio for the total angular momentum of all accreted particles.
 \textbf{F:} The magnitude of the specific angular momentum of particles ($\vert\vec{j}\vert$, green), the component of angular momentum aligned with the galaxy disk ($j_z$; purple), and the perpendicular component ($j_{\perp} = \vert \vec{j} - j_z \hat{z} \vert$; pink).
 The dashed line shows the angular momentum necessary for rotational support.
 \textbf{G:} Baryon number density.
@@ -1064,7 +1063,7 @@ The dashed line shows the angular momentum necessary for rotational support.
 % M12F
 \begin{figure*}\includegraphics[width=\textwidth]{figures/before_and_after/before_and_after_allone_m12f_md.pdf}
 \caption{
-Same as Figure~\ref{f: m11d} but for accretion onto a $z\sim0$ galaxy in FIRE with a thin disk fraction $\fthin=0.87 and versus time relative to the final cooling time ($t - \tcools$).
+Same as Figure~\ref{f: m11d} but for accretion onto a $z\sim0$ galaxy in FIRE with a thin disk fraction $\fthin=0.87$ and versus time relative to the final cooling time ($t - \tcools$).
 This galaxy (\texttt{m12f}) has qualitatively similar properties to other thin disk galaxies relative to $t-\tcools$, as seen via comparison with Figs~\ref{f: before and after A},~\ref{f: before and after B}, and~\ref{f: before and after combined}.
 }
 \label{f: m12f-tcools}
@@ -1073,8 +1072,8 @@ This galaxy (\texttt{m12f}) has qualitatively similar properties to other thin d
 % M12F
 \begin{figure*}\includegraphics[width=\textwidth]{figures/variations/relative_to_accretion/before_and_after/before_and_after_allone_m12f_md.pdf}
 \caption{
-Same as Fig.~\ref{f: m12f-tcools}, but relative to $\tacc$.
-In this galaxy the properties of accreting gas relative to $\tacc$ are qualitatively different from those relative to $\tcools$ shown in Fig.~\ref{f: m12f-tcools}, likely due to the high specific angular momentum in the accreting gas (see text). 
+Same as Fig.~\ref{f: m12f-tcools}, but with time relative to $\tacc$ in the horizontal axis. 
+In this galaxy the properties of accreting gas relative to $\tacc$ are qualitatively different from those relative to $\tcools$ shown in Fig.~\ref{f: m12f-tcools}, likely due to the relatively high specific angular momentum of the accreting gas (see text). 
 % Gas circularizes and flattens at approximately twice the galaxy radius (Fig.~\ref{f: m12f-tcools}), and this figure shows that subsequently accretion onto \texttt{m12f} is already cooler and more aligned relative to other thin disk galaxies.
 }
 \label{f: m12f-tacc}
@@ -1082,32 +1081,33 @@ In this galaxy the properties of accreting gas relative to $\tacc$ are qualitati
 
 % M11D
 We show the equivalent of Figs~\ref{f: before and after A} and~\ref{f: before and after B} for a representative irregular galaxy, \texttt{m11d}.
-Most features are visible when averaged across the sample in Fig.~\ref{f: before and after combined} and are discussed there.
-Of special note, prior to $\tacc$ accretion has a very broad and unchanging $j_z/\vert \vec j \vert$ distribution, despite the total angular momentum being mostly aligned with the galaxy ($L_z / \vert \vec L \vert \sim 0.8-0.9$.
-The low thin disk fraction of this galaxy is consistent with the coherence /narrowness of the angular momentum distribution being necessary for thin disk formation even when the accretion is broadly co-rotating with the galaxy.
+Panel E shows that prior to $\tacc$ the accreting gas has a very broad and unchanging $j_z/\vert \vec j \vert$ distribution, in contrast with the narrowing angular momentum distribution of thin disk galaxies shown in the main text, and despite the total angular momentum being mostly aligned with the galaxy $(\Sigma \vec{j})_z / \vert \vec \Sigma\vec{j} \vert \sim 0.8-0.9$.
+The low thin disk fraction of $0.03$ in this galaxy is thus  consistent with angular momentum coherence in accreted gas being necessary for thin disk formation. Other properties of the accretion onto m11d are apparent also in the sample average onto irregular galaxies (Fig.~\ref{f: before and after combined}) and are discussed there.
 
 % M12F
-Figures~\ref{f: m12f-tcools} and~\ref{f: m12f-tacc} show properties of accretion onto \texttt{m12f}, which was excluded from Fig.~\ref{f: before and after combined}, relative to $\tcools$ and $\tacc$ respectively.
-We can see that relative to final cooling accretion onto \texttt{m12f} has the same key characteristics as accretion onto other thin disk galaxies --- inflow is hot in the CGM, and cooling is simultaneous with flattening, occuring when angular momentum support becomes significant.
+Figures~\ref{f: m12f-tcools} and~\ref{f: m12f-tacc} show properties of accretion onto \texttt{m12f} (which was excluded from the averages in Fig.~\ref{f: before and after combined}) relative to $\tcools$ and $\tacc$ respectively.
+Figure~\ref{f: m12f-tcools} shows that relative to $\tcools$ the accreting gas has the same key characteristics as accretion onto other thin disk galaxies --- inflow is hot in the CGM, and cooling is simultaneous with flattening, occuring when angular momentum support becomes significant.
 Also, panels E and H show that angular momentum coherence increases prior to cooling, while radiative cooling in the hot gas is offset by compression heating.
-By comparison, Fig.~\ref{f: m12f-tacc} shows that relative to time of accretion many of the properties of \texttt{m12f} are qualitatively different from those relative to $\tcools$, in contrast with other thin disk galaxies.
-This difference is likely due to the large specific angular momentum of accreted gas (panel F), and therefore the radius at which the accretion circularizes and cools is substantially larger than the galaxy radius, $\Rcirc \approx 2 r_{\rm gal}$ (panel B in Fig.~\ref{f: m12f-tcools}).
-As a result, gas reaches $r_{\rm gal}$ from within the disk, and quantities measured versus $\tacc$ track the evolution of gas accretion within the disk, rather than in the CGM. 
+By comparison, Fig.~\ref{f: m12f-tacc} shows that relative to $\tacc$ many of the properties of \texttt{m12f} are qualitatively different from those relative to $\tcools$, in contrast with other thin disk galaxies.
+We suspect this difference is due to the relatively large specific angular momentum of accreted gas, which implies that the radius at which the accretion circularizes and cools is substantially larger than the galaxy radius, $\Rcirc \approx 2 r_{\rm gal}$ (see panel B in Fig.~\ref{f: m12f-tcools}).
+As a result, gas reaches $r_{\rm gal}$ from within the disk, and quantities measured versus $\tacc$ track the evolution of gas accretion within the disk, rather than the evolution of accretion in the CGM. 
 
 % Presence of a rotating cooling flow for intermediate cases
-We also address noticeable features of accretion onto additional specific galaxies.
-The haloes with $0.1 \lesssim \fthin < 0.6$ have varying levels of circularized cooling flow accretion.
+We also briefly discuss noticeable features of accretion onto additional specific galaxies.
+The haloes with intermediate thin disk fractions $(0.1 \lesssim \fthin < 0.6)$ also have intermediate levels of change in accretion alignment upon cooling (Fig.~\ref{f: prevalence}). 
 Four of these six haloes, \texttt{m12z}, \texttt{m12r}, \texttt{m12w}, and \texttt{m12m}, have $M_{\rm vir} \sim 10^{12} M_\odot$.
 \texttt{m12z} has a chaotic halo with a number of ongoing mergers.
 \texttt{m12r} has some ongoing thin disk formation, but is undergoing a major merger during the last Gyr that dominates the accreting gas supply and disrupts the galaxy structure.
 This merger is relatively well-aligned with the disk, with $f_{\rm aligned} \approx 0.3-0.4$, and the aligned mass fraction does not change significantly as the gas cools past $\tcools$.
 \texttt{m12w} is a galaxy where its inner CGM is only just virializing at $z=0$~\citep{Yu2021}, and the majority of the gas accretes with angular momentum perpendicular to the galaxy angular momentum.
-Of these four the one with the highest thin disk fraction, \texttt{m12m}, is a galaxy that undergoes significant rotating cooling flow accretion, but does not have a high thin disk fraction.
-Visual inspection reveals that \texttt{m12m} has a prominent stellar bar.
+Of these four the one with the highest thin disk fraction, \texttt{m12m}, 
+% is a galaxy that undergoes significant rotating cooling flow accretion, but does not have a high thin disk fraction.
+% Visual inspection reveals that \texttt{m12m} 
+has a prominent stellar bar.
 \texttt{m12m} may be evidence that if rotating cooling flows are a condition for disk formation, they are a necessary-but-not-sufficient condition (\S\ref{s: why CFs thin disks}).
-\texttt{m12m} is one of the few MW-mass haloes that does not include metal diffusion, which may play a role in its morphology.
-The $M_{\rm vir} \sim 10^{11} M_\odot$ haloes are \texttt{m11h} and \texttt{m11b} --- galaxies that are beginning to form disks despite their lower virial mass.
-Much of their accretion is still isotropic, but alignment increases mildly post-cooling.
+\texttt{m12m} is one of the few MW-mass halo simulations that does not include metal diffusion, which may also play a role in its morphology.
+% The other two halos with an intermediate thin disk fraction have $M_{\rm vir} \sim 10^{11} M_\odot$ haloes,  \texttt{m11h} and \texttt{m11b}. These galaxies are beginning to form disks despite their lower virial mass.
+% Much of their accretion is still isotropic, but alignment increases mildly post-cooling.
 
 % \section{Comparison to metrics of galaxy and halo spin}
 
