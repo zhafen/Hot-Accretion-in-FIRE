@@ -27,6 +27,8 @@
 \usepackage{graphicx}	% Including figure files
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
+\usepackage{standalone}
+\usepackage{import}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -152,7 +154,7 @@ Collapsing structures in an otherwise expanding universe will be spun up by the 
 this can deliver enough angular momentum to allow (at least some) galaxies to have significant angular-momentum support~\citep[e.g.][]{MMW98}. 
 While these ideas have provided foundational insights into the origin of disk galaxies in a $\Lambda$CDM universe, our understanding of disk  formation, and thin-disk galaxy formation in particular, remains incomplete. 
 While dark matter haloes of all masses are predicted to have similar angular momentum distributions \citep[e.g.][]{Barnes87}, disk fraction varies noticeably as a function of galaxy mass \citep[e.g.][]{Bernardi2010, Bluck2014, Moffett16}.
-Moreover, dark matter spin alone is insufficient to explain the detailed properties of disks formed in cosmological simulations~\citep[e.g.][]{Sales2012, GK18, Rohr2021}.  
+Moreover, dark matter spin alone is insufficient to explain the detailed properties of disks formed in cosmological simulations~\citep[e.g.][]{Sales2012, GK18, Rohr2021}.
 
 % The puzzle of thin disks
 Given what we know about the angular momentum distribution in galactic haloes, it is somewhat surprising that so many galaxies are dominated by {\em thin} disks, with  scale heights and vertical velocity dispersions that are small compared to their scale radii and circular speeds, $h/R \sim \sigma_z/V_c \sim 0.1$~\citep[][]{Kregel2002}.
@@ -341,8 +343,8 @@ At the time of cooling the geometry of accreting gas transitions from a quasi-sp
 To characterize gas accretion we analyze the central galaxy and its CGM from $z=0$ to one Gyr prior.
 Fig.~\ref{f: overview} shows a visual overview of how gas accretes onto \texttt{m12i} -- a MW-mass galaxy that forms a substantial thin disk ($\fthin = 0.94$). 
 The top and right panels plot the temperature and spatial evolution of accreting gas versus time prior to cooling ($t-\tcools$), while the bottom-left panel plots three representative trajectories for accreting gas elements.
-The trajectories were visualized using the Firefly visualization software~\citep{Geller2018}.\footnote{
-A 3D version of these trajectories is available online at \url{zhafen.github.io/rotating-cooling-flows}. The Firefly homepage is at \url{alexbgurvi.ch/Firefly}.}
+The trajectories were visualized using the \textsc{Firefly} visualization software~\citep{Geller2018}.\footnote{
+A 3D version of these trajectories is available online at \url{zhafen.github.io/rotating-cooling-flows}. The \textsc{Firefly} homepage is at \url{alexbgurvi.ch/Firefly}.}
 The trajectory color scales with temperature, with red, white, and blue indicating $T=10^6$ K, $10^5$ K, and $10^4$ K, respectively.
 The figure shows that at early times relative to cooling ($t-\tcools \sim -1000$ Myr) the accretion is hot ($\approx10^6$ K) and contracts quasi-spherically.
 Then, around the time of cooling the geometry of accreting gas transitions from quasi-spherical at $t - \tcools=-150$ Myr to a cool disk aligned with the galaxy at $t - \tcools=+ 150$ Myr.
@@ -840,6 +842,8 @@ We defer a more direct comparison of the predictions of the rotating cooling flo
 \section{Summary}
 \label{s: conclusions}
 
+This line should not exist.
+
 % Summary paragraph
 In this paper we use the particle-tracking method developed in \cite{Hafen2019,Hafen2020} to study how gas accretes onto $z\sim0$ galaxies in the FIRE-2 cosmological zoom simulations~\citep{Hopkins2018}, focusing on Milky-Way mass galaxies in which stars form in a thin disk. 
 Our main results are as follows.
@@ -879,16 +883,16 @@ Numerical calculations were performed on the Quest computing cluster at Northwes
 This research benefited from the Halo21 KITP workshop which was supported in part by the National Science Foundation under Grant No.~NSF PHY-1748958.
 
 This research used the Python programming language and the following modules:
-Firefly~\citep{Geller2018},
-Numpy~\citep{Harris2020},
-Matplotlib~\citep{Hunter2007},
-pytest~\citep{pytest3.4},
-Jug~\citep{Coelho2017},
-h5py~\citep{h5py},
-SciPy~\citep{Virtanen2020},
-pandas~\citep{McKinney2010,Reback2020},
-palettable~(\url{https://github.com/jiffyclub/palettable}),
-and Numba~\citep{Lam2015}.
+\textsc{Firefly}~\citep{Geller2018},
+\textsc{Numpy}~\citep{Harris2020},
+\textsc{Matplotlib}~\citep{Hunter2007},
+\textsc{pytest}~\citep{pytest3.4},
+\textsc{Jug}~\citep{Coelho2017},
+\textsc{h5py}~\citep{h5py},
+\textsc{SciPy}~\citep{Virtanen2020},
+\textsc{pandas}~\citep{McKinney2010,Reback2020},
+\textsc{palettable}~(\url{https://github.com/jiffyclub/palettable}),
+and \textsc{Numba}~\citep{Lam2015}.
 
 \section*{Data availability}
 The data underlying this article will be shared on reasonable request to the corresponding author (ZH). The simulation initial conditions, snapshot files, and visualization can be found in \href{https://fire.northwestern.edu/data/}{https://fire.northwestern.edu/data/}.
@@ -989,39 +993,9 @@ similar between the accreted gas and general CGM gas. The bottom panel shows tha
 \section{Instantaneous mass flow}
 \label{s: appendix-mass flow}
 
-% HOT IN HALO
-\begin{figure*}
-    \centering
-    \includegraphics[width=\textwidth]{figures/Mdot.pdf}
-    \caption{
-    Average mass inflow rate versus gas temperature, during the last Gyr prior to $z=0$ in the same haloes as in Fig.~\ref{f: stars}.
-    The galaxy radius $r_{\rm gal}=4 r_{\star,0.5}$ is marked in the panels. 
-    Hot accretion ($T>10^5$ K) dominates the mass inflow onto thin-disk galaxies at $r \gtrsim r_{\rm gal} \sim 10-20$ kpc.
-    Cold accretion ($T<10^5$ K) dominates the inflow onto the  
-    % within the galaxy in thin disk galaxies, and 
-    % in the halo of the lower-mass 
-    irregular galaxy.
-    }
-    \label{f: Mdot}
-\end{figure*}
-
-In this appendix we analyze if inflow is dominated by hot or cold gas, which allows us to distinguish a hot inflow from the accretion of cool clouds (formed, e.g., via instabilities).
-Fig.~\ref{f: Mdot} shows the mass inflow rate versus radius for hot gas (red curves; $T>10^5$ K) and for cool gas (blue curves; $T < 10^5\,{\rm K}$),  for the four simulations shown in Fig.~\ref{f: stars}. 
-We calculate the mass inflow rate at a given radius as
-\begin{equation}
-     \Mdot(r) = \frac{\int_{\rm shell} v_r dm}{\Delta r} = \frac{M_{\rm shell}}{\Delta r} \langle v_r\rangle_{\rm mass\, weighted}
-     \label{e: Mdot}
-\end{equation}
-where $\Delta r=0.05\,{\rm dex}$ is the shell thickness, and the integration is done on all particles with centers within the shell which satisfy the appropriate temperature cut. 
-
-% Consequences
-In the three MW-mass galaxies with a large thin disk fraction, at halo scales of $r>20$ kpc the inflow is dominated by hot gas, where in \texttt{m12i} and \texttt{m12b} $\Mdot$ of the hot gas is larger by a factor of $\gtrsim 4\times$ than that of cool gas.
-The greater mass flux of hot gas indicates that the dominant form of accretion is an inflowing hot phase, rather than cold streams or cool clouds precipitating from the hot phase.
-In contrast, in the lower mass galaxy shown in the bottom right the inflow is dominated by cool gas, while the hot gas is outflowing out to $\approx50$ kpc.
-Fig.~\ref{f: Mdot} also shows that the inflow rate of hot gas in the MW-mass galaxies drops within $r_{\rm gal}$, reflecting the cooling of the hot inflow at the galaxy-halo interface, as shown in \S\ref{s: characteristics -- cools}.
+\import{}{appendixC}
 
 \section{Notes on individual galaxies}
-
 \label{s: appendix-individual}
 
 % M11D
@@ -1064,7 +1038,7 @@ In this galaxy the properties of accreting gas relative to $\tacc$ are qualitati
 \end{figure*}
 
 % M11D
-We show the equivalent of Figs~\ref{f: before and after A} and~\ref{f: before and after B} for a representative irregular galaxy, \texttt{m11d}.
+In Figure~\ref{f: m11d} we show the equivalent of Figs~\ref{f: before and after A} and~\ref{f: before and after B} for a representative irregular galaxy, \texttt{m11d}.
 Panel E shows that prior to $\tacc$ the accreting gas has a very broad and unchanging $j_z/\vert \vec j \vert$ distribution, in contrast with the narrowing angular momentum distribution of thin disk galaxies shown in the main text, and despite the total angular momentum being mostly aligned with the galaxy $(\Sigma \vec{j})_z / \vert \vec \Sigma\vec{j} \vert \sim 0.8-0.9$.
 The low thin disk fraction of $0.03$ in this galaxy is thus  consistent with angular momentum coherence in accreted gas being necessary for thin disk formation. Other properties of the accretion onto m11d are apparent also in the sample average onto irregular galaxies (Fig.~\ref{f: before and after combined}) and are discussed there.
 
